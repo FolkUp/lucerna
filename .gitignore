@@ -2,6 +2,7 @@
 .claude/SESSION_CONTEXT.md
 .claude/settings.local.json
 .claude/PLAN.md
+CLAUDE.local.md
 
 # Secrets
 *.env
