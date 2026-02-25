@@ -21,7 +21,7 @@
 - [x] Deep dossier prompt
 - [x] IP researcher prompt
 
-## Phase 5: Registration (LC-006)
+## Phase 5: Registration (LC-006) — DONE
 - [x] Register in FolkUp ecosystem
 
 ## Phase 6: OSINT Skill (LC-007) — Future
