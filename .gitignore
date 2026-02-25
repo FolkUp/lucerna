@@ -1,0 +1,28 @@
+# Session files
+.claude/SESSION_CONTEXT.md
+.claude/settings.local.json
+.claude/PLAN.md
+
+# Secrets
+*.env
+.env.*
+secrets/
+credentials/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temp
+*.tmp
+*.bak
+*.log
