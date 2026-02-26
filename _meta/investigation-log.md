@@ -15,6 +15,7 @@ Master log of all Lucerna investigations.
 | INV-009 | 2026-02 | Research | Restaurants research | Complete | `research/setubal/restaurants-research.md` |
 | INV-010 | 2026-02 | Research | Setubal mushrooms research | Complete | `research/setubal/mushrooms-research.md` |
 | INV-011 | 2026-02 | Research | DayForge licensing research | Complete | `research/dayforge/licensing-research.md` |
+| INV-012 | 2026-02-26 | Research | Karma proverb origin | Complete | `research/general/karma-proverb-origin-2026-02-26.md` |
 
 ---
 

@@ -24,11 +24,11 @@
 ## Phase 5: Registration (LC-006) — DONE
 - [x] Register in FolkUp ecosystem
 
-## Phase 6: OSINT Skill (LC-007) — Future
-- [ ] `/osint` or `/lucerna` skill
-- [ ] 4-agent parallel investigation architecture
-- [ ] Modes: verify, audit, dossier, ip-check
-- [ ] Publication pipeline Lucerna → JohnDoe Channel
+## Phase 6: OSINT Skill (LC-007) — DONE
+- [x] `/cyber-gonzo` skill (5 modes: verify, audit, dossier, ip, research)
+- [x] 4-agent parallel investigation architecture
+- [x] Modes: verify, audit, dossier, ip, research
+- [x] Publication pipeline placeholder (pending content strategy)
 
 ## Backlog
 - LC-008: Habr GenAI full analysis (P2)
