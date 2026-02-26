@@ -16,6 +16,7 @@ Master log of all Lucerna investigations.
 | INV-010 | 2026-02 | Research | Setubal mushrooms research | Complete | `research/setubal/mushrooms-research.md` |
 | INV-011 | 2026-02 | Research | DayForge licensing research | Complete | `research/dayforge/licensing-research.md` |
 | INV-012 | 2026-02-26 | Research | Karma proverb origin | Complete | `research/general/karma-proverb-origin-2026-02-26.md` |
+| INV-013 | 2026-02-26 | Research | "Immortal until I die" proverb origin | Complete | `research/general/immortal-proverb-origin-2026-02-26.md` |
 
 ---
 
