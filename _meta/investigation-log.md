@@ -17,6 +17,8 @@ Master log of all Lucerna investigations.
 | INV-011 | 2026-02 | Research | DayForge licensing research | Complete | `research/dayforge/licensing-research.md` |
 | INV-012 | 2026-02-26 | Research | Karma proverb origin | Complete | `research/general/karma-proverb-origin-2026-02-26.md` |
 | INV-013 | 2026-02-26 | Research | "Immortal until I die" proverb origin | Complete | `research/general/immortal-proverb-origin-2026-02-26.md` |
+| INV-014 | 2026-02-26 | Research | Drug content legislation (RU/PT/EU) | Complete | `research/general/drug-content-legislation-2026-02-26.md` |
+| INV-015 | 2026-02-27 | Research | Igreja de São Julião de Setúbal | Complete | `research/setubal/igreja-sao-juliao.md` |
 
 ---
 
