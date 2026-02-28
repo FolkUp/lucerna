@@ -1,6 +1,12 @@
 ---
 title: "Legal"
 description: "Legal pages — privacy policy, terms of use."
+outputs: ["HTML"]
+cascade:
+  build:
+    render: always
+    list: never
+    publishResources: true
 ---
 
 ## Legal Documents

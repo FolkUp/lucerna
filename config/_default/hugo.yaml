@@ -3,6 +3,7 @@ theme: "blowfish"
 defaultContentLanguage: en
 
 enableRobotsTXT: true
+disableHugoGeneratorInject: true
 summaryLength: 0
 buildDrafts: false
 buildFuture: false
