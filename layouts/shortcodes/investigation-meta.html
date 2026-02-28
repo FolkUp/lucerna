@@ -1,0 +1,59 @@
+{{/* investigation-meta shortcode — metadata card for investigation articles
+     Usage: {{< investigation-meta >}}
+     Reads from page frontmatter: investigation_id, investigation_type, date,
+     sources_count, status, confidence, reviewed_by, review_date
+*/}}
+{{ $p := .Page.Params }}
+
+<div class="investigation-meta">
+  <div class="investigation-meta__grid">
+    {{ with $p.investigation_id }}
+    <div class="investigation-meta__item">
+      <span class="investigation-meta__label">{{ i18n "metaId" | default "ID" }}</span>
+      <span class="investigation-meta__value">{{ . }}</span>
+    </div>
+    {{ end }}
+
+    {{ with $p.investigation_type }}
+    <div class="investigation-meta__item">
+      <span class="investigation-meta__label">{{ i18n "metaType" | default "Type" }}</span>
+      <span class="investigation-meta__value">{{ . }}</span>
+    </div>
+    {{ end }}
+
+    {{ with $p.status }}
+    <div class="investigation-meta__item">
+      <span class="investigation-meta__label">{{ i18n "metaStatus" | default "Status" }}</span>
+      <span class="investigation-meta__value investigation-meta__status--{{ . }}">{{ . }}</span>
+    </div>
+    {{ end }}
+
+    {{ with $p.confidence }}
+    <div class="investigation-meta__item">
+      <span class="investigation-meta__label">{{ i18n "metaConfidence" | default "Confidence" }}</span>
+      <span class="investigation-meta__value">{{ . | upper }}</span>
+    </div>
+    {{ end }}
+
+    {{ with $p.sources_count }}
+    <div class="investigation-meta__item">
+      <span class="investigation-meta__label">{{ i18n "metaSources" | default "Sources" }}</span>
+      <span class="investigation-meta__value">{{ . }}</span>
+    </div>
+    {{ end }}
+
+    {{ with $p.reviewed_by }}
+    <div class="investigation-meta__item">
+      <span class="investigation-meta__label">{{ i18n "metaReviewedBy" | default "Reviewed by" }}</span>
+      <span class="investigation-meta__value">{{ . }}</span>
+    </div>
+    {{ end }}
+
+    {{ with $p.review_date }}
+    <div class="investigation-meta__item">
+      <span class="investigation-meta__label">{{ i18n "metaReviewDate" | default "Review date" }}</span>
+      <span class="investigation-meta__value">{{ . }}</span>
+    </div>
+    {{ end }}
+  </div>
+</div>

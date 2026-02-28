@@ -1,0 +1,80 @@
+colorScheme: "ocean"
+defaultAppearance: "dark"
+autoSwitchAppearance: true
+
+enableA11y: true
+enableSearch: true
+enableCodeCopy: true
+enableStructuredBreadcrumbs: true
+
+disableImageOptimization: false
+
+fingerprintAlgorithm: "sha512"
+
+header:
+  layout: "fixed"
+
+footer:
+  showMenu: true
+  showCopyright: true
+  showThemeAttribution: false
+  showAppearanceSwitcher: true
+  showScrollToTop: true
+
+homepage:
+  layout: "hero"
+  showRecent: true
+  showRecentItems: 6
+  showMoreLink: true
+  showMoreLinkDest: "/investigations/"
+  cardView: true
+  cardViewScreenWidth: false
+
+article:
+  showDate: true
+  showDateUpdated: true
+  showAuthor: true
+  showHero: false
+  showBreadcrumbs: true
+  showDraftLabel: true
+  showEdit: false
+  seriesOpened: true
+  showHeadingAnchors: true
+  showPagination: true
+  showReadingTime: true
+  showTableOfContents: true
+  showRelatedContent: true
+  relatedContentLimit: 3
+  showTaxonomies: true
+  showWordCount: true
+  sharingLinks:
+    - linkedin
+    - twitter
+    - telegram
+    - email
+
+list:
+  showBreadcrumbs: true
+  showSummary: true
+  showTableOfContents: false
+  showCards: true
+  cardView: true
+  groupByYear: false
+
+taxonomy:
+  showTermCount: true
+  showBreadcrumbs: true
+  cardView: true
+
+term:
+  showBreadcrumbs: true
+  showTableOfContents: true
+  groupByYear: false
+  cardView: true
+
+sitemap:
+  excludedKinds: ["taxonomy", "term"]
+
+umamiAnalytics:
+  # websiteid will be set after Umami website creation
+  domain: "analytics.folkup.app"

@@ -1,0 +1,19 @@
+{{/* confidence-badge shortcode — inline badge showing confidence level
+     Usage: {{< confidence-badge level="high|medium|low" >}}
+*/}}
+{{ $level := .Get "level" | default (.Get 0) | default "low" }}
+
+{{ $class := "" }}
+{{ $label := "" }}
+{{ if eq $level "high" }}
+  {{ $class = "confidence-badge--high" }}
+  {{ $label = i18n "confidenceHigh" | default "HIGH" }}
+{{ else if eq $level "medium" }}
+  {{ $class = "confidence-badge--medium" }}
+  {{ $label = i18n "confidenceMedium" | default "MEDIUM" }}
+{{ else }}
+  {{ $class = "confidence-badge--low" }}
+  {{ $label = i18n "confidenceLow" | default "LOW" }}
+{{ end }}
+
+<span class="confidence-badge {{ $class }}">{{ $label }}</span>

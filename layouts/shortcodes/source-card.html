@@ -1,0 +1,39 @@
+{{/* source-card shortcode — card showing a source with tier and type
+     Usage: {{< source-card name="..." url="..." tier="1|2|3" type="academic|government|news|report|database" >}}
+     Optional: date="YYYY-MM-DD" author="..."
+*/}}
+{{ $name := .Get "name" }}
+{{ $url := .Get "url" }}
+{{ $tier := .Get "tier" | default "3" }}
+{{ $type := .Get "type" | default "other" }}
+{{ $date := .Get "date" }}
+{{ $author := .Get "author" }}
+
+{{ $tierLabel := "" }}
+{{ $tierClass := "" }}
+{{ if eq $tier "1" }}
+  {{ $tierLabel = i18n "sourceTier1" | default "Tier 1 — Primary" }}
+  {{ $tierClass = "source-card--tier1" }}
+{{ else if eq $tier "2" }}
+  {{ $tierLabel = i18n "sourceTier2" | default "Tier 2 — Secondary" }}
+  {{ $tierClass = "source-card--tier2" }}
+{{ else }}
+  {{ $tierLabel = i18n "sourceTier3" | default "Tier 3 — Tertiary" }}
+  {{ $tierClass = "source-card--tier3" }}
+{{ end }}
+
+<div class="source-card {{ $tierClass }}">
+  <div class="source-card__header">
+    <span class="source-card__tier">{{ $tierLabel }}</span>
+    <span class="source-card__type">{{ $type }}</span>
+  </div>
+  <div class="source-card__body">
+    {{ with $url }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="source-card__name">{{ $name }}</a>
+    {{ else }}
+      <span class="source-card__name">{{ $name }}</span>
+    {{ end }}
+    {{ with $author }}<span class="source-card__author">{{ . }}</span>{{ end }}
+    {{ with $date }}<span class="source-card__date">{{ . }}</span>{{ end }}
+  </div>
+</div>

@@ -1,56 +1,62 @@
-# Lucerna — OSINT Research Hub
+# Lucerna — FolkUp Research Lab
 
 ## Проект
 
 - **Имя:** Lucerna (лат. "фонарь")
 - **Код бэклога:** LC
-- **Репо:** FolkUp/lucerna (private)
-- **Назначение:** единая база OSINT-исследований, методологий, инструментов
+- **Репо:** FolkUp/lucerna (private → будет public после launch)
+- **Назначение:** публичный OSINT research site — расследования, верификации, методологии
+- **URL:** https://lucerna.folkup.app
+- **Техстек:** Hugo + Blowfish theme, VPS nginx, Umami analytics
 
-## Скоуп
+## Структура
 
-- **dossiers/** — глубокие досье (персоны, организации, события)
-- **verifications/** — факт-чекинг и верификация утверждений
-- **audits/** — техаудиты (technical/), IP-аудиты (ip/), лицензионные (license/)
-- **research/** — ресёрч для энциклопедий и проектов FolkUp
-- **methodology/** — методологии OSINT (верификация, аудит, оценка источников)
-- **prompts/** — библиотека переиспользуемых промптов
-- **tools/** — скрипты и утилиты
+### Публикуемый контент (content/)
+- `investigations/` — глубокие расследования + серии (EU AI Act и др.)
+- `verifications/` — факт-чеки конкретных утверждений
+- `methodology/` — методологии OSINT (верификация, аудит, оценка источников)
+- `toolkit/` — промпты и инструменты
+- `about/` — о проекте + editorial policy
+- `legal/` — Privacy Policy, Terms, Cookie Policy
+
+### Внутренний контент (НЕ публикуется)
+- `research/` — ресёрч для энциклопедий и проектов FolkUp
+- `dossiers/` — исходные досье
+- `audits/` — техаудиты и IP-аудиты
+- `prompts/` — исходные промпты
+- `_meta/` — операционные файлы
 
 ## Правила работы
 
-### Файлы
-- Каждое исследование = отдельный Markdown файл
-- Имя файла: `{topic}-{YYYY-MM-DD}.md` (если привязано к дате) или `{topic}.md`
-- Все файлы — Markdown, UTF-8
+### Hugo build
+- `hugo --gc --minify` = 0 errors, 0 warnings (всегда перед коммитом)
+- Тема: Blowfish (git submodule)
+- Конфиг: `config/_default/` (split config формат)
 
-### Качество
+### Качество контента
 - Нейтральная позиция: факты и разные точки зрения
-- Минимум 2 источника для утверждений
-- Указывать confidence level: high / medium / low
-- Указывать источники в конце файла
+- Минимум 2 источника для verified-статей
+- Confidence level: high / medium / low в frontmatter
+- PII review перед публикацией
 
 ### Публикация
-- Публикация результатов → johndoe-channel (Telegram)
-- **Процесс публикации определяется в LC-007** (отдельная сессия)
-- До LC-007: никакой публикации из Lucerna без явного одобрения Андрея
-- Перед любой публикацией: ручной ревью на PII, чувствительные данные
+- Двойное одобрение: (1) Андрей + (2) бренд-менеджер
+- Перед публикацией: PII review, reviewed_by + review_date
 
-### Обращение с данными (PII / GDPR)
-- Минимизация данных: собирать только то, что нужно для исследования
-- Приватные данные (email, телефоны, адреса) — только если критично для исследования
-- Не публиковать PII без ревью
-- Удалять неактуальные данные при обнаружении
-- Приватный репо ≠ повод хранить всё подряд
+### OSINT Frontmatter
+- status: verified | partially_verified | unverified | draft
+- confidence: high | medium | low
+- investigation_id: INV-NNN
+- investigation_type: verification | research | dossier | audit
+- pii_reviewed: true/false
 
-### Интеграция
-- **johndoe-channel** — площадка публикации (one-way: Lucerna → Channel)
-- **Энциклопедии** — research/ содержит ресёрч для всех проектов FolkUp
-- **vault** — бэкап через vault/backup.sh
+### i18n
+- EN (default) + RU
+- Суффиксный формат: `file.md` + `file.ru.md`
 
-## Investigation Log
-
-Мастер-лог всех расследований: `_meta/investigation-log.md`
+### Лицензии
+- Код: MIT (LICENSE)
+- Контент: CC BY-SA 4.0 (LICENSE-CONTENT)
 
 ## Разрешения
 

@@ -1,0 +1,397 @@
+/* Lucerna — OSINT Research Lab custom styles */
+
+/* ============================================
+   Evidence block
+   ============================================ */
+.evidence {
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+}
+
+.evidence--confirmed {
+  border-color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.08);
+}
+
+.evidence--partial {
+  border-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.08);
+}
+
+.evidence--refuted {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.08);
+}
+
+.evidence--unverified {
+  border-color: #6b7280;
+  background-color: rgba(107, 114, 128, 0.08);
+}
+
+.evidence__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.evidence__verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.evidence--confirmed .evidence__verdict { color: #22c55e; }
+.evidence--partial .evidence__verdict { color: #f59e0b; }
+.evidence--refuted .evidence__verdict { color: #ef4444; }
+.evidence--unverified .evidence__verdict { color: #6b7280; }
+
+.evidence__icon {
+  display: inline-flex;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.evidence__claim {
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.dark .evidence__claim {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.evidence__body {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.evidence__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Verdict summary table
+   ============================================ */
+.verdict-summary {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.verdict-summary__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.verdict-summary__table th {
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 2px solid rgb(var(--color-primary-500));
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.verdict-summary__table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(var(--color-neutral-300), 0.3);
+}
+
+.verdict-status {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.verdict-status--confirmed {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.verdict-status--partial {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.verdict-status--refuted {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.verdict-status--unverified {
+  background-color: rgba(107, 114, 128, 0.15);
+  color: #6b7280;
+}
+
+/* ============================================
+   Source card
+   ============================================ */
+.source-card {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  border: 1px solid rgba(var(--color-neutral-300), 0.3);
+  border-left: 3px solid;
+}
+
+.source-card--tier1 { border-left-color: #22c55e; }
+.source-card--tier2 { border-left-color: #3b82f6; }
+.source-card--tier3 { border-left-color: #6b7280; }
+
+.source-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.375rem;
+}
+
+.source-card__tier {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.source-card--tier1 .source-card__tier { color: #22c55e; }
+.source-card--tier2 .source-card__tier { color: #3b82f6; }
+.source-card--tier3 .source-card__tier { color: #6b7280; }
+
+.source-card__type {
+  font-size: 0.6875rem;
+  padding: 0.0625rem 0.375rem;
+  border-radius: 0.25rem;
+  background-color: rgba(var(--color-neutral-300), 0.2);
+  text-transform: uppercase;
+}
+
+.source-card__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.375rem 0.75rem;
+}
+
+.source-card__name {
+  font-weight: 600;
+}
+
+.source-card__author,
+.source-card__date {
+  font-size: 0.8125rem;
+  color: rgb(var(--color-neutral-400));
+}
+
+/* ============================================
+   Methodology box
+   ============================================ */
+.methodology-box {
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(var(--color-primary-400), 0.3);
+  background-color: rgba(var(--color-primary-100), 0.05);
+}
+
+.methodology-box__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.methodology-box__icon {
+  display: inline-flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: rgb(var(--color-primary-500));
+}
+
+.methodology-box__title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: rgb(var(--color-primary-500));
+}
+
+.methodology-box__link {
+  margin-left: auto;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.methodology-box__body {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.methodology-box__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Confidence badge (inline)
+   ============================================ */
+.confidence-badge {
+  display: inline-block;
+  padding: 0.0625rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+}
+
+.confidence-badge--high {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.confidence-badge--medium {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.confidence-badge--low {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+/* ============================================
+   Investigation meta card
+   ============================================ */
+.investigation-meta {
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  background-color: rgba(var(--color-neutral-200), 0.1);
+  border: 1px solid rgba(var(--color-neutral-300), 0.2);
+}
+
+.investigation-meta__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.75rem;
+}
+
+.investigation-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.investigation-meta__label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgb(var(--color-neutral-400));
+}
+
+.investigation-meta__value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.investigation-meta__status--verified { color: #22c55e; }
+.investigation-meta__status--partially_verified { color: #f59e0b; }
+.investigation-meta__status--unverified { color: #6b7280; }
+.investigation-meta__status--draft { color: #6b7280; font-style: italic; }
+
+/* ============================================
+   Disclaimer block
+   ============================================ */
+.disclaimer {
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  font-size: 0.875rem;
+}
+
+.disclaimer--legal {
+  border-color: #6b7280;
+  background-color: rgba(107, 114, 128, 0.08);
+}
+
+.disclaimer--osint-ethics {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.08);
+}
+
+.disclaimer--pii {
+  border-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.08);
+}
+
+.disclaimer__header {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer__icon {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+}
+
+.disclaimer--legal .disclaimer__icon { color: #6b7280; }
+.disclaimer--osint-ethics .disclaimer__icon { color: #3b82f6; }
+.disclaimer--pii .disclaimer__icon { color: #f59e0b; }
+
+.disclaimer__title {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.disclaimer--legal .disclaimer__title { color: #6b7280; }
+.disclaimer--osint-ethics .disclaimer__title { color: #3b82f6; }
+.disclaimer--pii .disclaimer__title { color: #f59e0b; }
+
+.disclaimer__body {
+  line-height: 1.5;
+}
+
+.disclaimer__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Ko-fi CTA
+   ============================================ */
+.ko-fi-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(var(--color-primary-600));
+  color: rgb(var(--color-neutral-100));
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.ko-fi-cta:hover {
+  background-color: rgb(var(--color-primary-500));
+}

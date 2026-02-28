@@ -1,0 +1,17 @@
+goldmark:
+  renderer:
+    unsafe: true
+  extensions:
+    extras:
+      mark:
+        enable: true
+      superscript:
+        enable: true
+      subscript:
+        enable: true
+  parser:
+    attribute:
+      block: true
+highlight:
+  lineNumbersInTable: false
+  noClasses: false

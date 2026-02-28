@@ -1,0 +1,9 @@
+---
+title: "{{ replace .File.ContentBaseName "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+status: draft
+confidence: low
+tags: []
+categories: []
+---

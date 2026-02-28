@@ -1,0 +1,35 @@
+{{/* verdict-summary shortcode — summary table for verification articles
+     Usage: {{< verdict-summary >}}
+     Renders from page frontmatter params: claims (list of {claim, status, accuracy})
+*/}}
+{{ $claims := .Page.Params.claims }}
+
+{{ if $claims }}
+<div class="verdict-summary">
+  <table class="verdict-summary__table">
+    <thead>
+      <tr>
+        <th>{{ i18n "verdictClaim" | default "Claim" }}</th>
+        <th>{{ i18n "verdictStatus" | default "Status" }}</th>
+        <th>{{ i18n "verdictAccuracy" | default "Accuracy" }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $claims }}
+      <tr>
+        <td>{{ .claim }}</td>
+        <td>
+          {{ $statusClass := "" }}
+          {{ if eq .status "confirmed" }}{{ $statusClass = "verdict-status--confirmed" }}
+          {{ else if eq .status "partial" }}{{ $statusClass = "verdict-status--partial" }}
+          {{ else if eq .status "refuted" }}{{ $statusClass = "verdict-status--refuted" }}
+          {{ else }}{{ $statusClass = "verdict-status--unverified" }}{{ end }}
+          <span class="verdict-status {{ $statusClass }}">{{ .status }}</span>
+        </td>
+        <td>{{ .accuracy }}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+{{ end }}

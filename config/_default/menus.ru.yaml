@@ -1,0 +1,32 @@
+main:
+  - name: Расследования
+    pageRef: investigations
+    weight: 10
+  - name: Верификации
+    pageRef: verifications
+    weight: 20
+  - name: Методология
+    pageRef: methodology
+    weight: 30
+  - name: Инструменты
+    pageRef: toolkit
+    weight: 40
+  - name: О проекте
+    pageRef: about
+    weight: 50
+
+footer:
+  - name: Политика конфиденциальности
+    pageRef: legal/privacy
+    weight: 10
+  - name: Условия использования
+    pageRef: legal/terms
+    weight: 20
+  - name: Редакционная политика
+    pageRef: about/editorial-policy
+    weight: 30
+  - name: Ko-fi
+    url: "https://ko-fi.com/folkup"
+    weight: 40
+    params:
+      external: true

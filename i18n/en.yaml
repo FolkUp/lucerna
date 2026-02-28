@@ -1,0 +1,41 @@
+# Evidence shortcode
+evidenceConfirmed: "Confirmed"
+evidencePartial: "Partially Confirmed"
+evidenceRefuted: "Refuted"
+evidenceUnverified: "Unverified"
+
+# Verdict summary
+verdictClaim: "Claim"
+verdictStatus: "Status"
+verdictAccuracy: "Accuracy"
+
+# Source card
+sourceTier1: "Tier 1 — Primary"
+sourceTier2: "Tier 2 — Secondary"
+sourceTier3: "Tier 3 — Tertiary"
+
+# Methodology box
+methodologyTitle: "Methodology"
+methodologyReadMore: "Read full methodology"
+
+# Confidence badge
+confidenceHigh: "HIGH"
+confidenceMedium: "MEDIUM"
+confidenceLow: "LOW"
+
+# Investigation meta
+metaId: "ID"
+metaType: "Type"
+metaStatus: "Status"
+metaConfidence: "Confidence"
+metaSources: "Sources"
+metaReviewedBy: "Reviewed by"
+metaReviewDate: "Review date"
+
+# Disclaimers
+disclaimerLegalTitle: "Legal Disclaimer"
+disclaimerLegalText: "This content is provided for informational purposes only and does not constitute legal advice. Always consult a qualified professional for specific legal questions."
+disclaimerOsintTitle: "Research Ethics"
+disclaimerOsintText: "This investigation uses only publicly available information (open-source intelligence). No private systems were accessed. All methods are disclosed in the methodology section."
+disclaimerPiiTitle: "Personal Data Notice"
+disclaimerPiiText: "This article references publicly available information about public figures acting in their professional capacity. If you believe your personal data has been included in error, please contact us."

@@ -1,0 +1,41 @@
+# Evidence shortcode
+evidenceConfirmed: "Подтверждено"
+evidencePartial: "Частично подтверждено"
+evidenceRefuted: "Опровергнуто"
+evidenceUnverified: "Не верифицировано"
+
+# Verdict summary
+verdictClaim: "Утверждение"
+verdictStatus: "Статус"
+verdictAccuracy: "Точность"
+
+# Source card
+sourceTier1: "Уровень 1 — Первичный"
+sourceTier2: "Уровень 2 — Вторичный"
+sourceTier3: "Уровень 3 — Третичный"
+
+# Methodology box
+methodologyTitle: "Методология"
+methodologyReadMore: "Полная методология"
+
+# Confidence badge
+confidenceHigh: "ВЫСОКАЯ"
+confidenceMedium: "СРЕДНЯЯ"
+confidenceLow: "НИЗКАЯ"
+
+# Investigation meta
+metaId: "ID"
+metaType: "Тип"
+metaStatus: "Статус"
+metaConfidence: "Достоверность"
+metaSources: "Источники"
+metaReviewedBy: "Проверено"
+metaReviewDate: "Дата проверки"
+
+# Disclaimers
+disclaimerLegalTitle: "Юридический дисклеймер"
+disclaimerLegalText: "Этот контент предоставлен исключительно в информационных целях и не является юридической консультацией. По конкретным правовым вопросам обращайтесь к квалифицированному специалисту."
+disclaimerOsintTitle: "Этика исследования"
+disclaimerOsintText: "Данное расследование использует исключительно общедоступную информацию (OSINT). Доступ к закрытым системам не осуществлялся. Все методы раскрыты в разделе методологии."
+disclaimerPiiTitle: "Уведомление о персональных данных"
+disclaimerPiiText: "В данной статье упоминается общедоступная информация о публичных лицах, действующих в профессиональном качестве. Если вы считаете, что ваши персональные данные были включены по ошибке, свяжитесь с нами."

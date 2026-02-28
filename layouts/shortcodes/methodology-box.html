@@ -1,0 +1,22 @@
+{{/* methodology-box shortcode — block describing research methodology
+     Usage: {{< methodology-box title="..." >}} ... {{< /methodology-box >}}
+     Optional: ref="fact-verification" (link to methodology page)
+*/}}
+{{ $title := .Get "title" | default (i18n "methodologyTitle" | default "Methodology") }}
+{{ $ref := .Get "ref" }}
+
+<div class="methodology-box">
+  <div class="methodology-box__header">
+    <span class="methodology-box__icon">{{ partial "icon.html" "search" }}</span>
+    <span class="methodology-box__title">{{ $title }}</span>
+    {{ with $ref }}
+      {{ $targetPage := $.Page.GetPage (printf "/methodology/%s" .) }}
+      {{ with $targetPage }}
+        <a href="{{ .RelPermalink }}" class="methodology-box__link">{{ i18n "methodologyReadMore" | default "Read full methodology" }} &rarr;</a>
+      {{ end }}
+    {{ end }}
+  </div>
+  <div class="methodology-box__body">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

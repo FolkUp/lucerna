@@ -1,36 +1,50 @@
 # Lucerna
 
-**OSINT Research Hub** — centralized repository for open-source intelligence research, fact verification, technical audits, and investigation methodologies.
+[![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/Content-CC%20BY--SA%204.0-lightgrey.svg)](LICENSE-CONTENT)
 
-## Structure
+**FolkUp Research Lab** — open OSINT investigations, fact-checks, and methodological guides.
+
+## Live Site
+
+[lucerna.folkup.app](https://lucerna.folkup.app)
+
+## Tech Stack
+
+- **Hugo** (SSG) + **Blowfish** theme
+- Hosted on VPS with nginx
+- Analytics: Umami (self-hosted)
+- Languages: English, Russian
+
+## Content Structure
+
+| Section | Purpose |
+|---------|---------|
+| `investigations/` | Deep-dive OSINT investigations and series |
+| `verifications/` | Fact-checks of specific claims |
+| `methodology/` | Research and verification methodologies |
+| `toolkit/` | Reusable prompts and audit frameworks |
+
+## Internal (not published)
 
 | Directory | Purpose |
 |-----------|---------|
-| `dossiers/` | Deep investigations on people, organizations, events |
-| `verifications/` | Fact-checking and claim verification |
-| `audits/technical/` | Technical audits of websites and products |
-| `audits/ip/` | Intellectual property audits |
-| `audits/license/` | License compliance audits (index) |
-| `research/` | Research materials organized by project |
-| `methodology/` | OSINT methodologies and frameworks |
-| `prompts/` | Reusable prompt templates |
-| `tools/` | Scripts and utilities |
+| `research/` | Internal research for other FolkUp projects |
+| `dossiers/` | Source material for investigations |
+| `audits/` | Technical and IP audits |
+| `prompts/` | Source prompt templates |
 
-## Methodologies
+## Development
 
-- **Fact Verification** — structured process for verifying claims with multi-agent parallel analysis
-- **Technical Audit** — comprehensive website/product audit checklist with cost estimation
-- **Source Evaluation** — CRAAP test and tiered source classification
-
-## Navigation
-
-- Investigation master log: [`_meta/investigation-log.md`](_meta/investigation-log.md)
-- Project roadmap: [`docs/ROADMAP.md`](docs/ROADMAP.md)
+```bash
+hugo server -D
+```
 
 ## License
 
-MIT — see [LICENSE](LICENSE) for details.
+- **Code:** MIT — see [LICENSE](LICENSE)
+- **Content:** CC BY-SA 4.0 — see [LICENSE-CONTENT](LICENSE-CONTENT)
 
 ---
 
-© 2026 FolkUp
+FolkUp

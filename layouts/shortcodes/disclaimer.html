@@ -1,0 +1,35 @@
+{{/* disclaimer shortcode — legal/ethical disclaimer block
+     Usage: {{< disclaimer type="legal|osint-ethics|pii" >}}
+     Optional: text="Custom disclaimer text"
+*/}}
+{{ $type := .Get "type" | default (.Get 0) | default "legal" }}
+{{ $customText := .Get "text" }}
+
+{{ $icon := "alert-triangle" }}
+{{ $title := "" }}
+{{ $body := "" }}
+
+{{ if eq $type "legal" }}
+  {{ $title = i18n "disclaimerLegalTitle" | default "Legal Disclaimer" }}
+  {{ $body = i18n "disclaimerLegalText" | default "This content is provided for informational purposes only and does not constitute legal advice. Always consult a qualified professional for specific legal questions." }}
+{{ else if eq $type "osint-ethics" }}
+  {{ $title = i18n "disclaimerOsintTitle" | default "Research Ethics" }}
+  {{ $body = i18n "disclaimerOsintText" | default "This investigation uses only publicly available information (open-source intelligence). No private systems were accessed. All methods are disclosed in the methodology section." }}
+{{ else if eq $type "pii" }}
+  {{ $title = i18n "disclaimerPiiTitle" | default "Personal Data Notice" }}
+  {{ $body = i18n "disclaimerPiiText" | default "This article references publicly available information about public figures acting in their professional capacity. If you believe your personal data has been included in error, please contact us." }}
+{{ end }}
+
+{{ with $customText }}
+  {{ $body = . }}
+{{ end }}
+
+<div class="disclaimer disclaimer--{{ $type }}">
+  <div class="disclaimer__header">
+    <span class="disclaimer__icon">{{ partial "icon.html" $icon }}</span>
+    <span class="disclaimer__title">{{ $title }}</span>
+  </div>
+  <div class="disclaimer__body">
+    {{ $body | markdownify }}
+  </div>
+</div>

@@ -1,0 +1,41 @@
+{{/* evidence shortcode — block showing a claim with verification verdict
+     Usage: {{< evidence claim="..." verdict="confirmed|partial|refuted" >}} ... {{< /evidence >}}
+*/}}
+{{ $verdict := .Get "verdict" | default "unverified" }}
+{{ $claim := .Get "claim" }}
+
+{{ $colorClass := "" }}
+{{ $icon := "" }}
+{{ $label := "" }}
+{{ if eq $verdict "confirmed" }}
+  {{ $colorClass = "evidence--confirmed" }}
+  {{ $icon = "check-circle" }}
+  {{ $label = i18n "evidenceConfirmed" | default "Confirmed" }}
+{{ else if eq $verdict "partial" }}
+  {{ $colorClass = "evidence--partial" }}
+  {{ $icon = "alert-triangle" }}
+  {{ $label = i18n "evidencePartial" | default "Partially Confirmed" }}
+{{ else if eq $verdict "refuted" }}
+  {{ $colorClass = "evidence--refuted" }}
+  {{ $icon = "x-circle" }}
+  {{ $label = i18n "evidenceRefuted" | default "Refuted" }}
+{{ else }}
+  {{ $colorClass = "evidence--unverified" }}
+  {{ $icon = "help-circle" }}
+  {{ $label = i18n "evidenceUnverified" | default "Unverified" }}
+{{ end }}
+
+<div class="evidence {{ $colorClass }}">
+  <div class="evidence__header">
+    <span class="evidence__verdict">
+      <span class="evidence__icon">{{ partial "icon.html" $icon }}</span>
+      {{ $label }}
+    </span>
+  </div>
+  {{ with $claim }}
+  <div class="evidence__claim">{{ . | markdownify }}</div>
+  {{ end }}
+  <div class="evidence__body">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

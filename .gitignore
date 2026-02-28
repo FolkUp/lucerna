@@ -23,6 +23,11 @@ Desktop.ini
 *.swo
 *~
 
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
 # Temp
 *.tmp
 *.bak

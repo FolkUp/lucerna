@@ -1,0 +1,24 @@
+disabled: false
+languageCode: en
+languageName: English
+weight: 1
+title: "Lucerna — FolkUp Research Lab"
+
+params:
+  displayName: EN
+  isoCode: en
+  dateFormat: "2 January 2006"
+  description: "Open research notes from FolkUp investigations. Methodology-driven, transparency-first."
+  copyright: >-
+    Code [MIT](https://opensource.org/licenses/MIT) |
+    Content [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+  author:
+    name: "FolkUp Research"
+    image: "img/logo.png"
+    headline: "Open investigations, transparent methodology"
+    bio: "Independent OSINT research lab by FolkUp. We verify claims, investigate origins, and audit compliance."
+    links:
+      - github: "https://github.com/FolkUp"
+      - ko-fi: "https://ko-fi.com/folkup"
+      - telegram: "https://t.me/johndoe_was_here"

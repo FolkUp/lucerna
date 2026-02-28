@@ -1,0 +1,24 @@
+disabled: false
+languageCode: ru
+languageName: "Русский"
+weight: 2
+title: "Lucerna — Исследовательская лаборатория FolkUp"
+
+params:
+  displayName: RU
+  isoCode: ru
+  dateFormat: "2 January 2006"
+  description: "Открытые исследовательские заметки FolkUp. Методология и прозрачность."
+  copyright: >-
+    Код [MIT](https://opensource.org/licenses/MIT) |
+    Контент [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+  author:
+    name: "FolkUp Research"
+    image: "img/logo.png"
+    headline: "Открытые расследования, прозрачная методология"
+    bio: "Независимая OSINT-лаборатория FolkUp. Верификация фактов, расследования, аудит."
+    links:
+      - github: "https://github.com/FolkUp"
+      - ko-fi: "https://ko-fi.com/folkup"
+      - telegram: "https://t.me/johndoe_was_here"
