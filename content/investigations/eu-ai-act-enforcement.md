@@ -315,7 +315,7 @@ Overwhelming majority of large fines (tens/hundreds of millions) imposed on:
    - CNPD — one of least-funded DPAs in EU
    - ANACOM — only beginning to build AI competencies
    - Priorities: large violators with mass citizen impact
-6. **Deployer position:** using commercial AI services (Claude, GPT) for content generation — deployer role, not provider. Main compliance burden — on model providers
+6. **Deployer position:** using commercial AI services for content generation — deployer role, not provider. Main compliance burden — on model providers
 
 **Factors INCREASING risk:**
 

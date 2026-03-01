@@ -55,7 +55,7 @@ Directive (EU) 2019/790 of April 17, 2019 on copyright and related rights in the
 - Exception is mandatory — rights holders **cannot** opt out
 - Only for scientific purposes
 
-**Relevance for content creators:** Article 3 **not directly applicable**, as individual publishers are not research organizations or cultural heritage institutions. However, it applies to AI providers (Anthropic, OpenAI) who may use research partnerships.
+**Relevance for content creators:** Article 3 **not directly applicable**, as individual publishers are not research organizations or cultural heritage institutions. However, it applies to AI providers who may use research partnerships.
 
 ### 1.3 Article 4 — TDM for Any Purpose
 
@@ -80,7 +80,7 @@ Articles 3 and 4 regulate **training** of AI models, not **use** of already trai
 - **EU AI Act (2024/1689):** Article 53 explicitly references Article 4 of DSM Directive in context of training general-purpose AI models (GPAI), confirming TDM exception applicable to AI training.
 - **Munich Court decision in GEMA v. OpenAI (November 2025):** Court distinguished reproduction for data analysis (covered by TDM) and "memorization" in model (not covered).
 
-**For AI tool users (i.e., publisher using Claude):** TDM questions primarily concern **providers** of AI (Anthropic). Publisher using Claude for writing texts is on **output side** — here different legal norms apply (authorship, originality, potential third-party rights infringement).
+**For AI tool users (i.e., publisher using AI tools):** TDM questions primarily concern **providers** of AI. Publisher using AI tools for writing texts is on **output side** — here different legal norms apply (authorship, originality, potential third-party rights infringement).
 
 ### 1.5 Transposition in Portugal
 
@@ -263,7 +263,7 @@ Reproduction risk exists when:
 
 Under EU and Portuguese law, liability may fall on:
 
-1. **AI provider** (Anthropic/OpenAI) — for training model on protected content and for "memorization"
+1. **AI provider** — for training model on protected content and for "memorization"
 2. **AI user** (publisher) — for **publishing** content infringing third-party rights
 
 **Articles 195-199 CDADC** qualify unauthorized use of work as:
@@ -370,7 +370,7 @@ Safe harbor for **hosting providers**: liability exemption if provider:
 - **Recommendation:** Position content as "AI-assisted, human-edited" (which corresponds to actual process)
 
 **Verify AI content doesn't infringe others' copyright:**
-- Claude doesn't quote verbatim protected texts (Anthropic Usage Policy)
+- Commercial AI tools generally don't quote verbatim protected texts (per their usage policies)
 - But control output data for matches with existing texts
 - Especially for: scientific descriptions, rules, card interpretations
 

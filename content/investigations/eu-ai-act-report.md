@@ -41,7 +41,7 @@ The primary obligation is **Article 50 transparency** — but it comes with a cr
 
 ### Key Takeaways
 
-1. **You're a deployer, not a provider.** Small publishers using commercial AI tools (ChatGPT, Claude, etc.) are classified as "deployers" under the AI Act — with significantly lighter obligations than providers.
+1. **You're a deployer, not a provider.** Small publishers using commercial AI tools are classified as "deployers" under the AI Act — with significantly lighter obligations than providers.
 
 2. **Art. 50(4) is your main obligation.** If you publish AI-generated text that informs the public, you must either: (a) disclose that it's AI-generated, or (b) have editorial review + editorial responsibility — which exempts you from disclosure.
 

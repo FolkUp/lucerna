@@ -27,7 +27,7 @@ summary: "Comprehensive compliance checklist for small digital publishers using 
 
 ## Executive Summary
 
-This checklist provides actionable guidance for small digital publishers using AI tools (Claude, ChatGPT, etc.) for content creation. Focus areas:
+This checklist provides actionable guidance for small digital publishers using AI tools for content creation. Focus areas:
 
 - **Immediate actions** (before next deployment)
 - **Short-term tasks** (3 months)
@@ -67,7 +67,7 @@ This checklist provides actionable guidance for small digital publishers using A
   - Right to complaint with CNPD (Portugal) or local DPA
 - [ ] Specify data retention periods
 - [ ] Specify international data transfers (if applicable):
-  - AI API (Anthropic, OpenAI) → US (if PII in prompts)
+  - AI API (US-based providers) → US (if PII in prompts)
   - Donation platform → UK/US
 - [ ] Provide contact for data protection questions
 - [ ] Date of last update prominently displayed
@@ -223,7 +223,7 @@ This checklist provides actionable guidance for small digital publishers using A
   - **Recommendation:** Position content as "AI-assisted, human-edited"
 
 - [ ] **Verify AI content doesn't infringe others' copyright:**
-  - AI providers (Claude, GPT) don't quote verbatim protected texts (Usage Policies)
+  - AI providers generally don't quote verbatim protected texts (per their usage policies)
   - But monitor output for matches with existing texts
   - Especially for: scientific descriptions, rules explanations, interpretations
 

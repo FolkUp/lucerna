@@ -96,7 +96,7 @@ In context of using AI APIs:
 | Participant | GDPR Role | Basis |
 |-------------|-----------|-------|
 | Developer/Publisher | **Controller** (Article 4(7)) | Determines purposes and means of processing |
-| AI Provider (Anthropic, OpenAI, etc.) | **Processor** (Article 4(8)) | Processes data per controller's instructions |
+| AI Provider | **Processor** (Article 4(8)) | Processes data per controller's instructions |
 | AI Provider's Subprocessors (AWS, etc.) | **Subprocessors** | Processing in chain |
 
 **Controller Obligations:**
@@ -121,7 +121,7 @@ On November 19, 2025, European Commission published **Digital Omnibus** package,
 
 Transfer of personal data to third countries (outside EEA) regulated by **GDPR Chapter V (Articles 44-49)**.
 
-Using AI APIs from US companies (Anthropic, OpenAI) constitutes cross-border data transfer.
+Using AI APIs from US-based providers constitutes cross-border data transfer.
 
 ### 2.2 Transfer Mechanisms
 

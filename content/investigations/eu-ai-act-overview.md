@@ -56,7 +56,7 @@ The EU AI Act establishes four risk levels:
 
 > *"AI system" means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.*
 
-**Key distinction:** Using AI tools (like Claude, ChatGPT) through APIs makes you a **deployer**, not a provider. The AI model developer (Anthropic, OpenAI) is the **provider**.
+**Key distinction:** Using AI tools through APIs makes you a **deployer**, not a provider. The AI model developer is the **provider**.
 
 ---
 
@@ -128,19 +128,19 @@ The Regulation does not explicitly define "voluntary donations" in the monetizat
 
 ### 3.2 Classification for Content Creators
 
-#### Scenario: Using Claude API for content generation
+#### Scenario: Using AI API for content generation
 
 ```
-Anthropic → Provider (GPAI model Claude)
+AI model developer → Provider (GPAI model)
     ↓
-Content Creator → Deployer (uses Claude under their control)
+Content Creator → Deployer (uses AI tool under their control)
     ↓
 Website Users → End users (not regulated)
 ```
 
 **Content Creator = Deployer** because:
-- Does **not develop** the AI system — uses existing (Claude)
-- Does **not place** Claude on the market — model belongs to Anthropic
+- Does **not develop** the AI system — uses existing commercial AI tool
+- Does **not place** the AI tool on the market — model belongs to the provider
 - Uses AI system **under their authority**
 - Use is **professional** (not personal non-professional)
 
@@ -232,7 +232,7 @@ Draft Code of Practice on labeling and disclosure of AI content:
    - Social scoring, manipulative systems, biometric identification in public spaces (with exceptions)
 
 3. **Chapter V — GPAI (since August 2, 2025):**
-   - Obligations for **providers** of GPAI models (Anthropic, OpenAI, etc.)
+   - Obligations for **providers** of GPAI models
    - For deployers/downstream users — indirect impact
 
 ### 5.3 Digital Omnibus Proposal (November 19, 2025)
@@ -256,8 +256,8 @@ Chapter V (Articles 51–56) regulates **providers** of GPAI models, not their u
 
 **Key distinction:**
 ```
-GPAI model (Claude, GPT, Llama, etc.)
-    → Provider = Anthropic, OpenAI, Meta
+GPAI model (commercial or open-source)
+    → Provider = model developer
     → Downstream provider = integrates model into their AI system
     → Deployer = uses AI system
 ```
