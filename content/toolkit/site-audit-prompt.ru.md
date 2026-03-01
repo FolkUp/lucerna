@@ -1,0 +1,95 @@
+---
+title: "Промпт для технического аудита сайта"
+date: 2026-02-25
+status: verified
+confidence: high
+tags: [toolkit, prompt, audit, web, technical, seo, security]
+categories: [toolkit]
+reviewed_by: "FolkUp Editorial"
+review_date: 2026-03-01
+pii_reviewed: true
+---
+
+## Использование
+Используйте этот промпт для проведения комплексного технического аудита любого веб-сайта или веб-приложения.
+
+> **Примечание:** промпт ниже на английском языке — это рабочий язык большинства AI-моделей.
+
+## Промпт
+
+```
+You are conducting a professional technical audit of [URL].
+
+Analyze the following areas and provide a structured report:
+
+## 1. First Impression (30-second test)
+- Load time perception
+- Purpose clarity
+- Navigation intuitiveness
+- Mobile responsiveness
+- Visual bugs
+
+## 2. Technology Stack
+- Frontend framework/library
+- CSS approach
+- JavaScript strategy
+- Image optimization
+- Backend indicators (headers, APIs)
+- Third-party services (analytics, CDN, payments)
+
+## 3. SEO Analysis
+- Meta tags (title, description, OG)
+- Structured data
+- Sitemap and robots.txt
+- Mobile-friendliness
+- Core Web Vitals indicators
+
+## 4. Security
+- HTTPS configuration
+- Security headers (CSP, HSTS, X-Frame-Options)
+- Cookie flags
+- Visible vulnerabilities
+
+## 5. UX/UI Assessment
+- Value proposition clarity
+- Navigation consistency
+- Accessibility (WCAG 2.1 AA)
+- Responsive design
+- Forms and error handling
+- Loading states
+
+## 6. Performance
+- Estimated Lighthouse scores
+- TTFB and loading metrics
+- Asset optimization
+- Caching strategy
+
+## 7. Business & Monetization
+- Revenue model
+- Conversion funnel
+- CTA effectiveness
+- Competitor positioning
+
+## 8. Issues Found
+Classify each issue as Critical / Serious / Cosmetic.
+Provide specific recommendations for each.
+
+## 9. Cost Estimate
+- Option A: Fix existing (hours × rate range)
+- Option B: Rebuild (component breakdown)
+- ROI justification
+
+## Scoring
+Rate each category 1-10 and provide an overall score.
+
+Format as a structured markdown report suitable for client presentation.
+Do not include any information about tools used for the analysis.
+```
+
+## Переменные
+- `[URL]` — URL целевого веб-сайта
+
+## Примечания
+- Основан на методологии: `methodology/technical-audit`
+- Адаптируйте глубину анализа в зависимости от сложности сайта
+- Для клиентских отчётов: уберите внутренние заметки, добавьте краткое резюме

@@ -13,3 +13,4 @@ cascade:
 
 - [Privacy Policy]({{< ref "/legal/privacy-policy" >}}) — how we handle your data
 - [Terms of Use]({{< ref "/legal/terms" >}}) — conditions for using this website
+- [Cookie Policy]({{< ref "/legal/cookie-policy" >}}) — our cookie-free declaration
