@@ -1,8 +1,13 @@
 ---
 title: "Deep Dossier Prompt"
 date: 2026-02-25
+status: verified
+confidence: high
 tags: [toolkit, prompt, investigation, osint, multi-agent]
 categories: [toolkit]
+reviewed_by: "FolkUp Editorial"
+review_date: 2026-02-28
+pii_reviewed: true
 ---
 
 ## Usage

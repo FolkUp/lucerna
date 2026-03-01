@@ -17,11 +17,14 @@ main:
 
 footer:
   - name: Политика конфиденциальности
-    pageRef: legal/privacy
+    pageRef: legal/privacy-policy
     weight: 10
   - name: Условия использования
     pageRef: legal/terms
     weight: 20
+  - name: Политика cookies
+    pageRef: legal/cookie-policy
+    weight: 25
   - name: Редакционная политика
     pageRef: about/editorial-policy
     weight: 30

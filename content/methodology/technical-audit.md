@@ -7,6 +7,7 @@ tags: [methodology, technical-audit, ux, security, performance, seo, web-develop
 categories: [methodology]
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
+pii_reviewed: true
 ---
 
 ## Overview

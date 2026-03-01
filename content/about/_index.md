@@ -24,36 +24,7 @@ Lucerna is a project by [FolkUp](https://folkup.app) — an independent research
 
 ## Editorial Policy
 
-### Editorial Responsibility
-
-The responsible editor for all content published on Lucerna is the **FolkUp Editorial Board**. We take full editorial responsibility for every article published on this platform.
-
-### Editorial Workflow
-
-Every article on Lucerna undergoes the following process:
-
-1. **Research** — topic investigation using multiple sources, cross-referenced for accuracy
-2. **Writing** — content drafted with full source attribution
-3. **Verification** — claims checked against primary and secondary sources using our [fact verification methodology]({{< ref "/methodology/fact-verification" >}})
-4. **Review** — editorial review by a named reviewer (recorded in article metadata as `reviewed_by`)
-5. **Publication** — approved content published with status, confidence level, and source count
-
-### Quality Indicators
-
-Each article displays:
-- **Status** — verified, partially verified, unverified, or draft
-- **Confidence** — high, medium, or low
-- **Sources count** — number of sources consulted
-- **Reviewer** — who reviewed and approved the article
-- **Review date** — when the editorial review was completed
-
-### Corrections
-
-If you find errors in our content, please contact us at **editorial@folkup.app**. We are committed to correcting inaccuracies promptly and transparently.
-
-### Independence
-
-Lucerna operates independently. Our research is not sponsored, commissioned, or influenced by any external party. Investigations are conducted in the public interest.
+For details on our editorial workflow, quality indicators, and corrections process, see our [Editorial Policy](/about/editorial-policy/).
 
 ## Support
 

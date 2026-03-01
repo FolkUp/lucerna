@@ -1,7 +1,6 @@
-# Session files
-.claude/SESSION_CONTEXT.md
-.claude/settings.local.json
-.claude/PLAN.md
+# Claude Code (private, never publish)
+.claude/
+CLAUDE.md
 CLAUDE.local.md
 
 # Secrets

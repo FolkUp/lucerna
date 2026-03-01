@@ -1,8 +1,13 @@
 ---
 title: "IP / Copyright Researcher Prompt"
 date: 2026-02-25
+status: verified
+confidence: high
 tags: [toolkit, prompt, ip, copyright, licensing, legal]
 categories: [toolkit]
+reviewed_by: "FolkUp Editorial"
+review_date: 2026-02-28
+pii_reviewed: true
 ---
 
 ## Usage

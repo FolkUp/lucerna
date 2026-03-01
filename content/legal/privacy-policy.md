@@ -17,12 +17,14 @@ This website is operated by **FolkUp** — an independent research collective ba
 
 ### 2.1 Analytics (Self-Hosted)
 
-We use **Umami**, a privacy-focused, self-hosted analytics platform. Umami:
+We plan to use **Umami**, a privacy-focused, self-hosted analytics platform. When activated, Umami:
 - Does **not** use cookies
 - Does **not** collect personally identifiable information (PII)
 - Does **not** track users across websites
 - Collects only: page URL, referrer, browser type, operating system, device type, country (from IP, not stored)
 - All data is **aggregated and anonymous**
+
+**Current status:** Analytics are not yet active. This section will be updated when analytics are enabled.
 
 ### 2.2 Server Logs
 
@@ -40,17 +42,27 @@ Server logs are retained for a maximum of **30 days** and are used exclusively f
 - We do not use third-party tracking scripts
 - We do not collect email addresses (unless you contact us directly)
 
-## 3. Legal Basis for Processing
+## 3. Data Protection Officer
+
+We have not appointed a Data Protection Officer (DPO) as we do not meet the threshold under Article 37 GDPR (we do not engage in large-scale processing of personal data or special categories of data).
+
+For data protection inquiries, contact: **privacy@folkup.app**
+
+## 4. Legal Basis for Processing
 
 Under **Article 6 of the GDPR**, we process data based on:
-- **Legitimate interest** (Art. 6(1)(f)) — for anonymous analytics and security monitoring
+- **Legitimate interest** (Art. 6(1)(f)) — for anonymous analytics and security monitoring. We have conducted a balancing test and determined that our minimal, anonymous data collection does not override the rights and freedoms of data subjects, given that no PII is collected or stored.
 - **Consent** — if you voluntarily contact us via email
 
-## 4. Cookies
+## 5. Automated Decision-Making
+
+We do **not** engage in automated decision-making or profiling as defined in Article 22 GDPR. No decisions affecting you are made solely by automated means.
+
+## 6. Cookies
 
 This website does **not use cookies**. Our analytics solution (Umami) is cookie-free.
 
-## 5. Third-Party Services
+## 7. Third-Party Services
 
 ### 5.1 Ko-fi (Donations)
 
@@ -60,13 +72,13 @@ If you choose to support us via [Ko-fi](https://ko-fi.com/folkup), your data is 
 
 Our source code is hosted on [GitHub](https://github.com/FolkUp). If you interact with our repositories, GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) applies.
 
-## 6. International Data Transfers
+## 8. International Data Transfers
 
 Our server is located in the **European Union**. We do not transfer personal data outside the EU/EEA, except:
 - When you voluntarily use third-party services (Ko-fi, GitHub) that may process data in other jurisdictions
 - These services operate under Standard Contractual Clauses (SCCs) or equivalent safeguards
 
-## 7. Data Retention
+## 9. Data Retention
 
 | Data Type | Retention Period |
 |-----------|-----------------|
@@ -74,7 +86,7 @@ Our server is located in the **European Union**. We do not transfer personal dat
 | Server logs | Maximum 30 days |
 | Email correspondence | Until purpose fulfilled, then deleted |
 
-## 8. Your Rights
+## 10. Your Rights
 
 Under the **GDPR** (Articles 15–22), you have the right to:
 - **Access** your personal data
@@ -87,7 +99,7 @@ Under the **GDPR** (Articles 15–22), you have the right to:
 
 To exercise these rights, contact us at: **privacy@folkup.app**
 
-## 9. Right to Complaint
+## 11. Right to Complaint
 
 You have the right to lodge a complaint with a supervisory authority. For Portugal:
 
@@ -96,7 +108,7 @@ You have the right to lodge a complaint with a supervisory authority. For Portug
 - Email: geral@cnpd.pt
 - Address: Av. D. Carlos I, 134, 1200-651 Lisboa, Portugal
 
-## 10. Security
+## 12. Security
 
 We implement appropriate technical and organizational measures to protect your data, including:
 - HTTPS/TLS encryption for all traffic
@@ -104,10 +116,10 @@ We implement appropriate technical and organizational measures to protect your d
 - Regular software updates
 - Access controls and monitoring
 
-## 11. Children's Privacy
+## 13. Children's Privacy
 
 This website is not directed at children under 16. We do not knowingly collect data from children.
 
-## 12. Changes to This Policy
+## 14. Changes to This Policy
 
 We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. We encourage you to review this page periodically.

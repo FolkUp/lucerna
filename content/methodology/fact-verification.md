@@ -7,6 +7,7 @@ tags: [methodology, osint, fact-checking, verification, multi-agent]
 categories: [methodology]
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
+pii_reviewed: true
 ---
 
 ## Overview
