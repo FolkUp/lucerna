@@ -77,5 +77,5 @@ sitemap:
   excludedKinds: ["taxonomy", "term"]
 
 umamiAnalytics:
-  # websiteid will be set after Umami website creation
+  websiteid: "92bc4e09-7e2a-47fa-9536-6d71cb01b75a"
   domain: "analytics.folkup.app"

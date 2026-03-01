@@ -17,14 +17,12 @@ This website is operated by **FolkUp** — an independent research collective ba
 
 ### 2.1 Analytics (Self-Hosted)
 
-We plan to use **Umami**, a privacy-focused, self-hosted analytics platform. When activated, Umami:
+We use **Umami**, a privacy-focused, self-hosted analytics platform. Umami:
 - Does **not** use cookies
 - Does **not** collect personally identifiable information (PII)
 - Does **not** track users across websites
 - Collects only: page URL, referrer, browser type, operating system, device type, country (from IP, not stored)
 - All data is **aggregated and anonymous**
-
-**Current status:** Analytics are not yet active. This section will be updated when analytics are enabled.
 
 ### 2.2 Server Logs
 
