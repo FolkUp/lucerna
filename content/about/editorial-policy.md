@@ -21,6 +21,16 @@ Every article on Lucerna undergoes the following process:
 
 Content production is supported by automated tools. All content undergoes human editorial review before publication.
 
+## AI Assistance Disclosure (EU AI Act Art. 50)
+
+Some materials on Lucerna are prepared with artificial intelligence tools
+to accelerate research and information structuring. All content undergoes
+human editorial review before publication. Editorial responsibility is held
+by **FolkUp Editorial Board**. AI-assisted content is identified in article
+metadata (`reviewed_by` / `review_date` fields).
+
+For the full site-wide disclaimer, see [Disclaimer](/legal/disclaimer/).
+
 ## Quality Indicators
 
 Each article displays:

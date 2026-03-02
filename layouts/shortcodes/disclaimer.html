@@ -1,5 +1,5 @@
 {{/* disclaimer shortcode — legal/ethical disclaimer block
-     Usage: {{< disclaimer type="legal|osint-ethics|pii" >}}
+     Usage: {{< disclaimer type="legal|osint-ethics|pii|harm-reduction" >}}
      Optional: text="Custom disclaimer text"
 */}}
 {{ $type := .Get "type" | default (.Get 0) | default "legal" }}
@@ -18,6 +18,10 @@
 {{ else if eq $type "pii" }}
   {{ $title = i18n "disclaimerPiiTitle" | default "Personal Data Notice" }}
   {{ $body = i18n "disclaimerPiiText" | default "This article references publicly available information about public figures acting in their professional capacity. If you believe your personal data has been included in error, please contact us." }}
+{{ else if eq $type "harm-reduction" }}
+  {{ $icon = "shield" }}
+  {{ $title = i18n "disclaimerHarmReductionTitle" | default "Health & Safety Disclaimer" }}
+  {{ $body = i18n "disclaimerHarmReductionText" | default "This content is for educational and harm reduction purposes only. It does not constitute medical advice. Some substances discussed are controlled or illegal in most jurisdictions. Consult a licensed healthcare professional before using any psychoactive substance. In case of emergency, call 112 (EU) immediately." }}
 {{ end }}
 
 {{ with $customText }}
