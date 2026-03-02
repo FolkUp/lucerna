@@ -1,0 +1,88 @@
+{{ define "main" }}
+  {{ partial "declassified-head.html" . }}
+
+  <div class="declassified">
+    <div class="declassified__bg">
+
+      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED &mdash; FOLKUP TECHNICAL INTELLIGENCE</div>
+
+      <div class="paper">
+        <div class="watermark">DECLASSIFIED</div>
+
+        <div class="paper-inner">
+
+          {{/* ═══ DOCUMENT HEADER ═══ */}}
+          <div class="doc-header">
+            <div class="agency">FOLKUP RESEARCH LAB</div>
+            <div class="division">{{ with .Params.investigation_id }}INVESTIGATION {{ . }}{{ else }}INVESTIGATION FILE{{ end }}</div>
+
+            <div class="stamp">DECLASSIFIED</div>
+
+            <dl class="doc-meta">
+              {{ with .Params.investigation_id }}
+                <dt>ID:</dt>
+                <dd>{{ . }}</dd>
+              {{ end }}
+              <dt>{{ i18n "metaDate" | default "DATE" }}:</dt>
+              <dd>{{ .Date.Format "02 January 2006" }}</dd>
+              {{ with .Params.investigation_type }}
+                <dt>{{ i18n "metaType" | default "TYPE" }}:</dt>
+                <dd style="text-transform: uppercase;">{{ . }}</dd>
+              {{ end }}
+              {{ with .Params.status }}
+                <dt>{{ i18n "metaStatus" | default "STATUS" }}:</dt>
+                <dd><span class="badge badge--{{ . }}">{{ . | upper }}</span></dd>
+              {{ end }}
+              {{ with .Params.confidence }}
+                <dt>{{ i18n "metaConfidence" | default "CONFIDENCE" }}:</dt>
+                <dd style="text-transform: uppercase;">{{ . }}</dd>
+              {{ end }}
+              {{ with .Params.sources_count }}
+                <dt>{{ i18n "metaSources" | default "SOURCES" }}:</dt>
+                <dd>{{ . }}</dd>
+              {{ end }}
+              {{ with .Params.reviewed_by }}
+                <dt>{{ i18n "metaReviewedBy" | default "REVIEWED BY" }}:</dt>
+                <dd>{{ . }}</dd>
+              {{ end }}
+              {{ with .Params.review_date }}
+                <dt>{{ i18n "metaReviewDate" | default "REVIEW DATE" }}:</dt>
+                <dd>{{ . }}</dd>
+              {{ end }}
+            </dl>
+          </div>
+
+          {{/* ═══ TITLE ═══ */}}
+          <div class="section">
+            <h2>{{ .Title }}</h2>
+            {{ with .Params.summary }}
+              <p><em>{{ . }}</em></p>
+            {{ end }}
+          </div>
+
+          <hr class="separator">
+
+          {{/* ═══ CONTENT (markdown rendered) ═══ */}}
+          <div class="section">
+            {{ .Content }}
+          </div>
+
+          <hr class="separator separator--heavy">
+
+          {{/* ═══ END MARK ═══ */}}
+          <div class="end-mark">&mdash; END OF DOCUMENT &mdash;</div>
+
+          <div class="doc-footer">
+            <span>{{ with .Params.investigation_id }}{{ . }}{{ else }}FILE{{ end }} / {{ i18n "docPage" | default "Page" }} 1</span>
+            <span>FolkUp Research Lab</span>
+            <span>{{ .Date.Format "02.01.2006" }}</span>
+          </div>
+
+        </div>{{/* /paper-inner */}}
+      </div>{{/* /paper */}}
+
+      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED</div>
+
+    </div>{{/* /declassified__bg */}}
+  </div>{{/* /declassified */}}
+{{ end }}

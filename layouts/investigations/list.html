@@ -1,0 +1,100 @@
+{{ define "main" }}
+  {{ partial "declassified-head.html" . }}
+
+  <div class="declassified">
+    <div class="declassified__bg">
+
+      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED &mdash; FOLKUP TECHNICAL INTELLIGENCE</div>
+
+      <div class="paper">
+        <div class="watermark">DECLASSIFIED</div>
+
+        <div class="paper-inner">
+
+          {{/* ═══ HEADER ═══ */}}
+          <div class="doc-header">
+            <div class="agency">FOLKUP RESEARCH LAB</div>
+            <div class="division">INDEX OF DOSSIERS</div>
+
+            <div class="stamp">DECLASSIFIED</div>
+
+            <dl class="doc-meta">
+              <dt>SECTION:</dt>
+              <dd>{{ .Title }}</dd>
+              <dt>RECORDS:</dt>
+              <dd>{{ len .Pages }}</dd>
+              <dt>CLASSIFICATION:</dt>
+              <dd><span class="badge badge--green">PUBLIC</span></dd>
+            </dl>
+          </div>
+
+          {{ with .Content }}
+            <div class="section">
+              {{ . }}
+            </div>
+            <hr class="separator">
+          {{ end }}
+
+          {{/* ═══ DOSSIER TABLE ═══ */}}
+          <div class="section">
+            <h2>Investigation Files</h2>
+
+            {{ $pages := .Pages.ByDate.Reverse }}
+            {{ if gt (len $pages) 0 }}
+              <div class="table-wrap">
+                <table class="dossier-table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Date</th>
+                      <th>Subject</th>
+                      <th>Status</th>
+                      <th>Confidence</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{ range $pages }}
+                      {{ if not .Draft }}
+                        <tr>
+                          <td class="mono">{{ with .Params.investigation_id }}{{ . }}{{ else }}&mdash;{{ end }}</td>
+                          <td class="mono">{{ .Date.Format "2006-01-02" }}</td>
+                          <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+                          <td>
+                            {{ with .Params.status }}
+                              <span class="badge badge--{{ . }}">{{ . | upper }}</span>
+                            {{ end }}
+                          </td>
+                          <td>
+                            {{ with .Params.confidence }}
+                              <span class="badge badge--{{ cond (eq . "high") "green" (cond (eq . "medium") "yellow" "red") }}">{{ . | upper }}</span>
+                            {{ end }}
+                          </td>
+                        </tr>
+                      {{ end }}
+                    {{ end }}
+                  </tbody>
+                </table>
+              </div>
+            {{ else }}
+              <p>No investigation files available.</p>
+            {{ end }}
+          </div>
+
+          <hr class="separator separator--heavy">
+
+          <div class="end-mark">&mdash; END OF INDEX &mdash;</div>
+
+          <div class="doc-footer">
+            <span>INDEX / {{ i18n "docPage" | default "Page" }} 1</span>
+            <span>FolkUp Research Lab</span>
+            <span>{{ now.Format "02.01.2006" }}</span>
+          </div>
+
+        </div>{{/* /paper-inner */}}
+      </div>{{/* /paper */}}
+
+      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED</div>
+
+    </div>{{/* /declassified__bg */}}
+  </div>{{/* /declassified */}}
+{{ end }}

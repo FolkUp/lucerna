@@ -1,0 +1,5 @@
+{{- $len := .Get "len" | default "8" -}}
+{{- $blocks := int $len -}}
+{{- $chars := "" -}}
+{{- range seq $blocks -}}{{- $chars = printf "%s%s" $chars "\u2588" -}}{{- end -}}
+<span class="r" title="[REDACTED]">{{ $chars }}</span>
