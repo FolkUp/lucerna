@@ -14,7 +14,7 @@ methodology_disclosed: true
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-03-03
 pii_reviewed: true
-sensitive: false
+sensitive: true
 summary: "Политическая скатология: экскременты как инструмент протеста, унижения и власти — от античности до современного акционизма."
 ---
 

@@ -14,7 +14,7 @@ methodology_disclosed: true
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-03-03
 pii_reviewed: true
-sensitive: false
+sensitive: true
 summary: "Скатология в визуальном искусстве и акционизме: от Merda d'artista до московского акционизма. Анализ эволюции скатологических мотивов как инструмента критики, протеста и деколонизации в истории искусства."
 ---
 
