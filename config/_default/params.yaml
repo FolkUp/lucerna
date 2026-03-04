@@ -2,6 +2,8 @@ colorScheme: "ocean"
 defaultAppearance: "dark"
 autoSwitchAppearance: true
 
+logo: "img/folkup-wordmark-auto.svg"
+
 enableA11y: true
 enableSearch: true
 enableCodeCopy: true
