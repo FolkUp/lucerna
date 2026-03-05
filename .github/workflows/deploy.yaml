@@ -1,0 +1,91 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: [self-hosted, folkup-lucerna]
+    timeout-minutes: 15
+    env:
+      PATH: /home/deploy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+          clean: true
+
+      - name: Build
+        run: hugo --gc --minify
+
+      - name: Validate site
+        if: "!contains(github.event.head_commit.message, '[skip-validation]')"
+        run: bash scripts/validate-site.sh
+
+      - name: Deploy to production
+        run: |
+          mkdir -p ~/lucerna/public_staging
+          rsync -a --delete public/ ~/lucerna/public_staging/
+          rsync -a --delete ~/lucerna/public_staging/ ~/lucerna/public/
+          rm -rf ~/lucerna/public_staging
+          docker restart lucerna
+
+      - name: Verify site is live
+        run: |
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            if docker exec lucerna wget -q --spider http://127.0.0.1/ 2>/dev/null; then
+              echo 'Site is live on production!'
+              exit 0
+            fi
+            echo "Waiting for container... attempt $i/10"
+            sleep 3
+          done
+          echo 'ERROR: Site health check failed after 30s'
+          exit 1
+
+      - name: Check content changes
+        id: tg_msg
+        run: |
+          chmod +x scripts/build-changelog-telegram.sh
+          scripts/build-changelog-telegram.sh /tmp/changelog-telegram.txt
+          echo "has_message=$(test -f /tmp/changelog-telegram.txt && echo true || echo false)" >> $GITHUB_OUTPUT
+
+      - name: Build changelog email
+        if: steps.tg_msg.outputs.has_message == 'true'
+        run: |
+          chmod +x scripts/build-changelog-email.sh
+          scripts/build-changelog-email.sh /tmp/changelog-email.html
+
+      - name: Send notification email
+        if: steps.tg_msg.outputs.has_message == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp-relay.brevo.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Lucerna — updated ${{ github.event.head_commit.timestamp }}"
+          to: ${{ secrets.NOTIFY_EMAILS }}
+          from: "Lucerna <updates@folkup.app>"
+          html_body: file:///tmp/changelog-email.html
+
+      - name: Send Telegram notification
+        if: steps.tg_msg.outputs.has_message == 'true'
+        run: |
+          curl -sf "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n \
+              --arg chat_id "${{ secrets.TELEGRAM_CHAT_ID }}" \
+              --arg thread_id "${{ secrets.TELEGRAM_THREAD_ID }}" \
+              --rawfile text /tmp/changelog-telegram.txt \
+              '{chat_id: $chat_id, text: $text, parse_mode: "HTML", disable_web_page_preview: true} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')" \
+            || echo "Warning: Telegram notification failed"
