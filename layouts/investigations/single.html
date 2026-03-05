@@ -4,19 +4,19 @@
   <div class="declassified">
     <div class="declassified__bg">
 
-      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED &mdash; FOLKUP TECHNICAL INTELLIGENCE</div>
+      <div class="class-bar class-bar--struck">{{ i18n "classificationRevokedFull" | default "CLASSIFICATION REVOKED — FOLKUP TECHNICAL INTELLIGENCE" }}</div>
 
       <div class="paper">
-        <div class="watermark">DECLASSIFIED</div>
+        <div class="watermark">{{ i18n "declassifiedWatermark" | default "DECLASSIFIED" }}</div>
 
         <div class="paper-inner">
 
           {{/* ═══ DOCUMENT HEADER ═══ */}}
           <div class="doc-header">
-            <div class="agency">FOLKUP RESEARCH LAB</div>
-            <div class="division">{{ with .Params.investigation_id }}INVESTIGATION {{ . }}{{ else }}INVESTIGATION FILE{{ end }}</div>
+            <div class="agency">{{ i18n "agencyName" | default "FOLKUP RESEARCH LAB" }}</div>
+            <div class="division">{{ with .Params.investigation_id }}{{ i18n "investigationPrefix" | default "INVESTIGATION" }} {{ . }}{{ else }}{{ i18n "investigationFile" | default "INVESTIGATION FILE" }}{{ end }}</div>
 
-            <div class="stamp">DECLASSIFIED</div>
+            <div class="stamp">{{ i18n "declassifiedWatermark" | default "DECLASSIFIED" }}</div>
 
             <dl class="doc-meta">
               {{ with .Params.investigation_id }}
@@ -70,7 +70,7 @@
           <hr class="separator separator--heavy">
 
           {{/* ═══ END MARK ═══ */}}
-          <div class="end-mark">&mdash; END OF DOCUMENT &mdash;</div>
+          <div class="end-mark">&mdash; {{ i18n "endOfDocument" | default "END OF DOCUMENT" }} &mdash;</div>
 
           <div class="doc-footer">
             <span>{{ with .Params.investigation_id }}{{ . }}{{ else }}FILE{{ end }} / {{ i18n "docPage" | default "Page" }} 1</span>
@@ -81,7 +81,7 @@
         </div>{{/* /paper-inner */}}
       </div>{{/* /paper */}}
 
-      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED</div>
+      <div class="class-bar class-bar--struck">{{ i18n "classificationRevoked" | default "CLASSIFICATION REVOKED" }}</div>
 
     </div>{{/* /declassified__bg */}}
   </div>{{/* /declassified */}}

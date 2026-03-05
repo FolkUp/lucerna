@@ -4,27 +4,27 @@
   <div class="declassified">
     <div class="declassified__bg">
 
-      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED &mdash; FOLKUP TECHNICAL INTELLIGENCE</div>
+      <div class="class-bar class-bar--struck">{{ i18n "classificationRevokedFull" | default "CLASSIFICATION REVOKED — FOLKUP TECHNICAL INTELLIGENCE" }}</div>
 
       <div class="paper">
-        <div class="watermark">DECLASSIFIED</div>
+        <div class="watermark">{{ i18n "declassifiedWatermark" | default "DECLASSIFIED" }}</div>
 
         <div class="paper-inner">
 
           {{/* ═══ HEADER ═══ */}}
           <div class="doc-header">
-            <div class="agency">FOLKUP RESEARCH LAB</div>
-            <div class="division">INDEX OF DOSSIERS</div>
+            <div class="agency">{{ i18n "agencyName" | default "FOLKUP RESEARCH LAB" }}</div>
+            <div class="division">{{ i18n "indexOfDossiers" | default "INDEX OF DOSSIERS" }}</div>
 
-            <div class="stamp">DECLASSIFIED</div>
+            <div class="stamp">{{ i18n "declassifiedWatermark" | default "DECLASSIFIED" }}</div>
 
             <dl class="doc-meta">
-              <dt>SECTION:</dt>
+              <dt>{{ i18n "dossierSection" | default "SECTION" }}:</dt>
               <dd>{{ .Title }}</dd>
-              <dt>RECORDS:</dt>
+              <dt>{{ i18n "dossierRecords" | default "RECORDS" }}:</dt>
               <dd>{{ len .Pages }}</dd>
-              <dt>CLASSIFICATION:</dt>
-              <dd><span class="badge badge--green">PUBLIC</span></dd>
+              <dt>{{ i18n "dossierClassification" | default "CLASSIFICATION" }}:</dt>
+              <dd><span class="badge badge--green">{{ i18n "dossierPublic" | default "PUBLIC" }}</span></dd>
             </dl>
           </div>
 
@@ -37,7 +37,7 @@
 
           {{/* ═══ DOSSIER TABLE ═══ */}}
           <div class="section">
-            <h2>Investigation Files</h2>
+            <h2>{{ i18n "investigationFiles" | default "Investigation Files" }}</h2>
 
             {{ $pages := .Pages.ByDate.Reverse }}
             {{ if gt (len $pages) 0 }}
@@ -45,11 +45,11 @@
                 <table class="dossier-table">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>Date</th>
-                      <th>Subject</th>
-                      <th>Status</th>
-                      <th>Confidence</th>
+                      <th>{{ i18n "dossierColId" | default "ID" }}</th>
+                      <th>{{ i18n "dossierColDate" | default "Date" }}</th>
+                      <th>{{ i18n "dossierColSubject" | default "Subject" }}</th>
+                      <th>{{ i18n "dossierColStatus" | default "Status" }}</th>
+                      <th>{{ i18n "dossierColConfidence" | default "Confidence" }}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -76,13 +76,13 @@
                 </table>
               </div>
             {{ else }}
-              <p>No investigation files available.</p>
+              <p>{{ i18n "noInvestigations" | default "No investigation files available." }}</p>
             {{ end }}
           </div>
 
           <hr class="separator separator--heavy">
 
-          <div class="end-mark">&mdash; END OF INDEX &mdash;</div>
+          <div class="end-mark">&mdash; {{ i18n "endOfIndex" | default "END OF INDEX" }} &mdash;</div>
 
           <div class="doc-footer">
             <span>INDEX / {{ i18n "docPage" | default "Page" }} 1</span>
@@ -93,7 +93,7 @@
         </div>{{/* /paper-inner */}}
       </div>{{/* /paper */}}
 
-      <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED</div>
+      <div class="class-bar class-bar--struck">{{ i18n "classificationRevoked" | default "CLASSIFICATION REVOKED" }}</div>
 
     </div>{{/* /declassified__bg */}}
   </div>{{/* /declassified */}}
