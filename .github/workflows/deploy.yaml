@@ -27,7 +27,6 @@ jobs:
         run: hugo --gc --minify
 
       - name: Validate site
-        if: "!contains(github.event.head_commit.message, '[skip-validation]')"
         run: bash scripts/validate-site.sh
 
       - name: Deploy to production
@@ -51,6 +50,11 @@ jobs:
           echo 'ERROR: Site health check failed after 30s'
           exit 1
 
+      - name: Load notification secrets
+        run: |
+          sudo cat /run/secrets/ci-notify.env >> $GITHUB_ENV
+          sudo cat /run/secrets/telegram-bot.env >> $GITHUB_ENV
+
       - name: Check content changes
         id: tg_msg
         run: |
@@ -71,21 +75,21 @@ jobs:
           server_address: smtp-relay.brevo.com
           server_port: 587
           secure: false
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
+          username: ${{ env.MAIL_USERNAME }}
+          password: ${{ env.MAIL_PASSWORD }}
           subject: "Lucerna — updated ${{ github.event.head_commit.timestamp }}"
-          to: ${{ secrets.NOTIFY_EMAILS }}
+          to: ${{ env.NOTIFY_EMAILS }}
           from: "Lucerna <updates@folkup.app>"
           html_body: file:///tmp/changelog-email.html
 
       - name: Send Telegram notification
         if: steps.tg_msg.outputs.has_message == 'true'
         run: |
-          curl -sf "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+          curl -sf "https://api.telegram.org/bot${{ env.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -H "Content-Type: application/json" \
             -d "$(jq -n \
-              --arg chat_id "${{ secrets.TELEGRAM_CHAT_ID }}" \
-              --arg thread_id "${{ secrets.TELEGRAM_THREAD_ID }}" \
+              --arg chat_id "${{ env.TELEGRAM_CHAT_ID }}" \
+              --arg thread_id "169" \
               --rawfile text /tmp/changelog-telegram.txt \
               '{chat_id: $chat_id, text: $text, parse_mode: "HTML", disable_web_page_preview: true} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')" \
             || echo "Warning: Telegram notification failed"
