@@ -100,7 +100,7 @@ branded_header() {
 <table role="presentation" class="email-card" width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 <tr>
 <td style="background:linear-gradient(135deg,#2D3436 0%,#3d4548 100%);padding:32px 40px;text-align:center;" class="email-padding">
-  <img src="https://docs.folkup.app/images/folkup-email-logo.png?v=2" alt="FolkUp" width="260" style="display:block;margin:0 auto 16px;max-width:260px;height:auto;">
+  <img src="https://docs.folkup.app/images/folkup-email-logo.png?v=3" alt="FolkUp" width="260" style="display:block;margin:0 auto 16px;max-width:260px;height:auto;">
   <div style="color:#E8AD4A;font-size:14px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;">Deploy Report</div>
 HEADER
   echo "  <div style=\"color:#9DA5AB;font-size:12px;margin-top:6px;\">${MONTH_YEAR}</div>"
