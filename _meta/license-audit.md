@@ -26,7 +26,7 @@ None (pure Markdown repository).
 | folkup-docs | `LICENSE` | CC BY-SA 4.0 | See project |
 | folkup-auth | — | Private | — |
 
-> Full audit: GE-009 (P1) in master backlog.
+> Full audit: GNRL-009 (P1) in master backlog.
 
 ---
 
