@@ -62,14 +62,8 @@ jobs:
           scripts/build-changelog-telegram.sh /tmp/changelog-telegram.txt
           echo "has_message=$(test -f /tmp/changelog-telegram.txt && echo true || echo false)" >> $GITHUB_OUTPUT
 
-      - name: Build changelog email
-        if: steps.tg_msg.outputs.has_message == 'true'
-        run: |
-          chmod +x scripts/build-changelog-email.sh
-          scripts/build-changelog-email.sh /tmp/changelog-email.html
-
-      - name: Send notification email
-        if: steps.tg_msg.outputs.has_message == 'true'
+      - name: Send failure email
+        if: failure()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp-relay.brevo.com
@@ -77,10 +71,10 @@ jobs:
           secure: false
           username: ${{ env.MAIL_USERNAME }}
           password: ${{ env.MAIL_PASSWORD }}
-          subject: "Lucerna — updated ${{ github.event.head_commit.timestamp }}"
+          subject: "Deploy FAILED — Lucerna"
           to: ${{ env.NOTIFY_EMAILS }}
           from: "Lucerna <updates@folkup.app>"
-          html_body: file:///tmp/changelog-email.html
+          body: "Deploy failed.\n\nCommit: ${{ github.event.head_commit.message }}\nAuthor: ${{ github.actor }}\n\nAction: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
       - name: Send Telegram notification
         if: steps.tg_msg.outputs.has_message == 'true'
