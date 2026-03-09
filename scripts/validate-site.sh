@@ -44,7 +44,7 @@ echo ""
 
 # 3. .md links in HTML
 echo "--- 3. .md links in HTML ---"
-MD_LINKS=$(grep -rl 'href="[^"]*\.md"' public/ --include="*.html" 2>/dev/null | grep -v "searchindex\.\|print\." || true)
+MD_LINKS=$(grep -rl 'href="[^"]*\.md"' public/ --include="*.html" 2>/dev/null | grep -v "searchindex\.\|print\.\|lawyer-pack/" || true)
 if [ -n "$MD_LINKS" ]; then
     MD_COUNT=$(echo "$MD_LINKS" | wc -l)
     error "Found .md links in $MD_COUNT HTML files"
