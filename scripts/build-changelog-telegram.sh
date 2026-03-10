@@ -20,6 +20,12 @@ SITE_TITLE="Lucerna"
 DEPLOY_DATE=$(date -u +'%d %b %Y, %H:%M UTC')
 DOMAIN=$(echo "$BASE_URL" | sed 's|https\?://||')
 
+# --- Commit info ---
+COMMIT_MSG=$(git log -1 --format=%s HEAD)
+COMMIT_HASH=$(git log -1 --format=%h HEAD)
+COMMIT_AUTHOR=$(git log -1 --format=%an HEAD)
+COMMIT_URL="https://github.com/${GITHUB_REPOSITORY}/commit/$(git log -1 --format=%H HEAD)"
+
 # --- HTML-escape helper ---
 html_escape() {
   echo "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'
@@ -95,6 +101,8 @@ fi
 # --- Build message ---
 MSG="&#128230; <b>${SITE_TITLE}</b>"
 MSG="${MSG}"$'\n'"Deploy successful &#8212; ${DEPLOY_DATE}"
+MSG="${MSG}"$'\n'$'\n'"&#128172; $(html_escape "$COMMIT_MSG")"
+MSG="${MSG}"$'\n'"by ${COMMIT_AUTHOR} &#183; <code>${COMMIT_HASH}</code> &#183; <a href=\"${COMMIT_URL}\">view commit</a>"
 
 ITEMS=""
 if [ -n "$NEW_FILES" ] && [ "$NEW_COUNT" -gt 0 ]; then
