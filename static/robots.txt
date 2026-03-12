@@ -1,2 +1,20 @@
 User-agent: *
-Disallow: /
+
+# Public sections
+Allow: /investigations/
+Allow: /about/
+Allow: /methodology/
+Allow: /legal/
+Allow: /tags/
+Allow: /categories/
+
+# Protected sections
+Disallow: /research/
+Disallow: /dossiers/
+Disallow: /toolkit/
+Disallow: /prompts/
+
+# Sitemaps
+Sitemap: https://lucerna.folkup.app/sitemap.xml
+Sitemap: https://lucerna.folkup.app/ru/sitemap.xml
+Sitemap: https://lucerna.folkup.app/pt/sitemap.xml

@@ -1,0 +1,190 @@
+# Blowfish theme keys for Hugo language "pt"
+# Hugo language key "pt" doesn't fall back to theme's "pt-PT.yaml",
+# so we provide all theme translations here.
+
+global:
+  language:
+    other: "PT"
+
+article:
+  anchor_label:
+    other: "Etiqueta"
+  date:
+    other: "{{ .Date }}"
+  date_updated:
+    other: "Atualizado a: {{ .Date }}"
+  draft:
+    other: "Rascunho"
+  edit_title:
+    other: "Editar Conteúdo"
+  reading_time:
+    one: "{{ .Count }} minuto"
+    other: "{{ .Count }} minutos"
+  reading_time_title:
+    other: "Tempo de leitura"
+  table_of_contents:
+    other: "Índice"
+  word_count:
+    one: "{{ .Count }} palavra"
+    other: "{{ .Count }} palavras"
+  views:
+    one: "{{ .Count }} visualização"
+    other: "{{ .Count }} visualizações"
+  part_of_series:
+    other: "Este artigo faz parte de uma série."
+  part:
+    other: "Parte"
+  this_article:
+    other: "Este artigo"
+  related_articles:
+    other: "Relacionados"
+  reply_by_email:
+    other: "Responder por email"
+
+a11y:
+  title:
+    other: "Definições de acessibilidade"
+  disable_blur:
+    other: "Desativar desfoque"
+  disable_images:
+    other: "Desativar imagens"
+  show_link_underline:
+    other: "Mostrar sublinhado de links"
+  font_size:
+    other: "Tamanho da fonte"
+
+author:
+  byline_title:
+    other: "Autor"
+
+code:
+  copy:
+    other: "Copiar"
+  copied:
+    other: "Copiado"
+
+error:
+  404_title:
+    other: "Página não encontrada"
+  404_error:
+    other: "Erro 404"
+  404_description:
+    other: "A página pretendida não existe."
+
+footer:
+  dark_appearance:
+    other: "Mudar para modo escuro"
+  light_appearance:
+    other: "Mudar para modo claro"
+  powered_by:
+    other: "Criado por {{ .Hugo }} &amp; {{ .Theme }}"
+
+list:
+  externalurl_title:
+    other: "Link para site externo"
+  no_articles:
+    other: "Ainda não existem artigos para listar aqui."
+
+nav:
+  scroll_to_top_title:
+    other: "Ir para o topo"
+  skip_to_main:
+    other: "Ir para o conteúdo principal"
+
+search:
+  open_button_title:
+    other: "Pesquisar (/)"
+  close_button_title:
+    other: "Fechar (Esc)"
+  input_placeholder:
+    other: "Pesquisar"
+
+sharing:
+  email:
+    other: "Partilhar por email"
+  facebook:
+    other: "Partilhar pelo Facebook"
+  line:
+    other: "Partilhar pelo LINE"
+  linkedin:
+    other: "Partilhar pelo LinkedIn"
+  pinterest:
+    other: "Partilhar no Pinterest"
+  reddit:
+    other: "Partilhar no Reddit"
+  twitter:
+    other: "Partilhar no Twitter"
+
+shortcode:
+  recent_articles:
+    other: "Recentes"
+
+recent:
+  show_more:
+    other: "Mostrar mais"
+
+# ===== Lucerna custom keys =====
+
+evidenceConfirmed: "Confirmado"
+evidencePartial: "Parcialmente Confirmado"
+evidenceRefuted: "Refutado"
+evidenceUnverified: "Não Verificado"
+
+verdictClaim: "Afirmação"
+verdictStatus: "Estado"
+verdictAccuracy: "Precisão"
+
+sourceTier1: "Nível 1 — Primário"
+sourceTier2: "Nível 2 — Secundário"
+sourceTier3: "Nível 3 — Terciário"
+
+methodologyTitle: "Metodologia"
+methodologyReadMore: "Ler metodologia completa"
+
+confidenceHigh: "ALTA"
+confidenceMedium: "MÉDIA"
+confidenceLow: "BAIXA"
+
+metaId: "ID"
+metaType: "Tipo"
+metaStatus: "Estado"
+metaConfidence: "Confiança"
+metaSources: "Fontes"
+metaReviewedBy: "Revisto por"
+metaReviewDate: "Data de revisão"
+
+disclaimerLegalTitle: "Aviso Legal"
+disclaimerLegalText: "Este conteúdo é fornecido apenas para fins informativos e não constitui aconselhamento jurídico. Consulte sempre um profissional qualificado para questões jurídicas específicas."
+disclaimerOsintTitle: "Ética da Investigação"
+disclaimerOsintText: "Esta investigação utiliza apenas informação publicamente disponível (inteligência de fontes abertas). Nenhum sistema privado foi acedido. Todos os métodos são divulgados na secção de metodologia."
+disclaimerPiiTitle: "Aviso sobre Dados Pessoais"
+disclaimerPiiText: "Este artigo referencia informação publicamente disponível sobre figuras públicas no exercício da sua capacidade profissional. Se acredita que os seus dados pessoais foram incluídos por erro, contacte-nos."
+disclaimerHarmReductionTitle: "Aviso: Saúde e Segurança"
+disclaimerHarmReductionText: "Este conteúdo destina-se exclusivamente a fins educativos e de redução de danos. Não constitui aconselhamento médico. Algumas substâncias discutidas são controladas ou ilegais na maioria das jurisdições. Consulte um profissional de saúde licenciado antes de utilizar qualquer substância psicoativa. Em caso de emergência, ligue 112 (UE). [Aviso completo](/pt/legal/disclaimer/)"
+
+classificationRevoked: "CLASSIFICAÇÃO REVOGADA"
+classificationRevokedFull: "CLASSIFICAÇÃO REVOGADA — INTELIGÊNCIA TÉCNICA FOLKUP"
+declassifiedWatermark: "DESCLASSIFICADO"
+agencyName: "LABORATÓRIO DE INVESTIGAÇÃO FOLKUP"
+investigationFile: "FICHEIRO DE INVESTIGAÇÃO"
+investigationPrefix: "INVESTIGAÇÃO"
+metaDate: "DATA"
+endOfDocument: "FIM DO DOCUMENTO"
+endOfIndex: "FIM DO ÍNDICE"
+docPage: "Pág."
+indexOfDossiers: "ÍNDICE DE DOSSIÊS"
+investigationFiles: "Ficheiros de Investigação"
+dossierSection: "SECÇÃO"
+dossierRecords: "REGISTOS"
+dossierClassification: "CLASSIFICAÇÃO"
+dossierPublic: "PÚBLICO"
+noInvestigations: "Não existem ficheiros de investigação disponíveis."
+dossierColId: "ID"
+dossierColDate: "Data"
+dossierColSubject: "Assunto"
+dossierColStatus: "Estado"
+dossierColConfidence: "Confiança"
+
+404Title: "Ficheiro Não Encontrado"
+404Text: "O documento solicitado foi redigido, realocado, ou nunca existiu."
+404Home: "Voltar à Sede"

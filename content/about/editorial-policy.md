@@ -44,6 +44,32 @@ Each article displays:
 
 If you find errors in our content, please contact us at **editorial@folkup.app**. We are committed to correcting inaccuracies promptly and transparently.
 
+## PII Protection
+
+When our investigations involve private individuals (as opposed to public figures), we apply the following safeguards:
+
+- All personal identifiers are **redacted** before publication
+- We conduct a re-identification audit to ensure that remaining visible data does not allow identification with reasonable effort
+- Unique combinations of attributes are generalized (e.g., specific employer → "major investment bank")
+- We never publish private communications or data obtained through unauthorized access
+
+Our goal is to demonstrate methodology and share findings of public interest — not to expose individuals.
+
+## Right of Reply
+
+If you are the subject of one of our investigations, you have the right to:
+
+1. **Access** the data we have processed about you
+2. **Request corrections** to factual errors
+3. **Submit a response** — we will publish your unedited comment alongside our research
+4. **Request removal** of your data
+
+Contact: **privacy@folkup.app** — we respond within 30 days.
+
+## Funding Transparency
+
+Lucerna is funded entirely by voluntary donations via [Ko-fi](https://ko-fi.com/folkup). We have no corporate sponsors, no advertising revenue, and no paid content. Our editorial decisions are not influenced by financial considerations.
+
 ## Independence
 
 Lucerna operates independently. Our research is not sponsored, commissioned, or influenced by any external party. Investigations are conducted in the public interest.

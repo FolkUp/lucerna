@@ -5,7 +5,7 @@ description: "Terms of Use for Lucerna — FolkUp Research Lab."
 layout: "simple"
 ---
 
-**Last updated:** February 28, 2026
+**Last updated:** March 12, 2026
 
 ## 1. Acceptance
 
@@ -82,9 +82,17 @@ You agree not to:
 
 This Site may contain links to external websites. We are not responsible for the content, privacy practices, or availability of third-party websites. Links do not imply endorsement.
 
-## 8. Corrections and Feedback
+## 8. Corrections, Right of Reply, and Feedback
 
 If you believe any content on this Site contains errors or inaccuracies, please contact us at **editorial@folkup.app**. We welcome corrections and will investigate promptly.
+
+### 8.1 Right of Reply
+
+If you are the subject of an investigation published on this Site, you have the right to submit a response. We will publish your unedited comment alongside our research. Contact: **privacy@folkup.app**
+
+### 8.2 Data Subject Rights
+
+If you believe your personal data has been processed in one of our investigations, please refer to our [Privacy Policy](/legal/privacy-policy/) for information on exercising your rights under GDPR.
 
 ## 9. Modifications
 

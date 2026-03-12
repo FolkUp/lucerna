@@ -1,0 +1,32 @@
+main:
+  - name: Investigações
+    pageRef: investigations
+    weight: 10
+  - name: Verificações
+    pageRef: verifications
+    weight: 20
+  - name: Metodologia
+    pageRef: methodology
+    weight: 30
+  - name: Sobre
+    pageRef: about
+    weight: 50
+
+footer:
+  - name: Política de Privacidade
+    pageRef: legal/privacy-policy
+    weight: 10
+  - name: Termos de Uso
+    pageRef: legal/terms
+    weight: 20
+  - name: Política de Cookies
+    pageRef: legal/cookie-policy
+    weight: 25
+  - name: Política Editorial
+    pageRef: about/editorial-policy
+    weight: 30
+  - name: Ko-fi
+    url: "https://ko-fi.com/folkup"
+    weight: 40
+    params:
+      external: true

@@ -5,7 +5,7 @@ description: "Privacy Policy for Lucerna — FolkUp Research Lab."
 layout: "simple"
 ---
 
-**Last updated:** February 28, 2026
+**Last updated:** March 12, 2026
 
 ## 1. Data Controller
 
@@ -52,7 +52,45 @@ Under **Article 6 of the GDPR**, we process data based on:
 - **Legitimate interest** (Art. 6(1)(f)) — for anonymous analytics and security monitoring. We have conducted a balancing test and determined that our minimal, anonymous data collection does not override the rights and freedoms of data subjects, given that no PII is collected or stored.
 - **Consent** — if you voluntarily contact us via email
 
-## 5. Automated Decision-Making
+## 5. OSINT Research — Processing of Third-Party Data
+
+As part of our research activities, Lucerna may process publicly available information about individuals. This section explains how we handle such data.
+
+### 5.1 What Data We Process
+
+In the course of OSINT (open-source intelligence) investigations, we may collect and analyze:
+- Publicly available professional profiles (GitHub, tech blogs, professional platforms)
+- Published articles, comments, and public contributions
+- Professional affiliations visible in public sources
+
+We do **not** access private systems, hack accounts, use social engineering, or obtain data through deceptive means.
+
+### 5.2 Legal Basis
+
+We process this data under:
+- **Legitimate interest** (Art. 6(1)(f) GDPR) — for research, fact-checking, and public interest journalism
+- **Sufficient anonymization** — published investigations redact personal identifiers so that the data subject cannot be identified with reasonable effort, rendering the data anonymous (Recital 26 GDPR)
+
+### 5.3 Protection Measures
+
+- All personal identifiers are **redacted** before publication
+- We apply a re-identification audit to ensure anonymization is sufficient
+- Subjects are not named, and unique identifying combinations are generalized
+- We never publish private communications, private data, or data obtained through unauthorized access
+
+### 5.4 Rights of Data Subjects
+
+If you believe you are the subject of one of our investigations, you have the right to:
+- **Access** the data we have processed about you (Art. 15 GDPR)
+- **Object** to processing (Art. 21 GDPR)
+- **Request erasure** of your data (Art. 17 GDPR)
+- **Right of reply** — we will publish your unedited response alongside our research
+
+To exercise these rights, contact: **privacy@folkup.app**
+
+We will respond within 30 days.
+
+## 6. Automated Decision-Making
 
 We do **not** engage in automated decision-making or profiling as defined in Article 22 GDPR. No decisions affecting you are made solely by automated means.
 

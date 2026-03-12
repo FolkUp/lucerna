@@ -2,7 +2,7 @@ baseURL: "https://lucerna.folkup.app/"
 theme: "blowfish"
 defaultContentLanguage: en
 
-enableRobotsTXT: true
+enableRobotsTXT: false
 disableHugoGeneratorInject: true
 summaryLength: 0
 buildDrafts: false
