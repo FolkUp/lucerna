@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>403 Access Denied &middot; Lucerna &mdash; FolkUp Research Lab</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Courier New',Courier,monospace;
+  background:#1c1917;
+  color:#f4efe4;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  width:100%;
+  max-width:820px;
+}
+.class-bar{
+  background:#8b1a1a;
+  color:#fff;
+  text-align:center;
+  padding:7px 12px;
+  font-size:11px;
+  letter-spacing:4px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.class-bar--struck{
+  text-decoration:line-through;
+  opacity:.6;
+}
+.paper{
+  background:#f4efe4;
+  background-image:linear-gradient(180deg,#ebe5d6 0%,#f4efe4 3%,#f4efe4 97%,#ebe5d6 100%);
+  box-shadow:0 2px 20px rgba(0,0,0,.25),0 0 60px rgba(0,0,0,.08);
+  position:relative;
+  overflow:hidden;
+  color:#1a1a1a;
+}
+.paper-inner{
+  padding:50px 60px 40px;
+  position:relative;
+  z-index:1;
+}
+.watermark{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%) rotate(-28deg);
+  font-size:min(9vw,5.5rem);
+  font-weight:900;
+  color:rgba(139,26,26,.04);
+  letter-spacing:10px;
+  white-space:nowrap;
+  pointer-events:none;
+  z-index:0;
+  user-select:none;
+}
+.doc-header{
+  text-align:center;
+  border-bottom:2px solid #1a1a1a;
+  padding-bottom:24px;
+  margin-bottom:30px;
+}
+.agency{
+  font-size:11px;
+  letter-spacing:5px;
+  color:#555;
+  margin-bottom:4px;
+}
+.division{
+  font-size:13px;
+  letter-spacing:3px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+.stamp{
+  display:inline-block;
+  font-weight:900;
+  color:#8b1a1a;
+  border:3px double #8b1a1a;
+  padding:6px 18px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  font-size:1.4rem;
+  opacity:.75;
+  transform:rotate(-4deg);
+  margin:16px 0;
+  animation:stampIn .4s ease-out;
+}
+@keyframes stampIn{
+  0%{opacity:0;transform:rotate(-4deg) scale(1.5)}
+  60%{opacity:.85;transform:rotate(-4deg) scale(.97)}
+  100%{opacity:.75;transform:rotate(-4deg) scale(1)}
+}
+.doc-meta{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:4px 20px;
+  text-align:left;
+  max-width:480px;
+  margin:0 auto;
+  font-size:13px;
+}
+.doc-meta dt{font-weight:700;letter-spacing:1px}
+.doc-meta dd{color:#1a1a1a;margin:0}
+.badge{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:3px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  background:#f8d7d7;
+  color:#8b1a1a;
+}
+.content{
+  text-align:center;
+  padding:2rem 0;
+}
+.content h2{
+  font-family:'Courier New',Courier,monospace;
+  font-size:1.5rem;
+  margin-bottom:.75rem;
+  color:#1a1a1a;
+}
+.content p{
+  font-size:13px;
+  margin-bottom:8px;
+  color:#555;
+  line-height:1.65;
+}
+.content a{
+  color:#8b1a1a;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+.content a:hover{color:#1a1a1a}
+.separator{
+  border:none;
+  border-top:2px solid #1a1a1a;
+  margin:28px 0;
+}
+.end-mark{
+  text-align:center;
+  font-size:11px;
+  letter-spacing:4px;
+  color:#555;
+  margin:30px 0 10px;
+}
+.doc-footer{
+  border-top:2px solid #1a1a1a;
+  margin-top:36px;
+  padding-top:14px;
+  font-size:11px;
+  color:#555;
+  display:flex;
+  justify-content:space-between;
+}
+@media(max-width:640px){
+  .paper-inner{padding:28px 20px 24px}
+  .doc-meta{grid-template-columns:1fr;gap:2px}
+  .stamp{font-size:1rem;padding:4px 12px;letter-spacing:3px}
+  .watermark{font-size:2.5rem}
+  .doc-footer{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED &mdash; FOLKUP TECHNICAL INTELLIGENCE</div>
+
+  <div class="paper">
+    <div class="watermark">RESTRICTED</div>
+
+    <div class="paper-inner">
+
+      <div class="doc-header">
+        <div class="agency">FOLKUP RESEARCH LAB</div>
+        <div class="division">ERROR 403</div>
+
+        <div class="stamp">403</div>
+
+        <dl class="doc-meta">
+          <dt>STATUS:</dt>
+          <dd><span class="badge">ACCESS DENIED</span></dd>
+          <dt>DATE:</dt>
+          <dd><script>document.write(new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'}))</script></dd>
+        </dl>
+      </div>
+
+      <div class="content">
+        <h2>Access Denied</h2>
+        <p>This document is classified. Authorization required to proceed.</p>
+        <p>If you believe you should have access, contact your handler or return to headquarters.</p>
+        <p style="margin-top:1.5rem;">
+          <a href="/">Return to Headquarters</a>
+        </p>
+      </div>
+
+      <hr class="separator">
+
+      <div class="end-mark">&mdash; END OF DOCUMENT &mdash;</div>
+
+      <div class="doc-footer">
+        <span>ERROR 403</span>
+        <span>FolkUp Research Lab</span>
+        <span><script>document.write(new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'numeric'}).replace(/\//g,'.'))</script></span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="class-bar class-bar--struck">CLASSIFICATION REVOKED</div>
+</div>
+
+</body>
+</html>
