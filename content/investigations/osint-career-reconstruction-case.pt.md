@@ -23,6 +23,14 @@ summary: "Caso metodológico: como reconstruir a trajetória profissional de um 
 
 {{< disclaimer type="osint-ethics" >}}
 
+---
+
+> **Resumo INV-035.** Reconstrução de carreira de um engenheiro de software europeu exclusivamente a partir de fontes abertas (GitHub API, blog técnico). Analisados: ~20 repositórios públicos, 8 artigos, ~300 comentários. Identificados 4 períodos de carreira (~15 anos): protocolos de rede (programação funcional) → enterprise Java → fintech/bases de dados colunares → programação de sistemas (Rust, C, asm). Nível profissional: Principal/Staff Engineer (decil superior fintech). Avaliação OPSEC: ALTA — minimização deliberada de divulgação pessoal. Ligação a grande organização financeira: MUITO ALTA (circunstancial). Red flags: nenhuma. Todos os identificadores pessoais redigidos — esta é uma demonstração de metodologia, não uma exposição.
+>
+> *Painel de investigação: CyberGonzo (perfilagem OSINT), Alpha+Beta (verificação adversarial)*
+
+---
+
 ## Sujeito da Investigação
 
 **Blog técnico:** {{< redacted len="24" >}}

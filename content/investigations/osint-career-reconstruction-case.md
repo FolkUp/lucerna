@@ -23,6 +23,14 @@ summary: "A methodology case study: reconstructing a developer's career trajecto
 
 {{< disclaimer type="osint-ethics" >}}
 
+---
+
+> **INV-035 Summary.** Career reconstruction of a European software engineer from open sources only (GitHub API, tech blog). ~20 public repositories, 8 articles, ~300 comments analyzed. Four career periods identified (~15 years): network protocols (functional programming) → enterprise Java → fintech/columnar databases → systems programming (Rust, C, asm). Professional level: Principal/Staff Engineer (top decile fintech). OPSEC assessment: HIGH — deliberate minimization of personal disclosure. Connection to a major financial organization: VERY HIGH (circumstantial). Red flags: none. All personal identifiers redacted — this is a methodology demonstration, not an exposure.
+>
+> *Investigation panel: CyberGonzo (OSINT profiling), Alpha+Beta (adversarial verification)*
+
+---
+
 ## Subject of Investigation
 
 **Tech blog:** {{< redacted len="24" >}}
