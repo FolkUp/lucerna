@@ -69,7 +69,7 @@ Deliberate minimization of disclosure:
 | **Articles** | ~10 |
 | **Comments** | ~300 |
 | **Bookmarks** | ~350 |
-| **Followers** | 7 |
+| **Followers** | <10 |
 
 ---
 
@@ -121,11 +121,11 @@ Deliberate minimization of disclosure:
 
 | # | Topic | Period | Views | Votes | Originality |
 |---|-------|--------|-------|-------|-------------|
-| 1 | Domain-specific fintech language | 2026 | ~1,700 | positive | MEDIUM-HIGH |
-| 2-5 | Database internals series (4 parts) | 2025 | ~7,500 | positive | MEDIUM |
-| 6 | Retro computing RE, part 2 | 2025 | ~3,000 | positive | HIGH |
-| 7 | Systems programming toolkit | 2025 | ~3,800 | positive | HIGH |
-| 8 | Retro computing RE, part 1 | 2023 | ~6,700 | positive | HIGH |
+| 1 | Domain-specific fintech language | 2020s | thousands | positive | MEDIUM-HIGH |
+| 2-5 | Database internals series (several parts) | 2020s | thousands | positive | MEDIUM |
+| 6 | Retro computing RE, continuation | 2020s | thousands | positive | HIGH |
+| 7 | Systems programming toolkit | 2020s | thousands | positive | HIGH |
+| 8 | Retro computing RE | 2020s | thousands | positive | HIGH |
 
 ### Originality Assessment
 
@@ -137,7 +137,7 @@ Deliberate minimization of disclosure:
 - Domain-specific fintech language — original review, GitHub fork confirms expertise
 
 **MEDIUM (risk: compilation):**
-- Database internals series (4 parts) — deep technical analysis, but requires sentence-level checking for compilation from official documentation
+- Database internals series (several parts) — deep technical analysis, but requires sentence-level checking for compilation from official documentation
 
 **Overall verdict:** no plagiarism detected. All articles contain original authorial analysis.
 

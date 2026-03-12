@@ -69,7 +69,7 @@ Minimização deliberada de divulgação:
 | **Artigos** | ~10 |
 | **Comentários** | ~300 |
 | **Favoritos** | ~350 |
-| **Seguidores** | 7 |
+| **Seguidores** | <10 |
 
 ---
 
@@ -121,11 +121,11 @@ Minimização deliberada de divulgação:
 
 | # | Tema | Período | Visualizações | Votos | Originalidade |
 |---|------|---------|---------------|-------|---------------|
-| 1 | Linguagem fintech de domínio específico | 2026 | ~1.700 | positivos | MÉDIA-ALTA |
-| 2-5 | Série sobre internos de base de dados (4 partes) | 2025 | ~7.500 | positivos | MÉDIA |
-| 6 | RE retro computing, parte 2 | 2025 | ~3.000 | positivos | ALTA |
-| 7 | Ferramentas de programação de sistemas | 2025 | ~3.800 | positivos | ALTA |
-| 8 | RE retro computing, parte 1 | 2023 | ~6.700 | positivos | ALTA |
+| 1 | Linguagem fintech de domínio específico | 2020s | milhares | positivos | MÉDIA-ALTA |
+| 2-5 | Série sobre internos de base de dados (várias partes) | 2020s | milhares | positivos | MÉDIA |
+| 6 | RE retro computing, continuação | 2020s | milhares | positivos | ALTA |
+| 7 | Ferramentas de programação de sistemas | 2020s | milhares | positivos | ALTA |
+| 8 | RE retro computing | 2020s | milhares | positivos | ALTA |
 
 ### Avaliação de Originalidade
 
@@ -137,7 +137,7 @@ Minimização deliberada de divulgação:
 - Linguagem fintech de domínio específico — revisão original, fork no GitHub confirma expertise
 
 **MÉDIA (risco: compilação):**
-- Série sobre internos de base de dados (4 partes) — análise técnica profunda, mas requer verificação a nível de frase contra documentação oficial
+- Série sobre internos de base de dados (várias partes) — análise técnica profunda, mas requer verificação a nível de frase contra documentação oficial
 
 **Veredicto geral:** plágio não detetado. Todos os artigos contêm análise autoral original.
 
