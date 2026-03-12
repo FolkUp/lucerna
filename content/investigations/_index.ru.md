@@ -1,6 +1,6 @@
 ---
 title: "Расследования"
-description: "Глубокие OSINT-расследования — анализ нормативных актов, исторические исследования, аудит compliance."
+description: "OSINT-расследования, факт-чеки и досье — adversarial-верификация публичных утверждений."
 cascade:
   showBreadcrumbs: false
   showReadingTime: false

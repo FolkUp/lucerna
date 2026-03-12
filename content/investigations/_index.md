@@ -1,6 +1,6 @@
 ---
 title: "Investigations"
-description: "Deep-dive OSINT investigations — regulatory analysis, historical research, compliance audits."
+description: "OSINT investigations, fact-checks, and dossiers — adversarial verification of public claims."
 cascade:
   showBreadcrumbs: false
   showReadingTime: false

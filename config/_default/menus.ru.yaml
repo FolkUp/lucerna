@@ -2,6 +2,9 @@ main:
   - name: Расследования
     pageRef: investigations
     weight: 10
+  - name: Исследования
+    pageRef: studies
+    weight: 15
   - name: Верификации
     pageRef: verifications
     weight: 20

@@ -24,12 +24,12 @@ This is the summary report from a series of 6 detailed research papers analyzing
 
 ## Series Overview
 
-1. [EU AI Act — Structure and Applicability]({{< ref "/investigations/eu-ai-act-overview" >}})
-2. [Portugal — National Implementation]({{< ref "/investigations/eu-ai-act-portugal" >}})
-3. [GDPR and AI Intersections]({{< ref "/investigations/eu-ai-act-gdpr" >}})
-4. [Copyright and AI in the EU]({{< ref "/investigations/eu-ai-act-copyright" >}})
-5. [Enforcement Landscape]({{< ref "/investigations/eu-ai-act-enforcement" >}})
-6. [Compliance Checklist]({{< ref "/investigations/eu-ai-act-checklist" >}})
+1. [EU AI Act — Structure and Applicability]({{< ref "/studies/eu-ai-act-overview" >}})
+2. [Portugal — National Implementation]({{< ref "/studies/eu-ai-act-portugal" >}})
+3. [GDPR and AI Intersections]({{< ref "/studies/eu-ai-act-gdpr" >}})
+4. [Copyright and AI in the EU]({{< ref "/studies/eu-ai-act-copyright" >}})
+5. [Enforcement Landscape]({{< ref "/studies/eu-ai-act-enforcement" >}})
+6. [Compliance Checklist]({{< ref "/studies/eu-ai-act-checklist" >}})
 
 ---
 

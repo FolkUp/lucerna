@@ -2,6 +2,9 @@ main:
   - name: Investigations
     pageRef: investigations
     weight: 10
+  - name: Studies
+    pageRef: studies
+    weight: 15
   - name: Verifications
     pageRef: verifications
     weight: 20

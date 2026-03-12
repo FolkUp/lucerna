@@ -9,9 +9,9 @@ We publish OSINT investigations, fact-checks, and methodological notes. Every cl
 
 **What you'll find here:**
 
-- **Investigations** — deep dives into regulatory frameworks, historical origins, and compliance landscapes
-- **Verifications** — fact-checks of specific claims, articles, and datasets
+- **Investigations** — OSINT dossiers and adversarial fact-checks
+- **Studies** — academic research, deep analysis, and systematic reviews
+- **Verifications** — quick fact-checks of specific claims and datasets
 - **Methodology** — how we research, verify, and evaluate sources
-- **Toolkit** — reusable prompts and audit frameworks
 
 All content is freely available under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

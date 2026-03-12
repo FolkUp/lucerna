@@ -20,7 +20,7 @@ Uma lucerna era uma lâmpada a óleo na Roma antiga — uma pequena fonte de luz
 
 ## Quem somos
 
-Lucerna é um projeto da [FolkUp](https://folkup.app) — um coletivo de investigação independente sediado na Europa.
+Lucerna é um projeto do [FolkUp Research Lab](https://folkup.app) — um coletivo de investigação independente sediado na Europa. Não colocamos nomes nas publicações. O nosso trabalho fala por si.
 
 ## Política Editorial
 

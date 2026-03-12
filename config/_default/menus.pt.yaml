@@ -2,6 +2,9 @@ main:
   - name: Investigações
     pageRef: investigations
     weight: 10
+  - name: Estudos
+    pageRef: studies
+    weight: 15
   - name: Verificações
     pageRef: verifications
     weight: 20

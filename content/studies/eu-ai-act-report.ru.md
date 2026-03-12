@@ -24,12 +24,12 @@ summary: "Комплексный анализ обязательств по EU A
 
 ## Обзор серии
 
-1. [EU AI Act — структура и применимость]({{< ref "/investigations/eu-ai-act-overview" >}})
-2. [Португалия — национальная имплементация]({{< ref "/investigations/eu-ai-act-portugal" >}})
-3. [GDPR и AI: точки пересечения]({{< ref "/investigations/eu-ai-act-gdpr" >}})
-4. [Авторское право и AI в ЕС]({{< ref "/investigations/eu-ai-act-copyright" >}})
-5. [Enforcement: практика применения]({{< ref "/investigations/eu-ai-act-enforcement" >}})
-6. [Чеклист соответствия]({{< ref "/investigations/eu-ai-act-checklist" >}})
+1. [EU AI Act — структура и применимость]({{< ref "/studies/eu-ai-act-overview" >}})
+2. [Португалия — национальная имплементация]({{< ref "/studies/eu-ai-act-portugal" >}})
+3. [GDPR и AI: точки пересечения]({{< ref "/studies/eu-ai-act-gdpr" >}})
+4. [Авторское право и AI в ЕС]({{< ref "/studies/eu-ai-act-copyright" >}})
+5. [Enforcement: практика применения]({{< ref "/studies/eu-ai-act-enforcement" >}})
+6. [Чеклист соответствия]({{< ref "/studies/eu-ai-act-checklist" >}})
 
 ---
 
