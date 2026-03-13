@@ -1,28 +1,21 @@
 {{/* Lucerna hero override — compact brand-block + featured content */}}
-<article class="lucerna-hero" role="banner">
+<header class="lucerna-hero">
   <div class="lucerna-hero__accent" aria-hidden="true"></div>
   <div class="lucerna-hero__inner">
     <h1 class="lucerna-hero__title">
       Lucerna
-      <span class="sr-only"> — Independent OSINT Research Lab</span>
+      <span class="sr-only"> — {{ i18n "heroSrLabel" | default "Independent OSINT Research Lab" }}</span>
     </h1>
     {{ with .Site.Params.Author.headline }}
       <p class="lucerna-hero__subtitle">{{ . | markdownify }}</p>
     {{ end }}
     <div class="lucerna-hero__divider" aria-hidden="true"></div>
-    {{ if eq .Site.Language.Lang "ru" }}
-      <a href="{{ relLangURL `investigations/` }}" class="lucerna-hero__cta">
-        Читать расследования
-        <span aria-hidden="true">&rarr;</span>
-      </a>
-    {{ else }}
-      <a href="{{ relLangURL `investigations/` }}" class="lucerna-hero__cta">
-        Read investigations
-        <span aria-hidden="true">&rarr;</span>
-      </a>
-    {{ end }}
+    <a href="{{ relLangURL "investigations/" }}" class="lucerna-hero__cta">
+      {{ i18n "heroCta" | default "Read investigations" }}
+      <span aria-hidden="true">&rarr;</span>
+    </a>
   </div>
-</article>
+</header>
 <section>
   {{ partial "recent-articles/main.html" . }}
 </section>

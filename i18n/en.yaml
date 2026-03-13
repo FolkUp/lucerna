@@ -66,6 +66,14 @@ dossierColSubject: "Subject"
 dossierColStatus: "Status"
 dossierColConfidence: "Confidence"
 
+# Hero
+heroSrLabel: "Independent OSINT Research Lab"
+heroCta: "Read investigations"
+
+# Methodology ref in investigation meta
+metaMethodology: "Methodology"
+metaMethodologyLink: "Read methodology"
+
 # 404 page
 404Title: "File Not Found"
 404Text: "The requested document has been redacted, relocated, or never existed."

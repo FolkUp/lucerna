@@ -185,6 +185,14 @@ dossierColSubject: "Assunto"
 dossierColStatus: "Estado"
 dossierColConfidence: "Confiança"
 
+# Hero
+heroSrLabel: "Laboratório Independente de Investigação OSINT"
+heroCta: "Ler investigações"
+
+# Methodology ref in investigation meta
+metaMethodology: "Metodologia"
+metaMethodologyLink: "Ler metodologia"
+
 404Title: "Ficheiro Não Encontrado"
 404Text: "O documento solicitado foi redigido, realocado, ou nunca existiu."
 404Home: "Voltar à Sede"

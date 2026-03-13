@@ -66,6 +66,14 @@ dossierColSubject: "Тема"
 dossierColStatus: "Статус"
 dossierColConfidence: "Достоверность"
 
+# Hero
+heroSrLabel: "Независимая OSINT-исследовательская лаборатория"
+heroCta: "Читать расследования"
+
+# Methodology ref in investigation meta
+metaMethodology: "Методология"
+metaMethodologyLink: "Читать методологию"
+
 # 404 page
 404Title: "Файл не найден"
 404Text: "Запрашиваемый документ был изъят, перемещён или никогда не существовал."
