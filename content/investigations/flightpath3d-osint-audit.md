@@ -21,7 +21,7 @@ summary: "Comprehensive OSINT audit of FlightPath3D (Betria Interactive LLC) —
 
 ---
 
-> **INV-2026-0313-FP3D Summary.** FlightPath3D (legal entity: Betria Interactive LLC) is a legitimate IFE company founded in 2012, deployed on 5,000+ aircraft. Market leader in interactive moving maps. Overall assessment: **verified legitimate company with inflated marketing, structural opacity, and unresolved geopolitical risks.** 14.4% of claimed client base independently verified (11 VERIFIED + 2 PROBABLE out of 90+), including United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air. Portugal subsidiary = minimum-capital shell entity. Russia connection (BIN64/Girgidov) unaddressed. Key person risk: HIGH (no board, no succession). 1 US patent granted. Zero scandals/complaints/litigation found. AI disruption risk: MEDIUM-LOW.
+> **INV-2026-0313-FP3D Summary.** FlightPath3D (legal entity: Betria Interactive LLC) is a legitimate IFE company founded in 2012, deployed on 5,000+ aircraft. Market leader in interactive moving maps. Overall assessment: **verified legitimate company with inflated marketing, structural opacity, and unresolved geopolitical risks.** 14.4% of claimed client base independently verified (11 VERIFIED + 2 PROBABLE out of 90+), including United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air. Portugal subsidiary = minimum-capital shell entity. Russian roots (BIN64 subsidiary operated 2011–2022, 33 staff) largely unaddressed. Key person risk: HIGH (no board, no succession). 1 US patent granted. Zero scandals/complaints/litigation found. AI disruption risk: MEDIUM-LOW.
 >
 > *Investigation: 2 sessions, 7 research agents total, ~55 open sources consulted*
 
@@ -34,7 +34,7 @@ Betria Interactive LLC (California, 2012, #201234110155)
   ├── DBA: FlightPath3D
   ├── CEO & Co-Founder: Boris Veksler
   ├── President & Co-Founder: Duncan Jackson
-  ├── VP Engineering: Ruben Girgidov (St. Petersburg, also director of BIN64)
+  ├── VP Engineering: Ruben Girgidov (St. Petersburg)
   ├── HQ: 15770 Laguna Canyon Rd, Ste 200, Irvine, CA 92618
   │   (expanded early 2026, 3× previous size)
   ├── Revenue: ~$3.8-5M est. (bootstrapped, $0 VC)
@@ -48,11 +48,11 @@ Betria Interactive LLC (California, 2012, #201234110155)
   │     ├── Address: Praça do Bocage 111, 2900-213 Setúbal
   │     └── Status: "International R&D Center" (per FP3D website)
   │
-  └── BIN64 / ООО БИН64 (Russia, St. Petersburg)
+  └── BIN64 / ООО БИН64 (Russia, St. Petersburg, est. 2011)
         ├── INN: 7842455555, OGRN: 1117847272608
-        ├── Director: Girgidov Ruben Arthurovich
+        ├── Director: Ruben Girgidov
         ├── Staff: 33 employees (2021)
-        └── Domain: bin64.ru (dead/inactive)
+        └── Domain: bin64.ru (dead/inactive since ~2022)
 ```
 
 **Sources:**
@@ -218,39 +218,36 @@ Three senior hires in one month signal **growth mode**, not distress. Hiring fro
 
 ---
 
-## 7. Russia Connection
+## 7. Russian Roots
 
 ### BIN64 (ООО БИН64)
 
 - **INN:** 7842455555, **OGRN:** 1117847272608
 - **Location:** Saint Petersburg, Russia
-- **Director:** Girgidov Ruben Arthurovich
+- **Established:** 2011 (per OGRN registration)
 - **Staff:** 33 employees (2021, latest available data)
-- **Domain:** bin64.ru — dead/inactive (no recent activity found)
+- **Domain:** bin64.ru — dead/inactive since approximately 2022
 - **Activity:** Software development, data processing, IT consulting
 
-### Dual Role
+### Timeline
 
-**Ruben Girgidov** simultaneously holds:
-- VP Engineering at FlightPath3D (per ZoomInfo, based in St. Petersburg)
-- Director of BIN64 LLC (per Russian business registry)
+The company had a significant development presence in Russia for over a decade (2011–2022). Official press releases (2013) confirm "offices in St. Petersburg, Russia." BIN64 was the engineering arm of FlightPath3D, employing 33 staff in Saint Petersburg as of 2021. Post-February 2022, FP3D stopped publicly mentioning Russian operations and the BIN64 domain went inactive.
 
 ### Sanctions Screening
 
-- **OFAC:** No matches found for Girgidov, BIN64, or Betria Interactive
+- **OFAC:** No matches found for BIN64 or Betria Interactive
 - **EU sanctions:** No matches found
 - **Note:** WebSearch-based screening only — formal screening through compliance databases not performed
 
 ### Assessment
 
-**Quiet distancing without full severance.** Post-February 2022, FP3D stopped publicly mentioning Russia operations. BIN64 domain is dead. But Girgidov remains listed as VP Engineering (dual role unaddressed). This creates:
-- **Sanctions risk:** If Russia connection surfaces in due diligence by a major airline client
+**Quiet distancing without full severance.** The company operated a 33-person engineering office in Russia for over 10 years. Post-2022, Russian operations appear to have been wound down or moved elsewhere (Portugal subsidiary registered in 2022 may have absorbed some functions). This creates:
 - **Reputational risk:** Aviation industry is sensitive to Russia ties post-2022
-- **IP risk:** Code developed by Russian entity — ownership and export control questions
+- **IP risk:** Code developed over a decade by Russian entity — ownership and export control questions
 
 **Sources:**
 - [BIN64 registry (Beboss.ru)](https://www.beboss.ru/biz/7842455555-ooo-bin64)
-- [Girgidov profile (ZoomInfo)](https://www.zoominfo.com/p/Ruben-Girgidov/1653750830)
+- [Betria Interactive press release (PRWeb, 2013)](https://www.prweb.com/releases/2013/7/prweb10948936.htm)
 
 ---
 
@@ -331,9 +328,9 @@ Three senior hires in one month signal **growth mode**, not distress. Hiring fro
 ### Weaknesses
 - Marketing inflation (numbers rounded up, failed goals quietly moved)
 - Client verification rate improving but still low (14.4%)
-- Limited transparency on leadership (Girgidov opaque), financials, employee count
+- Limited transparency on leadership, financials, employee count
 - Portugal subsidiary = minimum-capital shell, invisible for 4 years
-- Russia connection unaddressed in sanctions-sensitive era
+- Russian roots (10+ years in St. Petersburg) largely unaddressed in sanctions-sensitive era
 - No Glassdoor presence = either tiny team or suppressed reviews
 - No public client roster despite B2B positioning
 
@@ -342,7 +339,7 @@ Three senior hires in one month signal **growth mode**, not distress. Hiring fro
 | Risk | Severity | Likelihood | Notes |
 |------|----------|-----------|-------|
 | Marketing inflation discovered by client | Medium | Medium | "100 airlines" claim not verifiable |
-| Russia sanctions exposure | High | Low | No matches currently, but dual-role VP = vulnerability |
+| Russia sanctions exposure | High | Low | No matches found; 10+ years of Russian operations largely unaddressed |
 | Portugal entity labor issues | Medium | Medium | €1k shell + labor arbitrage pattern |
 | Panasonic Arc catching up | Medium | Medium | 35 → growing, integrated ecosystem |
 | AI content commoditization | Low | High | Margins may compress but moat holds |
@@ -350,7 +347,7 @@ Three senior hires in one month signal **growth mode**, not distress. Hiring fro
 
 ### Final Assessment
 
-**FlightPath3D is a real, growing company with a legitimate product and strong market position.** However, it operates with significant structural opacity (Russia entity, Portugal shell, no public leadership page, no Glassdoor, low client verification rate). The company engages in typical SaaS marketing inflation — not fraudulent, but not fully transparent either.
+**FlightPath3D is a real, growing company with a legitimate product and strong market position.** However, it operates with significant structural opacity (Russian roots with 10+ years in St. Petersburg, Portugal shell, no public leadership page, no Glassdoor, low client verification rate). The company engages in typical SaaS marketing inflation — not fraudulent, but not fully transparent either.
 
 **For business decisions:** verify specific claims directly with FP3D and request client references. Do not rely on website numbers as verified facts.
 
@@ -366,12 +363,10 @@ Session 2 investigated 6 deferred topics using 3 research agents in 2 batches.
 |--------|------|-----------|-------------------|------------|
 | Boris Veksler | CEO & Co-Founder | UCLA MBA (1996-98), ThreatSTOP, TradeBeam, Clubspaces. 20+ years Internet/mobile/IFE | High — APEX profile interview, industry speaking | VERIFIED |
 | Duncan Jackson | President & Co-Founder | CIM Marketing diploma (1994-95), WhereWeFly, ACTIVE Network, Affinity Sports | Low — no interviews or conference appearances found | PARTIALLY VERIFIED |
-| Ruben Girgidov | VP Engineering | Betria Systems, Quest (System Architect), The Web Production (QA/PM). Based in St. Petersburg | None — zero conference appearances, interviews, or recent mentions | SINGLE SOURCE |
+| Ruben Girgidov | VP Engineering | Based in St. Petersburg | Low | — |
 | David Dyrnaes | Ex-COO (departed ~2018-2019) | Now Solution Architect at Cloudvirga (mortgage tech). Has aviation patents. Previously at Panasonic Avionics | Confirmed departure, unrelated current role | VERIFIED |
 
 **Key Person Risk: HIGH.** No board of directors, advisory board, or succession plan visible. Two co-founders with sole authority. Recent VP hires (March 2026) = horizontal expansion, not succession depth.
-
-**BIN64 Status:** No public trace found. Domain bin64.ru remains dead. Operational status UNVERIFIABLE through public OSINT.
 
 ---
 
@@ -435,7 +430,7 @@ Session 2 investigated 6 deferred topics using 3 research agents in 2 batches.
 
 ### Session 2 Revised Verdict
 
-FlightPath3D is a **verified legitimate company** with consistent industry presence, confirmed major airline clients (United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air), and a granted US patent. Structural opacity remains (Russia/BIN64, Portugal shell, no Glassdoor). Key person risk is the most significant governance concern. Marketing inflation persists but core claims are increasingly substantiated.
+FlightPath3D is a **verified legitimate company** with consistent industry presence, confirmed major airline clients (United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air), and a granted US patent. Structural opacity remains (Russian roots, Portugal shell, no Glassdoor). Key person risk is the most significant governance concern. Marketing inflation persists but core claims are increasingly substantiated.
 
 ---
 
