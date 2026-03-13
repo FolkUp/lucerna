@@ -6,7 +6,7 @@ status: partially_verified
 confidence: medium-high
 tags: ["osint", "due-diligence", "company-audit", "aviation", "ife", "flightpath3d"]
 categories: ["investigation"]
-sources_count: 55
+sources_count: 60
 investigation_id: "INV-2026-0313-FP3D"
 investigation_type: audit
 methodology_disclosed: true
@@ -21,17 +21,23 @@ summary: "Comprehensive OSINT audit of FlightPath3D (Betria Interactive LLC) —
 
 ---
 
-> **INV-2026-0313-FP3D Summary.** FlightPath3D (legal entity: Betria Interactive LLC) is a legitimate IFE company founded in 2012, deployed on 5,000+ aircraft. Market leader in interactive moving maps. Overall assessment: **verified legitimate company with inflated marketing, structural opacity, and unresolved geopolitical risks.** 14.4% of claimed client base independently verified (11 VERIFIED + 2 PROBABLE out of 90+), including United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air. Portugal subsidiary = minimum-capital shell entity. Russian roots (BIN64 subsidiary operated 2011–2022, 33 staff) largely unaddressed. Key person risk: HIGH (no board, no succession). 1 US patent granted. Zero scandals/complaints/litigation found. AI disruption risk: MEDIUM-LOW.
+> **INV-2026-0313-FP3D Summary.** FlightPath3D is the trade name (DBA) of **Betria Interactive, LLC** — a California-registered IFE company deployed on 5,000+ aircraft. Market leader in interactive moving maps. Overall assessment: **verified legitimate company with inflated marketing, structural opacity, and unresolved geopolitical risks.** 14.4% of claimed client base independently verified (11 VERIFIED + 2 PROBABLE out of 90+), including United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air. The "Betria" name was quietly retired from public use circa 2016–2017 when the FlightPath3D trademark was registered. Portugal subsidiary = minimum-capital shell entity. Russian roots (BIN64 subsidiary operated 2011–2022, 33 staff) largely unaddressed. Key person risk: HIGH (no board, no succession). 1 US patent granted. Zero scandals/complaints/litigation found. AI disruption risk: MEDIUM-LOW.
 >
-> *Investigation: 2 sessions, 7 research agents total, ~55 open sources consulted*
+> *Investigation: 3 sessions, 9 research agents, ~60 open sources consulted*
 
 ---
 
-## 1. Corporate Structure
+## 1. Corporate Structure & Identity
+
+### Legal Entity
+
+**Betria Interactive, LLC** is registered in California (entity #201234110155). "FlightPath3D" is a DBA (doing business as) trade name — not a separate company, subsidiary, or product. The FLIGHTPATH3D trademark (US Reg. #5348873) was filed November 2016 and registered December 2017, owned by Betria Interactive, LLC.
+
+The "Betria" name ceased to appear in public marketing circa 2016–2017, coinciding with the trademark filing. No press release or formal rebrand announcement was found. Employees on LinkedIn list their affiliation as "FlightPath3D / Betria Interactive LLC." Founding date is disputed: CBInsights lists 2007, California filing indicates 2012, and the About page references 2013 (first airline deployment).
 
 ```
 Betria Interactive LLC (California, 2012, #201234110155)
-  ├── DBA: FlightPath3D
+  ├── DBA: FlightPath3D (trademark #5348873, reg. 2017)
   ├── CEO & Co-Founder: Boris Veksler
   ├── President & Co-Founder: Duncan Jackson
   ├── VP Engineering: Ruben Girgidov (St. Petersburg)
@@ -56,9 +62,11 @@ Betria Interactive LLC (California, 2012, #201234110155)
 ```
 
 **Sources:**
-- [Betria Interactive CA filing](https://www.bizprofile.net/ca/irvine/betria-interactive-llc)
-- [Smart Travel Software registry (Racius)](https://www.racius.com/smart-travel-software-unipessoal-lda/)
-- [BIN64 registry (Beboss.ru)](https://www.beboss.ru/biz/7842455555-ooo-bin64)
+- [Betria Interactive — OpenCorporates](https://opencorporates.com/companies/us_ca/201234110155)
+- [FlightPath3D trademark — USPTO via Justia](https://trademarks.justia.com/872/28/flightpath3d-87228680.html)
+- [Betria Interactive — D&B](https://www.dnb.com/business-directory/company-profiles.betria_interactive_llc.html)
+- [Smart Travel Software registry — Racius](https://www.racius.com/smart-travel-software-unipessoal-lda/)
+- [BIN64 registry — Beboss.ru](https://www.beboss.ru/biz/7842455555-ooo-bin64)
 - [FlightPath3D Contact page](https://flightpath3d.com/contact)
 
 ---
@@ -96,20 +104,27 @@ Betria Interactive LLC (California, 2012, #201234110155)
 
 ## 3. Client Base Verification
 
-### Independently Confirmed (6 airlines)
+### Independently Verified Airlines
 
-| Airline | Source | Year |
-|---------|--------|------|
-| Norwegian Air Shuttle | RGN, BusinessWire | 2013 (first customer) |
-| All Nippon Airways (ANA) | AII, FTE | 2018 (50th customer) |
-| Southwest Airlines | RGN, FTE | 2022 |
-| Cathay Pacific | RGN | 2024 |
-| Delta Air Lines | PaxEx | 2024 (Accessibility Map) |
-| Riyadh Air | RGN | 2025 (pre-launch) |
+| Airline | Source | Year | Confidence |
+|---------|--------|------|-----------|
+| Norwegian Air Shuttle | RGN, BusinessWire | 2013 (first customer) | VERIFIED |
+| All Nippon Airways (ANA) | AII, FTE | 2018 (50th customer) | VERIFIED |
+| British Airways | PaxEx | 2020 | VERIFIED |
+| Southwest Airlines | RGN, FTE | 2022 | VERIFIED |
+| Lufthansa Group | RGN, PaxEx | 2022 | VERIFIED |
+| American Airlines | Simple Flying | 2024 | VERIFIED |
+| Cathay Pacific | RGN | 2024 | VERIFIED |
+| Delta Air Lines | PaxEx | 2024 (Accessibility Map) | VERIFIED |
+| Qatar Airways | FTE | 2024 | VERIFIED |
+| Riyadh Air | RGN | 2025 (pre-launch) | VERIFIED |
+| United Airlines | RGN, PaxEx, FTE | 2025 | VERIFIED |
+| EL AL | FP3D news | 2024 | PROBABLE |
+| Starlux Airlines | Aircraft Interiors Intl | 2024 | PROBABLE |
 
-### Claimed Only — No Independent Confirmation
+### Still Unverified
 
-United Airlines, American Airlines, Lufthansa Group, Qatar Airways, Air China, British Airways, EL AL, Starlux Airlines — listed on FP3D website/Tracxn only.
+Air China, Emirates, Singapore Airlines, JetBlue, Turkish Airlines — listed on FP3D website or Tracxn, but no independent trade press confirmation found.
 
 ### Client Departures
 
@@ -125,7 +140,7 @@ United Airlines, American Airlines, Lufthansa Group, Qatar Airways, Air China, B
 
 ### Assessment
 
-**"90+ airlines" = 6.7% verification rate.** The claim trajectory (50 → 60 → 85 → 90+) is internally consistent, but independent evidence covers only 6 airlines. The gap may be due to NDAs common in aviation contracts, but it cannot be ruled out that the number includes regional/charter operators counted individually.
+**"90+ airlines" → 14.4% verification rate (13/90+).** The claim trajectory (50 → 60 → 85 → 90+) is internally consistent. Independent evidence covers 11 verified + 2 probable airlines, including major carriers (United, American, Lufthansa, Qatar, BA). The gap may be due to NDAs common in aviation contracts, but it cannot be ruled out that the number includes regional/charter operators counted individually.
 
 **Sources:**
 - [50th airline (ANA) — Aircraft Interiors Intl](https://www.aircraftinteriorsinternational.com/news/industry-news/flightpath3d-signs-ana-as-50th-airline-customer.html)
@@ -163,19 +178,24 @@ United Airlines, American Airlines, Lufthansa Group, Qatar Airways, Air China, B
 
 ---
 
-## 5. Leadership Changes (2024–2026)
+## 5. Leadership & Governance
 
-### New Hires (March 2026)
+### Leadership Team
+
+| Person | Role | Background | Public Visibility | Confidence |
+|--------|------|-----------|-------------------|------------|
+| Boris Veksler | CEO & Co-Founder | UCLA MBA (1996–98), ThreatSTOP, TradeBeam, Clubspaces. 20+ years Internet/mobile/IFE | High — APEX profile, industry speaking | VERIFIED |
+| Duncan Jackson | President & Co-Founder | CIM Marketing diploma (1994–95), WhereWeFly, ACTIVE Network, Affinity Sports | Low — no interviews or conferences found | PARTIALLY VERIFIED |
+| Ruben Girgidov | VP Engineering | Based in St. Petersburg | Low | — |
+| David Dyrnaes | Ex-COO (departed ~2018–2019) | Now Solution Architect at Cloudvirga (mortgage tech). Has aviation patents. Previously at Panasonic Avionics | Confirmed departure, unrelated current role | VERIFIED |
+
+### Recent Hires (March 2026)
 
 | Name | Title | Background | Signal |
 |------|-------|-----------|--------|
 | Prashant Vyas | VP, Middle East | Thales, Safran, **Panasonic Avionics** | Hired from direct competitor |
 | Howie Lewis | VP, Business Aviation | Gogo, Airshow, EMS Satcom | BizAv expansion |
 | Ross Derham | Director, Product Management | **Boeing**, **Meta** (3D/AI) | AI integration focus |
-
-### Key Departures / Unclear Status
-
-- **David Dyrnaes (ex-COO):** No trace of current role or departure announcement. LinkedIn references only from 2014-2017. Status unknown.
 
 ### Operational Expansion
 
@@ -184,7 +204,7 @@ United Airlines, American Airlines, Lufthansa Group, Qatar Airways, Air China, B
 
 ### Assessment
 
-Three senior hires in one month signal **growth mode**, not distress. Hiring from Panasonic (direct competitor) and Meta/Boeing (AI/3D expertise) indicates strategic direction: Middle East expansion + AI integration + business aviation market.
+**Key Person Risk: HIGH.** No board of directors, advisory board, or succession plan visible. Two co-founders with sole authority. Three senior hires in one month signal **growth mode**, not distress — hiring from Panasonic (direct competitor) and Meta/Boeing (AI/3D expertise) indicates strategic direction: Middle East expansion + AI integration + business aviation market. Recent VP hires represent horizontal expansion, not succession depth.
 
 **Source:** [PAX International, March 12, 2026](https://www.pax-intl.com/ife-connectivity/inflight-entertainment/2026/03/12/flightpath3d-expands-leadership-and-operations/)
 
@@ -262,10 +282,12 @@ The company had a significant development presence in Russia for over a decade (
 4. **Relationships:** 13 years of airline partnerships, B2B trust
 
 **FP3D's AI moves:**
-- **Luci:** AI companion on 700+ aircraft (Aug 2024), contextual content overlay
+- **Luci:** AI companion launched September 2023, deployed on 700+ aircraft by August 2024. Reported 19 million messages to 2.6 million passengers. 100,000+ POI database
 - **Ross Derham:** Boeing/Meta hire for AI product direction
 - **FlightPath3D Cloud:** SaaS model addresses BYOD trend
-- **Destination Stories:** AI-curated content (Sept 2025)
+- **Destination Stories:** AI-curated content (September 2025)
+
+**Luci — Transparency Gap:** The term "AI" appears 40+ times in FP3D press materials, but no third-party AI vendor has been identified in any public source. The company has neither disclosed using an external model (OpenAI, Google, etc.) nor explicitly claimed proprietary AI development. This is a notable transparency gap for a product marketed as an "AI companion."
 
 **Could AI disrupt FP3D?**
 - Content generation: YES — AI can create POI descriptions, curate stories
@@ -316,66 +338,12 @@ The company had a significant development presence in Russia for over a decade (
 
 ---
 
-## 11. Overall Verdict
-
-### Strengths
-- Real product with verified deployment (5,000+ aircraft confirmed by multiple sources)
-- Market leader in moving maps (overtook Collins Airshow)
-- Genuine awards from recognized industry bodies (APEX, PAX, Onboard Hospitality)
-- Strategic AI integration (Luci, hiring from Meta/Boeing)
-- Clean public record — no scandals, complaints, or lawsuits found
-
-### Weaknesses
-- Marketing inflation (numbers rounded up, failed goals quietly moved)
-- Client verification rate improving but still low (14.4%)
-- Limited transparency on leadership, financials, employee count
-- Portugal subsidiary = minimum-capital shell, invisible for 4 years
-- Russian roots (10+ years in St. Petersburg) largely unaddressed in sanctions-sensitive era
-- No Glassdoor presence = either tiny team or suppressed reviews
-- No public client roster despite B2B positioning
-
-### Risk Matrix
-
-| Risk | Severity | Likelihood | Notes |
-|------|----------|-----------|-------|
-| Marketing inflation discovered by client | Medium | Medium | "100 airlines" claim not verifiable |
-| Russia sanctions exposure | High | Low | No matches found; 10+ years of Russian operations largely unaddressed |
-| Portugal entity labor issues | Medium | Medium | €1k shell + labor arbitrage pattern |
-| Panasonic Arc catching up | Medium | Medium | 35 → growing, integrated ecosystem |
-| AI content commoditization | Low | High | Margins may compress but moat holds |
-| Key person risk (Veksler/Jackson) | High | Low | Bootstrapped, no succession plan visible |
-
-### Final Assessment
-
-**FlightPath3D is a real, growing company with a legitimate product and strong market position.** However, it operates with significant structural opacity (Russian roots with 10+ years in St. Petersburg, Portugal shell, no public leadership page, no Glassdoor, low client verification rate). The company engages in typical SaaS marketing inflation — not fraudulent, but not fully transparent either.
-
-**For business decisions:** verify specific claims directly with FP3D and request client references. Do not rely on website numbers as verified facts.
-
----
-
-## Session 2 — Deep Dive (13.03.2026)
-
-Session 2 investigated 6 deferred topics using 3 research agents in 2 batches.
-
-### 12. Leadership Deep-Dive
-
-| Person | Role | Background | Public Visibility | Confidence |
-|--------|------|-----------|-------------------|------------|
-| Boris Veksler | CEO & Co-Founder | UCLA MBA (1996-98), ThreatSTOP, TradeBeam, Clubspaces. 20+ years Internet/mobile/IFE | High — APEX profile interview, industry speaking | VERIFIED |
-| Duncan Jackson | President & Co-Founder | CIM Marketing diploma (1994-95), WhereWeFly, ACTIVE Network, Affinity Sports | Low — no interviews or conference appearances found | PARTIALLY VERIFIED |
-| Ruben Girgidov | VP Engineering | Based in St. Petersburg | Low | — |
-| David Dyrnaes | Ex-COO (departed ~2018-2019) | Now Solution Architect at Cloudvirga (mortgage tech). Has aviation patents. Previously at Panasonic Avionics | Confirmed departure, unrelated current role | VERIFIED |
-
-**Key Person Risk: HIGH.** No board of directors, advisory board, or succession plan visible. Two co-founders with sole authority. Recent VP hires (March 2026) = horizontal expansion, not succession depth.
-
----
-
-### 13. Intellectual Property & Litigation
+## 11. Intellectual Property & Litigation
 
 **Patents:**
-- **US 9,989,370** (granted) — "Real-time multimodal travel estimation and routing system" — Inventors: Jackson, Veksler, Dyrnaes. Also filed as WIPO WO2017160374A1.
-- **Trademarks:** FLIGHTPATH3D (Reg. 5348873), FLIGHTPATH2D (Reg. 5318959)
-- Core 3D rendering and data integration technology protected as trade secrets.
+- **US 9,989,370** (granted) — "Real-time multimodal travel estimation and routing system" — Inventors: Jackson, Veksler, Dyrnaes. Also filed as WIPO WO2017160374A1
+- Additional registered trademark: FLIGHTPATH2D (Reg. #5318959). Main trademark covered in Section 1
+- Core 3D rendering and data integration technology protected as trade secrets
 
 **Litigation:** ZERO. No lawsuits found involving Betria Interactive, FlightPath3D, or Smart Travel Software in any jurisdiction searched.
 
@@ -383,7 +351,7 @@ Session 2 investigated 6 deferred topics using 3 research agents in 2 batches.
 
 ---
 
-### 14. Financial Health Indicators
+## 12. Financial Health Indicators
 
 | Indicator | Finding | Confidence |
 |-----------|---------|-----------|
@@ -397,7 +365,7 @@ Session 2 investigated 6 deferred topics using 3 research agents in 2 batches.
 
 ---
 
-### 15. Conference Presence
+## 13. Conference Presence
 
 | Event | Year(s) | Evidence | Type |
 |-------|---------|----------|------|
@@ -410,27 +378,47 @@ Session 2 investigated 6 deferred topics using 3 research agents in 2 batches.
 
 ---
 
-### 16. Updated Client Verification
+## 14. Overall Verdict
 
-**Session 2 newly verified:**
+### Strengths
 
-| Airline | Source | Year | Confidence |
-|---------|--------|------|-----------|
-| United Airlines | RGN, PaxEx, FTE | 2025 | VERIFIED |
-| American Airlines | Simple Flying | 2024 | VERIFIED |
-| Lufthansa | RGN, PaxEx | 2022 | VERIFIED |
-| Qatar Airways | FTE | 2024 | VERIFIED |
-| British Airways | PaxEx | 2020 | VERIFIED |
-| EL AL | FP3D news | 2024 | PROBABLE |
-| Starlux | Aircraft Interiors Intl | 2024 | PROBABLE |
+- Real product with verified deployment (5,000+ aircraft confirmed by multiple sources)
+- Market leader in moving maps (overtook Collins Airshow)
+- Genuine awards from recognized industry bodies (APEX, PAX, Onboard Hospitality)
+- Strategic AI integration (Luci, hiring from Meta/Boeing)
+- Clean public record — no scandals, complaints, or lawsuits found
+- Confirmed major airline clients: United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air
+- Granted US patent (multimodal travel routing)
+- Consistent conference presence at APEX EXPO and AIX Hamburg
 
-**Cumulative:** 11 VERIFIED + 2 PROBABLE = 13/90+ (14.4%). Still unverified: Air China, Emirates, Singapore Airlines, JetBlue, Turkish Airlines.
+### Weaknesses
 
----
+- Marketing inflation (numbers rounded up, failed goals quietly moved)
+- Client verification rate: 14.4% (13/90+) — improving but still low
+- Limited transparency on leadership, financials, employee count
+- Luci AI: no vendor or proprietary technology disclosure despite heavy "AI" marketing
+- Portugal subsidiary = minimum-capital shell, invisible for 4 years before public acknowledgment
+- Russian roots (10+ years in St. Petersburg) largely unaddressed in sanctions-sensitive era
+- No Glassdoor presence = either tiny team or suppressed reviews
+- Quiet rebrand from Betria to FlightPath3D with no public explanation
 
-### Session 2 Revised Verdict
+### Risk Matrix
 
-FlightPath3D is a **verified legitimate company** with consistent industry presence, confirmed major airline clients (United, American, Lufthansa, Qatar, BA, Southwest, Cathay, Delta, Norwegian, ANA, Riyadh Air), and a granted US patent. Structural opacity remains (Russian roots, Portugal shell, no Glassdoor). Key person risk is the most significant governance concern. Marketing inflation persists but core claims are increasingly substantiated.
+| Risk | Severity | Likelihood | Notes |
+|------|----------|-----------|-------|
+| Marketing inflation discovered by client | Medium | Medium | "100 airlines" claim not independently verifiable |
+| Russia sanctions exposure | High | Low | No matches found; 10+ years of Russian operations largely unaddressed |
+| Portugal entity labor issues | Medium | Medium | €1k shell + labor arbitrage pattern |
+| AI transparency gap (Luci) | Medium | Medium | No vendor disclosure despite heavy marketing |
+| Panasonic Arc catching up | Medium | Medium | 35 → growing, integrated ecosystem |
+| AI content commoditization | Low | High | Margins may compress but moat holds |
+| Key person risk (Veksler/Jackson) | High | Low | Bootstrapped, no succession plan visible |
+
+### Final Assessment
+
+**FlightPath3D (DBA of Betria Interactive, LLC) is a verified legitimate company** with a real product, strong market position, and confirmed major airline clients. However, it operates with significant structural opacity: a quiet rebrand from Betria with no public explanation, Russian engineering roots spanning 10+ years in St. Petersburg, a minimum-capital Portugal shell invisible for 4 years, no disclosed AI technology stack despite heavy marketing, no public leadership page, no Glassdoor presence, and a low client verification rate. The company engages in typical SaaS marketing inflation — not fraudulent, but not fully transparent either.
+
+**For business decisions:** verify specific claims directly with FP3D and request client references. Do not rely on website numbers as verified facts.
 
 ---
 
@@ -438,14 +426,15 @@ FlightPath3D is a **verified legitimate company** with consistent industry prese
 
 This investigation was conducted using exclusively open sources (OSINT):
 
-1. **Session 1** — 4 specialized agents in 2 batches: website/claims verification, client base analysis, competitive landscape/industry, leadership/incidents
-2. **Session 2** — 3 specialized agents in 2 batches: leadership deep-dive, IP/litigation/financial, conference presence/client verification
-3. **Source triangulation** — ~55 web sources cross-referenced across both sessions
-4. **Corporate registry verification** — California SOS, Portuguese Racius, Russian business registries, USPTO, WIPO
+1. **Phase 1** — 4 research directions: website/claims verification, client base analysis, competitive landscape/industry, leadership/incidents
+2. **Phase 2** — 3 research directions: leadership deep-dive, IP/litigation/financial, conference presence/client verification
+3. **Phase 3** — 2 research directions: corporate identity (Betria/DBA relationship), AI technology verification (Luci)
+4. **Source triangulation** — ~60 web sources cross-referenced
+5. **Corporate registry verification** — California SOS, Portuguese Racius, Russian business registries, USPTO, WIPO, OpenCorporates, D&B
 
-**Sources:** public websites, trade press archives, business registries, patent databases, industry databases, search engines
-**Limitations:** no access to financial filings (LLC), no formal sanctions screening databases, no insider interviews, Inc. 5000 revenue data paywalled
+**Sources:** public websites, trade press archives, business registries, patent databases, trademark databases, industry databases, search engines
+**Limitations:** no access to financial filings (LLC), no formal sanctions screening databases, no insider interviews, Inc. 5000 revenue data paywalled, California SOS CAPTCHA-protected
 
-*Session 1: 13.03.2026 — 4 agents, 2 batches, ~40 sources*
-*Session 2: 13.03.2026 — 3 agents, 2 batches, ~55 cumulative sources*
+*9 research agents across 3 phases, ~60 open sources consulted*
+*Investigation date: 13.03.2026*
 *Next review: on request*
