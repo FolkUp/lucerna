@@ -2,7 +2,7 @@ disabled: false
 languageCode: en
 languageName: English
 weight: 1
-title: "Lucerna — FolkUp Research Lab"
+title: "Lucerna"
 
 params:
   displayName: EN
@@ -14,11 +14,6 @@ params:
     Content [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
   author:
-    name: "FolkUp Research"
-    image: "img/logo.png"
-    headline: "Open investigations, transparent methodology"
+    name: "Lucerna"
+    headline: "Facts hidden in plain sight"
     bio: "Independent OSINT research lab by FolkUp. We verify claims, investigate origins, and audit compliance."
-    links:
-      - github: "https://github.com/FolkUp"
-      - ko-fi: "https://ko-fi.com/folkup"
-      - telegram: "https://t.me/+FKSLu1k3U5IyODZi"

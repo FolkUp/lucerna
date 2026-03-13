@@ -5,15 +5,12 @@ main:
   - name: Исследования
     pageRef: studies
     weight: 15
-  - name: Верификации
+  - name: Факт-чек
     pageRef: verifications
     weight: 20
   - name: Методология
     pageRef: methodology
     weight: 30
-  - name: О проекте
-    pageRef: about
-    weight: 50
 
 footer:
   - name: Политика конфиденциальности
@@ -28,6 +25,9 @@ footer:
   - name: Редакционная политика
     pageRef: about/editorial-policy
     weight: 30
+  - name: О проекте
+    pageRef: about
+    weight: 35
   - name: Ko-fi
     url: "https://ko-fi.com/folkup"
     weight: 40
