@@ -10,7 +10,6 @@ sources_count: 18
 investigation_id: "INV-010"
 investigation_type: dossier
 methodology_disclosed: true
-methodology_ref: ""
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
 pii_reviewed: true

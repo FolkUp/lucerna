@@ -55,5 +55,17 @@
       <span class="investigation-meta__value">{{ . }}</span>
     </div>
     {{ end }}
+
+    {{ with $p.methodology_ref }}
+      {{ $methodPage := $.Page.GetPage (printf "/methodology/%s" .) }}
+      {{ if $methodPage }}
+      <div class="investigation-meta__item investigation-meta__item--full">
+        <span class="investigation-meta__label">{{ i18n "metaMethodology" | default "Methodology" }}</span>
+        <a href="{{ $methodPage.RelPermalink }}" class="investigation-meta__value investigation-meta__link">
+          {{ $methodPage.Title }} &rarr;
+        </a>
+      </div>
+      {{ end }}
+    {{ end }}
   </div>
 </div>

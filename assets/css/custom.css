@@ -481,6 +481,22 @@ h1, h2, h3, h4,
   font-weight: 600;
 }
 
+.investigation-meta__item--full {
+  grid-column: 1 / -1;
+}
+
+.investigation-meta__link {
+  color: rgb(var(--color-primary-500));
+  text-decoration: none;
+  transition: text-decoration-color 0.2s;
+}
+
+.investigation-meta__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgb(var(--color-primary-500));
+}
+
 .investigation-meta__status--verified { color: #22c55e; }
 .investigation-meta__status--partially_verified { color: #f59e0b; }
 .investigation-meta__status--unverified { color: #6b7280; }
