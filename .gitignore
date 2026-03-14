@@ -30,6 +30,12 @@ resources/
 # Node
 node_modules/
 
+# Operational files moved to vault (LCRN-071)
+research/
+dossiers/
+prompts/
+audits/
+
 # Temp
 *.tmp
 *.bak
