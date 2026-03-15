@@ -8,7 +8,7 @@ params:
   displayName: PT
   isoCode: pt
   dateFormat: "2 January 2006"
-  description: "Notas de investigação abertas do FolkUp. Metodologia rigorosa, transparência em primeiro lugar."
+  description: "Centro independente de investigação OSINT. Due diligence, verificação de factos e auditorias de conformidade com metodologia transparente e reproduzível."
   copyright: >-
     Código [MIT](https://opensource.org/licenses/MIT) |
     Conteúdo [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

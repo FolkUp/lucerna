@@ -8,7 +8,7 @@ params:
   displayName: RU
   isoCode: ru
   dateFormat: "2 January 2006"
-  description: "Открытые исследовательские заметки FolkUp. Методология и прозрачность."
+  description: "Независимый OSINT-хаб. Расследования, верификация фактов и комплаенс-аудит с прозрачной воспроизводимой методологией."
   copyright: >-
     Код [MIT](https://opensource.org/licenses/MIT) |
     Контент [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
