@@ -55,6 +55,20 @@ Quando as nossas investigações envolvem indivíduos privados (em contraste com
 
 O nosso objetivo é demonstrar metodologia e partilhar descobertas de interesse público — não expor indivíduos.
 
+## Identificação de Indivíduos
+
+Quando as nossas investigações referenciam pessoas reais pelo nome, aplicamos um teste em três partes:
+
+1. **Interesse público** — as ações do indivíduo têm relevância pública demonstrável (fraude empresarial, violações regulatórias, segurança pública)
+2. **Proporcionalidade** — o nível de identificação é proporcional ao interesse público servido. Não identificamos indivíduos quando dados anonimizados servem o mesmo propósito
+3. **Capacidade profissional** — referenciamos indivíduos na sua capacidade profissional ou pública, não na sua vida privada
+
+Distinguimos entre:
+- **Figuras públicas** (diretores de empresas, funcionários públicos, profissionais com exposição pública) — podem ser identificados quando atuam na sua capacidade pública
+- **Indivíduos privados** — anonimizados por defeito, identificados apenas quando estritamente necessário para a integridade da investigação
+
+Todas as decisões de identificação são documentadas nos metadados editoriais do artigo e revistas antes da publicação.
+
 ## Direito de Resposta
 
 Se é o sujeito de uma das nossas investigações, tem o direito de:

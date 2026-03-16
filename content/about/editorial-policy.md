@@ -55,6 +55,20 @@ When our investigations involve private individuals (as opposed to public figure
 
 Our goal is to demonstrate methodology and share findings of public interest — not to expose individuals.
 
+## Naming of Individuals
+
+When our investigations reference real people by name, we apply a three-part test:
+
+1. **Public interest** — the individual's actions have demonstrable public relevance (e.g., corporate fraud, regulatory violations, public safety)
+2. **Proportionality** — the level of identification is proportionate to the public interest served. We do not name individuals when anonymized data would serve the same purpose
+3. **Professional capacity** — we reference individuals in their professional or public roles, not their private lives
+
+We distinguish between:
+- **Public figures** (company directors, officials, public-facing professionals) — may be named when acting in their public capacity
+- **Private individuals** — anonymized by default, identified only when strictly necessary for the investigation's integrity
+
+All naming decisions are documented in the article's editorial metadata and reviewed before publication.
+
 ## Right of Reply
 
 If you are the subject of one of our investigations, you have the right to:

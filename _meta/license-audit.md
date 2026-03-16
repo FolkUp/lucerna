@@ -8,6 +8,15 @@
 ## Dependencies
 None (pure Markdown repository).
 
+## Fonts (self-hosted, GDPR-compliant)
+
+| Font | License | SPDX | Source |
+|------|---------|------|--------|
+| Source Sans Pro | SIL Open Font License 1.1 | OFL-1.1 | Google Fonts (self-hosted) |
+| Playfair Display | SIL Open Font License 1.1 | OFL-1.1 | Google Fonts (self-hosted) |
+
+All fonts are served from `/fonts/` — no external requests to Google Fonts.
+
 ## Content Licensing
 - Methodologies and prompts: MIT (same as project)
 - Migrated research materials: original work by FolkUp
