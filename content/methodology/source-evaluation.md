@@ -1,5 +1,6 @@
 ---
 title: "Source Evaluation Methodology"
+description: "Framework for evaluating source reliability using the CRAAP test: Currency, Relevance, Authority, Accuracy, Purpose. Tiered classification system."
 date: 2026-02-25
 status: verified
 confidence: high

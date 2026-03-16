@@ -1,5 +1,6 @@
 ---
 title: "Статья Habr о GenAI — верификация фактов"
+description: "Фактчек статьи Habr о техдолге GenAI и кадровом кризисе. 10 утверждений проверено с источниками. Точность: 8.3/10."
 date: 2026-02-25
 status: partially_verified
 confidence: high

@@ -1,5 +1,6 @@
 ---
 title: "Habr GenAI Article — Fact Verification"
+description: "Fact-checking a Habr article on GenAI tech debt and hiring crisis. 10 claims verified with sources. Overall accuracy: 8.3/10."
 date: 2026-02-25
 status: partially_verified
 confidence: high

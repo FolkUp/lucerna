@@ -1,5 +1,6 @@
 ---
 title: "Technical Audit Methodology"
+description: "Comprehensive framework for auditing websites and web apps: UX, tech stack, performance, security, SEO, and business viability analysis."
 date: 2026-02-25
 status: verified
 confidence: high

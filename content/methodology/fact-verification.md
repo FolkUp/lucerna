@@ -1,5 +1,6 @@
 ---
 title: "Fact Verification Methodology"
+description: "Structured OSINT methodology for verifying claims using 4-agent parallel analysis. Reduce bias, increase coverage, verify with primary sources."
 date: 2026-02-25
 status: verified
 confidence: high

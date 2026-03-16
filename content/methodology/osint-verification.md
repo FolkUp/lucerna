@@ -1,5 +1,6 @@
 ---
 title: "OSINT Verification Methodology"
+description: "OSINT methodology for career reconstruction and corporate structure analysis using public records, registries, and tiered source verification."
 date: 2026-03-13
 weight: 4
 status: verified

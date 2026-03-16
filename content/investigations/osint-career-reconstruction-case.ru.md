@@ -1,5 +1,6 @@
 ---
 title: "OSINT-кейс: реконструкция карьеры разработчика по цифровому следу"
+description: "OSINT-кейс: реконструкция 15-летней карьеры разработчика по GitHub и техноблогу. Демонстрация методологии с редактированными данными."
 date: 2026-03-11
 slug: "osint-career-reconstruction-case"
 status: partially_verified

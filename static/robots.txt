@@ -4,6 +4,9 @@ User-agent: *
 Allow: /investigations/
 Allow: /studies/
 Allow: /verifications/
+Allow: /research/
+Allow: /services/
+Allow: /toolkit/
 Allow: /about/
 Allow: /methodology/
 Allow: /legal/
@@ -11,9 +14,7 @@ Allow: /tags/
 Allow: /categories/
 
 # Protected sections
-Disallow: /research/
 Disallow: /dossiers/
-Disallow: /toolkit/
 Disallow: /prompts/
 
 # Sitemaps

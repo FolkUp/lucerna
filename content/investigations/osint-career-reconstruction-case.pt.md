@@ -1,5 +1,6 @@
 ---
 title: "Caso OSINT: Reconstrução de Carreira de Programador a Partir da Pegada Digital"
+description: "Caso OSINT: reconstruir 15 anos de carreira de programador via GitHub e blog técnico. Demonstração metodológica com dados redigidos."
 date: 2026-03-11
 slug: "osint-career-reconstruction-case"
 status: partially_verified

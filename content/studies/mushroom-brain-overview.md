@@ -1,5 +1,6 @@
 ---
 title: "Mushrooms and Brain Activity: Series Overview"
+description: "10 OSINT investigations on mushrooms and the brain: neuropharmacology, ethnobotany, harm reduction. 27K+ words, 230+ sources, critical analysis."
 date: 2026-03-02
 status: verified
 confidence: high

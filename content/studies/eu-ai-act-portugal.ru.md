@@ -1,5 +1,6 @@
 ---
 title: "EU AI Act: Имплементация в Португалии"
+description: "Имплементация EU AI Act в Португалии: надзор ANACOM, налоговые стимулы (SIFIDE II), нацстратегия. Гид для разработчиков и стартапов."
 date: 2026-02-25
 status: verified
 confidence: high

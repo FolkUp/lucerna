@@ -1,5 +1,6 @@
 ---
 title: "OSINT Case Study: Reconstructing a Developer's Career from Digital Footprint"
+description: "OSINT case study: reconstructing a software engineer's 15-year career from GitHub and tech blog. Methodology demonstration with redacted PII."
 date: 2026-03-11
 slug: "osint-career-reconstruction-case"
 status: partially_verified

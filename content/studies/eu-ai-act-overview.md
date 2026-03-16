@@ -1,5 +1,6 @@
 ---
 title: "EU AI Act: Overview and Risk Classification"
+description: "Legal analysis of EU AI Act: risk classification, FOSS exemptions, transparency obligations. Practical guide for content creators and publishers."
 date: 2026-02-25
 status: verified
 confidence: high

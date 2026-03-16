@@ -1,5 +1,6 @@
 ---
 title: "EU AI Act: Implementation in Portugal"
+description: "EU AI Act implementation in Portugal: ANACOM oversight, tax incentives (SIFIDE II), national strategy. Practical guide for developers and startups."
 date: 2026-02-25
 status: verified
 confidence: high
