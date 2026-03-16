@@ -103,9 +103,8 @@ newsletterUnsubscribeText: "You can unsubscribe at any time."
 newsletterFallback: "To subscribe, send an email to"
 
 # Support CTA
-supportAriaLabel: "Support this project"
-supportHeading: "Independent research needs your support"
-supportDesc: "Lucerna operates without grants or advertising. Every contribution helps us maintain rigorous, transparent OSINT research."
+supportHeading: "OSINT research costs time, servers, and tools"
+supportDesc: "Lucerna is funded by reader support. No ads, no paywalls. Your contribution keeps investigations open and verifiable."
 supportButton: "Support on Ko-fi"
 
 # 404 page

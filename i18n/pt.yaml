@@ -222,9 +222,8 @@ newsletterUnsubscribeText: "Pode cancelar a subscrição a qualquer momento."
 newsletterFallback: "Para subscrever, envie um email para"
 
 # Support CTA
-supportAriaLabel: "Apoiar este projeto"
-supportHeading: "A investigação independente precisa do seu apoio"
-supportDesc: "A Lucerna funciona sem subvenções nem publicidade. Cada contribuição ajuda-nos a manter investigações OSINT rigorosas e transparentes."
+supportHeading: "Investigação OSINT custa tempo, servidores e ferramentas"
+supportDesc: "A Lucerna é financiada pelo apoio dos leitores. Sem anúncios, sem paywalls. A sua contribuição mantém as investigações abertas e verificáveis."
 supportButton: "Apoiar no Ko-fi"
 
 404Title: "Ficheiro Não Encontrado"
