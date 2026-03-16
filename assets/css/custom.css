@@ -1680,3 +1680,145 @@ h1, h2, h3, h4,
     width: 100%;
   }
 }
+
+/* ═══ SUPPORT CTA (homepage) ═══ */
+.hero-support {
+  max-width: 52rem;
+  margin: 2rem auto 2.5rem;
+  padding: 0 1rem;
+}
+
+.hero-support__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgb(var(--color-neutral-200));
+  border-radius: 0.5rem;
+  background: rgb(var(--color-neutral-50));
+}
+
+.hero-support__text {
+  flex: 1;
+}
+
+.hero-support__heading {
+  margin: 0 0 0.25rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 600;
+  color: rgb(var(--color-neutral-800));
+}
+
+.hero-support__desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgb(var(--color-neutral-500));
+  line-height: 1.5;
+}
+
+.hero-support__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: rgb(var(--color-primary-600));
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+  min-height: 44px;
+}
+
+.hero-support__button:hover {
+  background: rgb(var(--color-primary-700));
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-support__button:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 2px;
+}
+
+.hero-support__icon {
+  flex-shrink: 0;
+}
+
+.dark .hero-support__inner {
+  border-color: rgb(var(--color-neutral-700));
+  background: rgb(var(--color-neutral-800));
+}
+
+.dark .hero-support__heading {
+  color: rgb(var(--color-neutral-100));
+}
+
+.dark .hero-support__desc {
+  color: rgb(var(--color-neutral-400));
+}
+
+@media (max-width: 640px) {
+  .hero-support__inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+}
+
+/* ═══ KO-FI FOOTER BANNER (all pages except homepage) ═══ */
+.kofi-banner {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(var(--color-neutral-200));
+}
+
+.kofi-banner__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgb(var(--color-primary-600));
+  border: 1px solid rgb(var(--color-primary-200));
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.kofi-banner__link:hover {
+  background: rgb(var(--color-primary-50));
+  border-color: rgb(var(--color-primary-400));
+  color: rgb(var(--color-primary-700));
+  text-decoration: none;
+}
+
+.kofi-banner__link:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 2px;
+}
+
+.kofi-banner__icon {
+  flex-shrink: 0;
+}
+
+.dark .kofi-banner {
+  border-bottom-color: rgb(var(--color-neutral-700));
+}
+
+.dark .kofi-banner__link {
+  color: rgb(var(--color-primary-400));
+  border-color: rgb(var(--color-neutral-600));
+}
+
+.dark .kofi-banner__link:hover {
+  background: rgba(var(--color-primary-900), 0.3);
+  border-color: rgb(var(--color-primary-500));
+  color: rgb(var(--color-primary-300));
+}

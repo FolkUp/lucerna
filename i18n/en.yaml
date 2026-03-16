@@ -102,6 +102,12 @@ newsletterPrivacyLink: "Privacy Policy"
 newsletterUnsubscribeText: "You can unsubscribe at any time."
 newsletterFallback: "To subscribe, send an email to"
 
+# Support CTA
+supportAriaLabel: "Support this project"
+supportHeading: "Independent research needs your support"
+supportDesc: "Lucerna operates without grants or advertising. Every contribution helps us maintain rigorous, transparent OSINT research."
+supportButton: "Support on Ko-fi"
+
 # 404 page
 404Title: "File Not Found"
 404Text: "The requested document has been redacted, relocated, or never existed."

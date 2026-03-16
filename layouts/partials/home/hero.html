@@ -82,6 +82,20 @@
 </section>
 {{ end }}
 
+{{/* ═══ SUPPORT CTA ═══ */}}
+<div class="hero-support" aria-label="{{ i18n "supportAriaLabel" | default "Support this project" }}">
+  <div class="hero-support__inner">
+    <div class="hero-support__text">
+      <p class="hero-support__heading">{{ i18n "supportHeading" | default "Independent research needs your support" }}</p>
+      <p class="hero-support__desc">{{ i18n "supportDesc" | default "Lucerna operates without grants or advertising. Every contribution helps us maintain rigorous, transparent OSINT research." }}</p>
+    </div>
+    <a href="https://ko-fi.com/folkup" class="hero-support__button" target="_blank" rel="noopener">
+      <svg class="hero-support__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      {{ i18n "supportButton" | default "Support on Ko-fi" }}
+    </a>
+  </div>
+</div>
+
 <section>
   {{ partial "recent-articles/main.html" . }}
 </section>
