@@ -1,19 +1,16 @@
 main:
-  - name: Investigações
-    pageRef: investigations
+  - name: Investigação
+    pageRef: research
     weight: 10
-  - name: Estudos
-    pageRef: studies
-    weight: 15
-  - name: Verificações
-    pageRef: verifications
+  - name: Serviços
+    pageRef: services
     weight: 20
   - name: Metodologia
     pageRef: methodology
     weight: 30
   - name: Sobre
     pageRef: about
-    weight: 50
+    weight: 40
 
 footer:
   - name: Política de Privacidade

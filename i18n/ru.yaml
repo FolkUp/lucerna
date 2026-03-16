@@ -68,7 +68,16 @@ dossierColConfidence: "Достоверность"
 
 # Hero
 heroSrLabel: "Независимая OSINT-исследовательская лаборатория"
-heroCta: "Читать расследования"
+heroCta: "Исследования"
+
+# Hero stats strip
+heroStatPages: "страниц"
+heroStatSources: "источников на расследование"
+heroStatLanguages: "языка"
+heroStatLicense: "CC BY-SA"
+
+# Featured investigations
+heroFeaturedTitle: "Избранные расследования"
 
 # Methodology ref in investigation meta
 metaMethodology: "Методология"

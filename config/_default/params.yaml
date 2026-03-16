@@ -29,7 +29,7 @@ homepage:
   showRecent: true
   showRecentItems: 6
   showMoreLink: true
-  showMoreLinkDest: "/studies/"
+  showMoreLinkDest: "/research/"
   cardView: true
   cardViewScreenWidth: false
 

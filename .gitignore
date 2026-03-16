@@ -1,4 +1,4 @@
-# Claude Code (private, never publish)
+# Automated tool config (private, never publish)
 .claude/
 CLAUDE.md
 CLAUDE.local.md
@@ -31,10 +31,10 @@ resources/
 node_modules/
 
 # Operational files moved to vault (LCRN-071)
-research/
-dossiers/
-prompts/
-audits/
+/research/
+/dossiers/
+/prompts/
+/audits/
 
 # Temp
 *.tmp

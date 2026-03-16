@@ -1,16 +1,16 @@
 main:
-  - name: Investigations
-    pageRef: investigations
+  - name: Research
+    pageRef: research
     weight: 10
-  - name: Studies
-    pageRef: studies
-    weight: 15
-  - name: Fact-Check
-    pageRef: verifications
+  - name: Services
+    pageRef: services
     weight: 20
   - name: Methodology
     pageRef: methodology
     weight: 30
+  - name: About
+    pageRef: about
+    weight: 40
 
 footer:
   - name: Privacy Policy
@@ -25,9 +25,6 @@ footer:
   - name: Editorial Policy
     pageRef: about/editorial-policy
     weight: 30
-  - name: About
-    pageRef: about
-    weight: 35
   - name: Ko-fi
     url: "https://ko-fi.com/folkup"
     weight: 40

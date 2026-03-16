@@ -10,12 +10,67 @@
       <p class="lucerna-hero__subtitle">{{ . | markdownify }}</p>
     {{ end }}
     <div class="lucerna-hero__divider" aria-hidden="true"></div>
-    <a href="{{ relLangURL "investigations/" }}" class="lucerna-hero__cta">
-      {{ i18n "heroCta" | default "Read investigations" }}
+    <a href="{{ relLangURL "research/" }}" class="lucerna-hero__cta">
+      {{ i18n "heroCta" | default "Explore research" }}
       <span aria-hidden="true">&rarr;</span>
     </a>
   </div>
 </header>
+
+{{/* ═══ STATS STRIP ═══ */}}
+{{ $totalPages := len .Site.AllPages }}
+<div class="hero-stats" aria-label="Key metrics">
+  <div class="hero-stats__inner">
+    <div class="hero-stats__item">
+      <span class="hero-stats__number">{{ $totalPages }}+</span>
+      <span class="hero-stats__label">{{ i18n "heroStatPages" | default "pages" }}</span>
+    </div>
+    <div class="hero-stats__sep" aria-hidden="true"></div>
+    <div class="hero-stats__item">
+      <span class="hero-stats__number">60+</span>
+      <span class="hero-stats__label">{{ i18n "heroStatSources" | default "sources per investigation" }}</span>
+    </div>
+    <div class="hero-stats__sep" aria-hidden="true"></div>
+    <div class="hero-stats__item">
+      <span class="hero-stats__number">3</span>
+      <span class="hero-stats__label">{{ i18n "heroStatLanguages" | default "languages" }}</span>
+    </div>
+    <div class="hero-stats__sep" aria-hidden="true"></div>
+    <div class="hero-stats__item">
+      <span class="hero-stats__number">{{ i18n "heroStatLicense" | default "CC BY-SA" }}</span>
+      <span class="hero-stats__label">license</span>
+    </div>
+  </div>
+</div>
+
+{{/* ═══ FEATURED INVESTIGATIONS ═══ */}}
+{{ $featured := slice }}
+{{ $paths := slice "/investigations/flightpath3d-osint-audit" "/investigations/osint-career-reconstruction-case" "/investigations/headframe-shtanov-osint" }}
+{{ range $paths }}
+  {{ with site.GetPage . }}
+    {{ $featured = $featured | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $featured) 0 }}
+<section class="hero-featured" aria-labelledby="featured-heading">
+  <h2 id="featured-heading" class="hero-featured__title">
+    {{ i18n "heroFeaturedTitle" | default "Featured Investigations" }}
+  </h2>
+  <div class="hero-featured__grid">
+    {{ range $featured }}
+      <a href="{{ .RelPermalink }}" class="hero-featured__card">
+        <h3 class="hero-featured__card-title">{{ .Title }}</h3>
+        {{ with .Description }}
+          <p class="hero-featured__card-desc">{{ . | truncate 120 }}</p>
+        {{ end }}
+        <span class="hero-featured__card-cta" aria-hidden="true">&rarr;</span>
+      </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 <section>
   {{ partial "recent-articles/main.html" . }}
 </section>

@@ -187,7 +187,16 @@ dossierColConfidence: "Confiança"
 
 # Hero
 heroSrLabel: "Laboratório Independente de Investigação OSINT"
-heroCta: "Ler investigações"
+heroCta: "Explorar investigação"
+
+# Hero stats strip
+heroStatPages: "páginas"
+heroStatSources: "fontes por investigação"
+heroStatLanguages: "idiomas"
+heroStatLicense: "CC BY-SA"
+
+# Featured investigations
+heroFeaturedTitle: "Investigações em Destaque"
 
 # Methodology ref in investigation meta
 metaMethodology: "Metodologia"
