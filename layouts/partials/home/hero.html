@@ -43,6 +43,17 @@
   </div>
 </div>
 
+{{/* ═══ METHODOLOGY HIGHLIGHT ═══ */}}
+<div class="hero-method" aria-label="Methodology">
+  <p class="hero-method__text">
+    {{ i18n "heroMethodText" | default "Our method: transparent sources, reproducible analysis, peer-reviewed conclusions." }}
+  </p>
+  <a href="{{ relLangURL "methodology/" }}" class="hero-method__link">
+    {{ i18n "heroMethodLink" | default "Read our methodology" }}
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+</div>
+
 {{/* ═══ FEATURED INVESTIGATIONS ═══ */}}
 {{ $featured := slice }}
 {{ $paths := slice "/investigations/flightpath3d-osint-audit" "/investigations/osint-career-reconstruction-case" "/investigations/headframe-shtanov-osint" }}

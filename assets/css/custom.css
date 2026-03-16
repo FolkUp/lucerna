@@ -1217,6 +1217,67 @@ h1, h2, h3, h4,
 }
 
 /* ============================================
+   Methodology highlight (Brand Guide v2.5)
+   ============================================ */
+.hero-method {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.hero-method__text {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgb(var(--color-neutral-600));
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+
+.dark .hero-method__text {
+  color: rgb(var(--color-neutral-300));
+}
+
+.hero-method__link {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(var(--color-primary-600));
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.dark .hero-method__link {
+  color: rgb(var(--color-primary-400));
+}
+
+.hero-method__link:hover {
+  color: rgb(var(--color-primary-700));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.dark .hero-method__link:hover {
+  color: rgb(var(--color-primary-300));
+}
+
+.hero-method__link:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Methodology — reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-method__link {
+    transition: none;
+  }
+}
+
+/* ============================================
    Featured investigations (Brand Guide v2.5)
    ============================================ */
 .hero-featured {
@@ -1318,4 +1379,107 @@ h1, h2, h3, h4,
   .hero-featured__card:hover {
     transform: none;
   }
+}
+
+/* ============================================
+   Reader mode toggle (Brand Guide v2.5)
+   ============================================ */
+.reader-toggle-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.reader-toggle-btn {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgb(var(--color-primary-600));
+  background: none;
+  border: 1px solid rgb(var(--color-primary-500));
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+}
+
+.dark .reader-toggle-btn {
+  color: rgb(var(--color-primary-400));
+  border-color: rgb(var(--color-primary-400));
+}
+
+.reader-toggle-btn:hover {
+  background-color: rgba(var(--color-primary-500), 0.1);
+}
+
+.reader-toggle-btn[aria-pressed="true"] {
+  background-color: rgb(var(--color-primary-600));
+  color: #fff;
+  border-color: rgb(var(--color-primary-600));
+}
+
+.dark .reader-toggle-btn[aria-pressed="true"] {
+  background-color: rgb(var(--color-primary-500));
+  border-color: rgb(var(--color-primary-500));
+  color: #111;
+}
+
+.reader-toggle-btn:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 2px;
+}
+
+/* Reader toggle — reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reader-toggle-btn {
+    transition: none;
+  }
+}
+
+/* ============================================
+   Normal view article styles (investigation)
+   ============================================ */
+.article-header {
+  margin-bottom: 1.5rem;
+}
+
+.article-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgb(var(--color-neutral-800));
+  margin: 0 0 0.75rem;
+}
+
+.dark .article-title {
+  color: rgb(var(--color-neutral-100));
+}
+
+.article-summary {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgb(var(--color-neutral-600));
+  margin: 0;
+}
+
+.dark .article-summary {
+  color: rgb(var(--color-neutral-300));
+}
+
+.article-content {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(var(--color-neutral-700));
+}
+
+.dark .article-content {
+  color: rgb(var(--color-neutral-200));
 }

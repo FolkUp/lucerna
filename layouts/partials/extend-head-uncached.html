@@ -1,0 +1,8 @@
+{{/* Conditional assets per section — uncached (page-dependent) */}}
+
+{{/* Investigation pages: declassified CSS + reader mode toggle */}}
+{{ if eq .Section "investigations" }}
+  {{- $css := resources.Get "css/declassified.css" | resources.Minify | resources.Fingerprint "sha256" -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="all">
+  <script src="/js/reader-toggle.js" defer></script>
+{{ end }}

@@ -76,6 +76,14 @@ heroStatSources: "sources per investigation"
 heroStatLanguages: "languages"
 heroStatLicense: "CC BY-SA"
 
+# Methodology highlight
+heroMethodText: "Our method: transparent sources, reproducible analysis, peer-reviewed conclusions."
+heroMethodLink: "Read our methodology"
+
+# Reader mode
+readerModeOn: "Reader view"
+readerModeOff: "Normal view"
+
 # Featured investigations
 heroFeaturedTitle: "Featured Investigations"
 

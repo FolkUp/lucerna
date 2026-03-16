@@ -195,6 +195,14 @@ heroStatSources: "fontes por investigação"
 heroStatLanguages: "idiomas"
 heroStatLicense: "CC BY-SA"
 
+# Methodology highlight
+heroMethodText: "O nosso método: fontes transparentes, análise reproduzível, conclusões revistas por pares."
+heroMethodLink: "Ler a nossa metodologia"
+
+# Reader mode
+readerModeOn: "Modo leitura"
+readerModeOff: "Vista normal"
+
 # Featured investigations
 heroFeaturedTitle: "Investigações em Destaque"
 

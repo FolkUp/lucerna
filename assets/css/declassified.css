@@ -478,6 +478,15 @@
 }
 
 /* ============================================
+   Accessibility: reduced motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .declassified .stamp {
+    animation: none;
+  }
+}
+
+/* ============================================
    Responsive (mobile)
    ============================================ */
 @media (max-width: 640px) {

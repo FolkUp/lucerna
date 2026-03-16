@@ -76,6 +76,14 @@ heroStatSources: "источников на расследование"
 heroStatLanguages: "языка"
 heroStatLicense: "CC BY-SA"
 
+# Methodology highlight
+heroMethodText: "Наш метод: прозрачные источники, воспроизводимый анализ, рецензируемые выводы."
+heroMethodLink: "Читать методологию"
+
+# Reader mode
+readerModeOn: "Режим чтения"
+readerModeOff: "Обычный вид"
+
 # Featured investigations
 heroFeaturedTitle: "Избранные расследования"
 
