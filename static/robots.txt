@@ -12,6 +12,7 @@ Allow: /methodology/
 Allow: /legal/
 Allow: /tags/
 Allow: /categories/
+Allow: /newsletter/
 
 # Protected sections
 Disallow: /dossiers/

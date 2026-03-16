@@ -210,6 +210,17 @@ heroFeaturedTitle: "Investigações em Destaque"
 metaMethodology: "Metodologia"
 metaMethodologyLink: "Ler metodologia"
 
+# Newsletter
+newsletterSubscribe: "Subscrever"
+newsletterFormLabel: "Subscrição da newsletter"
+newsletterEmailLabel: "Email"
+newsletterEmailPlaceholder: "seu@email.com"
+newsletterButtonText: "Subscrever"
+newsletterConsentText: "Ao subscrever, concorda em receber a newsletter OSINT Digest. Processamos o seu email exclusivamente para envio da newsletter."
+newsletterPrivacyLink: "Política de Privacidade"
+newsletterUnsubscribeText: "Pode cancelar a subscrição a qualquer momento."
+newsletterFallback: "Para subscrever, envie um email para"
+
 404Title: "Ficheiro Não Encontrado"
 404Text: "O documento solicitado foi redigido, realocado, ou nunca existiu."
 404Home: "Voltar à Sede"

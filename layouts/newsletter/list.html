@@ -1,0 +1,70 @@
+{{ define "main" }}
+  <article class="newsletter-page">
+
+    {{/* Header */}}
+    <header class="newsletter-header">
+      <div class="newsletter-header__accent" aria-hidden="true"></div>
+      <h1 class="newsletter-header__title">{{ .Title }}</h1>
+      {{ with .Description }}
+        <p class="newsletter-header__subtitle">{{ . }}</p>
+      {{ end }}
+      <div class="newsletter-header__divider" aria-hidden="true"></div>
+    </header>
+
+    {{/* Content from _index.md */}}
+    <div class="newsletter-content prose dark:prose-invert max-w-none">
+      {{ .Content }}
+    </div>
+
+    {{/* Subscription form */}}
+    <div class="newsletter-form-section">
+      <h2 class="newsletter-form__heading">
+        {{ i18n "newsletterSubscribe" | default "Subscribe" }}
+      </h2>
+
+      <form
+        class="newsletter-form"
+        action="mailto:newsletter@folkup.app"
+        method="post"
+        enctype="text/plain"
+        aria-label="{{ i18n "newsletterFormLabel" | default "Newsletter subscription" }}"
+      >
+        <div class="newsletter-form__fields">
+          <label for="newsletter-email" class="newsletter-form__label">
+            {{ i18n "newsletterEmailLabel" | default "Email address" }}
+          </label>
+          <div class="newsletter-form__row">
+            <input
+              id="newsletter-email"
+              class="newsletter-form__input"
+              type="email"
+              name="email"
+              placeholder="{{ i18n "newsletterEmailPlaceholder" | default "your@email.com" }}"
+              required
+              autocomplete="email"
+              aria-describedby="newsletter-consent-text"
+            />
+            <button type="submit" class="newsletter-form__button">
+              {{ i18n "newsletterButtonText" | default "Subscribe" }}
+            </button>
+          </div>
+        </div>
+
+        <p id="newsletter-consent-text" class="newsletter-form__consent">
+          {{ i18n "newsletterConsentText" | default "By subscribing, you agree to receive the OSINT Digest newsletter. We process your email solely for sending the newsletter." }}
+          <a href="{{ relref . "/legal/privacy-policy" }}">{{ i18n "newsletterPrivacyLink" | default "Privacy Policy" }}</a>.
+          {{ i18n "newsletterUnsubscribeText" | default "You can unsubscribe at any time." }}
+        </p>
+      </form>
+
+      {{/* Fallback for consent-blocked contexts */}}
+      <noscript>
+        <p class="newsletter-form__fallback">
+          {{ i18n "newsletterFallback" | default "To subscribe, send an email to" }}
+          <a href="mailto:newsletter@folkup.app">newsletter@folkup.app</a>.
+        </p>
+      </noscript>
+    </div>
+
+  </article>
+{{ end }}

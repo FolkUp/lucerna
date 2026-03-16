@@ -25,6 +25,9 @@ footer:
   - name: Política Editorial
     pageRef: about/editorial-policy
     weight: 30
+  - name: OSINT Digest
+    pageRef: newsletter
+    weight: 35
   - name: Ko-fi
     url: "https://ko-fi.com/folkup"
     weight: 40

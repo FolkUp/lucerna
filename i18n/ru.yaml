@@ -91,6 +91,17 @@ heroFeaturedTitle: "Избранные расследования"
 metaMethodology: "Методология"
 metaMethodologyLink: "Читать методологию"
 
+# Newsletter
+newsletterSubscribe: "Подписаться"
+newsletterFormLabel: "Подписка на рассылку"
+newsletterEmailLabel: "Email"
+newsletterEmailPlaceholder: "ваш@email.com"
+newsletterButtonText: "Подписаться"
+newsletterConsentText: "Подписываясь, вы соглашаетесь получать рассылку OSINT Дайджест. Мы обрабатываем ваш email исключительно для отправки рассылки."
+newsletterPrivacyLink: "Политика конфиденциальности"
+newsletterUnsubscribeText: "Вы можете отписаться в любой момент."
+newsletterFallback: "Для подписки отправьте письмо на"
+
 # 404 page
 404Title: "Файл не найден"
 404Text: "Запрашиваемый документ был изъят, перемещён или никогда не существовал."

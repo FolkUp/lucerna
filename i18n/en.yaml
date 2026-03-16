@@ -91,6 +91,17 @@ heroFeaturedTitle: "Featured Investigations"
 metaMethodology: "Methodology"
 metaMethodologyLink: "Read methodology"
 
+# Newsletter
+newsletterSubscribe: "Subscribe"
+newsletterFormLabel: "Newsletter subscription"
+newsletterEmailLabel: "Email address"
+newsletterEmailPlaceholder: "your@email.com"
+newsletterButtonText: "Subscribe"
+newsletterConsentText: "By subscribing, you agree to receive the OSINT Digest newsletter. We process your email solely for sending the newsletter."
+newsletterPrivacyLink: "Privacy Policy"
+newsletterUnsubscribeText: "You can unsubscribe at any time."
+newsletterFallback: "To subscribe, send an email to"
+
 # 404 page
 404Title: "File Not Found"
 404Text: "The requested document has been redacted, relocated, or never existed."
