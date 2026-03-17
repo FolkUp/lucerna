@@ -43,7 +43,7 @@ Os dados da newsletter são processados pela **Brevo** (Sendinblue SA, França) 
 
 - **Base legal:** Consentimento (Art. 6(1)(a) RGPD) — subscrição ativa através de dupla confirmação (DOI)
 - **Período de retenção:** O seu email é armazenado até ao cancelamento da subscrição. Após cancelamento, os dados são eliminados no prazo de 30 dias
-- **Direito de retirada:** Pode cancelar a subscrição a qualquer momento através do link em cada newsletter ou contactando privacy@folkup.app
+- **Direito de retirada:** Pode cancelar a subscrição a qualquer momento através do link em cada newsletter (cancelamento com um clique, sem necessidade de login) ou contactando privacy@folkup.app. Após o cancelamento, o seu registo de contacto é eliminado da nossa lista de envio no prazo de 30 dias
 
 ### 2.4 Dados que NÃO Recolhemos
 
@@ -113,7 +113,7 @@ Este website **não utiliza cookies**. A nossa solução de análise de dados (U
 
 ### 8.1 Brevo (Newsletter)
 
-A subscrição da newsletter é processada pela **Brevo** (Sendinblue SA), 106 boulevard Haussmann, 75008 Paris, França. A Brevo atua como nosso subcontratante ao abrigo do Artigo 28 do RGPD. Política de Privacidade da Brevo: [https://www.brevo.com/legal/privacypolicy/](https://www.brevo.com/legal/privacypolicy/)
+A subscrição da newsletter é processada pela **Brevo** (Sendinblue SA), 106 boulevard Haussmann, 75008 Paris, França. A Brevo atua como nosso subcontratante ao abrigo do Artigo 28 do RGPD. Política de Privacidade da Brevo: [https://www.brevo.com/legal/privacypolicy/](https://www.brevo.com/legal/privacypolicy/). DPA Brevo: [https://www.brevo.com/legal/termsofuse/#data-processing-agreement](https://www.brevo.com/legal/termsofuse/#data-processing-agreement)
 
 ### 8.2 Ko-fi (Donativos)
 

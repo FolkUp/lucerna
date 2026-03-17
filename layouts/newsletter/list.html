@@ -41,7 +41,7 @@
             class="newsletter-form__input"
             aria-describedby="newsletter-email-error"
           />
-          <span id="newsletter-email-error" class="newsletter-form__error" role="alert" aria-live="assertive"></span>
+          <span id="newsletter-email-error" class="newsletter-form__error" role="alert"></span>
         </div>
 
         {{/* Honeypot (hidden from humans, visible to bots) */}}
@@ -79,7 +79,7 @@
         </button>
 
         {{/* Status messages */}}
-        <div id="newsletter-status" class="newsletter-form__status" role="status" aria-live="polite"></div>
+        <div id="newsletter-status" class="newsletter-form__status" role="alert" aria-live="assertive"></div>
       </form>
 
       {{/* Fallback for no-JS */}}
@@ -108,6 +108,7 @@
 
       // Error messages (from i18n)
       var messages = {
+        loading: {{ i18n "newsletterLoading" | default "Subscribing..." | jsonify }},
         invalid_email: {{ i18n "newsletterErrorInvalidEmail" | default "Please enter a valid email address." | jsonify }},
         consent_required: {{ i18n "newsletterErrorConsent" | default "Please accept the privacy policy to subscribe." | jsonify }},
         already_subscribed: {{ i18n "newsletterErrorDuplicate" | default "This email is already subscribed." | jsonify }},
@@ -153,6 +154,7 @@
         }
 
         setLoading(true);
+        setStatus(messages.loading || '', 'loading');
 
         fetch('/api/subscribe', {
           method: 'POST',

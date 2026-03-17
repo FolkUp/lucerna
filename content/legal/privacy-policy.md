@@ -43,7 +43,7 @@ Newsletter data is processed by **Brevo** (Sendinblue SA, France) as our data pr
 
 - **Legal basis:** Consent (Art. 6(1)(a) GDPR) — you actively opt-in via double opt-in (DOI)
 - **Retention:** Your email is stored until you unsubscribe. After unsubscription, your data is deleted within 30 days
-- **Right to withdraw:** You can unsubscribe at any time via the link in each newsletter or by contacting privacy@folkup.app
+- **Right to withdraw:** You can unsubscribe at any time via the one-click unsubscribe link in each newsletter (no login required) or by contacting privacy@folkup.app. Upon unsubscription, your contact record is deleted from our mailing list within 30 days
 
 ### 2.4 Data We Do NOT Collect
 
@@ -113,7 +113,7 @@ This website does **not use cookies**. Our analytics solution (Umami) is cookie-
 
 ### 8.1 Brevo (Newsletter)
 
-Newsletter subscriptions are processed by **Brevo** (Sendinblue SA), 106 boulevard Haussmann, 75008 Paris, France. Brevo acts as our data processor under Article 28 GDPR. Brevo's privacy policy: [https://www.brevo.com/legal/privacypolicy/](https://www.brevo.com/legal/privacypolicy/)
+Newsletter subscriptions are processed by **Brevo** (Sendinblue SA), 106 boulevard Haussmann, 75008 Paris, France. Brevo acts as our data processor under Article 28 GDPR. Brevo's privacy policy: [https://www.brevo.com/legal/privacypolicy/](https://www.brevo.com/legal/privacypolicy/). Brevo's Data Processing Agreement: [https://www.brevo.com/legal/termsofuse/#data-processing-agreement](https://www.brevo.com/legal/termsofuse/#data-processing-agreement)
 
 ### 8.2 Ko-fi (Donations)
 
