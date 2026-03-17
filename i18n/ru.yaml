@@ -111,3 +111,12 @@ supportButton: "Поддержать на Ko-fi"
 404Title: "Файл не найден"
 404Text: "Запрашиваемый документ был изъят, перемещён или никогда не существовал."
 404Home: "Вернуться в штаб"
+
+# Theme keys missing from theme's ru.yaml
+article:
+  zen_mode_title:
+    enable: "Включить режим дзен"
+    disable: "Выключить режим дзен"
+
+sharing:
+  telegram: "Поделиться в Telegram"

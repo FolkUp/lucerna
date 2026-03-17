@@ -1,129 +1,116 @@
-# Blowfish theme keys for Hugo language "pt"
-# Hugo language key "pt" doesn't fall back to theme's "pt-PT.yaml",
-# so we provide all theme translations here.
+# Blowfish theme translations for Hugo language "pt"
+# Hugo language code "pt" falls back to theme's "pt-PT.yaml",
+# so this file MUST be named "pt-PT.yaml" to override the theme's version.
+# See: Hugo #6134, #7982 — no auto-fallback from "pt" to "pt-PT".
+
+# --- Theme keys (nested format, matching theme's en.yaml structure) ---
 
 global:
-  language:
-    other: "PT"
+  language: "PT"
 
 article:
-  anchor_label:
-    other: "Etiqueta"
-  date:
-    other: "{{ .Date }}"
-  date_updated:
-    other: "Atualizado a: {{ .Date }}"
-  draft:
-    other: "Rascunho"
-  edit_title:
-    other: "Editar Conteúdo"
+  anchor_label: "Etiqueta"
+  date: "{{ .Date }}"
+  date_updated: "Atualizado a: {{ .Date }}"
+  draft: "Rascunho"
+  edit_title: "Editar Conteúdo"
   reading_time:
     one: "{{ .Count }} minuto"
     other: "{{ .Count }} minutos"
-  reading_time_title:
-    other: "Tempo de leitura"
-  table_of_contents:
-    other: "Índice"
+  reading_time_title: "Tempo de leitura"
+  table_of_contents: "Índice"
   word_count:
     one: "{{ .Count }} palavra"
     other: "{{ .Count }} palavras"
   views:
     one: "{{ .Count }} visualização"
     other: "{{ .Count }} visualizações"
-  part_of_series:
-    other: "Este artigo faz parte de uma série."
-  part:
-    other: "Parte"
-  this_article:
-    other: "Este artigo"
-  related_articles:
-    other: "Relacionados"
-  reply_by_email:
-    other: "Responder por email"
+  likes:
+    one: "{{ .Count }} gosto"
+    other: "{{ .Count }} gostos"
+  part_of_series: "Este artigo faz parte de uma série."
+  part: "Parte"
+  this_article: "Este artigo"
+  related_articles: "Relacionados"
+  reply_by_email: "Responder por email"
+  zen_mode_title:
+    enable: "Ativar modo zen"
+    disable: "Desativar modo zen"
 
 a11y:
-  title:
-    other: "Definições de acessibilidade"
-  disable_blur:
-    other: "Desativar desfoque"
-  disable_images:
-    other: "Desativar imagens"
-  show_link_underline:
-    other: "Mostrar sublinhado de links"
-  font_size:
-    other: "Tamanho da fonte"
+  title: "Definições de acessibilidade"
+  disable_blur: "Desativar desfoque"
+  disable_images: "Desativar imagens"
+  show_link_underline: "Mostrar sublinhado de links"
+  font_size: "Tamanho da fonte"
 
 author:
-  byline_title:
-    other: "Autor"
+  byline_title: "Autor"
 
 code:
-  copy:
-    other: "Copiar"
-  copied:
-    other: "Copiado"
+  copy: "Copiar"
+  copied: "Copiado"
 
 error:
-  404_title:
-    other: "Página não encontrada"
-  404_error:
-    other: "Erro 404"
-  404_description:
-    other: "A página pretendida não existe."
+  404_title: "Página não encontrada"
+  404_error: "Erro 404"
+  404_description: "A página pretendida não existe."
 
 footer:
-  dark_appearance:
-    other: "Mudar para modo escuro"
-  light_appearance:
-    other: "Mudar para modo claro"
-  powered_by:
-    other: "Criado por {{ .Hugo }} &amp; {{ .Theme }}"
+  dark_appearance: "Mudar para modo escuro"
+  light_appearance: "Mudar para modo claro"
+  powered_by: "Criado por {{ .Hugo }} &amp; {{ .Theme }}"
 
 list:
-  externalurl_title:
-    other: "Link para site externo"
-  no_articles:
-    other: "Ainda não existem artigos para listar aqui."
+  externalurl_title: "Link para site externo"
+  no_articles: "Ainda não existem artigos para listar aqui."
 
 nav:
-  scroll_to_top_title:
-    other: "Ir para o topo"
-  skip_to_main:
-    other: "Ir para o conteúdo principal"
+  scroll_to_top_title: "Ir para o topo"
+  skip_to_main: "Ir para o conteúdo principal"
 
 search:
-  open_button_title:
-    other: "Pesquisar (/)"
-  close_button_title:
-    other: "Fechar (Esc)"
-  input_placeholder:
-    other: "Pesquisar"
+  open_button_title: "Pesquisar (/)"
+  close_button_title: "Fechar (Esc)"
+  input_placeholder: "Pesquisar"
 
 sharing:
-  email:
-    other: "Partilhar por email"
-  facebook:
-    other: "Partilhar pelo Facebook"
-  line:
-    other: "Partilhar pelo LINE"
-  linkedin:
-    other: "Partilhar pelo LinkedIn"
-  pinterest:
-    other: "Partilhar no Pinterest"
-  reddit:
-    other: "Partilhar no Reddit"
-  twitter:
-    other: "Partilhar no Twitter"
+  email: "Partilhar por email"
+  facebook: "Partilhar pelo Facebook"
+  line: "Partilhar pelo LINE"
+  linkedin: "Partilhar pelo LinkedIn"
+  pinterest: "Partilhar no Pinterest"
+  reddit: "Partilhar no Reddit"
+  twitter: "Partilhar no Twitter"
+  bluesky: "Publicar no Bluesky"
+  whatsapp: "Partilhar via WhatsApp"
+  telegram: "Partilhar via Telegram"
+  mastodon: "Partilhar via Mastodon"
 
 shortcode:
-  recent_articles:
-    other: "Recentes"
+  recent_articles: "Recentes"
 
 recent:
-  show_more:
-    other: "Mostrar mais"
+  show_more: "Mostrar mais"
 
-# ===== Lucerna custom keys =====
+admonition:
+  abstract: "Resumo"
+  bug: "Erro"
+  caution: "Precaução"
+  danger: "Perigo"
+  example: "Exemplo"
+  failure: "Falha"
+  important: "Importante"
+  info: "Informação"
+  note: "Nota"
+  question: "Pergunta"
+  quote: "Citação"
+  success: "Sucesso"
+  tip: "Dica"
+  todo: "A fazer"
+  warning: "Aviso"
+
+# --- Lucerna custom keys ---
 
 evidenceConfirmed: "Confirmado"
 evidencePartial: "Parcialmente Confirmado"
@@ -226,6 +213,7 @@ supportHeading: "Investigação OSINT custa tempo, servidores e ferramentas"
 supportDesc: "A Lucerna é financiada pelo apoio dos leitores. Sem anúncios, sem paywalls. A sua contribuição mantém as investigações abertas e verificáveis."
 supportButton: "Apoiar no Ko-fi"
 
+# 404 page
 404Title: "Ficheiro Não Encontrado"
 404Text: "O documento solicitado foi redigido, realocado, ou nunca existiu."
 404Home: "Voltar à Sede"
