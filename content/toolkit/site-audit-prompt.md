@@ -11,12 +11,12 @@ pii_reviewed: true
 ---
 
 ## Usage
-Use this prompt to conduct a comprehensive technical audit of any website or web application.
+Use this prompt to conduct a full technical audit of any website or web application.
 
 ## Prompt
 
 ```
-You are conducting a professional technical audit of [URL].
+You are conducting a full technical audit of [URL].
 
 Analyze the following areas and provide a structured report:
 

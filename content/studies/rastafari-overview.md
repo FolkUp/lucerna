@@ -1,5 +1,5 @@
 ---
-title: "Rastafarianism: Comprehensive Overview and Verification"
+title: "Rastafarianism: Full Overview and Verification"
 date: 2026-03-03
 status: verified
 confidence: high
@@ -15,7 +15,7 @@ reviewed_by: "FolkUp Editorial"
 review_date: 2026-03-03
 pii_reviewed: true
 sensitive: false
-summary: "Comprehensive OSINT overview of Rastafarianism: verification of 17 theses by Levikova, 155+ sources, 5 key paradoxes of the movement."
+summary: "Full OSINT overview of Rastafarianism: verification of 17 theses by Levikova, 155+ sources, 5 key paradoxes of the movement."
 ---
 
 {{< disclaimer type="osint-ethics" >}}
@@ -24,7 +24,7 @@ summary: "Comprehensive OSINT overview of Rastafarianism: verification of 17 the
 
 ## Project Description
 
-The **"Rastafarianism"** series is a comprehensive OSINT investigation of the Rastafari movement: from its origins to the present day, from music to law, from sacred cannabis to gender politics. The investigation was conducted as part of FolkUp Research Lab (Lucerna).
+The **"Rastafarianism"** series is a thorough OSINT investigation of the Rastafari movement: from its origins to the present day, from music to law, from sacred cannabis to gender politics. The investigation was conducted as part of FolkUp Research Lab (Lucerna).
 
 **Starting point:** Academic article by Levikova S.I. "Informal Youth Subculture of Rastafari" (2015, DOI: 10.7256/2409-8728.2015.5.15474). The article was used as a framework for verification — each thesis has been checked against 2+ independent sources.
 

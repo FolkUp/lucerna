@@ -58,7 +58,7 @@ Conduct a deep OSINT investigation on: [TOPIC]
 - Areas requiring further investigation
 
 ## Output format:
-Comprehensive markdown dossier with:
+Complete markdown dossier with:
 - Executive summary (1 paragraph)
 - Detailed findings by section
 - Timeline (if applicable)

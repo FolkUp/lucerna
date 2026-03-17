@@ -15,7 +15,7 @@ methodology_disclosed: true
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
 pii_reviewed: true
-summary: "Comprehensive legal analysis of the EU AI Act (Regulation 2024/1689), covering risk classification, FOSS exceptions, roles, transparency obligations, and practical implications for digital publishers and content creators."
+summary: "Full legal analysis of the EU AI Act (Regulation 2024/1689), covering risk classification, FOSS exceptions, roles, transparency obligations, and practical implications for digital publishers and content creators."
 ---
 
 # EU AI Act: Overview and Risk Classification
@@ -28,7 +28,7 @@ summary: "Comprehensive legal analysis of the EU AI Act (Regulation 2024/1689), 
 
 ## Executive Summary
 
-The EU AI Act establishes a comprehensive regulatory framework for artificial intelligence systems based on risk classification. This investigation examines:
+The EU AI Act establishes a regulatory framework for artificial intelligence systems based on risk classification. This investigation examines:
 
 - Four-tier risk classification system
 - Free and Open Source Software (FOSS) exemptions

@@ -13,7 +13,7 @@ methodology_disclosed: true
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
 pii_reviewed: true
-summary: "Comprehensive dossier on the 1947 anthem — creation history, authors, musical analysis, cultural impact across 25+ languages, and copyright status."
+summary: "Detailed dossier on the 1947 anthem — creation history, authors, musical analysis, cultural impact across 25+ languages, and copyright status."
 ---
 
 {{< investigation-meta >}}

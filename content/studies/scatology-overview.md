@@ -1,5 +1,5 @@
 ---
-title: "Scatology in Culture: Comprehensive Research Overview"
+title: "Scatology in Culture: Full Research Overview"
 date: 2026-03-03
 status: verified
 confidence: high
@@ -15,7 +15,7 @@ reviewed_by: "FolkUp Editorial"
 review_date: 2026-03-03
 pii_reviewed: true
 sensitive: true
-summary: "Comprehensive OSINT overview of scatology in global culture: philosophy, art, literature, economics, politics, linguistics, medicine, mythology. 200+ sources, 8 research directions."
+summary: "Full OSINT overview of scatology in global culture: philosophy, art, literature, economics, politics, linguistics, medicine, mythology. 200+ sources, 8 research directions."
 ---
 
 {{< disclaimer type="osint-ethics" >}}

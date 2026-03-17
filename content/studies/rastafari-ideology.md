@@ -517,7 +517,7 @@ Rastafari adopted **"Kebra Nagast"** as **literal historical truth** and sacred 
 
 ## Conclusion
 
-The ideology and symbolism of Rastafarianism constitute a **complex system** integrating biblical theology, African nationalism, anti-colonial critique, and alternative ontology. From the cosmological opposition of Babylon and Zion to the philosophy of "I and I," Rastafari have created a **comprehensive counter-cultural program** aimed at the decolonialization of consciousness, body, and language of Black people.
+The ideology and symbolism of Rastafarianism constitute a **complex system** integrating biblical theology, African nationalism, anti-colonial critique, and alternative ontology. From the cosmological opposition of Babylon and Zion to the philosophy of "I and I," Rastafari have created a **complete counter-cultural program** aimed at the decolonialization of consciousness, body, and language of Black people.
 
 **Key conclusions:**
 

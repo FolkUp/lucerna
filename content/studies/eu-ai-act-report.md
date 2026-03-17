@@ -15,7 +15,7 @@ methodology_ref: "source-evaluation"
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
 pii_reviewed: true
-summary: "Comprehensive analysis of EU AI Act obligations for small-scale digital publishers. Covers Art. 50 transparency, GDPR intersections, copyright, enforcement, and compliance roadmap."
+summary: "In-depth analysis of EU AI Act obligations for small-scale digital publishers. Covers Art. 50 transparency, GDPR intersections, copyright, enforcement, and compliance roadmap."
 ---
 
 {{< investigation-meta >}}

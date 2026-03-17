@@ -1,6 +1,6 @@
 ---
 title: "Technical Audit Methodology"
-description: "Comprehensive framework for auditing websites and web apps: UX, tech stack, performance, security, SEO, and business viability analysis."
+description: "Full framework for auditing websites and web apps: UX, tech stack, performance, security, SEO, and business viability analysis."
 date: 2026-02-25
 status: verified
 confidence: high
@@ -13,7 +13,7 @@ pii_reviewed: true
 
 ## Overview
 
-Comprehensive framework for evaluating websites, web applications, and digital products. Covers UX, technology stack, performance, security, SEO, and business viability.
+Full framework for evaluating websites, web applications, and digital products. Covers UX, technology stack, performance, security, SEO, and business viability.
 
 ## Process
 

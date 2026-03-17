@@ -14,7 +14,7 @@ methodology_disclosed: true
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
 pii_reviewed: true
-summary: "Comprehensive compliance checklist for small digital publishers using AI tools: immediate actions, timeline-based tasks, documentation requirements, Privacy Policy templates, and risk mitigation strategies. Practical implementation guide for GDPR and EU AI Act."
+summary: "Practical compliance checklist for small digital publishers using AI tools: immediate actions, timeline-based tasks, documentation requirements, Privacy Policy templates, and risk mitigation strategies. Practical implementation guide for GDPR and EU AI Act."
 ---
 
 # EU AI Act Compliance Checklist: Practical Guide for Digital Publishers

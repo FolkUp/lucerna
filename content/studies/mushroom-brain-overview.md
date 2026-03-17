@@ -27,7 +27,7 @@ summary: "Series overview of 10 OSINT investigations on mushrooms and the brain:
 
 The **"Mushrooms and Brain Activity"** series is a large-scale OSINT investigation into the effects of mushrooms on cognitive function, mental health, and human well-being. The research was conducted within FolkUp Research Lab (Lucerna).
 
-**Goal:** An objective, comprehensive analysis — from neuropharmacology to cultural myths, from clinical data to marketing manipulation. Critical approach: facts, not hype.
+**Goal:** An objective, in-depth analysis — from neuropharmacology to cultural myths, from clinical data to marketing manipulation. Critical approach: facts, not hype.
 
 **Methodology:** OSINT (Open Source Intelligence) — systematic collection, verification, and analysis of open sources. Every claim is marked with an evidence level. Conflicts of interest among researchers are identified and documented.
 

@@ -15,7 +15,7 @@ reviewed_by: "FolkUp Editorial"
 review_date: 2026-03-02
 pii_reviewed: true
 sensitive: true
-summary: "Comprehensive safety overview: mushroom poisonings, drug interactions, legal status across jurisdictions, harm reduction principles."
+summary: "Full safety overview: mushroom poisonings, drug interactions, legal status across jurisdictions, harm reduction principles."
 ---
 
 {{< disclaimer type="harm-reduction" >}}
