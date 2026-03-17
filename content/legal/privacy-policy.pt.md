@@ -5,7 +5,7 @@ description: "Política de Privacidade do Lucerna — FolkUp Research Lab."
 layout: "simple"
 ---
 
-**Última atualização:** 12 de março de 2026
+**Última atualização:** 17 de março de 2026
 
 ## 1. Responsável pelo Tratamento de Dados
 
@@ -33,12 +33,23 @@ O nosso servidor web pode registar temporariamente:
 
 Os registos do servidor são retidos por um máximo de **30 dias** e são utilizados exclusivamente para monitorização de segurança e resolução de problemas.
 
-### 2.3 Dados que NÃO Recolhemos
+### 2.3 Subscrição da Newsletter
+
+Ao subscrever a newsletter **OSINT Digest**, recolhemos:
+- **Endereço de email** — exclusivamente para o envio da newsletter
+- **Prova de consentimento** — data/hora, hash do endereço IP (truncado, não armazenado na íntegra), versão do consentimento, preferência de idioma
+
+Os dados da newsletter são processados pela **Brevo** (Sendinblue SA, França) como nosso subcontratante, ao abrigo de um Acordo de Tratamento de Dados (DPA) em conformidade com o Artigo 28 do RGPD.
+
+- **Base legal:** Consentimento (Art. 6(1)(a) RGPD) — subscrição ativa através de dupla confirmação (DOI)
+- **Período de retenção:** O seu email é armazenado até ao cancelamento da subscrição. Após cancelamento, os dados são eliminados no prazo de 30 dias
+- **Direito de retirada:** Pode cancelar a subscrição a qualquer momento através do link em cada newsletter ou contactando privacy@folkup.app
+
+### 2.4 Dados que NÃO Recolhemos
 
 - Não exigimos contas de utilizador ou registo
 - Não utilizamos cookies de publicidade ou marketing
 - Não utilizamos scripts de rastreamento de terceiros
-- Não recolhemos endereços de correio eletrónico (a menos que nos contacte diretamente)
 
 ## 3. Responsável pela Proteção de Dados
 
@@ -50,7 +61,7 @@ Para questões sobre proteção de dados, contacte: **privacy@folkup.app**
 
 De acordo com o **Artigo 6 do RGPD**, processamos dados com base em:
 - **Interesse legítimo** (Art. 6(1)(f)) — para análise anónima de dados e monitorização de segurança. Realizámos um teste de balanceamento e determinámos que a nossa recolha mínima e anónima de dados não sobrepesa os direitos e liberdades dos titulares de dados, dado que nenhuma PII é recolhida ou armazenada.
-- **Consentimento** — se nos contactar voluntariamente por correio eletrónico
+- **Consentimento** (Art. 6(1)(a)) — para subscrição da newsletter e se nos contactar voluntariamente por correio eletrónico
 
 ## 5. OSINT Research — Tratamento de Dados de Terceiros
 
@@ -100,11 +111,15 @@ Este website **não utiliza cookies**. A nossa solução de análise de dados (U
 
 ## 8. Serviços de Terceiros
 
-### 8.1 Ko-fi (Donativos)
+### 8.1 Brevo (Newsletter)
+
+A subscrição da newsletter é processada pela **Brevo** (Sendinblue SA), 106 boulevard Haussmann, 75008 Paris, França. A Brevo atua como nosso subcontratante ao abrigo do Artigo 28 do RGPD. Política de Privacidade da Brevo: [https://www.brevo.com/legal/privacypolicy/](https://www.brevo.com/legal/privacypolicy/)
+
+### 8.2 Ko-fi (Donativos)
 
 Se optar por nos apoiar via [Ko-fi](https://ko-fi.com/folkup), os seus dados são processados pela Ko-fi de acordo com a sua [Política de Privacidade](https://ko-fi.com/home/privacy). Não recebemos nem armazenamos informações do seu pagamento.
 
-### 8.2 GitHub
+### 8.3 GitHub
 
 O nosso código-fonte é alojado em [GitHub](https://github.com/FolkUp). Se interage com os nossos repositórios, a [Declaração de Privacidade](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) do GitHub aplica-se.
 
@@ -120,6 +135,7 @@ O nosso servidor está localizado na **União Europeia**. Não transferimos dado
 |-----------|-----------------|
 | Análise de dados (Umami) | Agregados, nenhuma PII armazenada |
 | Registos do servidor | Máximo 30 dias |
+| Subscrição da newsletter | Até ao cancelamento, depois apagado em 30 dias |
 | Correspondência por correio eletrónico | Até ao cumprimento do fim, depois apagado |
 
 ## 11. Os Seus Direitos
