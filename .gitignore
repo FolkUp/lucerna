@@ -51,3 +51,4 @@ scripts/reviews-passwords.json
 *.bak
 *.log
 nul
+_archive/
