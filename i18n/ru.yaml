@@ -101,6 +101,15 @@ newsletterConsentText: "Подписываясь, вы соглашаетесь 
 newsletterPrivacyLink: "Политика конфиденциальности"
 newsletterUnsubscribeText: "Вы можете отписаться в любой момент."
 newsletterFallback: "Для подписки отправьте письмо на"
+newsletterEmailFallback: "Подписаться по email"
+newsletterLoading: "Подписываем..."
+newsletterSuccess: "Проверьте почту — мы отправили письмо для подтверждения подписки."
+newsletterErrorInvalidEmail: "Введите корректный email-адрес."
+newsletterErrorConsent: "Необходимо принять политику конфиденциальности."
+newsletterErrorDuplicate: "Этот email уже подписан."
+newsletterErrorRateLimit: "Слишком много запросов. Попробуйте позже."
+newsletterErrorService: "Сервис временно недоступен. Попробуйте позже."
+newsletterErrorNetwork: "Ошибка соединения. Проверьте интернет и попробуйте снова."
 
 # Support CTA
 supportHeading: "OSINT-исследования — это время, серверы и инструменты"

@@ -101,6 +101,15 @@ newsletterConsentText: "By subscribing, you agree to receive the OSINT Digest ne
 newsletterPrivacyLink: "Privacy Policy"
 newsletterUnsubscribeText: "You can unsubscribe at any time."
 newsletterFallback: "To subscribe, send an email to"
+newsletterEmailFallback: "Subscribe via email"
+newsletterLoading: "Subscribing..."
+newsletterSuccess: "Please check your email to confirm your subscription."
+newsletterErrorInvalidEmail: "Please enter a valid email address."
+newsletterErrorConsent: "Please accept the privacy policy to subscribe."
+newsletterErrorDuplicate: "This email is already subscribed."
+newsletterErrorRateLimit: "Too many requests. Please try again later."
+newsletterErrorService: "Service temporarily unavailable. Please try again later."
+newsletterErrorNetwork: "Connection error. Please check your internet and try again."
 
 # Support CTA
 supportHeading: "OSINT research costs time, servers, and tools"

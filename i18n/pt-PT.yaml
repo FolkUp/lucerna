@@ -207,6 +207,15 @@ newsletterConsentText: "Ao subscrever, concorda em receber a newsletter OSINT Di
 newsletterPrivacyLink: "Política de Privacidade"
 newsletterUnsubscribeText: "Pode cancelar a subscrição a qualquer momento."
 newsletterFallback: "Para subscrever, envie um email para"
+newsletterEmailFallback: "Subscrever por email"
+newsletterLoading: "A subscrever..."
+newsletterSuccess: "Verifique o seu email para confirmar a subscrição."
+newsletterErrorInvalidEmail: "Introduza um endereço de email válido."
+newsletterErrorConsent: "É necessário aceitar a política de privacidade."
+newsletterErrorDuplicate: "Este email já está subscrito."
+newsletterErrorRateLimit: "Demasiados pedidos. Tente novamente mais tarde."
+newsletterErrorService: "Serviço temporariamente indisponível. Tente novamente mais tarde."
+newsletterErrorNetwork: "Erro de ligação. Verifique a sua internet e tente novamente."
 
 # Support CTA
 supportHeading: "Investigação OSINT custa tempo, servidores e ferramentas"
