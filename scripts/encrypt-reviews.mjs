@@ -15,7 +15,7 @@
  * If no per-file config exists, uses the --password flag for all files.
  */
 
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, readFileSync } from "node:fs";
 import { join, basename } from "node:path";
 
@@ -75,9 +75,10 @@ for (const file of htmlFiles) {
   const outputPath = join(outputDir, file);
 
   try {
-    execSync(
-      `npx staticrypt "${inputPath}" -p "${password}" -o "${outputPath}" --short`,
-      { stdio: "pipe" }
+    execFileSync(
+      "npx",
+      ["staticrypt", inputPath, "-p", password, "-o", outputPath, "--short"],
+      { stdio: "pipe", shell: false }
     );
     console.log(`Encrypted: ${file}`);
     encrypted++;
