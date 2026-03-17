@@ -32,9 +32,11 @@ Análise regulatória para organizações que operam em jurisdições complexas.
 
 As nossas investigações publicadas demonstram a profundidade e o rigor da nossa abordagem. Os projetos para clientes seguem a mesma metodologia com relatórios confidenciais.
 
-**Auditoria OSINT Empresarial** — Auditoria técnica multijurisdicional de uma empresa de software. 47 alegações verificadas em 60+ fontes primárias, evidências classificadas por nível de confiança. [Ler a versão publicada]({{< relref "/investigations/flightpath3d-osint-audit" >}}).
-
 **Reconstrução de Carreira** — Reconstrução de uma cronologia profissional utilizando fontes abertas, com referência cruzada de registos empresariais, arquivos de redes sociais e registos públicos em vários países. [Ler a versão publicada]({{< relref "/investigations/osint-career-reconstruction-case" >}}).
+
+**Due Diligence Empresarial** — Verificação multijurisdicional das alegações públicas de uma empresa tecnológica. Referência cruzada de registos empresariais, relatórios financeiros e registos de domínios em quatro países. Relatório estruturado com classificação de confiança para cada achado.
+
+**Auditoria de Conformidade Regulatória** — Análise de lacunas nas práticas de tratamento de dados de uma organização relativamente aos requisitos do RGPD e do EU AI Act. Mapeamento de fluxos de dados, identificação de não-conformidades e roteiro de remediação com ações priorizadas.
 
 ---
 

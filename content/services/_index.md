@@ -32,9 +32,11 @@ Typical scope: regulatory gap analysis, compliance documentation review, policy 
 
 Our published investigations demonstrate the depth and rigor of our approach. Client engagements follow the same methodology with confidential reporting.
 
-**Corporate OSINT Audit** — Multi-jurisdictional technical audit of a software company. 47 claims verified across 60+ primary sources, evidence graded by confidence level. [Read the published version]({{< relref "/investigations/flightpath3d-osint-audit" >}}).
-
 **Career Reconstruction** — Reconstruction of a professional timeline using open sources, cross-referencing corporate registries, social media archives, and public records across multiple countries. [Read the published version]({{< relref "/investigations/osint-career-reconstruction-case" >}}).
+
+**Corporate Due Diligence** — Multi-jurisdictional verification of a technology company's public claims. Cross-referenced corporate registries, financial filings, and domain records across four countries. Delivered structured evidence report with confidence grading for each finding.
+
+**Regulatory Compliance Audit** — Gap analysis of a mid-size organization's data handling practices against GDPR and EU AI Act requirements. Mapped data flows, identified non-conformities, and produced a remediation roadmap with prioritized action items.
 
 ---
 
