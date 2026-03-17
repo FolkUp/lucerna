@@ -14,7 +14,7 @@ methodology_ref: "osint-verification"
 reviewed_by: "FolkUp Editorial Board"
 review_date: "2026-03-13"
 pii_reviewed: true
-summary: "Comprehensive OSINT audit of FlightPath3D (Betria Interactive LLC) — IFE company producing interactive moving maps for commercial aviation. Covers: corporate structure, website claims verification, client base, competitive landscape, leadership changes, Portugal subsidiary, Russia connection, AI disruption risk, incidents/scandals, trade press analysis."
+summary: "Detailed OSINT audit of FlightPath3D (Betria Interactive LLC) — IFE company producing interactive moving maps for commercial aviation. Covers: corporate structure, website claims verification, client base, competitive landscape, leadership changes, Portugal subsidiary, Russia connection, AI disruption risk, incidents/scandals, trade press analysis."
 ---
 
 {{< investigation-meta >}}

@@ -14,7 +14,7 @@ methodology_disclosed: true
 reviewed_by: "FolkUp Editorial"
 review_date: 2026-02-28
 pii_reviewed: true
-summary: "Comprehensive analysis of GDPR compliance for AI systems: legal basis for processing, international data transfers, DPIA requirements, data subject rights, and enforcement trends. Includes practical guidance for AI deployers and content creators."
+summary: "Detailed analysis of GDPR compliance for AI systems: legal basis for processing, international data transfers, DPIA requirements, data subject rights, and enforcement trends. Includes practical guidance for AI deployers and content creators."
 ---
 
 # GDPR and AI: Legal Basis, Data Transfers, and Compliance

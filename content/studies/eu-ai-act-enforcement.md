@@ -265,7 +265,7 @@ November 19, 2025, European Commission published Digital Omnibus on AI proposal:
 ### 5.3 Other Active DPAs
 
 **France: CNIL**
-- Published comprehensive AI guidance (February 2025, July 2025)
+- Published detailed AI guidance (February 2025, July 2025)
 - Active enforcement: Clearview AI (€25.2M)
 - Strategic priority: AI and biometric systems
 
