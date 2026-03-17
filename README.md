@@ -14,7 +14,7 @@
 - **Hugo** (SSG) + **Blowfish** theme
 - Hosted on VPS with nginx
 - Analytics: Umami (self-hosted)
-- Languages: English, Russian
+- Languages: English, Russian, Portuguese
 
 ## Content Structure
 
@@ -24,15 +24,6 @@
 | `verifications/` | Fact-checks of specific claims |
 | `methodology/` | Research and verification methodologies |
 | `toolkit/` | Reusable prompts and audit frameworks |
-
-## Internal (not published)
-
-| Directory | Purpose |
-|-----------|---------|
-| `research/` | Internal research for other FolkUp projects |
-| `dossiers/` | Source material for investigations |
-| `audits/` | Technical and IP audits |
-| `prompts/` | Source prompt templates |
 
 ## Development
 

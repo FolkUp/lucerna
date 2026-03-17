@@ -36,6 +36,12 @@ node_modules/
 /prompts/
 /audits/
 
+# Sensitive data — must NOT be in public repo (LCRN-082)
+static/fp3d/
+static/lawyer-pack/
+static/dossiers/
+deploy/bastion-deploy-runbook.md
+
 # Temp
 *.tmp
 *.bak
