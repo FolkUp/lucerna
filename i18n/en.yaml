@@ -107,6 +107,13 @@ supportHeading: "OSINT research costs time, servers, and tools"
 supportDesc: "Lucerna is funded by reader support. No ads, no paywalls. Your contribution keeps investigations open and verifiable."
 supportButton: "Support on Ko-fi"
 
+# Services CTA
+servicesCtaQuote: "Request a quote"
+servicesCtaCall: "Book a call"
+servicesCtaSubjectQuote: "Lucerna Services — Quote Request"
+servicesCtaSubjectCall: "Lucerna Services — Call Request"
+servicesCtaGroupLabel: "Contact options"
+
 # 404 page
 404Title: "File Not Found"
 404Text: "The requested document has been redacted, relocated, or never existed."

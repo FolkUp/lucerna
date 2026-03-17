@@ -40,10 +40,10 @@ As nossas investigações publicadas demonstram a profundidade e o rigor da noss
 
 ---
 
-## Colaboração
+## Comece
 
 Cada projeto é dimensionado individualmente. Não operamos com retentores fixos ou pacotes padronizados — cada projeto é adaptado à questão em causa.
 
-Para discutir um potencial projeto, escreva para [contact@folkup.app](mailto:contact@folkup.app). Inclua uma breve descrição do que precisa de ser investigado ou verificado. Tipicamente respondemos em 48 horas.
+Inclua uma breve descrição do que precisa de ser investigado ou verificado. Tipicamente respondemos em 48 horas. As comunicações são tratadas como confidenciais. Não divulgamos identidades de clientes nem detalhes de projetos. Consulte a nossa [Política de Privacidade]({{< relref "/legal/privacy-policy" >}}).
 
-As comunicações são tratadas como confidenciais. Não divulgamos identidades de clientes nem detalhes de projetos. Consulte a nossa [Política de Privacidade]({{< relref "/legal/privacy-policy" >}}).
+{{< service-cta >}}

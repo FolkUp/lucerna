@@ -1124,9 +1124,107 @@ h1, h2, h3, h4,
   }
 }
 
+/* Services CTA block */
+.services-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(var(--color-neutral-300), 0.3);
+}
+
+.dark .services-cta {
+  border-top-color: rgba(var(--color-neutral-600), 0.3);
+}
+
+.services-cta__primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  min-height: 2.75rem;
+  border-radius: 0.375rem;
+  background-color: rgb(var(--color-primary-600));
+  color: #fff;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color 0.2s;
+}
+
+.services-cta__primary:hover {
+  background-color: rgb(var(--color-primary-700));
+  color: #fff;
+}
+
+.dark .services-cta__primary {
+  background-color: rgb(var(--color-primary-500));
+}
+
+.dark .services-cta__primary:hover {
+  background-color: rgb(var(--color-primary-400));
+  color: #fff;
+}
+
+.services-cta__secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  min-height: 2.75rem;
+  border-radius: 0.375rem;
+  background-color: transparent;
+  color: rgb(var(--color-primary-600));
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgb(var(--color-primary-200));
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.services-cta__secondary:hover {
+  background-color: rgba(var(--color-primary-100), 0.3);
+  border-color: rgb(var(--color-primary-400));
+}
+
+.dark .services-cta__secondary {
+  color: rgb(var(--color-primary-400));
+  border-color: rgba(var(--color-primary-400), 0.4);
+}
+
+.dark .services-cta__secondary:hover {
+  background-color: rgba(var(--color-primary-500), 0.15);
+  border-color: rgb(var(--color-primary-400));
+}
+
+.services-cta__primary:focus-visible,
+.services-cta__secondary:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 2px;
+}
+
+/* Services CTA — mobile: stack vertically */
+@media (max-width: 640px) {
+  .services-cta {
+    flex-direction: column;
+  }
+
+  .services-cta__primary,
+  .services-cta__secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Services page — reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .services-content a {
+  .services-content a,
+  .services-cta__primary,
+  .services-cta__secondary {
     transition: none;
   }
 }

@@ -213,6 +213,13 @@ supportHeading: "Investigação OSINT custa tempo, servidores e ferramentas"
 supportDesc: "A Lucerna é financiada pelo apoio dos leitores. Sem anúncios, sem paywalls. A sua contribuição mantém as investigações abertas e verificáveis."
 supportButton: "Apoiar no Ko-fi"
 
+# Services CTA
+servicesCtaQuote: "Solicitar orçamento"
+servicesCtaCall: "Marcar uma chamada"
+servicesCtaSubjectQuote: "Lucerna — Pedido de orçamento"
+servicesCtaSubjectCall: "Lucerna — Pedido de chamada"
+servicesCtaGroupLabel: "Opções de contacto"
+
 # 404 page
 404Title: "Ficheiro Não Encontrado"
 404Text: "O documento solicitado foi redigido, realocado, ou nunca existiu."

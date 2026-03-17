@@ -40,10 +40,10 @@ Our published investigations demonstrate the depth and rigor of our approach. Cl
 
 ---
 
-## Engagement
+## Get Started
 
 Each project is scoped individually. We do not operate on fixed retainers or standardized packages — every engagement is tailored to the question at hand.
 
-To discuss a potential project, write to [contact@folkup.app](mailto:contact@folkup.app). Include a brief description of what you need investigated or verified. We typically respond within 48 hours.
+Include a brief description of what you need investigated or verified. We typically respond within 48 hours. All communications are treated as confidential. We do not disclose client identities or project details. See our [Privacy Policy]({{< relref "/legal/privacy-policy" >}}).
 
-All communications are treated as confidential. We do not disclose client identities or project details. See our [Privacy Policy]({{< relref "/legal/privacy-policy" >}}).
+{{< service-cta >}}

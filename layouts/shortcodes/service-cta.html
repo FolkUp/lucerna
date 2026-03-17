@@ -1,0 +1,18 @@
+{{- $email := "contact@folkup.app" -}}
+{{- $subjectQuote := i18n "servicesCtaSubjectQuote" | default "Lucerna Services — Quote Request" -}}
+{{- $subjectCall := i18n "servicesCtaSubjectCall" | default "Lucerna Services — Call Request" -}}
+{{- $labelQuote := i18n "servicesCtaQuote" | default "Request a quote" -}}
+{{- $labelCall := i18n "servicesCtaCall" | default "Book a call" -}}
+
+<div class="services-cta" role="group" aria-label="{{ i18n "servicesCtaGroupLabel" | default "Contact options" }}">
+  <a href="mailto:{{ $email }}?subject={{ $subjectQuote | urlquery }}"
+     class="services-cta__primary"
+     aria-label="{{ $labelQuote }}">
+    {{ $labelQuote }} →
+  </a>
+  <a href="mailto:{{ $email }}?subject={{ $subjectCall | urlquery }}"
+     class="services-cta__secondary"
+     aria-label="{{ $labelCall }}">
+    {{ $labelCall }}
+  </a>
+</div>

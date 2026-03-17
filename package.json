@@ -1,0 +1,12 @@
+{
+  "name": "lucerna-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lucerna OSINT Research Lab — site build tools",
+  "scripts": {
+    "encrypt-reviews": "node scripts/encrypt-reviews.mjs"
+  },
+  "devDependencies": {
+    "staticrypt": "^4.0.1"
+  }
+}

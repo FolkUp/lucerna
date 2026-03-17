@@ -42,6 +42,10 @@ static/lawyer-pack/
 static/dossiers/
 deploy/bastion-deploy-runbook.md
 
+# StatiCrypt (LCRN-035)
+deploy/reviews/
+scripts/reviews-passwords.json
+
 # Temp
 *.tmp
 *.bak
