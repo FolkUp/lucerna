@@ -181,6 +181,7 @@ heroStatPages: "páginas"
 heroStatSources: "fontes por investigação"
 heroStatLanguages: "idiomas"
 heroStatLicense: "CC BY-SA"
+heroStatLicenseLabel: "licença"
 
 # Methodology highlight
 heroMethodText: "O nosso método: fontes transparentes, análise reproduzível, conclusões revistas por pares."

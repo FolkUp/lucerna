@@ -17,6 +17,7 @@ Allow: /newsletter/
 # Protected sections
 Disallow: /dossiers/
 Disallow: /prompts/
+Disallow: /reviews/
 
 # Sitemaps
 Sitemap: https://lucerna.folkup.app/sitemap.xml

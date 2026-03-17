@@ -506,6 +506,9 @@ h1, h2, h3, h4,
   color: rgb(var(--color-primary-500));
   text-decoration: none;
   transition: text-decoration-color 0.2s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .investigation-meta__link:hover {
@@ -803,6 +806,23 @@ h1, h2, h3, h4,
   background-color: rgba(107, 114, 128, 0.1);
   color: rgb(var(--color-neutral-400));
   font-style: italic;
+}
+
+/* Dark mode: brighten badge colors for 4.5:1 contrast on dark bg */
+.dark .lucerna-card__status--verified {
+  color: #4ade80;
+}
+
+.dark .lucerna-card__status--partially_verified {
+  color: #fbbf24;
+}
+
+.dark .investigation-meta__status--verified {
+  color: #4ade80;
+}
+
+.dark .investigation-meta__status--partially_verified {
+  color: #fbbf24;
 }
 
 /* Category badge */
@@ -1780,9 +1800,9 @@ h1, h2, h3, h4,
 
 .newsletter-form__hp {
   position: absolute;
-  left: -9999px;
-  opacity: 0;
-  height: 0;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
   overflow: hidden;
 }
 
@@ -1983,4 +2003,18 @@ h1, h2, h3, h4,
   background: rgba(var(--color-primary-900), 0.3);
   border-color: rgb(var(--color-primary-500));
   color: rgb(var(--color-primary-300));
+}
+
+/* ============================================
+   Global reduced-motion catch-all (WCAG 2.1)
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

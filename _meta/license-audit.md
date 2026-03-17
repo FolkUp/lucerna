@@ -12,8 +12,9 @@ None (pure Markdown repository).
 
 | Font | License | SPDX | Source |
 |------|---------|------|--------|
-| Source Sans Pro | SIL Open Font License 1.1 | OFL-1.1 | Google Fonts (self-hosted) |
+| Pacifico | SIL Open Font License 1.1 | OFL-1.1 | Google Fonts (self-hosted) |
 | Playfair Display | SIL Open Font License 1.1 | OFL-1.1 | Google Fonts (self-hosted) |
+| Source Sans 3 | SIL Open Font License 1.1 | OFL-1.1 | Google Fonts (self-hosted) |
 
 All fonts are served from `/fonts/` — no external requests to Google Fonts.
 

@@ -66,6 +66,7 @@
               {{ i18n "newsletterUnsubscribeText" | default "You can unsubscribe at any time." }}
             </span>
           </label>
+          <span id="newsletter-consent-error" class="newsletter-form__error" role="alert"></span>
         </div>
 
         {{/* Submit button */}}
@@ -102,6 +103,7 @@
       var btnText = submitBtn.querySelector('.newsletter-form__button-text');
       var btnLoading = submitBtn.querySelector('.newsletter-form__button-loading');
       var tsField = document.getElementById('newsletter-ts');
+      var consentError = document.getElementById('newsletter-consent-error');
 
       // Set timestamp on load (for timing-based bot detection)
       tsField.value = Date.now().toString();
@@ -133,6 +135,7 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         emailError.textContent = '';
+        consentError.textContent = '';
         statusEl.textContent = '';
         statusEl.className = 'newsletter-form__status';
 
@@ -149,7 +152,7 @@
           return;
         }
         if (!consent) {
-          setStatus(messages.consent_required, 'error');
+          consentError.textContent = messages.consent_required;
           return;
         }
 

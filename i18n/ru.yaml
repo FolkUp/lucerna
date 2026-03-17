@@ -75,6 +75,7 @@ heroStatPages: "страниц"
 heroStatSources: "источников на расследование"
 heroStatLanguages: "языка"
 heroStatLicense: "CC BY-SA"
+heroStatLicenseLabel: "лицензия"
 
 # Methodology highlight
 heroMethodText: "Наш метод: прозрачные источники, воспроизводимый анализ, рецензируемые выводы."

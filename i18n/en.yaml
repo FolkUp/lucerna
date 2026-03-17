@@ -75,6 +75,7 @@ heroStatPages: "pages"
 heroStatSources: "sources per investigation"
 heroStatLanguages: "languages"
 heroStatLicense: "CC BY-SA"
+heroStatLicenseLabel: "license"
 
 # Methodology highlight
 heroMethodText: "Our method: transparent sources, reproducible analysis, peer-reviewed conclusions."
