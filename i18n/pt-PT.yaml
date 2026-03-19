@@ -217,6 +217,8 @@ newsletterErrorDuplicate: "Este email já está subscrito."
 newsletterErrorRateLimit: "Demasiados pedidos. Tente novamente mais tarde."
 newsletterErrorService: "Serviço temporariamente indisponível. Tente novamente mais tarde."
 newsletterErrorNetwork: "Erro de ligação. Verifique a sua internet e tente novamente."
+newsletterConfirmedTitle: "Subscrição confirmada"
+newsletterConfirmedMessage: "Está agora subscrito ao OSINT Digest. Bem-vindo."
 
 # Support CTA
 supportHeading: "Investigação OSINT custa tempo, servidores e ferramentas"

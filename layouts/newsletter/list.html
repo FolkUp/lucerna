@@ -95,6 +95,26 @@
     {{/* Form script */}}
     <script>
     (function() {
+      // Handle DOI confirmation redirect (?confirmed=true)
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('confirmed') === 'true') {
+        var formSection = document.querySelector('.newsletter-form-section');
+        if (formSection) {
+          var title = {{ i18n "newsletterConfirmedTitle" | default "Subscription confirmed" | jsonify }};
+          var msg = {{ i18n "newsletterConfirmedMessage" | default "You are now subscribed to the OSINT Digest. Welcome aboard." | jsonify }};
+          formSection.innerHTML =
+            '<div class="newsletter-form__status newsletter-form__status--success" role="status">' +
+            '<h2 class="newsletter-form__heading">' + title + '</h2>' +
+            '<p>' + msg + '</p>' +
+            '</div>';
+        }
+        // Clean URL without reloading
+        if (window.history.replaceState) {
+          window.history.replaceState({}, '', window.location.pathname);
+        }
+        return;
+      }
+
       var form = document.getElementById('newsletter-form');
       var emailInput = document.getElementById('newsletter-email');
       var emailError = document.getElementById('newsletter-email-error');

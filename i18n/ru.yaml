@@ -111,6 +111,8 @@ newsletterErrorDuplicate: "Этот email уже подписан."
 newsletterErrorRateLimit: "Слишком много запросов. Попробуйте позже."
 newsletterErrorService: "Сервис временно недоступен. Попробуйте позже."
 newsletterErrorNetwork: "Ошибка соединения. Проверьте интернет и попробуйте снова."
+newsletterConfirmedTitle: "Подписка подтверждена"
+newsletterConfirmedMessage: "Вы подписаны на OSINT Дайджест. Добро пожаловать."
 
 # Support CTA
 supportHeading: "OSINT-исследования — это время, серверы и инструменты"

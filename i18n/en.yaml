@@ -111,6 +111,8 @@ newsletterErrorDuplicate: "This email is already subscribed."
 newsletterErrorRateLimit: "Too many requests. Please try again later."
 newsletterErrorService: "Service temporarily unavailable. Please try again later."
 newsletterErrorNetwork: "Connection error. Please check your internet and try again."
+newsletterConfirmedTitle: "Subscription confirmed"
+newsletterConfirmedMessage: "You are now subscribed to the OSINT Digest. Welcome aboard."
 
 # Support CTA
 supportHeading: "OSINT research costs time, servers, and tools"
