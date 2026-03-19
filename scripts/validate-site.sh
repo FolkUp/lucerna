@@ -68,10 +68,10 @@ if [ "$FM_ERRORS" -eq 0 ]; then
 fi
 echo ""
 
-# 5. Publication compliance (investigations)
+# 5. Publication compliance (investigations + studies)
 echo "--- 5. Publication compliance ---"
 PUB_ERRORS=0
-for f in $(find content/investigations -name "*.md" ! -name "_index*" -type f 2>/dev/null); do
+for f in $(find content/investigations content/studies -name "*.md" ! -name "_index*" -type f 2>/dev/null); do
     FRONT=$(sed -n '/^---$/,/^---$/p' "$f" | head -40)
     STATUS=$(echo "$FRONT" | grep "^status:" | head -1 | sed 's/status: *//;s/"//g')
 
@@ -115,7 +115,7 @@ for f in $(find content/investigations -name "*.md" ! -name "_index*" -type f 2>
     fi
 done
 if [ "$PUB_ERRORS" -eq 0 ]; then
-    ok "All investigations pass publication compliance"
+    ok "All investigations and studies pass publication compliance"
 fi
 echo ""
 
