@@ -38,9 +38,17 @@ node_modules/
 
 # Sensitive data — must NOT be in public repo (LCRN-082)
 static/fp3d/
+static/fp3d-public/
+static/fp3d.html
+static/fp3d-dashboard.html
 static/lawyer-pack/
 static/dossiers/
+static/x713.html
 deploy/bastion-deploy-runbook.md
+deploy/bastion-*
+deploy/fail2ban/
+static/bastion-*
+scripts/build-fp3d-data.cjs
 
 # StatiCrypt (LCRN-035)
 deploy/reviews/

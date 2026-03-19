@@ -51,9 +51,7 @@ jobs:
           exit 1
 
       - name: Load notification secrets
-        run: |
-          sudo cat /run/secrets/ci-notify.env >> $GITHUB_ENV
-          sudo cat /run/secrets/telegram-bot.env >> $GITHUB_ENV
+        run: bash scripts/load-ci-secrets.sh >> $GITHUB_ENV
 
       - name: Check content changes
         id: tg_msg
