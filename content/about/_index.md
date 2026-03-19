@@ -25,7 +25,7 @@ Lucerna is a project by [FolkUp Research Lab](https://folkup.app) — an indepen
 ### Operator Identification (DL 7/2004, Art. 10)
 
 **Andrei Klemenchenok**, operating as **FolkUp**
-Largo José Afonso 19-20 RC, Setúbal, Portugal
+Largo José Afonso 19-20 RC, 2900-429 Setúbal, Portugal
 NIF: 312596928
 Email: editorial@folkup.app
 

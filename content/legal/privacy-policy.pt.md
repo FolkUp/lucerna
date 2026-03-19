@@ -12,7 +12,7 @@ layout: "simple"
 Este website é operado por:
 
 **Andrei Klemenchenok**, operando como **FolkUp**
-Largo José Afonso 19-20 RC, Setúbal, Portugal
+Largo José Afonso 19-20 RC, 2900-429 Setúbal, Portugal
 NIF: 312596928
 Email: privacy@folkup.app
 
