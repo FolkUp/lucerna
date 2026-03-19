@@ -22,6 +22,13 @@ A lucerna was an oil lamp in ancient Rome — a small source of light in the dar
 
 Lucerna is a project by [FolkUp Research Lab](https://folkup.app) — an independent research collective based in Europe. We don't put names on bylines. Our work speaks for itself.
 
+### Operator Identification (DL 7/2004, Art. 10)
+
+**Andrei Klemenchenok**, operating as **FolkUp**
+Largo José Afonso 19-20 RC, Setúbal, Portugal
+NIF: 312596928
+Email: editorial@folkup.app
+
 ## Editorial Policy
 
 For details on our editorial workflow, quality indicators, and corrections process, see our [Editorial Policy](/about/editorial-policy/).

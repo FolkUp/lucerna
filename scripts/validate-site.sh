@@ -68,6 +68,57 @@ if [ "$FM_ERRORS" -eq 0 ]; then
 fi
 echo ""
 
+# 5. Publication compliance (investigations)
+echo "--- 5. Publication compliance ---"
+PUB_ERRORS=0
+for f in $(find content/investigations -name "*.md" ! -name "_index*" -type f 2>/dev/null); do
+    FRONT=$(sed -n '/^---$/,/^---$/p' "$f" | head -40)
+    STATUS=$(echo "$FRONT" | grep "^status:" | head -1 | sed 's/status: *//;s/"//g')
+
+    # Skip drafts and stubs
+    if [ "$STATUS" = "draft" ] || [ "$STATUS" = "stub" ]; then
+        continue
+    fi
+
+    BASENAME=$(basename "$f")
+
+    # Check pii_reviewed
+    if ! echo "$FRONT" | grep -q "^pii_reviewed: *true"; then
+        error "Missing pii_reviewed: true in $BASENAME"
+        PUB_ERRORS=$((PUB_ERRORS + 1))
+    fi
+
+    # Check reviewed_by
+    if ! echo "$FRONT" | grep -q "^reviewed_by:"; then
+        error "Missing reviewed_by in $BASENAME"
+        PUB_ERRORS=$((PUB_ERRORS + 1))
+    fi
+
+    # Check review_date
+    if ! echo "$FRONT" | grep -q "^review_date:"; then
+        error "Missing review_date in $BASENAME"
+        PUB_ERRORS=$((PUB_ERRORS + 1))
+    fi
+
+    # Check legal_risk (warn if missing, not error — field is new)
+    if ! echo "$FRONT" | grep -q "^legal_risk:"; then
+        warn "Missing legal_risk in $BASENAME (new field)"
+    fi
+
+    # Check sources_count >= 2 for verified/partially_verified
+    if [ "$STATUS" = "verified" ] || [ "$STATUS" = "partially_verified" ]; then
+        SRC_COUNT=$(echo "$FRONT" | grep "^sources_count:" | head -1 | sed 's/sources_count: *//')
+        if [ -n "$SRC_COUNT" ] && [ "$SRC_COUNT" -lt 2 ] 2>/dev/null; then
+            error "sources_count < 2 for $STATUS article: $BASENAME"
+            PUB_ERRORS=$((PUB_ERRORS + 1))
+        fi
+    fi
+done
+if [ "$PUB_ERRORS" -eq 0 ]; then
+    ok "All investigations pass publication compliance"
+fi
+echo ""
+
 # Summary
 echo "==============================="
 echo -e "Errors:   ${RED}$ERRORS${NC}"

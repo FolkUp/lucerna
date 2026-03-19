@@ -5,13 +5,16 @@ description: "Privacy Policy for Lucerna — FolkUp Research Lab."
 layout: "simple"
 ---
 
-**Last updated:** March 17, 2026
+**Last updated:** March 19, 2026
 
 ## 1. Data Controller
 
-This website is operated by **FolkUp** — an independent research collective based in Europe.
+This website is operated by:
 
-**Contact:** privacy@folkup.app
+**Andrei Klemenchenok**, operating as **FolkUp**
+Largo José Afonso 19-20 RC, Setúbal, Portugal
+NIF: 312596928
+Email: privacy@folkup.app
 
 ## 2. Data We Collect
 
