@@ -1,9 +1,14 @@
 ---
 title: "Editorial Policy"
 date: 2026-02-28
+date_updated: 2026-03-19
 description: "Editorial policy and workflow for Lucerna — FolkUp Research Lab."
 layout: "simple"
 ---
+
+## Scope
+
+This editorial policy reflects Lucerna's voluntary commitment to accuracy, fairness and transparency in research publishing. It is not an acknowledgment of obligations under press legislation or media regulation.
 
 ## Editorial Responsibility
 
@@ -40,9 +45,21 @@ Each article displays:
 - **Reviewer** — who reviewed and approved the article
 - **Review date** — when the editorial review was completed
 
-## Corrections
+## Corrections and Takedowns
 
-If you find errors in our content, please contact us at **editorial@folkup.app**. We are committed to correcting inaccuracies promptly and transparently.
+If you find factual errors in our content, please contact **editorial@folkup.app**. We review all correction requests promptly.
+
+**We will correct content when:**
+- A verifiable factual error is identified
+- New information materially changes the accuracy of our reporting
+- Attribution or sourcing needs updating
+
+**We will remove content when:**
+- A court order or binding legal decision requires it
+- Continued publication poses a disproportionate risk to a private individual's rights
+- The content no longer serves a legitimate public interest
+
+All corrections and removals are documented publicly (date, nature of change, reason). We do not remove content solely because it is unfavorable to its subject.
 
 ## PII Protection
 
@@ -71,14 +88,25 @@ All naming decisions are documented in the article's editorial metadata and revi
 
 ## Right of Reply
 
-If you are the subject of one of our investigations, you have the right to:
+If you are the subject of one of our investigations, you may:
 
-1. **Access** the data we have processed about you
-2. **Request corrections** to factual errors
-3. **Submit a response** — we will publish your unedited comment alongside our research
-4. **Request removal** of your data
+1. **Request corrections** to factual errors — contact **editorial@folkup.app**
+2. **Submit a response** — we will publish your unedited comment alongside our research
 
-Contact: **privacy@folkup.app** — we respond within 30 days.
+We review editorial requests promptly and will acknowledge receipt.
+
+## Data Subject Rights (GDPR)
+
+Separately from editorial matters, if your personal data appears in our publications, you may exercise your rights under GDPR:
+
+1. **Access** the data we have processed about you (Art. 15)
+2. **Rectification** of inaccurate data (Art. 16)
+3. **Erasure** of your data where applicable (Art. 17)
+4. **Object** to processing (Art. 21)
+
+Contact: **privacy@folkup.app** — we respond within 30 days as required by GDPR Art. 12(3).
+
+Data subject requests are handled separately from editorial decisions. Removal of personal data does not necessarily result in removal of the underlying research, which may be maintained in anonymized form where public interest justifies continued publication.
 
 ## Funding Transparency
 

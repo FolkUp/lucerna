@@ -1,9 +1,14 @@
 ---
 title: "Política Editorial"
 date: 2026-02-28
+date_updated: 2026-03-19
 description: "Política editorial e fluxo de trabalho da Lucerna — Laboratório de Pesquisa FolkUp."
 layout: "simple"
 ---
+
+## Âmbito
+
+Esta política editorial reflete o compromisso voluntário da Lucerna com a exatidão, equidade e transparência na publicação de investigações. Não constitui um reconhecimento de obrigações ao abrigo da legislação de imprensa ou regulação dos meios de comunicação social.
 
 ## Responsabilidade Editorial
 
@@ -40,9 +45,21 @@ Cada artigo apresenta:
 - **Revisor** — quem reviu e aprovou o artigo
 - **Data de revisão** — quando a revisão editorial foi concluída
 
-## Correções
+## Correções e Remoção de Conteúdo
 
-Se encontrar erros no nosso conteúdo, contacte-nos em **editorial@folkup.app**. Estamos empenhados em corrigir imprecisões de forma rápida e transparente.
+Se encontrar erros factuais no nosso conteúdo, contacte **editorial@folkup.app**. Analisamos todos os pedidos de correção com celeridade.
+
+**Corrigimos conteúdo quando:**
+- Um erro factual verificável é identificado
+- Nova informação altera materialmente a exatidão dos nossos materiais
+- A atribuição ou fontes necessitam de atualização
+
+**Removemos conteúdo quando:**
+- Uma decisão judicial ou ato jurídico vinculativo o exige
+- A continuação da publicação representa um risco desproporcional para os direitos de um indivíduo privado
+- O conteúdo já não serve um interesse público legítimo
+
+Todas as correções e remoções são documentadas publicamente (data, natureza da alteração, razão). Não removemos conteúdo apenas por ser desfavorável ao seu sujeito.
 
 ## Proteção de Dados Pessoais
 
@@ -71,14 +88,25 @@ Todas as decisões de identificação são documentadas nos metadados editoriais
 
 ## Direito de Resposta
 
-Se é o sujeito de uma das nossas investigações, tem o direito de:
+Se é o sujeito de uma das nossas investigações, pode:
 
-1. **Aceder** aos dados que processámos sobre si
-2. **Solicitar correções** a erros factuais
-3. **Apresentar uma resposta** — publicaremos o seu comentário íntegro juntamente com a nossa pesquisa
-4. **Solicitar a remoção** dos seus dados
+1. **Solicitar correções** a erros factuais — contacte **editorial@folkup.app**
+2. **Apresentar uma resposta** — publicaremos o seu comentário íntegro juntamente com a nossa pesquisa
 
-Contacto: **privacy@folkup.app** — respondemos no prazo de 30 dias.
+Analisamos os pedidos editoriais com celeridade e confirmamos a receção.
+
+## Direitos do Titular dos Dados (RGPD)
+
+Separadamente das questões editoriais, se os seus dados pessoais constam das nossas publicações, pode exercer os seus direitos ao abrigo do RGPD:
+
+1. **Acesso** aos dados que processámos sobre si (Art. 15.º)
+2. **Retificação** de dados inexatos (Art. 16.º)
+3. **Apagamento** dos seus dados, quando aplicável (Art. 17.º)
+4. **Oposição** ao tratamento (Art. 21.º)
+
+Contacto: **privacy@folkup.app** — respondemos no prazo de 30 dias conforme exigido pelo RGPD, Art. 12.º(3).
+
+Os pedidos dos titulares de dados são tratados separadamente das decisões editoriais. A remoção de dados pessoais não implica necessariamente a remoção da investigação subjacente, que pode ser mantida em forma anonimizada quando o interesse público justifique a continuação da publicação.
 
 ## Transparência de Financiamento
 
