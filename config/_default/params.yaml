@@ -78,6 +78,6 @@ term:
 sitemap:
   excludedKinds: ["taxonomy", "term"]
 
-umamiAnalytics:
-  websiteid: "92bc4e09-7e2a-47fa-9536-6d71cb01b75a"
-  domain: "analytics.folkup.app"
+# umamiAnalytics: disabled pending ePrivacy Art. 5(3) consent mechanism (LCRN-099)
+# websiteid: "92bc4e09-7e2a-47fa-9536-6d71cb01b75a"
+# domain: "analytics.folkup.app"
