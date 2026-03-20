@@ -29,7 +29,37 @@ jobs:
       - name: Validate site
         run: bash scripts/validate-site.sh
 
-      - name: Deploy to production
+      - name: Check nginx config changes
+        id: nginx_check
+        run: |
+          if git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -qE '^deploy/(nginx-default\.conf|snippets/)'; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy nginx config
+        if: steps.nginx_check.outputs.changed == 'true'
+        run: |
+          cp ~/lucerna/nginx-default.conf ~/lucerna/nginx-default.conf.bak
+          cp -r ~/lucerna/snippets ~/lucerna/snippets.bak
+          cp deploy/nginx-default.conf ~/lucerna/nginx-default.conf
+          cp deploy/snippets/*.conf ~/lucerna/snippets/
+          if docker exec lucerna nginx -t; then
+            docker exec lucerna nginx -s reload
+            echo "Nginx config deployed and reloaded"
+            rm -f ~/lucerna/nginx-default.conf.bak
+            rm -rf ~/lucerna/snippets.bak
+          else
+            echo "ERROR: nginx -t failed, rolling back"
+            mv ~/lucerna/nginx-default.conf.bak ~/lucerna/nginx-default.conf
+            rm -rf ~/lucerna/snippets
+            mv ~/lucerna/snippets.bak ~/lucerna/snippets
+            docker exec lucerna nginx -s reload
+            exit 1
+          fi
+
+      - name: Deploy Hugo content
         run: |
           mkdir -p ~/lucerna/public_staging
           rsync -a --delete public/ ~/lucerna/public_staging/
