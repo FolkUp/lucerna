@@ -126,6 +126,9 @@ servicesCtaSubjectQuote: "Lucerna Services — Quote Request"
 servicesCtaSubjectCall: "Lucerna Services — Call Request"
 servicesCtaGroupLabel: "Contact options"
 
+# Cookie consent
+manageCookies: "Manage cookies"
+
 # 404 page
 404Title: "File Not Found"
 404Text: "The requested document has been redacted, relocated, or never existed."

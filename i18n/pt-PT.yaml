@@ -232,6 +232,9 @@ servicesCtaSubjectQuote: "Lucerna — Pedido de orçamento"
 servicesCtaSubjectCall: "Lucerna — Pedido de chamada"
 servicesCtaGroupLabel: "Opções de contacto"
 
+# Cookie consent
+manageCookies: "Gerir cookies"
+
 # 404 page
 404Title: "Ficheiro Não Encontrado"
 404Text: "O documento solicitado foi redigido, realocado, ou nunca existiu."

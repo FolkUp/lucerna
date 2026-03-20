@@ -57,6 +57,12 @@
       </p>
     {{ end }}
 
+    {{/* Manage cookies — consent revocation (ePrivacy Art. 5(3)) */}}
+    <button id="manage-cookies" class="cookie-manage-btn" type="button"
+      onclick="try{localStorage.removeItem('lucerna_consent')}catch(e){}location.reload()">
+      {{ i18n "manageCookies" | default "Manage cookies" }}
+    </button>
+
     {{/* Theme attribution */}}
     {{ if .Site.Params.footer.showThemeAttribution | default true }}
       <p class="text-xs text-neutral-500 dark:text-neutral-400">

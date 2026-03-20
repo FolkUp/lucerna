@@ -126,6 +126,9 @@ servicesCtaSubjectQuote: "Lucerna — запрос предложения"
 servicesCtaSubjectCall: "Lucerna — запрос на звонок"
 servicesCtaGroupLabel: "Варианты связи"
 
+# Cookie consent
+manageCookies: "Управление cookies"
+
 # 404 page
 404Title: "Файл не найден"
 404Text: "Запрашиваемый документ был изъят, перемещён или никогда не существовал."

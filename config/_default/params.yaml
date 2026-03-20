@@ -78,6 +78,8 @@ term:
 sitemap:
   excludedKinds: ["taxonomy", "term"]
 
-# umamiAnalytics: disabled pending ePrivacy Art. 5(3) consent mechanism (LCRN-099)
-# websiteid: "92bc4e09-7e2a-47fa-9536-6d71cb01b75a"
-# domain: "analytics.folkup.app"
+# Umami analytics — loaded conditionally via cookie-consent.html (LCRN-099)
+# Script injection happens client-side ONLY after explicit user opt-in.
+# Config values used by layouts/partials/cookie-consent.html:
+# websiteid: 92bc4e09-7e2a-47fa-9536-6d71cb01b75a
+# domain: analytics.folkup.app
