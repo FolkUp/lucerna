@@ -19,7 +19,7 @@ Master log of all Lucerna investigations.
 | INV-013 | 2026-02-26 | Research | "Immortal until I die" proverb origin | Complete | `research/general/immortal-proverb-origin-2026-02-26.md` |
 | INV-014 | 2026-02-26 | Research | Drug content legislation (RU/PT/EU) | Complete | `research/general/drug-content-legislation-2026-02-26.md` |
 | INV-015 | 2026-02-27 | Research | Igreja de São Julião de Setúbal | Complete | `research/setubal/igreja-sao-juliao.md` |
-| INV-016 | 2026-03-19 | Dossier | @ghaechka Frontend Assessment | Archived | `vault/private/lucerna/*.age` (LCRN-102, migrated 2026-03-20) |
+| INV-016 | 2026-03-19 | Dossier | @ghaechka Frontend Assessment | Archived | Migrated to encrypted storage (LCRN-102, 2026-03-20) |
 
 ---
 
