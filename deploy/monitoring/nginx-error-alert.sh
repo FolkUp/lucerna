@@ -11,13 +11,11 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 . "${SCRIPT_DIR}/lib/telegram.sh"
 
 # --- Configuration ---
-# Adjust log path based on actual VPS setup:
-# Option A: Docker volume mounted to host
-NGINX_LOG="/home/deploy/logs/nginx-access.log"
-# Option B: Docker logs (requires sudo docker)
-# Uncomment if using docker logs instead of mounted volume:
-# USE_DOCKER_LOGS=true
-# DOCKER_CONTAINER="nginx-proxy"
+# VPS uses Docker logs (nginx-proxy logs to stdout/stderr, no host volume)
+# deploy user is in docker group — no sudo needed
+USE_DOCKER_LOGS=true
+DOCKER_CONTAINER="nginx-proxy"
+NGINX_LOG=""  # unused when USE_DOCKER_LOGS=true
 
 THRESHOLD_4XX=50
 THRESHOLD_5XX=5
@@ -31,8 +29,8 @@ log() {
 # --- Get recent log lines ---
 get_recent_logs() {
   if [ "${USE_DOCKER_LOGS:-false}" = "true" ]; then
-    # Docker logs approach (needs sudo docker in sudoers)
-    sudo docker logs "${DOCKER_CONTAINER}" --since "${WINDOW_MINUTES}m" 2>/dev/null
+    # Docker logs approach (deploy user in docker group — no sudo)
+    docker logs "${DOCKER_CONTAINER}" --since "${WINDOW_MINUTES}m" 2>/dev/null
   elif [ -f "$NGINX_LOG" ]; then
     # File-based approach: filter by timestamp in last N minutes
     local since
