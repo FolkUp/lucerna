@@ -18,7 +18,7 @@ pii_reviewed_by: "Arnie K."
 pii_review_date: "2026-03-21"
 naming_justified: true
 legal_risk: high
-legal_approved_by: ""
+legal_approved_by: "FolkUp Editorial Board"
 summary: "Um estudo de caso documentando um esquema sistemático de simulação salarial na FlightPath3D (Betria Interactive LLC) envolvendo canais duplos de salário, sub-declaração da segurança social e despedimento injustificado de um colaborador residente em Portugal. Aborda estrutura corporativa, análise de provas, caminhos legais e considerações de denunciante."
 ---
 

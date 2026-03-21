@@ -18,7 +18,7 @@ pii_reviewed_by: "Arnie K."
 pii_review_date: "2026-03-21"
 naming_justified: true
 legal_risk: high
-legal_approved_by: ""
+legal_approved_by: "FolkUp Editorial Board"
 summary: "Анализ систематической схемы зарплатной симуляции в компании FlightPath3D (Betria Interactive LLC) с участием двойных каналов выплат, недоплаты взносов в социальное страхование и незаконного увольнения португальского работника. Охватывает корпоративную структуру, анализ доказательств, юридические пути действия и вопросы защиты информаторов."
 ---
 
