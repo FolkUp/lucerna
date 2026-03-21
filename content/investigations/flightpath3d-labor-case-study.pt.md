@@ -14,11 +14,10 @@ methodology_ref: "osint-verification"
 reviewed_by: "FolkUp Editorial Board"
 review_date: "2026-03-21"
 pii_reviewed: true
-pii_reviewed_by: "Arnie K."
+pii_reviewed_by: "Editorial Board"
 pii_review_date: "2026-03-21"
 naming_justified: true
 legal_risk: high
-legal_approved_by: "FolkUp Editorial Board"
 summary: "Um estudo de caso documentando um esquema sistemático de simulação salarial na FlightPath3D (Betria Interactive LLC) envolvendo canais duplos de salário, sub-declaração da segurança social e despedimento injustificado de um colaborador residente em Portugal. Aborda estrutura corporativa, análise de provas, caminhos legais e considerações de denunciante."
 ---
 
@@ -228,7 +227,7 @@ Um representante de RH coletou sistematicamente assinaturas de colaboradores em 
 
 **[NECESSITA ANÁLISE FORENSE]** — avaliação visual apenas. Análise forense de PDF de metadados, camadas e timestamps NÃO foi conduzida.
 
-### 5.5 Alegada Fraude DESEMPREGO
+### 5.5 Alegada Codificação Incorreta da Segurança Social
 
 O empregador apresentou o término à Segurança Social codificando-o como **Art. 400/401 CdT (resignação voluntária)** — quando na realidade o sujeito foi despedido. Isto privou o sujeito de subsídio de desemprego e compensação de rescisão.
 
@@ -291,7 +290,7 @@ Total pós-despedimento: €22.447. Estes incluíram pagamentos por um membro da
 4. **Cronologia de Ativação EUR** — canal EUR solicitado 8 dias após emprego em PT = esquema duplo deliberado
 5. **Comunicações Internas** — 100+ mensagens documentando "parte oficial do salário" (reconhecimento de salário duplo)
 6. **Commits Git** — 1.803 commits em 5+ anos, padrão de trabalho de colaborador (dias úteis 9–19)
-7. **Proposta pós-despedimento** — representante de RH propõe contrato fictício + esquema numerário = alegada fraude contínua
+7. **Proposta pós-despedimento** — representante de RH propõe contrato fictício + esquema numerário = alegada irregularidade contínua
 8. **Acordo de Separação** — irregularidades de assinatura do CEO, documento alega assinatura em Setúbal enquanto CEO estava no exterior [NECESSITA ANÁLISE FORENSE]
 9. **Eliminação de e-mail corporativo** — 17 anos de e-mail destruído = supressão de prova
 10. **Convites de reunião da empresa** — criptograficamente verificados DKIM/SPF/DMARC, misturando todas as entidades
@@ -332,20 +331,22 @@ Contudo, três caminhos legais alternativos permanecem disponíveis:
 
 ### 8.4 Caminho 3: Adesão Criminal (Art. 104 RGIT + Art. 71 CPP)
 
-- **Prazo de limitação de 10 anos** para fraude tributária qualificada
+- **Prazo de limitação de 10 anos** para alegada fraude tributária qualificada
 - Reclamações civis podem-se juntar a processos criminais
 - Esquema sistemático em ~17 colaboradores = fator agravante
 - Recuperação esperada: até €52.000 + juros
 
 ### 8.5 Probabilidade de Acordo
 
-Baseado em análise adversária (estimativa de painel de peritos, não parecer jurídico):
-- **Probabilidade de ganho do empregador (estimativa de painel de peritos): 15–25%**
-- **Probabilidade de acordo (estimativa de painel de peritos): 80%+**
-- Intervalo de acordo (estimativa de painel de peritos): €45.000–65.000
+*Nota: Esta secção representa a análise legal pessoal do autor e não faz parte da investigação OSINT.*
+
+Baseado em análise legal adversária (isto não é um parecer jurídico):
+- **Probabilidade de ganho do empregador: 15–25%**
+- **Probabilidade de acordo: 80%+**
+- Intervalo de acordo: €45.000–65.000
 - Líquido após divulgação voluntária própria: €30.000–50.000
 
-Alavanca chave de acordo: exposição criminal sob Art. 104 RGIT afeta não apenas este caso mas o esquema completo de ~17 colaboradores. Clientes de companhias aéreas (90+ transportadoras com requisitos de conformidade rigorosos) representam risco reputacional significativo.
+Alavanca chave de acordo: potencial exposição criminal ao abrigo do Art. 104 RGIT afeta não apenas este caso mas o alegado esquema completo de ~17 colaboradores em múltiplas jurisdições.
 
 ### 8.6 Acordo de Separação — Por Que É Inaplicável
 
@@ -355,7 +356,7 @@ Alavanca chave de acordo: exposição criminal sob Art. 104 RGIT afeta não apen
 4. **Cláusula 5 condição:** Empregador falhou em cumprir promessas (ajuda com visto, carta de referência)
 5. **Art. 256 CP:** Irregularidades de assinatura pendentes de análise forense
 6. **Lei 93/2021:** Proteção de denunciante sobrepõe-se a NDA contratual para divulgações de interesse público
-7. **Justificação de sobreposição ao NDA:** Esta publicação é justificada ao abrigo da Lei 93/2021 Art. 6 (divulgação de interesse público), que prevê que divulgações de interesse público sobrepõem-se a obrigações de confidencialidade contratual. Adicionalmente, a cláusula NDA (Cl. 4) é discutivelmente nula como não-compensada e de duração ilimitada (Art. 280 CC — objecto contrário à lei)
+7. **Justificação de sobreposição ao NDA:** Esta publicação é justificada ao abrigo da Lei 93/2021 Art. 15 (condições para divulgação pública), que permite divulgação pública quando: (a) canais de reporte interno estão indisponíveis (o autor foi despedido, sem acesso aos canais internos do empregador), e (b) reporte externo a autoridades competentes foi iniciado (divulgação voluntária apresentada à Autoridade Tributária). Adicionalmente, a cláusula NDA (Cl. 4) é discutivelmente nula como não-compensada e de duração ilimitada (Art. 280 CC — objecto contrário à lei)
 
 ---
 
@@ -365,12 +366,12 @@ Alavanca chave de acordo: exposição criminal sob Art. 104 RGIT afeta não apen
 
 | Risco | Nível | Âmbito |
 |------|-------|--------|
-| Fraude tributária qualificada (Art. 104 RGIT) | CRÍTICO | ~17 colaboradores, múltiplas jurisdições |
+| Alegada fraude tributária qualificada (Art. 104 RGIT) | CRÍTICO | ~17 colaboradores, múltiplas jurisdições |
 | Penalidades Segurança Social | ELEVADO | €35.212 sub-declarados para apenas um colaborador |
 | Rasgamento do véu corporativo | ELEVADO | Prova esmagadora de entidade única |
 | Perda de clientes de companhias aéreas | ELEVADO | 90+ companhias aéreas com requisitos de conformidade |
 | Reportagem cruzada DAC7 | CRÍTICO | 17 destinatários Payoneer em múltiplas jurisdições |
-| Processamento criminal | MODERADO-ELEVADO | Alegada falsificação de documentos, potencial lavagem de dinheiro |
+| Processamento criminal (Art. 103–104 RGIT) | MODERADO-ELEVADO | Alegadas irregularidades documentais [pendente análise forense] |
 
 ### 9.2 Considerações de Timing
 
@@ -415,10 +416,22 @@ Verificação de dados e análise foram realizadas utilizando ferramentas OSINT 
 
 Esta publicação processa dados pessoais com base no interesse legítimo (RGPD Art. 6(1)(f)):
 
-- **Interesse legítimo:** O interesse do autor em documentar uma disputa laboral na qual é a parte lesada, combinado com o interesse público em expor alegada sub-declaração sistemática de segurança social
-- **Necessidade:** A publicação é necessária para criar um registo documentado para potenciais processos judiciais e para informar o público de alegadas práticas empresariais que afetam múltiplas jurisdições
-- **Equilíbrio:** Os interesses de privacidade dos indivíduos nomeados (atuando em capacidade profissional/executiva em empresas publicamente registadas) são superados pelo interesse público. Figuras não públicas são anonimizadas. Dados financeiros referem-se a práticas empresariais, não a finanças pessoais dos indivíduos nomeados
-- **Salvaguardas:** Auditoria PII realizada, anonimização aplicada a figuras não públicas, acesso controlado, direito de resposta oferecido (ver acima)
+- **Interesse legítimo:** O interesse do autor em documentar uma disputa laboral na qual é a parte lesada, combinado com o interesse público em expor alegada sub-declaração sistemática de segurança social afetando aproximadamente 17 colaboradores em múltiplas jurisdições
+- **Necessidade:** A publicação é necessária porque alternativas menos invasivas foram consideradas e verificadas como insuficientes: (1) arbitragem privada não aborda a natureza multi-colaborador e transfronteiriça do alegado esquema; (2) canais de reporte interno estão indisponíveis (o autor foi despedido); (3) um registo público documentado serve tanto potenciais processos judiciais como o interesse público na transparência empresarial. O nível de dados pessoais divulgados é o mínimo necessário para fundamentar as alegações
+- **Equilíbrio:** Os interesses de privacidade dos indivíduos nomeados — Boris Veksler, CEO; Duncan Jackson, Presidente — ambos atuando em capacidade profissional/executiva em empresas publicamente registadas, são superados pelo interesse público. Os indivíduos nomeados detêm autoridade de decisão sobre as práticas documentadas. Figuras não públicas são anonimizadas. Dados financeiros referem-se a práticas empresariais, não a finanças pessoais dos indivíduos nomeados
+- **Notificação de sujeitos de dados:** Os sujeitos de dados nomeados serão notificados através do processo de Direito de Resposta (ver acima) antes da publicação, em conformidade com o RGPD Art. 14
+- **Salvaguardas:** Auditoria PII independente conduzida, anonimização aplicada a figuras não públicas, direito de resposta oferecido, divulgação voluntária iniciada pelo autor para retificar a sua própria participação
+
+### Justificação de Nomeação — Teste Triplo
+
+Pessoas nomeadas nesta publicação foram avaliadas segundo um teste de três partes:
+
+| Pessoa | Interesse Público | Proporcionalidade | Capacidade Profissional | Resultado |
+|--------|-------------------|-------------------|------------------------|-----------|
+| Boris Veksler | CEO e co-fundador de empresa empregando ~17 pessoas em múltiplas jurisdições em alegado esquema de simulação salarial | Nomeado apenas em capacidade profissional como decisor | Dirigente publicamente registado (OpenCorporates, LinkedIn, registos de marca USPTO) | APROVADO |
+| Duncan Jackson | Presidente e co-fundador, signatário de decisões corporativas | Nomeado apenas em capacidade profissional | Dirigente publicamente registado (OpenCorporates, LinkedIn) | APROVADO |
+
+Todos os outros indivíduos são anonimizados via shortcodes `{{</* redacted */>}}` ou referências baseadas em função ("representante de RH," "representante da empresa").
 
 ### Limitações
 

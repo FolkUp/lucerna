@@ -14,11 +14,10 @@ methodology_ref: "osint-verification"
 reviewed_by: "FolkUp Editorial Board"
 review_date: "2026-03-21"
 pii_reviewed: true
-pii_reviewed_by: "Arnie K."
+pii_reviewed_by: "Editorial Board"
 pii_review_date: "2026-03-21"
 naming_justified: true
 legal_risk: high
-legal_approved_by: "FolkUp Editorial Board"
 summary: "A case study documenting a systematic salary simulation scheme at FlightPath3D (Betria Interactive LLC) involving dual salary channels, social security under-declaration, and wrongful dismissal of a Portuguese-based employee. Covers corporate structure, evidence analysis, legal pathways, and whistleblower considerations."
 ---
 
@@ -228,7 +227,7 @@ An HR representative systematically collected employee signatures on transparent
 
 **[NEEDS FORENSIC ANALYSIS]** — visual assessment only. Forensic PDF analysis of metadata, layers, and timestamps has NOT been conducted.
 
-### 5.5 Alleged DESEMPREGO Fraud
+### 5.5 Alleged Social Security Miscoding
 
 The employer filed the termination with Social Security coding it as **Art. 400/401 CdT (voluntary resignation)** — when in reality the subject was dismissed. This deprived the subject of unemployment benefits and severance compensation.
 
@@ -291,7 +290,7 @@ Total post-dismissal: €22,447. These included payments for a family member als
 4. **EUR Activation Timeline** — EUR channel requested 8 days after PT employment = deliberate dual scheme
 5. **Internal Communications** — 100+ messages documenting "official part of salary" (dual salary acknowledgment)
 6. **Git Commits** — 1,803 commits over 5+ years, employee work pattern (weekdays 9–19)
-7. **Post-dismissal proposal** — HR representative proposes fictitious contract + cash scheme = alleged ongoing fraud
+7. **Post-dismissal proposal** — HR representative proposes fictitious contract + cash scheme = alleged ongoing irregularity
 8. **Separation Agreement** — CEO signature irregularities, document claims signing in Setúbal while CEO was abroad [NEEDS FORENSIC ANALYSIS]
 9. **Corporate email deletion** — 17 years of email destroyed = spoliation of evidence
 10. **Company-wide meeting invitations** — DKIM/SPF/DMARC cryptographically verified, mixing all entities
@@ -332,20 +331,22 @@ However, three alternative legal pathways remain available:
 
 ### 8.4 Path 3: Criminal Adhesion (Art. 104 RGIT + Art. 71 CPP)
 
-- **10-year limitation** for fraude tributária qualificada
+- **10-year limitation** for alleged fraude tributária qualificada
 - Civil claims can attach to criminal proceedings
 - Systematic scheme across ~17 employees = aggravating factor
 - Expected recovery: up to €52,000 + interest
 
 ### 8.5 Settlement Probability
 
-Based on adversarial analysis (expert panel estimate, not a legal opinion):
-- **Employer win probability (expert panel estimate): 15–25%**
-- **Settlement probability (expert panel estimate): 80%+**
-- Settlement range (expert panel estimate): €45,000–65,000
+*Note: This section represents the author's personal legal analysis and is not part of the OSINT investigation.*
+
+Based on adversarial legal analysis (this is not a legal opinion):
+- **Employer win probability: 15–25%**
+- **Settlement probability: 80%+**
+- Settlement range: €45,000–65,000
 - Net after own voluntary disclosure: €30,000–50,000
 
-Key settlement lever: criminal exposure under Art. 104 RGIT affects not just this case but the entire ~17-employee scheme. Airline clients (90+ carriers with strict compliance requirements) represent significant reputational risk.
+The alleged scheme's scope extends beyond a single case: Art. 104 RGIT liability may apply across approximately 17 employees in multiple jurisdictions.
 
 ### 8.6 Separation Agreement — Why It's Unenforceable
 
@@ -355,7 +356,7 @@ Key settlement lever: criminal exposure under Art. 104 RGIT affects not just thi
 4. **Cl. 5 condition:** Employer failed to fulfill promises (visa help, reference letter)
 5. **Art. 256 CP:** Signature irregularities pending forensic analysis
 6. **Lei 93/2021:** Whistleblower protection overrides contractual NDA for public interest disclosures
-7. **NDA override justification:** This publication is justified under Lei 93/2021 Art. 6 (public interest disclosure), which provides that public interest disclosures override contractual confidentiality obligations. Additionally, the NDA clause (Cl. 4) is arguably void as uncompensated and of unlimited duration (Art. 280 CC — objecto contrário à lei)
+7. **NDA override justification:** This publication is justified under Lei 93/2021 Art. 15 (conditions for public disclosure), which permits public disclosure when: (a) internal reporting channels are unavailable (author was dismissed, no access to employer's internal channels), and (b) external reporting to competent authorities has been initiated (voluntary disclosure filed with Autoridade Tributária). Additionally, the NDA clause (Cl. 4) is arguably void as uncompensated and of unlimited duration (Art. 280 CC — objecto contrário à lei)
 
 ---
 
@@ -365,12 +366,12 @@ Key settlement lever: criminal exposure under Art. 104 RGIT affects not just thi
 
 | Risk | Level | Scope |
 |------|-------|-------|
-| Fraude tributária qualificada (Art. 104 RGIT) | CRITICAL | ~17 employees, multiple jurisdictions |
+| Alleged fraude tributária qualificada (Art. 104 RGIT) | CRITICAL | ~17 employees, multiple jurisdictions |
 | Social Security penalties | HIGH | €35,212 underdeclared for one employee alone |
 | Corporate veil piercing | HIGH | Overwhelming single-enterprise evidence |
 | Loss of airline clients | HIGH | 90+ airlines with compliance requirements |
 | DAC7 cross-border reporting | CRITICAL | 17 Payoneer recipients across jurisdictions |
-| Criminal prosecution | MODERATE-HIGH | Alleged document falsification, potential money laundering |
+| Criminal prosecution (Art. 103–104 RGIT) | MODERATE-HIGH | Alleged document irregularities [pending forensic analysis] |
 
 ### 9.2 Timing Considerations
 
@@ -415,10 +416,22 @@ Data verification and analysis were performed using automated OSINT tools and au
 
 This publication processes personal data under the legitimate interest basis (GDPR Art. 6(1)(f)):
 
-- **Legitimate interest:** The author's interest in documenting a labor dispute in which they are the aggrieved party, combined with the public interest in exposing alleged systematic social security under-declaration
-- **Necessity:** Publication is necessary to create a documented record for potential legal proceedings and to inform the public of alleged corporate practices affecting multiple jurisdictions
-- **Balancing:** The privacy interests of named individuals (acting in professional/executive capacity in publicly registered companies) are outweighed by the public interest. Non-public figures are anonymized. Financial data relates to corporate practices, not personal finances of named individuals
-- **Safeguards:** PII review conducted, anonymization applied to non-public figures, access controlled, right of reply offered (see above)
+- **Legitimate interest:** The author's interest in documenting a labor dispute in which they are the aggrieved party, combined with the public interest in exposing alleged systematic social security under-declaration affecting approximately 17 employees across multiple jurisdictions
+- **Necessity:** Publication is necessary because less invasive alternatives were considered and found insufficient: (1) private arbitration does not address the multi-employee, cross-border nature of the alleged scheme; (2) internal reporting channels are unavailable (the author was dismissed); (3) a documented public record serves both potential legal proceedings and the public interest in corporate transparency. The level of personal data disclosed is the minimum necessary to substantiate the claims
+- **Balancing:** The privacy interests of named individuals (Boris Veksler, CEO; Duncan Jackson, President — both acting in professional/executive capacity in publicly registered companies) are outweighed by the public interest in alleged systematic tax irregularity. Non-public figures are anonymized via `{{< redacted >}}` shortcodes. Financial data relates to corporate practices, not personal finances of named individuals. The named persons hold decision-making authority over the practices documented
+- **Data subject notification:** Named data subjects will be notified via the Right of Reply process (see above) prior to publication, in accordance with GDPR Art. 14
+- **Safeguards:** Independent PII review conducted, anonymization applied to non-public figures, right of reply offered, voluntary disclosure initiated by the author to rectify own participation
+
+### Naming Justification — Triple Test
+
+Persons named in this publication were assessed against a three-part test:
+
+| Person | Public Interest | Proportionality | Professional Capacity | Result |
+|--------|----------------|-----------------|----------------------|--------|
+| Boris Veksler | CEO and co-founder of company employing ~17 persons across jurisdictions in alleged salary simulation scheme | Named only in professional capacity as decision-maker | Publicly registered officer (OpenCorporates, LinkedIn, USPTO trademark filings) | PASS |
+| Duncan Jackson | President and co-founder, signatory to corporate decisions | Named only in professional capacity | Publicly registered officer (OpenCorporates, LinkedIn) | PASS |
+
+All other individuals are anonymized via `{{< redacted >}}` shortcodes or role-based references ("HR representative," "company representative").
 
 ### Limitations
 
