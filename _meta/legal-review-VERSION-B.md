@@ -3,7 +3,8 @@
 **Date:** 2026-03-21
 **Investigation ID:** INV-2026-0321-FP3D-LABOR
 **Reviewed by:** FolkUp Editorial Board (internal compliance review)
-**Status:** APPROVED for draft publication (OAuth2-gated)
+**Status:** APPROVED for partially_verified publication (OAuth2-gated)
+**Status change:** draft → partially_verified (2026-03-21, approved by Andrei Klemenchenok)
 
 ---
 
@@ -14,7 +15,7 @@ This publication was reviewed through an internal compliance process including:
 1. **GDPR Art. 6(1)(f) balancing test** — legitimate interest of the author (who is the subject of the labor dispute) and public interest in labor rights/tax compliance outweigh privacy interests of named persons acting in professional capacity
 2. **Naming justification triple test** — public interest, proportionality, professional capacity verified for each named individual; non-public figures anonymized
 3. **Defamation risk mitigations** — "alleged" qualifiers on unproven claims, all assertions sourced, right of reply offered
-4. **Access control** — draft status, OAuth2-gated, not publicly indexed
+4. **Access control** — partially_verified status, OAuth2-gated (5 enabled accounts), not publicly indexed
 5. **PII review** — full PII audit completed, anonymization map maintained separately
 
 ## Expert Panel

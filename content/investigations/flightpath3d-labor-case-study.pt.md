@@ -2,7 +2,7 @@
 title: "FlightPath3D — Disputa Laboral & Estudo de Caso de Simulação Salarial"
 date: 2026-03-21
 slug: "flightpath3d-labor-case-study"
-status: draft
+status: partially_verified
 confidence: high
 tags: ["labor-law", "salary-simulation", "tax-fraud", "osint", "portugal", "flightpath3d", "whistleblower"]
 categories: ["investigation"]
