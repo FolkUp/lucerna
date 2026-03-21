@@ -55,7 +55,7 @@ Betria Interactive LLC (California, 2012)
   ├── Smart Travel Software, Unipessoal Lda (Portugal, 2022)
   │   ├── NIF: PT517034948
   │   ├── Capital: €1 (minimum)
-  │   └── Signatory: a company director ("Diretor de Serviços")
+  │   └── Signatory: a company representative ("Diretor de Serviços")
   │
   └── {{< redacted len="10" >}} (Russia, 2011–~2022)
         └── {{< redacted len="8" >}} — {{< redacted len="6" >}} employees
@@ -110,7 +110,7 @@ A W-8BEN form (IRS declaration for "independent personal services") was filed on
 
 ---
 
-## 3. The Salary Simulation Scheme
+## 3. The Alleged Salary Simulation Scheme
 
 ### 3.1 How It Worked
 
@@ -138,7 +138,7 @@ The scheme operated across approximately **17 employees** (OSINT-verified via Li
 |--------|--------|----------|-------|
 | Jan 2023 – Oct 2024 | Betria Systems / Interactive | 19 | €27,542.86 |
 | Post-dismissal (2025–2026) | Betria Interactive | 13 | €16,061 |
-| Post-dismissal (2025–2026) | a company director (personal) | 8 | €6,386 |
+| Post-dismissal (2025–2026) | a company representative (personal) | 8 | €6,386 |
 | **EUR Total** | | **40** | **€49,989.86** |
 
 Additionally, ~$50,900 was paid in USD via Payoneer during 2020–2022 (pre-Portugal period).
@@ -149,7 +149,7 @@ This was not an isolated arrangement:
 - **~17 employees** across 9 countries received Payoneer payments from Betria for work performed under local employment contracts
 - The EUR activation occurred 8 days after PT employment — indicating a pre-planned scheme, not organic contractor engagement
 - Internal communications (100+ messages) reference "оф. часть зп" (official part of salary) — explicitly distinguishing between declared and undeclared portions
-- A company director made **personal transfers** to the former employee's Payoneer account, totaling €6,386 — concealing the corporate nature of payments
+- A company representative made **personal transfers** to the former employee's Payoneer account, totaling €6,386 — allegedly concealing the corporate nature of payments
 
 ---
 
@@ -254,13 +254,13 @@ The subject renewed the residence permit alone. Immigration category was **downg
 3. **Cash component** — "bring cash first, it comes to your card"
 4. **Employee covers employer's 23.75% SS contribution**
 
-**The subject declined.** This proposal demonstrates the salary simulation scheme was ongoing, not historical. A company lawyer (a company lawyer) prepared the draft fictitious contract.
+**The subject declined.** This proposal demonstrates the salary simulation scheme was ongoing, not historical. The company's lawyer prepared the draft fictitious contract.
 
 ### 6.3 Post-Dismissal Payments
 
 Despite dismissal, Payoneer payments continued:
 - **Betria Interactive:** 13 payments, €16,061 (Feb 2025 — Feb 2026)
-- **A company director (personal transfers):** 8 payments, €6,386
+- **A company representative (personal transfers):** 8 payments, €6,386
 
 Total post-dismissal: €22,447. These included payments for a family member also working for the company, routed through the subject's Payoneer account — forcing the subject to declare and pay taxes on someone else's income.
 
@@ -285,13 +285,13 @@ Total post-dismissal: €22,447. These included payments for a family member als
 
 ### 7.2 Critical Evidence
 
-1. **Employment Contract** — €2,800/month in writing, signed by a company director
+1. **Employment Contract** — €2,800/month in writing, signed by a company representative
 2. **W-8BEN** — simultaneous employee + independent contractor status, same owner — dispositive evidence of simulação
 3. **Payoneer CSV** — 40 EUR payments totaling €49,989.86 (complete audit trail)
 4. **EUR Activation Timeline** — EUR channel requested 8 days after PT employment = deliberate dual scheme
 5. **Internal Communications** — 100+ messages documenting "official part of salary" (dual salary acknowledgment)
 6. **Git Commits** — 1,803 commits over 5+ years, employee work pattern (weekdays 9–19)
-7. **Post-dismissal proposal** — HR representative proposes fictitious contract + cash scheme = ongoing fraud
+7. **Post-dismissal proposal** — HR representative proposes fictitious contract + cash scheme = alleged ongoing fraud
 8. **Separation Agreement** — CEO signature irregularities, document claims signing in Setúbal while CEO was abroad [NEEDS FORENSIC ANALYSIS]
 9. **Corporate email deletion** — 17 years of email destroyed = spoliation of evidence
 10. **Company-wide meeting invitations** — DKIM/SPF/DMARC cryptographically verified, mixing all entities
@@ -369,7 +369,7 @@ Key settlement lever: criminal exposure under Art. 104 RGIT affects not just thi
 | Corporate veil piercing | HIGH | Overwhelming single-enterprise evidence |
 | Loss of airline clients | HIGH | 90+ airlines with compliance requirements |
 | DAC7 cross-border reporting | CRITICAL | 17 Payoneer recipients across jurisdictions |
-| Criminal prosecution | MODERATE-HIGH | Document falsification, potential money laundering |
+| Criminal prosecution | MODERATE-HIGH | Alleged document falsification, potential money laundering |
 
 ### 9.2 Timing Considerations
 

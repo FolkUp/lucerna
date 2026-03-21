@@ -55,7 +55,7 @@ Betria Interactive LLC (Califórnia, 2012)
   ├── Smart Travel Software, Unipessoal Lda (Portugal, 2022)
   │   ├── NIF: PT517034948
   │   ├── Capital: €1 (mínimo)
-  │   └── Signatário: um diretor da empresa ("Diretor de Serviços")
+  │   └── Signatário: um representante da empresa ("Diretor de Serviços")
   │
   └── {{< redacted len="10" >}} (Rússia, 2011–~2022)
         └── {{< redacted len="8" >}} — {{< redacted len="6" >}} colaboradores
@@ -110,7 +110,7 @@ Um formulário W-8BEN (declaração IRS para "serviços pessoais independentes")
 
 ---
 
-## 3. Esquema de Simulação Salarial
+## 3. Alegado Esquema de Simulação Salarial
 
 ### 3.1 Como Funcionava
 
@@ -138,7 +138,7 @@ O esquema operava entre aproximadamente **17 colaboradores** (verificado via OSI
 |---------|--------|-----------|-------|
 | Jan 2023 – Out 2024 | Betria Systems / Interactive | 19 | €27.542,86 |
 | Pós-despedimento (2025–2026) | Betria Interactive | 13 | €16.061 |
-| Pós-despedimento (2025–2026) | um diretor da empresa (pessoal) | 8 | €6.386 |
+| Pós-despedimento (2025–2026) | um representante da empresa (pessoal) | 8 | €6.386 |
 | **Total EUR** | | **40** | **€49.989,86** |
 
 Adicionalmente, ~$50.900 foram pagos em USD via Payoneer durante 2020–2022 (período pré-Portugal).
@@ -149,7 +149,7 @@ Isto não foi um arranjo isolado:
 - **~17 colaboradores** em 9 países receberam pagamentos Payoneer da Betria por trabalho realizado sob contratos de trabalho locais
 - A ativação de EUR ocorreu 8 dias após o emprego em PT — indicando um esquema pré-planeado, não uma contratação orgânica de contratado
 - Comunicações internas (100+ mensagens) referem "оф. часть зп" (parte oficial do salário) — distinguindo explicitamente entre porções declaradas e não declaradas
-- Um diretor da empresa fez **transferências pessoais** para a conta Payoneer do ex-colaborador, totalizando €6.386 — ocultando a natureza corporativa dos pagamentos
+- Um representante da empresa fez **transferências pessoais** para a conta Payoneer do ex-colaborador, totalizando €6.386 — alegadamente ocultando a natureza corporativa dos pagamentos
 
 ---
 
@@ -254,13 +254,13 @@ O sujeito renovou a permissão de residência sozinho. A categoria de imigraçã
 3. **Componente numerário** — "trazer numerário primeiro, vem para o seu cartão"
 4. **Colaborador cobre contribuição SS 23,75% do empregador**
 
-**O sujeito recusou.** Esta proposta demonstra que o esquema de simulação salarial continuava, não era histórico. Um advogado da empresa (um advogado da empresa) preparou o projeto de contrato fictício.
+**O sujeito recusou.** Esta proposta demonstra que o esquema de simulação salarial continuava, não era histórico. O advogado da empresa preparou o projeto de contrato fictício.
 
 ### 6.3 Pagamentos Pós-Despedimento
 
 Apesar do despedimento, pagamentos Payoneer continuaram:
 - **Betria Interactive:** 13 pagamentos, €16.061 (fev 2025 — fev 2026)
-- **um diretor da empresa (transferências pessoais):** 8 pagamentos, €6.386
+- **um representante da empresa (transferências pessoais):** 8 pagamentos, €6.386
 
 Total pós-despedimento: €22.447. Estes incluíram pagamentos por um membro da família também a trabalhar para a empresa, encaminhados através da conta Payoneer do sujeito — forçando o sujeito a declarar e pagar impostos sobre rendimento de outra pessoa.
 
@@ -285,13 +285,13 @@ Total pós-despedimento: €22.447. Estes incluíram pagamentos por um membro da
 
 ### 7.2 Prova Crítica
 
-1. **Contrato de Trabalho** — €2.800/mês por escrito, assinado por director da empresa
+1. **Contrato de Trabalho** — €2.800/mês por escrito, assinado por um representante da empresa
 2. **W-8BEN** — estatuto simultâneo de colaborador + contratado independente, mesmo proprietário — prova disposicional de simulação
 3. **CSV Payoneer** — 40 pagamentos EUR totalizando €49.989,86 (trilho de auditoria completo)
 4. **Cronologia de Ativação EUR** — canal EUR solicitado 8 dias após emprego em PT = esquema duplo deliberado
 5. **Comunicações Internas** — 100+ mensagens documentando "parte oficial do salário" (reconhecimento de salário duplo)
 6. **Commits Git** — 1.803 commits em 5+ anos, padrão de trabalho de colaborador (dias úteis 9–19)
-7. **Proposta pós-despedimento** — representante de RH propõe contrato fictício + esquema numerário = fraude contínua
+7. **Proposta pós-despedimento** — representante de RH propõe contrato fictício + esquema numerário = alegada fraude contínua
 8. **Acordo de Separação** — irregularidades de assinatura do CEO, documento alega assinatura em Setúbal enquanto CEO estava no exterior [NECESSITA ANÁLISE FORENSE]
 9. **Eliminação de e-mail corporativo** — 17 anos de e-mail destruído = supressão de prova
 10. **Convites de reunião da empresa** — criptograficamente verificados DKIM/SPF/DMARC, misturando todas as entidades
@@ -369,7 +369,7 @@ Alavanca chave de acordo: exposição criminal sob Art. 104 RGIT afeta não apen
 | Rasgamento do véu corporativo | ELEVADO | Prova esmagadora de entidade única |
 | Perda de clientes de companhias aéreas | ELEVADO | 90+ companhias aéreas com requisitos de conformidade |
 | Reportagem cruzada DAC7 | CRÍTICO | 17 destinatários Payoneer em múltiplas jurisdições |
-| Processamento criminal | MODERADO-ELEVADO | Falsificação de documentos, potencial lavagem de dinheiro |
+| Processamento criminal | MODERADO-ELEVADO | Alegada falsificação de documentos, potencial lavagem de dinheiro |
 
 ### 9.2 Considerações de Timing
 
