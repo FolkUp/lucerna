@@ -4,7 +4,7 @@ date: 2026-03-21
 slug: "flightpath3d-labor-case-study"
 status: partially_verified
 confidence: high
-tags: ["labor-law", "salary-simulation", "tax-fraud", "osint", "portugal", "flightpath3d", "whistleblower"]
+tags: ["labor-law", "salary-simulation", "tax-irregularity", "osint", "portugal", "flightpath3d", "whistleblower"]
 categories: ["investigation"]
 sources_count: 45
 investigation_id: "INV-2026-0321-FP3D-LABOR"
@@ -61,7 +61,7 @@ Betria Interactive LLC (Califórnia, 2012)
         └── {{< redacted len="8" >}} — {{< redacted len="6" >}} colaboradores
 ```
 
-**Prova de velo corporativo** mostra que estas entidades funcionam como uma única empresa: domínio de e-mail partilhado (@flightpath3d.com para todas as entidades), gestão entre entidades (CEO da Betria Interactive assina documentos da Smart Travel), infraestrutura partilhada (git.betria.com, jira.betria.com) e reuniões da empresa misturando colaboradores de todas as entidades.
+**Prova de velo corporativo** sugere que estas entidades funcionam como uma única empresa: domínio de e-mail partilhado (@flightpath3d.com para todas as entidades), gestão entre entidades (CEO da Betria Interactive assina documentos da Smart Travel), infraestrutura partilhada (git.betria.com, jira.betria.com) e reuniões da empresa misturando colaboradores de todas as entidades.
 
 ---
 
@@ -114,12 +114,12 @@ Um formulário W-8BEN (declaração IRS para "serviços pessoais independentes")
 
 ### 3.1 Como Funcionava
 
-O esquema operava entre aproximadamente **17 colaboradores** (verificado via OSINT no LinkedIn, abrangendo 9 países):
+O esquema alegadamente operava entre aproximadamente **17 colaboradores** (identificados através de perfis LinkedIn publicamente disponíveis, abrangendo 9 países; os destinatários efetivos de pagamentos Payoneer não foram independentemente verificados para todos os indivíduos):
 
 1. **Salário contratual:** €2.800/mês (escrito no contrato de trabalho)
 2. **Declarado à Segurança Social:** €1.200/mês (o montante efetivamente reportado)
 3. **Diferença:** Paga via Payoneer da Betria Interactive/Systems (entidades EUA propriedade do mesmo CEO)
-4. **Economia fiscal para empregador:** ~€8.363 em contribuições SS evitadas apenas para este colaborador
+4. **Economia fiscal estimada para empregador:** ~€8.363 **(estimado)** em contribuições SS evitadas apenas para este colaborador
 
 ### 3.2 Os Números
 
@@ -145,7 +145,7 @@ Adicionalmente, ~$50.900 foram pagos em USD via Payoneer durante 2020–2022 (pe
 
 ### 3.3 Prova de Sistematidade
 
-Isto não foi um arranjo isolado:
+As provas sugerem que isto não foi um arranjo isolado:
 - **~17 colaboradores** em 9 países receberam pagamentos Payoneer da Betria por trabalho realizado sob contratos de trabalho locais
 - A ativação de EUR ocorreu 8 dias após o emprego em PT — indicando um esquema pré-planeado, não uma contratação orgânica de contratado
 - Comunicações internas (100+ mensagens) referem "оф. часть зп" (parte oficial do salário) — distinguindo explicitamente entre porções declaradas e não declaradas
@@ -222,7 +222,7 @@ Múltiplos fundamentos legais suportam o desafio do Acordo de Separação:
 
 ### 5.4 Irregularidades de Assinatura
 
-O CEO assinou o documento como "5th of OCTOBER, 2024" (formato inglês), enquanto o sujeito assinou "04.10.2024." O documento afirma que foi assinado "em Setúbal" — contudo, evidência sugere que o CEO estava nos Estados Unidos na altura.
+O CEO assinou o documento como "5th of OCTOBER, 2024" (formato inglês), enquanto o sujeito assinou "04.10.2024." O documento afirma que foi assinado "em Setúbal" — contudo, **não foi independentemente confirmado se o CEO estava fisicamente presente em Setúbal no momento da assinatura.**
 
 Um representante de RH coletou sistematicamente assinaturas de colaboradores em fundos transparentes (formato PNG) e as inseriu em documentos — esta era prática padrão da empresa, não específica a este caso.
 
@@ -254,7 +254,7 @@ O sujeito renovou a permissão de residência sozinho. A categoria de imigraçã
 3. **Componente numerário** — "trazer numerário primeiro, vem para o seu cartão"
 4. **Colaborador cobre contribuição SS 23,75% do empregador**
 
-**O sujeito recusou.** Esta proposta demonstra que o esquema de simulação salarial continuava, não era histórico. O advogado da empresa preparou o projeto de contrato fictício.
+**O sujeito recusou.** Esta proposta sugere que o alegado esquema de simulação salarial continuava, não era histórico. O advogado da empresa alegadamente preparou o projeto de contrato fictício.
 
 ### 6.3 Pagamentos Pós-Despedimento
 
@@ -340,9 +340,9 @@ Contudo, três caminhos legais alternativos permanecem disponíveis:
 ### 8.5 Probabilidade de Acordo
 
 Baseado em análise adversária (estimativa de painel de peritos, não parecer jurídico):
-- **Probabilidade de ganho do empregador: 15–25%**
-- **Probabilidade de acordo: 80%+**
-- Intervalo de acordo: €45.000–65.000
+- **Probabilidade de ganho do empregador (estimativa de painel de peritos): 15–25%**
+- **Probabilidade de acordo (estimativa de painel de peritos): 80%+**
+- Intervalo de acordo (estimativa de painel de peritos): €45.000–65.000
 - Líquido após divulgação voluntária própria: €30.000–50.000
 
 Alavanca chave de acordo: exposição criminal sob Art. 104 RGIT afeta não apenas este caso mas o esquema completo de ~17 colaboradores. Clientes de companhias aéreas (90+ transportadoras com requisitos de conformidade rigorosos) representam risco reputacional significativo.
@@ -355,6 +355,7 @@ Alavanca chave de acordo: exposição criminal sob Art. 104 RGIT afeta não apen
 4. **Cláusula 5 condição:** Empregador falhou em cumprir promessas (ajuda com visto, carta de referência)
 5. **Art. 256 CP:** Irregularidades de assinatura pendentes de análise forense
 6. **Lei 93/2021:** Proteção de denunciante sobrepõe-se a NDA contratual para divulgações de interesse público
+7. **Justificação de sobreposição ao NDA:** Esta publicação é justificada ao abrigo da Lei 93/2021 Art. 6 (divulgação de interesse público), que prevê que divulgações de interesse público sobrepõem-se a obrigações de confidencialidade contratual. Adicionalmente, a cláusula NDA (Cl. 4) é discutivelmente nula como não-compensada e de duração ilimitada (Art. 280 CC — objecto contrário à lei)
 
 ---
 
@@ -383,6 +384,14 @@ Alavanca chave de acordo: exposição criminal sob Art. 104 RGIT afeta não apen
 
 ---
 
+## Direito de Resposta
+
+Aos sujeitos desta investigação — incluindo FlightPath3D (Betria Interactive LLC), Boris Veksler e Duncan Jackson — é oferecido o direito de resposta a quaisquer e todas as alegações contidas nesta publicação. Qualquer resposta recebida será publicada como adenda a este estudo de caso, sem edição e na íntegra.
+
+Respostas podem ser submetidas para: **editorial@folkup.app**
+
+---
+
 ## 10. Metodologia
 
 {{< methodology-box >}}
@@ -402,6 +411,15 @@ Verificação de dados e análise foram realizadas utilizando ferramentas OSINT 
 
 {{< /methodology-box >}}
 
+### Proteção de Dados — Teste de Equilíbrio RGPD Art. 6(1)(f)
+
+Esta publicação processa dados pessoais com base no interesse legítimo (RGPD Art. 6(1)(f)):
+
+- **Interesse legítimo:** O interesse do autor em documentar uma disputa laboral na qual é a parte lesada, combinado com o interesse público em expor alegada sub-declaração sistemática de segurança social
+- **Necessidade:** A publicação é necessária para criar um registo documentado para potenciais processos judiciais e para informar o público de alegadas práticas empresariais que afetam múltiplas jurisdições
+- **Equilíbrio:** Os interesses de privacidade dos indivíduos nomeados (atuando em capacidade profissional/executiva em empresas publicamente registadas) são superados pelo interesse público. Figuras não públicas são anonimizadas. Dados financeiros referem-se a práticas empresariais, não a finanças pessoais dos indivíduos nomeados
+- **Salvaguardas:** Auditoria PII realizada, anonimização aplicada a figuras não públicas, acesso controlado, direito de resposta oferecido (ver acima)
+
 ### Limitações
 
 - Estimativas financeiras são aproximações analíticas, não avaliações vinculativas
@@ -409,6 +427,7 @@ Verificação de dados e análise foram realizadas utilizando ferramentas OSINT 
 - Algumas provas (arquivo de e-mail corporativo, gestão de projeto interna) são mantidas pelo empregador
 - O total USD do Payoneer requer uma declaração certificada para uso em tribunal
 - A conexão entre o contador pessoal do sujeito e a Smart Travel é [NÃO VERIFICADO]
+- O autor reconhece ter sido participante no esquema de salário duplo, beneficiando também de obrigações fiscais pessoais reduzidas durante o período de sub-declaração. Procedimentos de divulgação voluntária estão a ser iniciados para retificar esta situação
 
 ---
 
