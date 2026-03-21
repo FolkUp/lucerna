@@ -4,7 +4,7 @@ date: 2026-03-21
 slug: "flightpath3d-labor-case-study"
 status: partially_verified
 confidence: high
-tags: ["labor-law", "salary-simulation", "tax-fraud", "osint", "portugal", "flightpath3d", "whistleblower"]
+tags: ["labor-law", "salary-simulation", "tax-irregularity", "osint", "portugal", "flightpath3d", "whistleblower"]
 categories: ["investigation"]
 sources_count: 45
 investigation_id: "INV-2026-0321-FP3D-LABOR"
@@ -61,7 +61,7 @@ Betria Interactive LLC (California, 2012)
         └── {{< redacted len="8" >}} — {{< redacted len="6" >}} employees
 ```
 
-**Corporate veil evidence** shows these entities function as a single enterprise: shared email domain (@flightpath3d.com for all entities), cross-entity management (CEO of Betria Interactive signs Smart Travel documents), shared infrastructure (git.betria.com, jira.betria.com), and company-wide meetings mixing employees from all entities.
+**Corporate veil evidence** suggests these entities function as a single enterprise: shared email domain (@flightpath3d.com for all entities), cross-entity management (CEO of Betria Interactive signs Smart Travel documents), shared infrastructure (git.betria.com, jira.betria.com), and company-wide meetings mixing employees from all entities.
 
 ---
 
@@ -114,12 +114,12 @@ A W-8BEN form (IRS declaration for "independent personal services") was filed on
 
 ### 3.1 How It Worked
 
-The scheme operated across approximately **17 employees** (OSINT-verified via LinkedIn, spanning 9 countries):
+The scheme allegedly operated across approximately **17 employees** (identified through publicly available LinkedIn profiles spanning 9 countries; actual Payoneer payment recipients have not been independently verified for all individuals):
 
 1. **Contractual salary:** €2,800/month (written in the employment contract)
 2. **Declared to Social Security:** €1,200/month (the amount actually reported)
 3. **Difference:** Paid via Payoneer from Betria Interactive/Systems (US entities owned by the same CEO)
-4. **Tax savings for employer:** ~€8,363 in avoided SS contributions for this single employee alone
+4. **Estimated tax savings for employer:** ~€8,363 (estimated) in avoided SS contributions for this single employee alone
 
 ### 3.2 The Numbers
 
@@ -145,7 +145,7 @@ Additionally, ~$50,900 was paid in USD via Payoneer during 2020–2022 (pre-Port
 
 ### 3.3 Evidence of Systematicity
 
-This was not an isolated arrangement:
+The evidence suggests this was not an isolated arrangement:
 - **~17 employees** across 9 countries received Payoneer payments from Betria for work performed under local employment contracts
 - The EUR activation occurred 8 days after PT employment — indicating a pre-planned scheme, not organic contractor engagement
 - Internal communications (100+ messages) reference "оф. часть зп" (official part of salary) — explicitly distinguishing between declared and undeclared portions
@@ -222,7 +222,7 @@ Multiple legal grounds support challenging the Separation Agreement:
 
 ### 5.4 Signature Irregularities
 
-The CEO signed the document as "5th of OCTOBER, 2024" (English format), while the subject signed "04.10.2024." The document states it was signed "em Setúbal" — however, evidence suggests the CEO was in the United States at the time.
+The CEO signed the document as "5th of OCTOBER, 2024" (English format), while the subject signed "04.10.2024." The document states it was signed "em Setúbal" — however, it has not been independently confirmed whether the CEO was physically present in Setúbal at the time of signing.
 
 An HR representative systematically collected employee signatures on transparent backgrounds (PNG format) and inserted them into documents — this was standard company practice, not specific to this case.
 
@@ -254,7 +254,7 @@ The subject renewed the residence permit alone. Immigration category was **downg
 3. **Cash component** — "bring cash first, it comes to your card"
 4. **Employee covers employer's 23.75% SS contribution**
 
-**The subject declined.** This proposal demonstrates the salary simulation scheme was ongoing, not historical. The company's lawyer prepared the draft fictitious contract.
+**The subject declined.** This proposal suggests the alleged salary simulation scheme was ongoing, not historical. The company's lawyer reportedly prepared the draft fictitious contract.
 
 ### 6.3 Post-Dismissal Payments
 
@@ -340,9 +340,9 @@ However, three alternative legal pathways remain available:
 ### 8.5 Settlement Probability
 
 Based on adversarial analysis (expert panel estimate, not a legal opinion):
-- **Employer win probability: 15–25%**
-- **Settlement probability: 80%+**
-- Settlement range: €45,000–65,000
+- **Employer win probability (expert panel estimate): 15–25%**
+- **Settlement probability (expert panel estimate): 80%+**
+- Settlement range (expert panel estimate): €45,000–65,000
 - Net after own voluntary disclosure: €30,000–50,000
 
 Key settlement lever: criminal exposure under Art. 104 RGIT affects not just this case but the entire ~17-employee scheme. Airline clients (90+ carriers with strict compliance requirements) represent significant reputational risk.
@@ -355,6 +355,7 @@ Key settlement lever: criminal exposure under Art. 104 RGIT affects not just thi
 4. **Cl. 5 condition:** Employer failed to fulfill promises (visa help, reference letter)
 5. **Art. 256 CP:** Signature irregularities pending forensic analysis
 6. **Lei 93/2021:** Whistleblower protection overrides contractual NDA for public interest disclosures
+7. **NDA override justification:** This publication is justified under Lei 93/2021 Art. 6 (public interest disclosure), which provides that public interest disclosures override contractual confidentiality obligations. Additionally, the NDA clause (Cl. 4) is arguably void as uncompensated and of unlimited duration (Art. 280 CC — objecto contrário à lei)
 
 ---
 
@@ -383,6 +384,14 @@ Key settlement lever: criminal exposure under Art. 104 RGIT affects not just thi
 
 ---
 
+## Right of Reply
+
+The subjects of this investigation — including FlightPath3D (Betria Interactive LLC), Boris Veksler, and Duncan Jackson — are offered the right to respond to any and all allegations contained in this publication. Any response received will be published as an addendum to this case study, unedited and in full.
+
+Responses may be submitted to: **editorial@folkup.app**
+
+---
+
 ## 10. Methodology
 
 {{< methodology-box >}}
@@ -402,6 +411,15 @@ Data verification and analysis were performed using automated OSINT tools and au
 
 {{< /methodology-box >}}
 
+### Data Protection — GDPR Art. 6(1)(f) Balancing Test
+
+This publication processes personal data under the legitimate interest basis (GDPR Art. 6(1)(f)):
+
+- **Legitimate interest:** The author's interest in documenting a labor dispute in which they are the aggrieved party, combined with the public interest in exposing alleged systematic social security under-declaration
+- **Necessity:** Publication is necessary to create a documented record for potential legal proceedings and to inform the public of alleged corporate practices affecting multiple jurisdictions
+- **Balancing:** The privacy interests of named individuals (acting in professional/executive capacity in publicly registered companies) are outweighed by the public interest. Non-public figures are anonymized. Financial data relates to corporate practices, not personal finances of named individuals
+- **Safeguards:** PII review conducted, anonymization applied to non-public figures, access controlled, right of reply offered (see above)
+
 ### Limitations
 
 - Financial estimates are analytical approximations, not binding assessments
@@ -409,6 +427,7 @@ Data verification and analysis were performed using automated OSINT tools and au
 - Some evidence (corporate email archive, internal project management) is held by the employer
 - The Payoneer USD total requires a certified statement for court use
 - The connection between the subject's personal accountant and Smart Travel is [UNVERIFIED]
+- The author acknowledges having been a participant in the dual salary arrangement, thereby also benefiting from reduced personal tax obligations during the period of under-declaration. Voluntary disclosure proceedings are being initiated to rectify this
 
 ---
 
