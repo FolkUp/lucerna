@@ -180,13 +180,65 @@ h1, h2, h3, h4,
   font-size: 1.125em;
 }
 
+/* ============================================
+   Responsive tables (mobile-first)
+   ============================================ */
+.article {
+  overflow-x: hidden;
+}
+
 .article table {
   font-size: 0.9375em;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
 }
 
 .article table th,
 .article table td {
   padding: 0.625rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(var(--color-neutral-300), 0.3);
+}
+
+.article table th {
+  background-color: rgba(var(--color-primary-500), 0.08);
+  font-weight: 600;
+  color: rgb(var(--color-primary-700));
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dark .article table th {
+  background-color: rgba(var(--color-primary-500), 0.15);
+  color: rgb(var(--color-primary-300));
+  border-bottom-color: rgba(var(--color-neutral-600), 0.3);
+}
+
+.article table tr:hover {
+  background-color: rgba(var(--color-primary-500), 0.04);
+}
+
+.dark .article table tr:hover {
+  background-color: rgba(var(--color-primary-500), 0.1);
+}
+
+/* Prevent content overflow in tight cells */
+@media (max-width: 768px) {
+  .article table {
+    font-size: 0.875em;
+  }
+
+  .article table th,
+  .article table td {
+    padding: 0.5rem 0.625rem;
+    min-width: 6rem;
+  }
 }
 
 /* ============================================
