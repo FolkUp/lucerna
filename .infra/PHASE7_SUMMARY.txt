@@ -1,0 +1,103 @@
+================================================================================
+INFR-127 Phase 7: GitHub Actions Webhook Setup
+Date: 22.03.2026
+Status: CONDITIONAL_PASS
+================================================================================
+
+EXECUTION RESULTS:
+
+1. Secrets Check (7.1)
+   Status: ❌ NOT SET
+   Command: gh secret list --org FolkUp
+   Result: No GitHub Actions secrets found
+
+2. Workflow File (7.3)
+   Status: ✅ DEPLOYED
+   Source: deploy/github/workflows/notify-telegram.yml
+   Dest: .github/workflows/notify-telegram.yml
+   Commit: 4ec111a
+
+3. Git Push (7.4)
+   Status: ✅ PUSHED
+   Branch: main
+   Workflow triggers: fork, watch, issues, pull_request, public
+
+4. Secrets Setup (7.2) — MANUAL REQUIRED
+   Status: 🔴 BLOCKED
+   Action: Andrеy must set org-level secrets
+   Location: https://github.com/organizations/FolkUp/settings/secrets/actions
+   Required:
+     - TELEGRAM_NOTIFY_BOT_TOKEN = [bot token]
+     - TELEGRAM_NOTIFY_CHAT_ID = [deploy group ID]
+
+================================================================================
+WORKFLOW DETAILS
+
+File: .github/workflows/notify-telegram.yml (96 lines)
+
+Security:
+  ✅ Safe environment variables (no template injection)
+  ✅ Graceful skip if secrets missing (lines 42-44)
+  ✅ HTML message format via curl --data-urlencode
+  ✅ Error suppression: curl -sf (silent on HTTP errors)
+
+Triggers:
+  - fork: Repo forked
+  - watch: Repo starred (TEST TRIGGER)
+  - issues: Opened/closed
+  - pull_request: Opened/closed/merged
+  - public: Visibility changed
+
+Message format:
+  [GH] EVENT_TYPE
+  REPO_NAME event details
+  by @ACTOR
+  ---
+  TIMESTAMP (UTC)
+
+================================================================================
+TEST PROCEDURE (Once Andrey sets secrets)
+
+1. Go to: https://github.com/FolkUp/lucerna
+2. Click ⭐ Star (top right)
+3. Check FolkUp Deploy Telegram group, topic 9 (thread_id: 9)
+4. Expected message:
+   [GH] Star
+   FolkUp/lucerna starred by @anklemPT
+   ---
+   2026-03-22 23:48 UTC
+
+================================================================================
+ROLLBACK
+
+To disable workflow:
+  git rm .github/workflows/notify-telegram.yml
+  git commit -m "Disable GitHub Actions webhook"
+  git push origin main
+
+Or simply don't set secrets in GitHub.
+
+================================================================================
+NEXT STEPS (Andrеy)
+
+1. Navigate to: https://github.com/organizations/FolkUp/settings/secrets/actions
+2. Click "New organization secret"
+3. Name: TELEGRAM_NOTIFY_BOT_TOKEN
+   Value: [FolkUp Telegram bot token from secrets]
+4. Name: TELEGRAM_NOTIFY_CHAT_ID
+   Value: [FolkUp Deploy group ID]
+5. Test: Star lucerna repo
+6. Verify notification in Telegram topic 9
+
+================================================================================
+FINAL STATUS: CONDITIONAL_PASS
+
+✅ Workflow file deployed and pushed
+✅ Syntax validated (GH Actions ready to run)
+✅ Graceful error handling if secrets missing
+❌ Secrets setup manual-only (awaits Andrеy)
+
+BLOCKING RESOLUTION: Once org secrets are set, workflow will activate on star/fork/PR.
+No code changes or re-deployment needed.
+
+================================================================================
