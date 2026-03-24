@@ -1,7 +1,7 @@
 # Automated tool config (private, never publish)
-.claude/
-CLAUDE.md
-CLAUDE.local.md
+.assistant/
+CONFIG.md
+CONFIG.local.md
 
 # Secrets
 *.env
@@ -35,6 +35,12 @@ node_modules/
 /dossiers/
 /prompts/
 /audits/
+
+# Evidence and sensitive documents (MUST NOT be in public repo — FP3D-047)
+/documents/
+/evidence/
+static/evidence/
+dossiers/*/evidence/
 
 # Sensitive data — must NOT be in public repo (LCRN-082)
 static/fp3d/

@@ -5,7 +5,7 @@ Master log of all Lucerna investigations.
 | ID | Date | Type | Topic | Status | Location |
 |----|------|------|-------|--------|----------|
 | INV-001 | 2026-02-20 | IP Audit | CityMap / SetubalMap App | Complete | `audits/ip/citymap-app-2026-02-20.md` |
-| INV-002 | 2026-02-23 | Meta-research | Best practices gap analysis | Complete | `research/meta/claude-code-best-practices.md` |
+| INV-002 | 2026-02-23 | Meta-research | Best practices gap analysis | Complete | `research/meta/ai-tools-best-practices.md` |
 | INV-003 | 2026-02-25 | Verification | Habr GenAI article fact-check | Complete | `verifications/habr-genai-2026-02-25.md` |
 | INV-004 | 2026-02-24 | Dossier | Democratic Youth Hymn origins | Complete | `dossiers/hymn-democratic-youth.md` |
 | INV-005 | 2026-02 | Research | Setubal crafts and souvenirs | Complete | `research/setubal/crafts-souvenirs-setubal.md` |
@@ -20,6 +20,7 @@ Master log of all Lucerna investigations.
 | INV-014 | 2026-02-26 | Research | Drug content legislation (RU/PT/EU) | Complete | `research/general/drug-content-legislation-2026-02-26.md` |
 | INV-015 | 2026-02-27 | Research | Igreja de São Julião de Setúbal | Complete | `research/setubal/igreja-sao-juliao.md` |
 | INV-016 | 2026-03-19 | Dossier | @ghaechka Frontend Assessment | Archived | Migrated to encrypted storage (LCRN-102, 2026-03-20) |
+| INV-017 | 2026-03-23 | Dossier | Roman (@codebykz) Technical Assessment | Complete | `dossiers/roman-codebykz-technical-assessment.md` |
 
 ---
 
