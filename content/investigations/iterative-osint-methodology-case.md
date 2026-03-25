@@ -69,6 +69,8 @@ By the end of this case study, you will understand:
 
 ## Methodology Framework: Iterative OSINT
 
+This case study demonstrates the application of [OSINT Verification Methodology]({{< relref "/methodology/osint-verification" >}}) — a structured framework for multi-source correlation, fact verification, and evidence cross-referencing.
+
 ### Three-Phase Approach
 
 Unlike traditional single-pass OSINT, this case demonstrates **progressive refinement**:

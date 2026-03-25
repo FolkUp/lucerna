@@ -178,6 +178,8 @@ Company-A's website makes specific quantitative claims about market position and
 
 ### Verification Methodology
 
+For a detailed framework on evaluating source reliability across these verification steps, see [Source Evaluation Methodology]({{< relref "/methodology/source-evaluation" >}}) — which provides the CRAAP test (Currency, Relevance, Authority, Accuracy, Purpose) and source tier classification used throughout this audit.
+
 **Deployment Count Verification [1]:** Cross-referenced company claims against commercial aviation fleet databases, aircraft equipment catalogs, and airline press announcements regarding cabin entertainment system installations. Multiple independent sources confirmed deployment numbers exceeding 2,000 aircraft across major commercial carriers.
 
 **Market Position Assessment [2]:** Segmented market analysis through trade publication coverage, industry research reports, and competitive landscape mapping. Company holds leading position in interactive gaming subset of aviation entertainment, but overall entertainment market includes broader categories (streaming, connectivity, traditional IFE) where other vendors maintain larger market shares.

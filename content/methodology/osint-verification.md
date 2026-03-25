@@ -77,3 +77,9 @@ A claim achieves **high confidence** when registry + at least one other path con
 - **Independence:** At least 2 sources that are not derived from each other
 - **Completeness:** Gaps in the record are explicitly documented, not papered over
 - **Reproducibility:** Another researcher could follow the same steps and reach the same conclusions
+
+---
+
+## Methodology in Practice
+
+This framework is applied throughout Lucerna case studies. See [OSINT Case Study: Iterative Employment Verification — Subject-Delta Technical Profile]({{< relref "/investigations/iterative-osint-methodology-case" >}}) for a detailed three-phase case demonstrating iterative cross-verification, timeline reconstruction, and edge case handling in professional due diligence.

@@ -113,6 +113,12 @@ When citing sources in Lucerna investigations:
 4. **Note** CRAAP weaknesses in the source list
 5. **Date** when you accessed online sources
 
+---
+
+## Methodology in Practice
+
+This framework is applied throughout Lucerna investigations. See [Corporate Opacity — Advanced Multi-Agent OSINT Audit of an Aviation Technology Company]({{< relref "/investigations/flightpath3d-osint-audit" >}}) for a detailed case study demonstrating source evaluation across claims verification, competitive analysis, and patent research.
+
 ## Source Documentation Format
 
 ```markdown
