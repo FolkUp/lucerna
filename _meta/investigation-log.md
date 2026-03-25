@@ -21,6 +21,7 @@ Master log of all Lucerna investigations.
 | INV-015 | 2026-02-27 | Research | Igreja de São Julião de Setúbal | Complete | `research/setubal/igreja-sao-juliao.md` |
 | INV-016 | 2026-03-19 | Dossier | @ghaechka Frontend Assessment | Archived | Migrated to encrypted storage (LCRN-102, 2026-03-20) |
 | INV-017 | 2026-03-23 | Dossier | Roman (@codebykz) Technical Assessment | Complete | `dossiers/roman-codebykz-technical-assessment.md` |
+| INV-018 | 2026-03-25 | Research | Jules Verne Agile hypothesis verification | Complete | `research/general/verne-agile-hypothesis.md` |
 
 ---
 
