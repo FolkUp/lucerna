@@ -73,7 +73,16 @@
     {{ with .Params.tags }}"keywords": {{ . }},{{ end }}
     {{ end }}
     "mainEntityOfPage": "true",
-    "wordCount": "{{ .WordCount }}"
+    "wordCount": "{{ .WordCount }}",
+    {{ if .Summary }}"articleBody": "{{ .Summary | plainify | safeJS }}",{{ end }}
+    {{ with .Params.about }}"about": {{ . | safeJS }},{{ end }}
+    {{ with .Params.mentions }}"mentions": {{ . | safeJS }},{{ end }}
+    "isAccessibleForFree": true,
+    "copyrightHolder": {
+      "@type": "Organization",
+      "name": "FolkUp",
+      "url": "https://folkup.app/"
+    }
   }{{ if site.Params.enableStructuredBreadcrumbs | default false }},
   {
     "@context": "https://schema.org",
