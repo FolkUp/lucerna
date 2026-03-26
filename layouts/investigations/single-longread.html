@@ -1,0 +1,197 @@
+{{/*
+  Lucerna Longread Layout — Multimedia OSINT investigations
+  Performance optimized | Brand Guide v2.5 | WCAG 2.1 AA
+  Target: LCP <2.5s | Mobile-first approach
+*/}}
+
+{{ define "head" }}
+  <!-- Critical CSS for longread -->
+  <link rel="preload" href="{{ "css/longread.css" | relURL }}" as="style">
+  <link rel="stylesheet" href="{{ "css/longread.css" | relURL }}">
+
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="preconnect" href="{{ .Site.BaseURL }}">
+
+  <!-- Structured data for cultural investigations -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ .Title }},
+    "description": {{ .Summary }},
+    "author": {
+      "@type": "Organization",
+      "name": "Lucerna Research Lab"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FolkUp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ "img/folkup-logo.svg" | absURL }}"
+      }
+    },
+    "datePublished": {{ .Params.date_created }},
+    "dateModified": {{ .Params.date_updated }},
+    "about": {
+      "@type": "Thing",
+      "name": {{ .Params.artist | default "Cultural Investigation" }}
+    },
+    "genre": "Cultural Intelligence",
+    "investigationType": {{ .Params.investigation_type | default "multimedia" }}
+  }
+  </script>
+{{ end }}
+
+{{ define "main" }}
+<div class="longread-container">
+
+  <!-- Hero Section with Performance Optimization -->
+  <header class="longread-hero longread-critical">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.longread_subtitle }}
+      <p class="longread-subtitle">{{ .Params.longread_subtitle }}</p>
+    {{ end }}
+
+    <!-- Investigation metadata -->
+    {{ if .Params.artist }}
+    <div class="investigation-meta">
+      <span class="meta-artist">{{ .Params.artist }}</span>
+      {{ if .Params.track_title }}
+        <span class="meta-separator">—</span>
+        <span class="meta-track">{{ .Params.track_title }}</span>
+      {{ end }}
+      {{ if .Params.release_year }}
+        <span class="meta-separator">•</span>
+        <span class="meta-year">{{ .Params.release_year }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  <!-- Article Content with Mobile-First Layout -->
+  <article class="longread-article" itemscope itemtype="https://schema.org/Article">
+
+    <!-- Article metadata -->
+    <meta itemprop="headline" content="{{ .Title }}">
+    <meta itemprop="datePublished" content="{{ .Params.date_created }}">
+    <meta itemprop="dateModified" content="{{ .Params.date_updated }}">
+
+    <!-- Investigation status badge -->
+    {{ if .Params.status }}
+      {{ partial "status-badge" . }}
+    {{ end }}
+
+    <!-- Reading time and metadata -->
+    <div class="article-metadata">
+      {{ if .Params.estimated_reading_time }}
+        <span class="reading-time" title="Estimated reading time">
+          📖 {{ .Params.estimated_reading_time }}
+        </span>
+      {{ end }}
+
+      {{ if .Params.confidence }}
+        <span class="confidence-level" title="Investigation confidence">
+          🎯 Confidence: {{ .Params.confidence }}
+        </span>
+      {{ end }}
+
+      {{ if .Params.performance_target }}
+        <span class="performance-target" title="Performance target">
+          ⚡ Target: {{ .Params.performance_target }}
+        </span>
+      {{ end }}
+    </div>
+
+    <!-- Main content with performance containment -->
+    <div class="longread-content" style="contain: layout;">
+      {{ .Content }}
+    </div>
+
+    <!-- Investigation tools and methodology -->
+    {{ if .Params.tools_demonstrated }}
+    <section class="methodology-section">
+      <h3>🛠 OSINT Tools Demonstrated</h3>
+      <ul class="tools-list">
+        {{ range .Params.tools_demonstrated }}
+          <li class="tool-item">{{ . | humanize }}</li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+
+    <!-- Related investigations -->
+    {{ if .Site.Params.article.showRelatedContent }}
+      {{ partial "related" . }}
+    {{ end }}
+
+  </article>
+
+  <!-- Performance monitoring (development) -->
+  {{ if not .Site.IsServer }}
+  <script>
+    // Core Web Vitals monitoring for longread
+    if ('PerformanceObserver' in window) {
+      // LCP monitoring
+      new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            const lcp = entry.startTime;
+            if (lcp > 2500) {
+              console.warn(`⚠️ LCP ${lcp.toFixed(0)}ms exceeds 2.5s target`);
+            } else {
+              console.log(`✅ LCP ${lcp.toFixed(0)}ms within target`);
+            }
+          }
+        }
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // CLS monitoring
+      let clsValue = 0;
+      new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        }
+        if (clsValue > 0.1) {
+          console.warn(`⚠️ CLS ${clsValue.toFixed(3)} exceeds 0.1 target`);
+        }
+      }).observe({ entryTypes: ['layout-shift'] });
+    }
+  </script>
+  {{ end }}
+
+</div>
+
+<!-- Accessibility improvements -->
+<div class="sr-only" aria-live="polite" id="longread-announcements"></div>
+
+{{ end }}
+
+{{ define "footer" }}
+  <!-- Defer non-critical longread enhancements -->
+  <script>
+    // Progressive enhancement for scroll experience
+    if ('IntersectionObserver' in window) {
+      // Add smooth section transitions
+      const sections = document.querySelectorAll('.phase-section');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+      });
+    }
+  </script>
+{{ end }}

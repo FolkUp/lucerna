@@ -1,0 +1,229 @@
+/* Lucerna Longread — Performance-optimized multimedia styles */
+/* Brand Guide v2.5 compliant | Mobile-first approach | LCP <2.5s target */
+
+/* ============================================
+   Longread Container & Typography
+   ============================================ */
+
+.longread-hero {
+  position: relative;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-800) 100%);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.longread-subtitle {
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+/* ============================================
+   Timeline Enhancements (Blowfish extensions)
+   ============================================ */
+
+.timeline-container {
+  max-width: 100%;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+/* Enhanced timeline items for cultural content */
+.timeline-cultural {
+  border-left: 3px solid var(--color-accent-500);
+}
+
+.timeline-cultural .timelineItem {
+  position: relative;
+}
+
+.timeline-cultural .timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent-500);
+  border: 3px solid var(--color-neutral-100);
+}
+
+/* ============================================
+   Multimedia Content Sections
+   ============================================ */
+
+.phase-section {
+  margin: 3rem 0;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  background: var(--color-neutral-50);
+  border-left: 4px solid var(--color-primary-500);
+}
+
+.phase-section h2 {
+  color: var(--color-primary-700);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.phase-placeholder {
+  padding: 2rem;
+  text-align: center;
+  background: var(--color-neutral-100);
+  border-radius: 8px;
+  font-style: italic;
+  color: var(--color-neutral-600);
+  margin: 1rem 0;
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+
+/* Critical CSS for Above-the-Fold content */
+.longread-critical {
+  /* Timeline styles are inlined in critical CSS */
+  contain: layout style;
+}
+
+/* Lazy loading improvements */
+.longread-media {
+  loading: lazy;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ============================================
+   Mobile-First Responsive Design
+   ============================================ */
+
+/* Base: Mobile (320px+) */
+.longread-container {
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .longread-container {
+    padding: 0 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .longread-hero {
+    padding: 3rem 2rem;
+  }
+
+  .timeline-container {
+    padding: 0 2rem;
+  }
+
+  .phase-section {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .longread-container {
+    max-width: 900px;
+  }
+
+  .timeline-container {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+}
+
+/* ============================================
+   Dark Mode Support (Auto-switching)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .longread-hero {
+    background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-900) 100%);
+  }
+
+  .phase-section {
+    background: var(--color-neutral-800);
+    border-left-color: var(--color-primary-400);
+  }
+
+  .phase-section h2 {
+    color: var(--color-primary-300);
+  }
+
+  .phase-placeholder {
+    background: var(--color-neutral-700);
+    color: var(--color-neutral-300);
+  }
+}
+
+/* ============================================
+   Accessibility & WCAG 2.1 AA Compliance
+   ============================================ */
+
+/* Focus visibility */
+.timeline-container [tabindex="0"]:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .phase-section {
+    border-width: 3px;
+  }
+
+  .timeline-cultural::before {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .longread-hero {
+    background: var(--color-primary-600);
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Touch targets minimum 44x44px */
+.timeline-container a,
+.timeline-container button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px;
+}
+
+/* ============================================
+   Performance Budget Monitoring
+   ============================================ */
+
+/* CSS contains hints for browser optimization */
+.timeline-container {
+  contain: layout style;
+}
+
+.phase-section {
+  contain: layout;
+}
+
+/* Prevent layout shifts */
+.longread-media {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
