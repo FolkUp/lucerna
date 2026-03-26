@@ -4,9 +4,12 @@
   "private": true,
   "description": "Lucerna OSINT Research Lab — site build tools",
   "scripts": {
-    "encrypt-reviews": "node scripts/encrypt-reviews.mjs"
+    "encrypt-reviews": "node scripts/encrypt-reviews.mjs",
+    "optimize-images": "node scripts/optimize-longread-images.js",
+    "build-longread": "npm run optimize-images && hugo --gc --minify"
   },
   "devDependencies": {
+    "sharp": "^0.33.0",
     "staticrypt": "^4.0.1"
   }
 }
