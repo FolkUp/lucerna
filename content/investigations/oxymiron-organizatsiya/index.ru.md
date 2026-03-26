@@ -178,7 +178,7 @@ Official designation: Oxymiron recognized as «иноагент». Regulatory pr
 **Pattern confirmed:** Artists successfully adapt titles while preserving lyrical integrity. Controversial message survives через acceptable packaging
 
 **Evidence pattern:**
-- Comparative analysis: [НЕПРОВЕРЕНО] 12+ artists similar adaptations
+- Comparative analysis: Multiple artists document similar adaptation patterns — exact scope requires systematic research, rich field for cultural archaeology
 - Academic studies: cultural resilience mechanisms
 - Long-term success: «Организация» remains accessible, content intact
 {{< /timelineItem >}}
@@ -343,7 +343,7 @@ Universities начинают systematic studying Oxymiron's lyrics. Hip-hop off
 **Legacy quantified:** New generation Russian rappers systematically incorporate literary references, complex metrics. «Организация» paradigm becomes industry standard
 
 **Influence mapping evidence:**
-- Artist analysis: [НЕПРОВЕРЕНО] 15+ new rappers using literary techniques
+- Artist analysis: New generation artists increasingly incorporate literary techniques — comprehensive mapping requires dedicated research
 - Metric evolution: dolnik meter adoption by multiple artists
 - Cultural bridge success: hip-hop now legitimate Russian cultural form
 - Template effect: title change strategy replicated across industry
