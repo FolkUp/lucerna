@@ -1,0 +1,62 @@
+{{/* evidence-card shortcode — compact card for evidence items in investigations
+     Usage: {{< evidence-card source="YouTube metadata" status="verified" confidence="high" >}}
+     Description of the evidence and what it proves.
+     {{< /evidence-card >}}
+
+     Parameters:
+       source: Evidence source name (required)
+       status: verified | partial | disputed | unverified (default: unverified)
+       confidence: high | medium | low (default: medium)
+       link: Optional URL to source
+*/}}
+{{ $source := .Get "source" | default "Unknown source" }}
+{{ $status := .Get "status" | default "unverified" }}
+{{ $confidence := .Get "confidence" | default "medium" }}
+{{ $link := .Get "link" }}
+
+{{ $statusClass := "" }}
+{{ $statusLabel := "" }}
+{{ $statusIcon := "" }}
+{{ if eq $status "verified" }}
+  {{ $statusClass = "evidence-card--verified" }}
+  {{ $statusLabel = i18n "evidenceVerified" | default "Verified" }}
+  {{ $statusIcon = "check-circle" }}
+{{ else if eq $status "partial" }}
+  {{ $statusClass = "evidence-card--partial" }}
+  {{ $statusLabel = i18n "evidencePartial" | default "Partial" }}
+  {{ $statusIcon = "alert-triangle" }}
+{{ else if eq $status "disputed" }}
+  {{ $statusClass = "evidence-card--disputed" }}
+  {{ $statusLabel = i18n "evidenceDisputed" | default "Disputed" }}
+  {{ $statusIcon = "alert-circle" }}
+{{ else }}
+  {{ $statusClass = "evidence-card--unverified" }}
+  {{ $statusLabel = i18n "evidenceUnverified" | default "Unverified" }}
+  {{ $statusIcon = "help-circle" }}
+{{ end }}
+
+{{ $confClass := "" }}
+{{ if eq $confidence "high" }}
+  {{ $confClass = "confidence--high" }}
+{{ else if eq $confidence "medium" }}
+  {{ $confClass = "confidence--medium" }}
+{{ else }}
+  {{ $confClass = "confidence--low" }}
+{{ end }}
+
+<div class="evidence-card {{ $statusClass }}" role="article" aria-label="{{ $source }}">
+  <div class="evidence-card__header">
+    <span class="evidence-card__source">
+      {{ with $link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}
+      {{ $source }}
+      {{ with $link }}</a>{{ end }}
+    </span>
+    <div class="evidence-card__badges">
+      <span class="evidence-card__status">{{ $statusLabel }}</span>
+      <span class="evidence-card__confidence {{ $confClass }}">{{ upper $confidence }}</span>
+    </div>
+  </div>
+  <div class="evidence-card__body">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

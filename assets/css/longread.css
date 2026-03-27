@@ -227,3 +227,295 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+
+/* ============================================
+   Evidence Card Component
+   ============================================ */
+
+.evidence-card {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-neutral-400);
+  background: var(--color-neutral-50);
+  contain: layout;
+}
+
+.evidence-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.evidence-card__source {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-neutral-800);
+}
+
+.evidence-card__source a {
+  color: var(--color-primary-600);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.evidence-card__source a:hover {
+  color: var(--color-primary-700);
+}
+
+.evidence-card__badges {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.evidence-card__status,
+.evidence-card__confidence {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.evidence-card__status {
+  background: var(--color-neutral-200);
+  color: var(--color-neutral-700);
+}
+
+.evidence-card__body {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-neutral-700);
+}
+
+.evidence-card__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Evidence card status variants */
+.evidence-card--verified {
+  border-left-color: #16a34a;
+}
+
+.evidence-card--verified .evidence-card__status {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.evidence-card--partial {
+  border-left-color: #d97706;
+}
+
+.evidence-card--partial .evidence-card__status {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.evidence-card--disputed {
+  border-left-color: #dc2626;
+}
+
+.evidence-card--disputed .evidence-card__status {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.evidence-card--unverified {
+  border-left-color: var(--color-neutral-400);
+}
+
+.evidence-card--unverified .evidence-card__status {
+  background: var(--color-neutral-200);
+  color: var(--color-neutral-600);
+}
+
+/* Confidence level badges */
+.confidence--high {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.confidence--medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.confidence--low {
+  background: var(--color-neutral-200);
+  color: var(--color-neutral-600);
+}
+
+/* ============================================
+   Pull Quote Component
+   ============================================ */
+
+.pull-quote {
+  margin: 2.5rem 0;
+  padding: 0;
+}
+
+.pull-quote--center {
+  text-align: center;
+}
+
+.pull-quote--left {
+  text-align: left;
+}
+
+.pull-quote--right {
+  text-align: right;
+}
+
+.pull-quote__text {
+  position: relative;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-primary-700);
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+
+.pull-quote__text::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.25rem;
+  left: 0;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-primary-300);
+  line-height: 1;
+}
+
+.pull-quote__text p:last-child {
+  margin-bottom: 0;
+}
+
+.pull-quote__attribution {
+  margin-top: 0.75rem;
+  padding: 0 2rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--color-neutral-500);
+}
+
+/* ============================================
+   Dark Mode — New Components
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .evidence-card {
+    background: var(--color-neutral-800);
+  }
+
+  .evidence-card__source {
+    color: var(--color-neutral-200);
+  }
+
+  .evidence-card__source a {
+    color: var(--color-primary-400);
+  }
+
+  .evidence-card__body {
+    color: var(--color-neutral-300);
+  }
+
+  .evidence-card--verified .evidence-card__status {
+    background: rgba(22, 163, 74, 0.2);
+    color: #86efac;
+  }
+
+  .evidence-card--partial .evidence-card__status {
+    background: rgba(217, 119, 6, 0.2);
+    color: #fcd34d;
+  }
+
+  .evidence-card--disputed .evidence-card__status {
+    background: rgba(220, 38, 38, 0.2);
+    color: #fca5a5;
+  }
+
+  .evidence-card--unverified .evidence-card__status {
+    background: var(--color-neutral-700);
+    color: var(--color-neutral-400);
+  }
+
+  .confidence--high {
+    background: rgba(22, 163, 74, 0.2);
+    color: #86efac;
+  }
+
+  .confidence--medium {
+    background: rgba(217, 119, 6, 0.2);
+    color: #fcd34d;
+  }
+
+  .confidence--low {
+    background: var(--color-neutral-700);
+    color: var(--color-neutral-400);
+  }
+
+  .pull-quote__text {
+    color: var(--color-primary-300);
+  }
+
+  .pull-quote__text::before {
+    color: var(--color-primary-600);
+  }
+
+  .pull-quote__attribution {
+    color: var(--color-neutral-400);
+  }
+}
+
+/* ============================================
+   High Contrast — New Components
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  .evidence-card {
+    border-left-width: 5px;
+  }
+
+  .pull-quote__text::before {
+    color: var(--color-primary-700);
+  }
+}
+
+/* ============================================
+   Responsive — New Components
+   ============================================ */
+
+@media (min-width: 768px) {
+  .pull-quote__text {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
+
+  .pull-quote__text::before {
+    font-size: 4.5rem;
+  }
+
+  .evidence-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Touch targets for new components */
+.evidence-card a,
+.pull-quote a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+}

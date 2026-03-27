@@ -1,0 +1,20 @@
+{{/* pull-quote shortcode — dramatic pull-quote for investigations
+     Usage: {{< pull-quote attribution="Investigation finding" >}}
+     The quote text goes here.
+     {{< /pull-quote >}}
+
+     Parameters:
+       attribution: Attribution text (optional)
+       align: left | center | right (default: center)
+*/}}
+{{ $attribution := .Get "attribution" }}
+{{ $align := .Get "align" | default "center" }}
+
+<figure class="pull-quote pull-quote--{{ $align }}" role="figure">
+  <blockquote class="pull-quote__text">
+    {{ .Inner | markdownify }}
+  </blockquote>
+  {{ with $attribution }}
+  <figcaption class="pull-quote__attribution">— {{ . }}</figcaption>
+  {{ end }}
+</figure>
