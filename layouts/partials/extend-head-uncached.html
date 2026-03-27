@@ -1,10 +1,11 @@
 {{/* Conditional assets per section — uncached (page-dependent) */}}
 
-{{/* Investigation pages: declassified CSS + longread CSS + reader mode toggle */}}
+{{/* Investigation pages: declassified CSS + longread CSS + reader mode toggle + enhanced timeline */}}
 {{ if eq .Section "investigations" }}
   {{- $declassifiedCSS := resources.Get "css/declassified.css" | resources.Minify | resources.Fingerprint "sha256" -}}
   <link rel="stylesheet" href="{{ $declassifiedCSS.RelPermalink }}" integrity="{{ $declassifiedCSS.Data.Integrity }}" media="all">
   {{- $longreadCSS := resources.Get "css/longread.css" | resources.Minify | resources.Fingerprint "sha256" -}}
   <link rel="stylesheet" href="{{ $longreadCSS.RelPermalink }}" integrity="{{ $longreadCSS.Data.Integrity }}" media="all">
   <script src="/js/reader-toggle.js" defer></script>
+  <script src="/js/timeline-enhanced.js" defer></script>
 {{ end }}

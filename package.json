@@ -6,10 +6,14 @@
   "scripts": {
     "encrypt-reviews": "node scripts/encrypt-reviews.mjs",
     "optimize-images": "node scripts/optimize-longread-images.js",
-    "build-longread": "npm run optimize-images && hugo --gc --minify"
+    "build-longread": "npm run optimize-images && hugo --gc --minify",
+    "perf-test": "node scripts/performance-test.mjs",
+    "lcp-check": "node scripts/lcp-measurement.mjs"
   },
   "devDependencies": {
     "sharp": "^0.33.0",
-    "staticrypt": "^4.0.1"
+    "staticrypt": "^4.0.1",
+    "puppeteer": "^22.0.0",
+    "lighthouse": "^11.0.0"
   }
 }
