@@ -1,0 +1,109 @@
+{{/* Timeline Horizontal Component — LCRN-130 Cultural Armor */}}
+<div class="timeline-horizontal">
+    <svg class="timeline-svg-h" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cultural armor evolution phases">
+        <!-- Main flow line -->
+        <line x1="50" y1="75" x2="750" y2="75" stroke="currentColor" stroke-width="2" stroke-dasharray="5,5" class="timeline-flow"/>
+
+        <!-- Phase 1: Institutionalization -->
+        <rect x="30" y="55" width="40" height="40" rx="4" fill="var(--phase-bg1, rgba(96, 165, 250, 0.3))" stroke="currentColor" stroke-width="2" class="phase-node"/>
+        <text x="50" y="85" text-anchor="middle" font-size="20" font-weight="bold" role="img" aria-label="Shield">🏛️</text>
+        <text x="50" y="130" text-anchor="middle" fill="currentColor" font-size="11" font-weight="bold" class="phase-label">Inst.</text>
+
+        <!-- Arrow 1 -->
+        <polygon points="120,75 130,70 130,80" fill="currentColor" opacity="0.6"/>
+
+        <!-- Phase 2: Digitization -->
+        <rect x="160" y="55" width="40" height="40" rx="4" fill="var(--phase-bg2, rgba(96, 165, 250, 0.3))" stroke="currentColor" stroke-width="2" class="phase-node"/>
+        <text x="180" y="85" text-anchor="middle" font-size="20" font-weight="bold" role="img" aria-label="Satellite">📡</text>
+        <text x="180" y="130" text-anchor="middle" fill="currentColor" font-size="11" font-weight="bold" class="phase-label">Digital</text>
+
+        <!-- Arrow 2 -->
+        <polygon points="270,75 280,70 280,80" fill="currentColor" opacity="0.6"/>
+
+        <!-- Phase 3: Integration -->
+        <rect x="290" y="55" width="40" height="40" rx="4" fill="var(--phase-bg3, rgba(96, 165, 250, 0.3))" stroke="currentColor" stroke-width="2" class="phase-node"/>
+        <text x="310" y="85" text-anchor="middle" font-size="20" font-weight="bold" role="img" aria-label="Link">🔗</text>
+        <text x="310" y="130" text-anchor="middle" fill="currentColor" font-size="11" font-weight="bold" class="phase-label">Integ.</text>
+
+        <!-- Arrow 3 -->
+        <polygon points="420,75 430,70 430,80" fill="currentColor" opacity="0.6"/>
+
+        <!-- Phase 4: Globalization -->
+        <rect x="450" y="55" width="40" height="40" rx="4" fill="var(--phase-bg4, rgba(96, 165, 250, 0.3))" stroke="currentColor" stroke-width="2" class="phase-node"/>
+        <text x="470" y="85" text-anchor="middle" font-size="20" font-weight="bold" role="img" aria-label="Globe">🌐</text>
+        <text x="470" y="130" text-anchor="middle" fill="currentColor" font-size="11" font-weight="bold" class="phase-label">Global</text>
+    </svg>
+</div>
+
+<style>
+.timeline-horizontal {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.timeline-svg-h {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    color: var(--primary-color, #60a5fa);
+}
+
+.timeline-flow {
+    opacity: 0.4;
+}
+
+.phase-node {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.timeline-horizontal:hover .phase-node {
+    filter: brightness(1.2);
+}
+
+.phase-node:hover {
+    stroke-width: 3;
+    r: 6;
+}
+
+.phase-label {
+    font-weight: 600;
+    font-size: clamp(10px, 1.5vw, 13px);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .timeline-svg-h {
+        color: var(--primary-light, #93c5fd);
+    }
+
+    .timeline-flow {
+        opacity: 0.3;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .timeline-horizontal {
+        margin: 1.5rem 0;
+    }
+
+    .timeline-svg-h {
+        min-height: 150px;
+    }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .phase-node {
+        transition: none;
+    }
+
+    .timeline-horizontal:hover .phase-node {
+        filter: none;
+    }
+}
+</style>

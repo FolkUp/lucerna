@@ -1,0 +1,90 @@
+{{/* Timeline Vertical Component — LCRN-130 Cultural Armor */}}
+<div class="timeline-vertical">
+    <svg class="timeline-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cultural armor evolution timeline">
+        <!-- Main vertical line -->
+        <line x1="200" y1="50" x2="200" y2="450" stroke="currentColor" stroke-width="3" class="timeline-line"/>
+
+        <!-- Phase 1: 2000–2005 Institutionalization -->
+        <circle cx="200" cy="100" r="12" fill="currentColor" stroke="var(--background)" stroke-width="3" class="timeline-point"/>
+        <text x="220" y="105" fill="currentColor" font-size="14" font-weight="bold" class="timeline-year">2000–2005</text>
+        <text x="220" y="125" fill="currentColor" font-size="12" class="timeline-phase">Institutionalization</text>
+
+        <!-- Phase 2: 2006–2010 Digitization -->
+        <circle cx="200" cy="180" r="12" fill="currentColor" stroke="var(--background)" stroke-width="3" class="timeline-point"/>
+        <text x="220" y="185" fill="currentColor" font-size="14" font-weight="bold" class="timeline-year">2006–2010</text>
+        <text x="220" y="205" fill="currentColor" font-size="12" class="timeline-phase">Digitization</text>
+
+        <!-- Phase 3: 2011–2018 Integration -->
+        <circle cx="200" cy="260" r="12" fill="currentColor" stroke="var(--background)" stroke-width="3" class="timeline-point"/>
+        <text x="220" y="265" fill="currentColor" font-size="14" font-weight="bold" class="timeline-year">2011–2018</text>
+        <text x="220" y="285" fill="currentColor" font-size="12" class="timeline-phase">Integration</text>
+
+        <!-- Phase 4: 2019–2026 Globalization -->
+        <circle cx="200" cy="340" r="12" fill="currentColor" stroke="var(--background)" stroke-width="3" class="timeline-point"/>
+        <text x="220" y="345" fill="currentColor" font-size="14" font-weight="bold" class="timeline-year">2019–2026</text>
+        <text x="220" y="365" fill="currentColor" font-size="12" class="timeline-phase">Globalization</text>
+    </svg>
+</div>
+
+<style>
+.timeline-vertical {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.timeline-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    color: var(--primary-color, #60a5fa);
+}
+
+.timeline-line {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.timeline-point {
+    transition: r 0.3s ease;
+}
+
+.timeline-vertical:hover .timeline-point {
+    r: 16px;
+}
+
+.timeline-year {
+    font-weight: 700;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.timeline-phase {
+    font-size: clamp(11px, 1.8vw, 14px);
+    opacity: 0.8;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .timeline-svg {
+        color: var(--primary-light, #93c5fd);
+    }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .timeline-vertical:hover .timeline-point {
+        r: 12px;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .timeline-vertical {
+        margin: 1.5rem 0;
+    }
+
+    .timeline-svg {
+        max-width: 350px;
+    }
+}
+</style>

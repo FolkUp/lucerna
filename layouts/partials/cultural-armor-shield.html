@@ -1,0 +1,156 @@
+{{/* Cultural Armor Shield Component — LCRN-130 */}}
+<div class="cultural-armor-shield">
+    <svg class="shield-svg" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cultural armor shield with layered protection">
+        <!-- Outer shield contour -->
+        <path d="M150 20 L250 80 L250 180 Q150 280 150 320 Q150 280 50 180 L50 80 Z" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5" class="shield-outer"/>
+
+        <!-- Layer 1 (outer) -->
+        <path d="M150 50 L230 100 L230 170 Q150 250 150 290 Q150 250 70 170 L70 100 Z" fill="var(--shield-layer1, rgba(96, 165, 250, 0.2))" stroke="currentColor" stroke-width="2" class="shield-layer shield-layer-1"/>
+
+        <!-- Layer 2 (middle) -->
+        <path d="M150 80 L210 120 L210 160 Q150 220 150 260 Q150 220 90 160 L90 120 Z" fill="var(--shield-layer2, rgba(147, 197, 253, 0.3))" stroke="currentColor" stroke-width="2" class="shield-layer shield-layer-2"/>
+
+        <!-- Center icon -->
+        <text x="150" y="170" text-anchor="middle" font-size="50" font-weight="bold" class="shield-icon" role="img" aria-label="Shield">🛡️</text>
+
+        <!-- Bottom label -->
+        <text x="150" y="370" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold" class="shield-label">Multi-Layer<tspan x="150" dy="1.2em">Protection</tspan></text>
+    </svg>
+</div>
+
+<style>
+.cultural-armor-shield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.shield-svg {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    color: var(--primary-color, #60a5fa);
+}
+
+.shield-layer {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: 150px 150px;
+}
+
+.shield-layer-1 {
+    animation: float-layer-1 4s ease-in-out infinite;
+}
+
+.shield-layer-2 {
+    animation: float-layer-2 5s ease-in-out infinite 0.5s;
+}
+
+.shield-outer {
+    animation: pulse-outer 3s ease-in-out infinite;
+}
+
+@keyframes float-layer-1 {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+@keyframes float-layer-2 {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-12px);
+        opacity: 0.9;
+    }
+}
+
+@keyframes pulse-outer {
+    0%, 100% {
+        stroke-width: 2;
+        opacity: 0.3;
+    }
+    50% {
+        stroke-width: 2.5;
+        opacity: 0.6;
+    }
+}
+
+.shield-icon {
+    animation: float-icon 3s ease-in-out infinite;
+}
+
+@keyframes float-icon {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.shield-label {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .shield-svg {
+        color: var(--primary-light, #93c5fd);
+    }
+}
+
+/* Interactive hover effect */
+@media (hover: hover) {
+    .cultural-armor-shield:hover .shield-layer {
+        filter: brightness(1.3);
+    }
+
+    .cultural-armor-shield:hover .shield-icon {
+        animation-play-state: paused;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .cultural-armor-shield {
+        margin: 1.5rem 0;
+    }
+
+    .shield-svg {
+        max-width: 250px;
+    }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .shield-layer,
+    .shield-outer,
+    .shield-icon {
+        animation: none;
+        opacity: 1;
+    }
+
+    .cultural-armor-shield:hover .shield-layer {
+        filter: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .shield-layer,
+    .shield-outer,
+    .shield-icon {
+        animation: none;
+    }
+}
+</style>
