@@ -93,72 +93,41 @@ draft: false
 
 {{< timeline >}}
 
-{{< timelineItem icon="hammer" header="СЛОЙ 1 — Литературное основание" badge="2014-2015" subheader="Дольник Блока как стальной каркас" >}}
+{{< timelineItemEnhanced icon="hammer" header="СЛОЙ 1 — Литературное основание" badge="2014-2015" subheader="Дольник Блока как стальной каркас" layer="literature-foundation" evidence="foundation" >}}
 В студии рождается не просто рэп-строчка — рождается **поэтическая криптография**. *«Я делаю рэп, как запрещённая организация»* — это дольник, трёхиктный размер «Двенадцати» (1918). Ритмическая неустойчивость, которая передаёт социальное напряжение.
 
 **ЗАЩИТНЫЙ МЕХАНИЗМ:** Литературная родословная Блок → Бродский → Оксимирон. Нельзя запретить то, что принадлежит канону.
+{{< /timelineItemEnhanced >}}
 
-**Доказательства:**
-- Метрический анализ: дольник с анакрусой confirmed
-- Культурные отсылки: «Подпольный человек», поэзия Серебряного века
-- Академическое признание: integration в university hip-hop studies
-{{< /timelineItem >}}
-
-{{< timelineItem icon="video" header="СЛОЙ 2 — Визуальная кодировка" badge="Весна 2015" subheader="Tim ROHO: стеклянная стена как манифест" >}}
+{{< timelineItemEnhanced icon="video" header="СЛОЙ 2 — Визуальная кодировка" badge="Весна 2015" subheader="Tim ROHO: стеклянная стена как манифест" layer="visual-encoding" evidence="visual" >}}
 Режиссёр Tim ROHO создаёт **визуальную метафору-пророчество**: стеклянные стены, свет через преграды, барьеры, через которые всё видно и слышно. Это не интерьерное решение — это **архитектура выживания**, спрятанная на виду.
 
 **ЗАЩИТНЫЙ МЕХАНИЗМ:** Цензура видна, но не названа. Послание проходит — упаковка поглощает удар.
+{{< /timelineItemEnhanced >}}
 
-**Доказательства:**
-- Visual analysis: минималистичная архитектура как метафора
-- Filmography Tim ROHO: pattern of barrier metaphors
-- [Synchronized concept](#layer-3-title-surgery): visual код предсказывает title modification
-{{< /timelineItem >}}
-
-{{< timelineItem icon="edit" header="СЛОЙ 3 — Хирургия названия" badge="Pre-Release 2015" subheader="Сжатие смысла как тактическое решение" >}}
+{{< timelineItemEnhanced icon="edit" header="СЛОЙ 3 — Хирургия названия" badge="Pre-Release 2015" subheader="Сжатие смысла как тактическое решение" layer="title-surgery" evidence="surgery" >}}
 **КЛЮЧЕВОЙ МОМЕНТ СОЗДАНИЯ БРОНИ.** «Запрещённая» исчезает из заголовка — остаётся в тексте. Но это не компромисс. Это **сжатие смысла**: убрать слово = усилить удар. «Организация» без прилагательного становится *любой* организацией — универсальность вместо конкретики.
 
 **ЗАЩИТНЫЙ МЕХАНИЗМ:** Платформенная безопасность + читательская кодировка. Audience дописывает недостающее.
+{{< /timelineItemEnhanced >}}
 
-**Доказательства:**
-- Lyrics preservation: полная фраза intact
-- Platform metadata: единое «безопасное» название
-- Psychology principle: reader completion effect stronger than explicit statement
-{{< /timelineItem >}}
-
-{{< timelineItem icon="shield" header="ИСПЫТАНИЕ БРОНИ — Предварительные тесты" badge="2015-2022" subheader="Семь лет стресс-тестирования" >}}
+{{< timelineItemEnhanced icon="shield" header="ИСПЫТАНИЕ БРОНИ — Предварительные тесты" badge="2015-2022" subheader="Семь лет стресс-тестирования" evidence="testing" >}}
 Трёхслойная броня проходит полевые испытания. Платформенные ограничения ужесточаются — «Организация» остаётся неуязвимой. Дольник защищает от cultural cancellation. Визуальный код даёт alternative reading. Название-сжатие обходит автоматическую модерацию.
 
 **РЕЗУЛЬТАТ ИСПЫТАНИЙ:** All three layers hold. No penetration detected.
+{{< /timelineItemEnhanced >}}
 
-**Доказательства:**
-- Platform policy evolution: YouTube/VK 2015-2022 restrictions
-- Comparative analysis: other artists' content removals
-- «Организация» accessibility: uninterrupted across all platforms
-{{< /timelineItem >}}
-
-{{< timelineItem icon="warning" header="БОЕВОЕ КРЕЩЕНИЕ — Иноагент 2022" badge="Октябрь 2022" subheader="Пророческая архитектура оправдана" >}}
+{{< timelineItemEnhanced icon="warning" header="БОЕВОЕ КРЕЩЕНИЕ — Иноагент 2022" badge="Октябрь 2022" subheader="Пророческая архитектура оправдана" evidence="validation" >}}
 Оксимирон получает статус «иноагента». Превентивная броня 2015 года внезапно обретает survival-critical значение. То, что казалось перестраховкой — оказывается военной инженерией. Artist интуитивно почувствовал угрозу за 7 лет до её material manifestation.
 
 **VALIDATED PREDICTION:** Restrictive environment approach confirmed. Cultural armor architecture successful.
+{{< /timelineItemEnhanced >}}
 
-**Доказательства:**
-- Foreign agent registry: October 2022
-- Content restrictions escalation
-- «Организация» survival: полный доступ maintained
-{{< /timelineItem >}}
-
-{{< timelineItem icon="chart-line" header="РЕПЛИКАЦИЯ БРОНИ — Культурное наследие" badge="2022-2026" subheader="Template для новой school" >}}
+{{< timelineItemEnhanced icon="chart-line" header="РЕПЛИКАЦИЯ БРОНИ — Культурное наследие" badge="2022-2026" subheader="Template для новой school" evidence="replication" >}}
 Стратегия «Организации» становится **шаблоном выживания** для intellectual hip-hop. Молодые рэперы копируют не только поэтические приёмы — они копируют **архитектуру адаптации**. Platform autocensure становится нормой. Cultural armor engineering распространяется.
 
 **ARMOR MULTIPLICATION:** Strategy template successfully replicated across new generation artists.
-
-**Доказательства:**
-- Citation analysis: наиболее influential track template
-- New generation patterns: preventive title adaptation standard practice
-- Academic studies: «Организация» как case study культурной resilience
-- Long-term impact assessment: [11 лет культурной детонации](#одиннадцать-лет-детонации-культурная-взрывная-волна)
-{{< /timelineItem >}}
+{{< /timelineItemEnhanced >}}
 
 {{< /timeline >}}
 

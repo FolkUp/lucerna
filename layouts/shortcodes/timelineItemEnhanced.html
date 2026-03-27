@@ -1,0 +1,400 @@
+{{/* Enhanced Timeline Item — LCRN-129 Phase 1 — Simplified Version */}}
+{{/* Works with manual params + basic evidence linking */}}
+
+{{ $icon := .Get "icon" | default "check" }}
+{{ $md := .Get "md" | default false }}
+{{ $header := .Get "header" }}
+{{ $badge := .Get "badge" }}
+{{ $subheader := .Get "subheader" }}
+{{ $evidenceId := .Get "evidence" }}
+{{ $layerRef := .Get "layer" }}
+
+<li class="timeline-item-enhanced" {{ if $layerRef }}data-layer="{{ $layerRef }}"{{ end }}>
+  <div class="flex">
+    <!-- Timeline Icon -->
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5 timeline-icon">
+      {{ partial "icon" $icon }}
+    </div>
+
+    <!-- Timeline Content -->
+    <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words timeline-content">
+      <!-- Header and Badge -->
+      <div class="flex justify-between items-start">
+        {{ if $header }}
+          <h2 class="mt-0 timeline-event-header">{{ $header }}</h2>
+        {{ end }}
+        {{ if $badge }}
+          <div class="timeline-badge">
+            {{ partial "badge" $badge }}
+          </div>
+        {{ end }}
+      </div>
+
+      <!-- Subheader -->
+      {{ if $subheader }}
+        <h4 class="mt-0 mb-4 timeline-event-subheader">{{ $subheader }}</h4>
+      {{ end }}
+
+      <!-- Main Content -->
+      <div class="mb-6 timeline-event-content">
+        {{ if $md }}
+          {{- .Inner | markdownify -}}
+        {{ else }}
+          {{- .Inner -}}
+        {{ end }}
+      </div>
+
+      <!-- Evidence Section (if layer reference or evidence ID provided) -->
+      {{ if or $layerRef $evidenceId }}
+        <div class="evidence-section">
+          <button class="evidence-toggle"
+                  data-target="evidence-{{ or $evidenceId $layerRef (print "item-" $header) }}"
+                  aria-expanded="false"
+                  aria-controls="evidence-{{ or $evidenceId $layerRef (print "item-" $header) }}"
+                  type="button">
+            <span class="evidence-toggle-icon">📄</span>
+            <span class="evidence-toggle-text">Evidence & Analysis</span>
+            <span class="evidence-count">(3-5)</span>
+          </button>
+
+          <div class="evidence-content"
+               id="evidence-{{ or $evidenceId $layerRef (print "item-" $header) }}"
+               aria-hidden="true"
+               style="display: none;">
+
+            <!-- Static Evidence for LCRN-129 Phase 1 -->
+            {{ if eq $layerRef "literature-foundation" }}
+            <div class="evidence-list-section">
+              <h5>Доказательства:</h5>
+              <ul class="evidence-list">
+                <li class="evidence-item" data-domain="literary_analysis" data-language="metrical_structure">
+                  <strong>Literary Analysis:</strong>
+                  <span class="evidence-text">Dolnik with anacrusis confirmed — three-foot meter from Blok's "Twelve" (1918)</span>
+                </li>
+                <li class="evidence-item" data-domain="literary_criticism" data-language="thematic_alignment">
+                  <strong>Literary Criticism:</strong>
+                  <span class="evidence-text">Underground Man narrative, Silver Age poetry connections</span>
+                </li>
+                <li class="evidence-item" data-domain="academia" data-language="institutional_validation">
+                  <strong>Academia:</strong>
+                  <span class="evidence-text">Integration into university hip-hop studies curricula</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mechanism-details">
+              <h6>Защитный механизм:</h6>
+              <p><strong>Описание:</strong> Embedding poetic heritage as cultural protection. Dolnik meter creates rhythmic instability that carries societal tension.</p>
+              <p><strong>Стратегия:</strong> Literary genealogy (Blok → Brodsky → Oxymiron) makes content inseparable from cultural canon. Censorship cannot target what belongs to canon.</p>
+            </div>
+
+            <div class="key-insight">
+              <h6>Ключевое понимание:</h6>
+              <blockquote>Literary armor works by making content too canonically significant to suppress without cultural backlash.</blockquote>
+            </div>
+
+            <div class="layer-quote">
+              <h6>Ключевая цитата:</h6>
+              <blockquote>Full phrase intact in lyrics. Three-foot dolnik carries ideological weight subconsciously.</blockquote>
+            </div>
+            {{ end }}
+
+            {{ if eq $layerRef "visual-encoding" }}
+            <div class="evidence-list-section">
+              <h5>Доказательства:</h5>
+              <ul class="evidence-list">
+                <li class="evidence-item" data-domain="cinematography" data-language="visual_semiotics">
+                  <strong>Cinematography:</strong>
+                  <span class="evidence-text">Minimalist architecture as metaphor for restricted communication</span>
+                  <span class="evidence-meta"> (Director: Tim ROHO)</span>
+                </li>
+                <li class="evidence-item" data-domain="film_studies" data-language="pattern_recognition">
+                  <strong>Film Studies:</strong>
+                  <span class="evidence-text">Recurring barrier metaphor in Tim ROHO's other work</span>
+                </li>
+                <li class="evidence-item" data-domain="integrated_design" data-language="cross_layer_analysis">
+                  <strong>Integrated Design:</strong>
+                  <span class="evidence-text">Visual architecture predicts title modification in Layer 3</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mechanism-details">
+              <h6>Защитный механизм:</h6>
+              <p><strong>Описание:</strong> Visual metaphor infrastructure. Glass walls, light through barriers, transparent yet unnamed censorship.</p>
+              <p><strong>Стратегия:</strong> Message passes through armor of form. Visual code provides alternative reading path. Packaging absorbs regulatory impact.</p>
+            </div>
+
+            <div class="visual-elements">
+              <h6>Визуальные элементы:</h6>
+              <ul>
+                <li><strong>Glass walls:</strong> Transparent boundaries. Visible but unnamed.</li>
+                <li><strong>Light penetration:</strong> Message travels through obstacles.</li>
+                <li><strong>Reflection meta:</strong> Censorship becomes visible art, not invisible suppression.</li>
+              </ul>
+            </div>
+
+            <div class="key-insight">
+              <h6>Ключевое понимание:</h6>
+              <blockquote>Visual encoding transforms regulatory constraint into artistic material. Form becomes resistance.</blockquote>
+            </div>
+            {{ end }}
+
+            {{ if eq $layerRef "title-surgery" }}
+            <div class="evidence-list-section">
+              <h5>Доказательства:</h5>
+              <ul class="evidence-list">
+                <li class="evidence-item" data-domain="musicology" data-language="lyrical_analysis">
+                  <strong>Musicology:</strong>
+                  <span class="evidence-text">Full phrase 'forbidden organization' intact in song text</span>
+                </li>
+                <li class="evidence-item" data-domain="content_distribution" data-language="platform_policy_compliance">
+                  <strong>Content Distribution:</strong>
+                  <span class="evidence-text">Single 'safe' title across YouTube/Spotify/VK</span>
+                </li>
+                <li class="evidence-item" data-domain="psychology" data-language="cognitive_science">
+                  <strong>Psychology:</strong>
+                  <span class="evidence-text">Reader completion effect stronger than explicit statement</span>
+                  <span class="evidence-citation"> — Gestalt principle of closure</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mechanism-details">
+              <h6>Защитный механизм:</h6>
+              <p><strong>Описание:</strong> Semantic compression. Removal of adjective 'forbidden' from title. Word disappears but remains in content.</p>
+              <p><strong>Стратегия:</strong> Missing word creates reader agency. Universal threat ('Organization') stronger than specific accusation ('Forbidden Organization'). Bypasses automated moderation.</p>
+            </div>
+
+            <div class="tactical-elements">
+              <h6>Тактические элементы:</h6>
+              <ul>
+                <li><strong>Word removal:</strong> Forbidden → Organization</li>
+                <li><strong>Semantic shift:</strong> Specific accusation → Universal threat</li>
+                <li><strong>Agency transfer:</strong> Platform decides what's safe → Reader completes meaning</li>
+              </ul>
+            </div>
+
+            <div class="key-insight">
+              <h6>Ключевое понимание:</h6>
+              <blockquote>Semantic deletion empowers reader and disarms automation. Meaning survives suppression through incompleteness.</blockquote>
+            </div>
+            {{ end }}
+
+            <!-- Default evidence for events without specific layer -->
+            {{ if and (not $layerRef) $evidenceId }}
+            <div class="evidence-list-section">
+              <h5>Доказательства:</h5>
+              <ul class="evidence-list">
+                <li class="evidence-item" data-domain="analysis" data-language="investigation">
+                  <strong>Investigation Analysis:</strong>
+                  <span class="evidence-text">Field testing data and timeline verification</span>
+                </li>
+                <li class="evidence-item" data-domain="documentation" data-language="historical_record">
+                  <strong>Documentation:</strong>
+                  <span class="evidence-text">Platform policy evolution and content survival analysis</span>
+                </li>
+              </ul>
+            </div>
+            {{ end }}
+
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</li>
+
+<style>
+/* Enhanced Timeline Item Styles */
+.timeline-item-enhanced .evidence-section {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+  padding-top: 1rem;
+}
+
+.evidence-toggle {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1px solid var(--primary-color, #60a5fa);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color, #60a5fa);
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: left;
+  min-height: 44px; /* WCAG touch target */
+}
+
+.evidence-toggle:hover {
+  background-color: var(--primary-color-light, rgba(96, 165, 250, 0.1));
+  transform: translateY(-1px);
+}
+
+.evidence-toggle:focus {
+  outline: 2px solid var(--primary-color, #60a5fa);
+  outline-offset: 2px;
+}
+
+.evidence-toggle-icon {
+  margin-right: 0.5rem;
+  font-size: 1.1em;
+}
+
+.evidence-count {
+  margin-left: auto;
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.evidence-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-secondary, #f8fafc);
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color, #60a5fa);
+}
+
+.evidence-content h5, .evidence-content h6 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color, #60a5fa);
+}
+
+.evidence-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.evidence-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-light, #f1f5f9);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.evidence-item:last-child {
+  border-bottom: none;
+}
+
+.evidence-text {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.evidence-meta, .evidence-citation {
+  font-size: 0.85em;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.mechanism-details,
+.key-insight,
+.layer-quote,
+.visual-elements,
+.tactical-elements {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-accent, rgba(96, 165, 250, 0.05));
+  border-radius: 6px;
+}
+
+.layer-quote blockquote,
+.key-insight blockquote {
+  margin: 0.5rem 0;
+  padding: 0;
+  font-style: italic;
+  border: none;
+  background: none;
+  font-size: 1.05em;
+  color: var(--text-primary);
+}
+
+.quote-significance {
+  margin-top: 0.5rem;
+  font-size: 0.9em;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.visual-elements ul,
+.tactical-elements ul {
+  margin: 0.5rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.visual-elements li,
+.tactical-elements li {
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .evidence-content {
+    background: var(--bg-secondary-dark, #1f2937);
+    color: var(--text-primary-dark, #f9fafb);
+  }
+
+  .mechanism-details,
+  .key-insight,
+  .layer-quote,
+  .visual-elements,
+  .tactical-elements {
+    background: var(--bg-accent-dark, rgba(147, 197, 253, 0.1));
+  }
+
+  .evidence-toggle {
+    color: var(--primary-light, #93c5fd);
+    border-color: var(--primary-light, #93c5fd);
+  }
+
+  .evidence-toggle:hover {
+    background-color: rgba(147, 197, 253, 0.1);
+  }
+
+  .evidence-content h5,
+  .evidence-content h6 {
+    color: var(--primary-light, #93c5fd);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .evidence-toggle {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .evidence-content {
+    padding: 0.8rem;
+  }
+
+  .mechanism-details,
+  .key-insight,
+  .layer-quote,
+  .visual-elements,
+  .tactical-elements {
+    padding: 0.8rem;
+  }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .evidence-toggle {
+    transition: none;
+    transform: none;
+  }
+
+  .evidence-toggle:hover {
+    transform: none;
+  }
+}
+</style>

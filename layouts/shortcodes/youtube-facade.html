@@ -1,0 +1,243 @@
+{{/*
+YouTube facade shortcode with click-to-load pattern
+Usage: {{< youtube-facade id="VIDEO_ID" title="Video title" >}}
+
+PERFORMANCE: Prevents YouTube iframe from loading until user interaction
+LCP SAFE: No blocking external resources until user clicks
+WCAG 2.1 AA: Keyboard navigation, screen reader support, focus management
+*/}}
+{{- $id := .Get "id" | default "" -}}
+{{- $title := .Get "title" | default "YouTube Video" -}}
+{{- $start := .Get "start" | default "" -}}
+
+{{- if not $id -}}
+  <div class="error-message" style="color: #dc2626; padding: 1rem; border: 1px solid #fca5a5; border-radius: 0.375rem;">
+    <p><strong>Error:</strong> youtube-facade shortcode requires 'id' parameter</p>
+  </div>
+{{- else -}}
+
+<div class="youtube-facade" data-video-id="{{ $id }}" {{ if $start }}data-start="{{ $start }}"{{ end }}>
+  <div class="youtube-facade__thumbnail-container">
+    <img
+      src="https://img.youtube.com/vi/{{ $id }}/maxresdefault.jpg"
+      alt="Видео: {{ $title }}"
+      class="youtube-facade__thumbnail"
+      loading="lazy"
+    >
+    <button
+      class="youtube-facade__play-button"
+      aria-label="Запустить видео: {{ $title }}"
+      data-title="{{ $title }}"
+    >
+      <svg
+        class="youtube-facade__play-icon"
+        viewBox="0 0 68 48"
+        aria-hidden="true"
+      >
+        <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.63-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#ff0000"/>
+        <path d="M45 24L27 14v20" fill="#fff"/>
+      </svg>
+      <span class="sr-only">Нажмите для загрузки и воспроизведения видео с YouTube</span>
+    </button>
+  </div>
+  <div class="youtube-facade__info">
+    <h3 class="youtube-facade__title">{{ $title }}</h3>
+    <p class="youtube-facade__notice">
+      Нажмите для загрузки видео с YouTube. При нажатии данные будут переданы YouTube.
+    </p>
+  </div>
+</div>
+
+<style>
+.youtube-facade {
+  position: relative;
+  max-width: 100%;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.youtube-facade__thumbnail-container {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+}
+
+.youtube-facade__thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youtube-facade__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 68px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-facade__play-button:hover,
+.youtube-facade__play-button:focus {
+  background: rgba(255, 0, 0, 0.9);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.youtube-facade__play-icon {
+  width: 68px;
+  height: 48px;
+}
+
+.youtube-facade__info {
+  padding: 1rem;
+  background: var(--color-neutral-50);
+  color: var(--color-neutral-900);
+}
+
+.youtube-facade__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.youtube-facade__notice {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+  line-height: 1.4;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .youtube-facade__info {
+    background: var(--color-neutral-800);
+    color: var(--color-neutral-100);
+  }
+
+  .youtube-facade__notice {
+    color: var(--color-neutral-400);
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .youtube-facade__play-button {
+    background: #000;
+    border: 2px solid #fff;
+  }
+
+  .youtube-facade__play-button:hover,
+  .youtube-facade__play-button:focus {
+    background: #fff;
+    color: #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .youtube-facade__play-button {
+    transition: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .youtube-facade__play-button {
+    width: 56px;
+    height: 40px;
+  }
+
+  .youtube-facade__play-icon {
+    width: 56px;
+    height: 40px;
+  }
+
+  .youtube-facade__info {
+    padding: 0.75rem;
+  }
+
+  .youtube-facade__title {
+    font-size: 1rem;
+  }
+
+  .youtube-facade__notice {
+    font-size: 0.8125rem;
+  }
+}
+</style>
+
+<script>
+(function() {
+  'use strict';
+
+  function initYouTubeFacade() {
+    const facades = document.querySelectorAll('.youtube-facade');
+
+    facades.forEach(facade => {
+      const playButton = facade.querySelector('.youtube-facade__play-button');
+      const thumbnailContainer = facade.querySelector('.youtube-facade__thumbnail-container');
+
+      function loadYouTubeVideo() {
+        const videoId = facade.dataset.videoId;
+        const start = facade.dataset.start;
+        const title = playButton.dataset.title;
+
+        let embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        if (start) {
+          embedUrl += `&start=${start}`;
+        }
+
+        const iframe = document.createElement('iframe');
+        iframe.src = embedUrl;
+        iframe.title = title;
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;';
+
+        // Replace thumbnail with iframe
+        thumbnailContainer.style.position = 'relative';
+        thumbnailContainer.innerHTML = '';
+        thumbnailContainer.appendChild(iframe);
+
+        // Focus iframe for accessibility
+        iframe.focus();
+      }
+
+      // Click handler
+      playButton.addEventListener('click', loadYouTubeVideo);
+      thumbnailContainer.addEventListener('click', loadYouTubeVideo);
+
+      // Keyboard support
+      playButton.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          loadYouTubeVideo();
+        }
+      });
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initYouTubeFacade);
+  } else {
+    initYouTubeFacade();
+  }
+})();
+</script>
+
+{{- end -}}

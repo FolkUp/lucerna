@@ -1,0 +1,422 @@
+{{/*
+Audio preview shortcode with placeholder UI (no actual streaming)
+Usage: {{< audio-preview platform="spotify" title="Song Title" artist="Artist Name" album="Album" external_url="https://..." >}}
+
+PERFORMANCE: Zero external resources, pure placeholder UI
+LCP SAFE: No network requests, only static elements
+COPYRIGHT SAFE: No actual audio playback, directs to official platforms
+WCAG 2.1 AA: Keyboard navigation, screen reader support
+*/}}
+{{- $platform := .Get "platform" | default "spotify" -}}
+{{- $title := .Get "title" | default "Untitled Track" -}}
+{{- $artist := .Get "artist" | default "Unknown Artist" -}}
+{{- $album := .Get "album" | default "" -}}
+{{- $external_url := .Get "external_url" | default "" -}}
+{{- $duration := .Get "duration" | default "0:00" -}}
+
+{{- if not $external_url -}}
+  <div class="error-message" style="color: #dc2626; padding: 1rem; border: 1px solid #fca5a5; border-radius: 0.375rem;">
+    <p><strong>Error:</strong> audio-preview shortcode requires 'external_url' parameter</p>
+  </div>
+{{- else -}}
+
+{{- $platformConfig := dict
+  "spotify" (dict "name" "Spotify" "color" "#1DB954" "icon" "spotify")
+  "apple" (dict "name" "Apple Music" "color" "#FA243C" "icon" "apple")
+  "yandex" (dict "name" "Яндекс.Музыка" "color" "#FFDB4D" "icon" "yandex")
+  "youtube" (dict "name" "YouTube Music" "color" "#FF0000" "icon" "youtube")
+  "bandcamp" (dict "name" "Bandcamp" "color" "#629AA0" "icon" "bandcamp")
+-}}
+
+{{- $config := index $platformConfig $platform -}}
+{{- if not $config -}}
+  {{- $config = dict "name" "Music Platform" "color" "#6B7280" "icon" "music" -}}
+{{- end -}}
+
+<div class="audio-preview" data-platform="{{ $platform }}">
+  <div class="audio-preview__header">
+    <div class="audio-preview__platform">
+      <span class="audio-preview__platform-icon audio-preview__platform-icon--{{ $config.icon }}"></span>
+      <span class="audio-preview__platform-name">{{ $config.name }}</span>
+    </div>
+    <button
+      class="audio-preview__external-link"
+      onclick="window.open('{{ $external_url }}', '_blank', 'noopener,noreferrer')"
+      aria-label="Открыть в {{ $config.name }}"
+    >
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="audio-preview__content">
+    <div class="audio-preview__artwork">
+      <div class="audio-preview__artwork-placeholder">
+        <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="audio-preview__meta">
+      <h3 class="audio-preview__title">{{ $title }}</h3>
+      <p class="audio-preview__artist">{{ $artist }}</p>
+      {{ if $album }}
+        <p class="audio-preview__album">{{ $album }}</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="audio-preview__controls">
+    <div class="audio-preview__control-buttons">
+      <button
+        class="audio-preview__play-button"
+        aria-label="Предварительный просмотр недоступен"
+        disabled
+        title="Перейдите на {{ $config.name }} для прослушивания"
+      >
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </button>
+
+      <div class="audio-preview__progress">
+        <div class="audio-preview__progress-bar">
+          <div class="audio-preview__progress-fill" style="width: 0%"></div>
+        </div>
+        <div class="audio-preview__time">
+          <span class="audio-preview__current-time">0:00</span>
+          <span class="audio-preview__duration">{{ $duration }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-preview__notice">
+      <p>Предварительный просмотр недоступен. <a href="{{ $external_url }}" target="_blank" rel="noopener noreferrer">Слушать на {{ $config.name }}</a></p>
+    </div>
+  </div>
+</div>
+
+<style>
+.audio-preview {
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 8px;
+  background: var(--color-neutral-50);
+  overflow: hidden;
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+.audio-preview__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--color-neutral-100);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.audio-preview__platform {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.audio-preview__platform-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.audio-preview__platform-icon--spotify { background-color: #1DB954; }
+.audio-preview__platform-icon--apple { background-color: #FA243C; }
+.audio-preview__platform-icon--yandex { background-color: #FFDB4D; }
+.audio-preview__platform-icon--youtube { background-color: #FF0000; }
+.audio-preview__platform-icon--bandcamp { background-color: #629AA0; }
+.audio-preview__platform-icon--music { background-color: #6B7280; }
+
+.audio-preview__platform-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-neutral-700);
+}
+
+.audio-preview__external-link {
+  background: none;
+  border: none;
+  color: var(--color-neutral-600);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.audio-preview__external-link:hover,
+.audio-preview__external-link:focus {
+  color: var(--color-neutral-900);
+  background: var(--color-neutral-200);
+  outline: 2px solid var(--color-blue-500);
+  outline-offset: 1px;
+}
+
+.audio-preview__content {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.audio-preview__artwork {
+  flex-shrink: 0;
+}
+
+.audio-preview__artwork-placeholder {
+  width: 64px;
+  height: 64px;
+  background: var(--color-neutral-200);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-500);
+}
+
+.audio-preview__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.audio-preview__title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-neutral-900);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.audio-preview__artist {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.audio-preview__album {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--color-neutral-500);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.audio-preview__controls {
+  padding: 1rem;
+  border-top: 1px solid var(--color-neutral-200);
+  background: var(--color-neutral-25);
+}
+
+.audio-preview__control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.audio-preview__play-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-neutral-300);
+  color: var(--color-neutral-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  flex-shrink: 0;
+}
+
+.audio-preview__progress {
+  flex: 1;
+  min-width: 0;
+}
+
+.audio-preview__progress-bar {
+  height: 4px;
+  background: var(--color-neutral-200);
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.audio-preview__progress-fill {
+  height: 100%;
+  background: var(--color-neutral-400);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.audio-preview__time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-neutral-500);
+}
+
+.audio-preview__notice {
+  margin: 0;
+}
+
+.audio-preview__notice p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--color-neutral-600);
+  text-align: center;
+}
+
+.audio-preview__notice a {
+  color: var(--color-blue-600);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.audio-preview__notice a:hover,
+.audio-preview__notice a:focus {
+  color: var(--color-blue-800);
+  text-decoration: underline;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .audio-preview {
+    border-color: var(--color-neutral-700);
+    background: var(--color-neutral-800);
+  }
+
+  .audio-preview__header {
+    background: var(--color-neutral-700);
+    border-bottom-color: var(--color-neutral-600);
+  }
+
+  .audio-preview__platform-name {
+    color: var(--color-neutral-300);
+  }
+
+  .audio-preview__external-link {
+    color: var(--color-neutral-400);
+  }
+
+  .audio-preview__external-link:hover,
+  .audio-preview__external-link:focus {
+    color: var(--color-neutral-100);
+    background: var(--color-neutral-600);
+  }
+
+  .audio-preview__artwork-placeholder {
+    background: var(--color-neutral-700);
+    color: var(--color-neutral-400);
+  }
+
+  .audio-preview__title {
+    color: var(--color-neutral-100);
+  }
+
+  .audio-preview__artist {
+    color: var(--color-neutral-400);
+  }
+
+  .audio-preview__album {
+    color: var(--color-neutral-500);
+  }
+
+  .audio-preview__controls {
+    background: var(--color-neutral-750);
+    border-top-color: var(--color-neutral-600);
+  }
+
+  .audio-preview__play-button {
+    background: var(--color-neutral-600);
+    color: var(--color-neutral-400);
+  }
+
+  .audio-preview__progress-bar {
+    background: var(--color-neutral-600);
+  }
+
+  .audio-preview__progress-fill {
+    background: var(--color-neutral-500);
+  }
+
+  .audio-preview__time {
+    color: var(--color-neutral-400);
+  }
+
+  .audio-preview__notice p {
+    color: var(--color-neutral-400);
+  }
+
+  .audio-preview__notice a {
+    color: var(--color-blue-400);
+  }
+
+  .audio-preview__notice a:hover,
+  .audio-preview__notice a:focus {
+    color: var(--color-blue-300);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .audio-preview__content {
+    padding: 0.75rem;
+  }
+
+  .audio-preview__artwork-placeholder {
+    width: 48px;
+    height: 48px;
+  }
+
+  .audio-preview__title {
+    font-size: 1rem;
+  }
+
+  .audio-preview__control-buttons {
+    margin-bottom: 0.5rem;
+  }
+
+  .audio-preview__play-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .audio-preview {
+    border: 2px solid currentColor;
+  }
+
+  .audio-preview__play-button {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .audio-preview__progress-fill,
+  .audio-preview__external-link {
+    transition: none;
+  }
+}
+</style>
+
+{{- end -}}
