@@ -1,0 +1,319 @@
+{{/* Data-Driven Timeline — LCRN-129 Phase 1 */}}
+{{/* Reads from data/oxymiron-timeline.yaml */}}
+
+{{ $timelineData := .Site.Data.oxymiron_timeline.timeline }}
+{{ $events := $timelineData.events }}
+
+<div class="timeline-container" role="region" aria-label="{{ $timelineData.title }}">
+    <!-- Timeline Header -->
+    <div class="timeline-header">
+        <h3 class="timeline-title">{{ $timelineData.title }}</h3>
+        <p class="timeline-description">{{ $timelineData.description }}</p>
+    </div>
+
+    <!-- Timeline Events List -->
+    <ol class="border-s-2 border-primary-500 dark:border-primary-300 list-none timeline-events">
+        {{ range $eventKey, $event := $events }}
+        <li class="timeline-event" data-event-id="{{ $event.id }}" data-layer="{{ $event.layer_ref }}">
+            <div class="flex">
+                <!-- Timeline Icon -->
+                <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full ltr:-ml-12 rtl:-mr-[79px] mt-5 timeline-icon">
+                    {{ partial "icon" $event.icon }}
+                </div>
+
+                <!-- Event Content -->
+                <div class="block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words timeline-content">
+                    <!-- Event Header -->
+                    <div class="flex justify-between items-start">
+                        <h2 class="mt-0 timeline-event-header">{{ $event.header }}</h2>
+                        <div class="timeline-badge">
+                            {{ partial "badge" $event.badge }}
+                        </div>
+                    </div>
+
+                    <!-- Event Subheader -->
+                    {{ if $event.subheader }}
+                    <h4 class="mt-0 mb-4 timeline-event-subheader">{{ $event.subheader }}</h4>
+                    {{ end }}
+
+                    <!-- Event Content Summary -->
+                    <div class="mb-6 timeline-event-content">
+                        {{ $event.content_summary | markdownify }}
+                    </div>
+
+                    <!-- Evidence Links -->
+                    {{ if $event.layer_ref }}
+                        {{ $layer := index $timelineData.layers $event.layer_ref }}
+                        {{ if $layer }}
+                        <div class="evidence-section">
+                            <button class="evidence-toggle"
+                                    data-target="evidence-{{ $event.id }}"
+                                    aria-expanded="false"
+                                    aria-controls="evidence-{{ $event.id }}">
+                                <span class="evidence-toggle-icon">📄</span>
+                                <span class="evidence-toggle-text">Evidence & Sources</span>
+                                <span class="evidence-count">({{ len $layer.evidence }})</span>
+                            </button>
+
+                            <div class="evidence-content"
+                                 id="evidence-{{ $event.id }}"
+                                 aria-hidden="true"
+                                 style="display: none;">
+                                <h5>Доказательства:</h5>
+                                <ul class="evidence-list">
+                                    {{ range $layer.evidence }}
+                                    <li class="evidence-item" data-domain="{{ .domain }}" data-language="{{ .language }}">
+                                        <strong>{{ .domain }}:</strong>
+                                        <span class="evidence-text">
+                                            {{ range $key, $value := . }}
+                                                {{ if not (in (slice "domain" "language" "director" "citation") $key) }}
+                                                    {{ $value }}
+                                                {{ end }}
+                                            {{ end }}
+                                        </span>
+                                        {{ if .director }}
+                                        <span class="evidence-meta"> (Director: {{ .director }})</span>
+                                        {{ end }}
+                                        {{ if .citation }}
+                                        <span class="evidence-citation"> — {{ .citation }}</span>
+                                        {{ end }}
+                                    </li>
+                                    {{ end }}
+                                </ul>
+
+                                {{ if $layer.mechanism }}
+                                <div class="mechanism-details">
+                                    <h6>Защитный механизм:</h6>
+                                    <p><strong>Описание:</strong> {{ $layer.mechanism.description }}</p>
+                                    <p><strong>Стратегия:</strong> {{ $layer.mechanism.strategy }}</p>
+                                </div>
+                                {{ end }}
+
+                                {{ if $layer.key_insight }}
+                                <div class="key-insight">
+                                    <h6>Ключевое понимание:</h6>
+                                    <blockquote>{{ $layer.key_insight }}</blockquote>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </li>
+        {{ end }}
+    </ol>
+</div>
+
+<style>
+/* Timeline Container */
+.timeline-container {
+    margin: 2rem 0;
+}
+
+.timeline-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.timeline-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.timeline-description {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Evidence Section */
+.evidence-section {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+    padding-top: 1rem;
+}
+
+.evidence-toggle {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 1px solid var(--primary-color, #60a5fa);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color, #60a5fa);
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+    min-height: 44px; /* WCAG touch target */
+}
+
+.evidence-toggle:hover {
+    background-color: var(--primary-color-light, rgba(96, 165, 250, 0.1));
+    transform: translateY(-1px);
+}
+
+.evidence-toggle:focus {
+    outline: 2px solid var(--primary-color, #60a5fa);
+    outline-offset: 2px;
+}
+
+.evidence-toggle-icon {
+    margin-right: 0.5rem;
+    font-size: 1.1em;
+}
+
+.evidence-count {
+    margin-left: auto;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.evidence-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-secondary, #f8fafc);
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color, #60a5fa);
+}
+
+.evidence-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.evidence-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light, #f1f5f9);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.evidence-item:last-child {
+    border-bottom: none;
+}
+
+.evidence-text {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.evidence-meta, .evidence-citation {
+    font-size: 0.85em;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.mechanism-details, .key-insight {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-accent, rgba(96, 165, 250, 0.05));
+    border-radius: 6px;
+}
+
+.mechanism-details h6, .key-insight h6 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color, #60a5fa);
+}
+
+.key-insight blockquote {
+    margin: 0.5rem 0;
+    padding: 0;
+    font-style: italic;
+    border: none;
+    background: none;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .evidence-content {
+        background: var(--bg-secondary-dark, #1f2937);
+        color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .mechanism-details, .key-insight {
+        background: var(--bg-accent-dark, rgba(147, 197, 253, 0.1));
+    }
+
+    .evidence-toggle {
+        color: var(--primary-light, #93c5fd);
+        border-color: var(--primary-light, #93c5fd);
+    }
+
+    .evidence-toggle:hover {
+        background-color: rgba(147, 197, 253, 0.1);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .timeline-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .evidence-toggle {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .evidence-content {
+        padding: 0.8rem;
+    }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .evidence-toggle {
+        transition: none;
+        transform: none;
+    }
+
+    .evidence-toggle:hover {
+        transform: none;
+    }
+}
+</style>
+
+<script>
+// Evidence Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const toggles = document.querySelectorAll('.evidence-toggle');
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const target = document.getElementById(this.dataset.target);
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            // Toggle visibility
+            if (isExpanded) {
+                target.style.display = 'none';
+                target.setAttribute('aria-hidden', 'true');
+                this.setAttribute('aria-expanded', 'false');
+            } else {
+                target.style.display = 'block';
+                target.setAttribute('aria-hidden', 'false');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Keyboard support
+        toggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+});
+</script>

@@ -1,0 +1,179 @@
+{{/*
+Documentation shortcode for multimedia facade usage
+Usage: {{< multimedia-docs >}}
+
+Displays usage examples for youtube-facade and audio-preview shortcodes
+*/}}
+<div class="multimedia-docs">
+  <h2>🎬 Multimedia Facade Patterns</h2>
+
+  <div class="docs-section">
+    <h3>YouTube Facade</h3>
+    <p>Click-to-load pattern for YouTube videos. Prevents iframe loading until user interaction.</p>
+
+    <div class="code-example">
+      <h4>Usage:</h4>
+      <pre><code>{{ `{{< youtube-facade id="VIDEO_ID" title="Video Title" >}}
+{{< youtube-facade id="VIDEO_ID" title="Video Title" start="90" >}}` }}</code></pre>
+    </div>
+
+    <div class="parameters">
+      <h4>Parameters:</h4>
+      <ul>
+        <li><code>id</code> (required) - YouTube video ID</li>
+        <li><code>title</code> (optional) - Video title for accessibility</li>
+        <li><code>start</code> (optional) - Start time in seconds</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="docs-section">
+    <h3>Audio Preview</h3>
+    <p>Placeholder UI for music platforms. Shows track info without actual streaming.</p>
+
+    <div class="code-example">
+      <h4>Usage:</h4>
+      <pre><code>{{ `{{< audio-preview
+  platform="spotify"
+  title="Song Title"
+  artist="Artist Name"
+  album="Album Name"
+  duration="3:45"
+  external_url="https://open.spotify.com/track/..."
+>}}` }}</code></pre>
+    </div>
+
+    <div class="parameters">
+      <h4>Parameters:</h4>
+      <ul>
+        <li><code>platform</code> - spotify, apple, yandex, youtube, bandcamp</li>
+        <li><code>title</code> - Track title</li>
+        <li><code>artist</code> - Artist name</li>
+        <li><code>album</code> (optional) - Album name</li>
+        <li><code>duration</code> (optional) - Track duration</li>
+        <li><code>external_url</code> (required) - Link to official platform</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="performance-note">
+    <h3>⚡ Performance Benefits</h3>
+    <ul>
+      <li><strong>LCP Safe:</strong> No blocking external resources</li>
+      <li><strong>Copyright Safe:</strong> No actual streaming, only links</li>
+      <li><strong>WCAG 2.1 AA:</strong> Full accessibility support</li>
+      <li><strong>Mobile Optimized:</strong> Touch-friendly controls</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.multimedia-docs {
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: var(--color-neutral-25);
+}
+
+.docs-section {
+  margin-bottom: 2rem;
+}
+
+.docs-section h3 {
+  color: var(--color-blue-700);
+  margin-bottom: 0.5rem;
+}
+
+.code-example {
+  margin: 1rem 0;
+}
+
+.code-example pre {
+  background: var(--color-neutral-100);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  border-left: 4px solid var(--color-blue-500);
+}
+
+.parameters ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.parameters li {
+  margin-bottom: 0.25rem;
+}
+
+.parameters code {
+  background: var(--color-neutral-100);
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+.performance-note {
+  background: var(--color-green-50);
+  border: 1px solid var(--color-green-200);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.performance-note h3 {
+  color: var(--color-green-800);
+  margin-bottom: 0.75rem;
+}
+
+.performance-note ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.performance-note li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.performance-note li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green-600);
+  font-weight: bold;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .multimedia-docs {
+    background: var(--color-neutral-800);
+    border-color: var(--color-neutral-700);
+  }
+
+  .docs-section h3 {
+    color: var(--color-blue-400);
+  }
+
+  .code-example pre {
+    background: var(--color-neutral-700);
+  }
+
+  .parameters code {
+    background: var(--color-neutral-700);
+  }
+
+  .performance-note {
+    background: var(--color-green-900);
+    border-color: var(--color-green-700);
+  }
+
+  .performance-note h3 {
+    color: var(--color-green-300);
+  }
+
+  .performance-note li::before {
+    color: var(--color-green-400);
+  }
+}
+</style>

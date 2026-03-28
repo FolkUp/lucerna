@@ -1,0 +1,42 @@
+{{/* Timeline Container — LCRN-129 Phase 1 */}}
+{{/* Compatible with timelineItemEnhanced shortcode */}}
+
+<div class="timeline-container" role="region" aria-label="Timeline">
+  <!-- Timeline Events List -->
+  <ol class="border-s-2 border-primary-500 dark:border-primary-300 list-none timeline-events">
+    {{- .Inner -}}
+  </ol>
+</div>
+
+<script>
+// Evidence Toggle Functionality for timelineItemEnhanced shortcodes
+document.addEventListener('DOMContentLoaded', function() {
+    const toggles = document.querySelectorAll('.evidence-toggle');
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const target = document.getElementById(this.dataset.target);
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            // Toggle visibility
+            if (isExpanded) {
+                target.style.display = 'none';
+                target.setAttribute('aria-hidden', 'true');
+                this.setAttribute('aria-expanded', 'false');
+            } else {
+                target.style.display = 'block';
+                target.setAttribute('aria-hidden', 'false');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Keyboard support
+        toggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+});
+</script>
