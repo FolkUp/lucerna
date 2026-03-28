@@ -1,0 +1,525 @@
+/* LCRN-132 Visual Enhancement — "Модная Красивая Удобная Статья" */
+/* Brand Guide v2.5 | WCAG 2.1 AA | Mobile-first | Banking-level UX */
+
+/* ============================================
+   Enhanced Brand Guide v2.5 Color System
+   ============================================ */
+
+:root {
+  /* Brand Guide v2.5 Palette D - Enhanced */
+  --color-primary-enhanced: #1D4ED8;
+  --color-accent-enhanced: #F59E0B;
+  --color-dark-enhanced: #0F172A;
+  --color-slate-enhanced: #64748B;
+  --color-light-enhanced: #F8FAFC;
+  --color-neutral-enhanced: #E2E8F0;
+
+  /* Typography Enhancement */
+  --font-display-enhanced: 'Playfair Display', Georgia, serif;
+  --font-body-enhanced: 'Inter', system-ui, sans-serif;
+
+  /* Spacing System Enhancement */
+  --space-xs-enhanced: 0.5rem;
+  --space-sm-enhanced: 1rem;
+  --space-md-enhanced: 1.5rem;
+  --space-lg-enhanced: 2rem;
+  --space-xl-enhanced: 3rem;
+  --space-2xl-enhanced: 4rem;
+
+  /* Visual Effects */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-enhanced), #3b82f6);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-enhanced), #fbbf24);
+  --gradient-background: linear-gradient(135deg, var(--color-dark-enhanced) 0%, #1e293b 50%, #334155 100%);
+
+  /* Shadows & Effects */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 20px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 20px 40px rgba(29, 78, 216, 0.1);
+}
+
+/* ============================================
+   Enhanced Typography System
+   ============================================ */
+
+/* Override/enhance existing longread typography */
+.longread-hero {
+  background: var(--gradient-background) !important;
+  padding: var(--space-2xl-enhanced) var(--space-lg-enhanced) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.longread-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(29, 78, 216, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Enhanced hero title */
+.longread-hero h1 {
+  font-family: var(--font-display-enhanced) !important;
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  font-weight: 800 !important;
+  background: var(--gradient-accent) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  line-height: 1.2 !important;
+  margin-bottom: var(--space-md-enhanced) !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced subtitle */
+.longread-subtitle {
+  font-size: clamp(1.125rem, 3vw, 1.25rem) !important;
+  line-height: 1.7 !important;
+  color: #cbd5e1 !important;
+  font-weight: 400 !important;
+  max-width: 800px !important;
+  margin: var(--space-lg-enhanced) auto !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   Enhanced Timeline System
+   ============================================ */
+
+/* Build on existing timeline-container */
+.timeline-container {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border-radius: 12px !important;
+  padding: var(--space-lg-enhanced) !important;
+  margin: var(--space-xl-enhanced) 0 !important;
+  border: 1px solid rgba(29, 78, 216, 0.2) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Enhanced cultural timeline */
+.timeline-cultural {
+  border-left: 4px solid var(--color-accent-enhanced) !important;
+  background: linear-gradient(135deg,
+    rgba(245, 158, 11, 0.05) 0%,
+    rgba(29, 78, 216, 0.03) 100%) !important;
+  border-radius: 8px !important;
+  padding: var(--space-md-enhanced) !important;
+}
+
+.timeline-cultural .timelineItem {
+  position: relative;
+  padding: var(--space-md-enhanced) !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: var(--space-sm-enhanced);
+}
+
+.timeline-cultural .timelineItem:hover {
+  background: rgba(245, 158, 11, 0.1) !important;
+  transform: translateX(4px);
+  box-shadow: var(--shadow-soft);
+}
+
+.timeline-cultural .timelineItem::before {
+  width: 16px !important;
+  height: 16px !important;
+  background: var(--gradient-accent) !important;
+  border-radius: 50% !important;
+  border: 3px solid var(--color-dark-enhanced) !important;
+  left: -12px !important;
+  z-index: 2;
+}
+
+/* Timeline date styling */
+.timeline-cultural .timelineItem .timeline-date {
+  color: var(--color-accent-enhanced);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xs-enhanced);
+  font-family: var(--font-body-enhanced);
+}
+
+/* Timeline content */
+.timeline-cultural .timelineItem .timeline-content {
+  color: var(--color-light-enhanced);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ============================================
+   Enhanced Audio Preview Components
+   ============================================ */
+
+.audio-preview-enhanced {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  padding: var(--space-lg-enhanced);
+  margin: var(--space-lg-enhanced) 0;
+  transition: all 0.3s ease;
+}
+
+.audio-preview-enhanced:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--color-accent-enhanced);
+}
+
+.audio-preview-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md-enhanced);
+  margin-bottom: var(--space-md-enhanced);
+}
+
+.audio-preview-icon {
+  font-size: 2rem;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.audio-preview-title {
+  color: var(--color-accent-enhanced);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.audio-preview-platforms {
+  display: flex;
+  gap: var(--space-sm-enhanced);
+  flex-wrap: wrap;
+}
+
+.platform-btn {
+  background: rgba(29, 78, 216, 0.2);
+  border: 1px solid var(--color-primary-enhanced);
+  color: var(--color-light-enhanced);
+  padding: var(--space-xs-enhanced) var(--space-sm-enhanced);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.platform-btn:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: var(--color-accent-enhanced);
+  transform: scale(1.05);
+}
+
+.platform-btn:focus {
+  outline: 2px solid var(--color-accent-enhanced);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Enhanced Pull Quote System
+   ============================================ */
+
+.enhanced-pullquote {
+  background: linear-gradient(135deg,
+    rgba(245, 158, 11, 0.1) 0%,
+    rgba(29, 78, 216, 0.05) 100%) !important;
+  border-left: 4px solid var(--color-accent-enhanced) !important;
+  padding: var(--space-xl-enhanced) !important;
+  margin: var(--space-xl-enhanced) 0 !important;
+  border-radius: 8px !important;
+  font-style: italic !important;
+  font-size: 1.25rem !important;
+  line-height: 1.7 !important;
+  color: var(--color-accent-enhanced) !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.enhanced-pullquote::before {
+  content: '"' !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: 20px !important;
+  font-size: 4rem !important;
+  color: rgba(245, 158, 11, 0.2) !important;
+  font-family: Georgia, serif !important;
+  z-index: 0 !important;
+}
+
+.enhanced-pullquote p {
+  position: relative !important;
+  z-index: 1 !important;
+  margin: 0 !important;
+}
+
+/* ============================================
+   Evidence Card Enhancement
+   ============================================ */
+
+.evidence-card-enhanced {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  padding: var(--space-lg-enhanced);
+  margin: var(--space-md-enhanced) 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.evidence-card-enhanced:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.evidence-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm-enhanced);
+  margin-bottom: var(--space-md-enhanced);
+}
+
+.evidence-icon {
+  font-size: 1.25rem;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.evidence-title {
+  color: var(--color-accent-enhanced);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.evidence-content {
+  color: var(--color-light-enhanced);
+  line-height: 1.6;
+}
+
+.evidence-source {
+  margin-top: var(--space-md-enhanced);
+  font-size: 0.875rem;
+  color: var(--color-slate-enhanced);
+  font-style: italic;
+}
+
+/* ============================================
+   Enhanced Reading Experience
+   ============================================ */
+
+/* Enhanced paragraph styling */
+.longread-content p {
+  font-family: var(--font-body-enhanced) !important;
+  font-size: 1.125rem !important;
+  line-height: 1.7 !important;
+  color: var(--color-light-enhanced) !important;
+  margin-bottom: var(--space-md-enhanced) !important;
+  max-width: 75ch !important;
+}
+
+/* Enhanced heading hierarchy */
+.longread-content h2 {
+  font-family: var(--font-display-enhanced) !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: var(--color-accent-enhanced) !important;
+  margin: var(--space-xl-enhanced) 0 var(--space-lg-enhanced) 0 !important;
+  position: relative !important;
+}
+
+.longread-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-accent);
+  border-radius: 2px;
+}
+
+.longread-content h3 {
+  font-family: var(--font-body-enhanced) !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: #cbd5e1 !important;
+  margin: var(--space-lg-enhanced) 0 var(--space-md-enhanced) 0 !important;
+}
+
+/* Enhanced list styling */
+.longread-content ul, .longread-content ol {
+  margin: var(--space-md-enhanced) 0 !important;
+  padding-left: var(--space-lg-enhanced) !important;
+}
+
+.longread-content li {
+  color: var(--color-light-enhanced) !important;
+  line-height: 1.6 !important;
+  margin-bottom: var(--space-xs-enhanced) !important;
+}
+
+/* ============================================
+   Interactive Enhancements
+   ============================================ */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced link styling */
+.longread-content a {
+  color: var(--color-accent-enhanced) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.longread-content a:hover {
+  color: #fbbf24 !important;
+  border-bottom-color: var(--color-accent-enhanced) !important;
+}
+
+.longread-content a:focus {
+  outline: 2px solid var(--color-accent-enhanced) !important;
+  outline-offset: 2px !important;
+}
+
+/* ============================================
+   Mobile Optimization
+   ============================================ */
+
+@media (max-width: 768px) {
+  .longread-hero {
+    padding: var(--space-lg-enhanced) var(--space-md-enhanced) !important;
+  }
+
+  .longread-hero h1 {
+    font-size: 2rem !important;
+  }
+
+  .longread-subtitle {
+    font-size: 1.125rem !important;
+  }
+
+  .timeline-container {
+    padding: var(--space-md-enhanced) !important;
+  }
+
+  .audio-preview-platforms {
+    flex-direction: column;
+  }
+
+  .platform-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .longread-content p {
+    font-size: 1rem !important;
+  }
+
+  .longread-content h2 {
+    font-size: 1.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .evidence-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs-enhanced);
+  }
+
+  .timeline-cultural .timelineItem {
+    padding: var(--space-sm-enhanced) !important;
+  }
+}
+
+/* ============================================
+   Accessibility Enhancements
+   ============================================ */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary-enhanced: #0066cc;
+    --color-accent-enhanced: #ff6600;
+    --gradient-accent: linear-gradient(135deg, #ff6600, #ff8800);
+  }
+}
+
+/* Focus management */
+.longread-content *:focus {
+  outline: 2px solid var(--color-accent-enhanced) !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen reader improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+
+/* GPU acceleration for animations */
+.timeline-cultural .timelineItem,
+.audio-preview-enhanced,
+.evidence-card-enhanced {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize repaints */
+.longread-hero::before {
+  will-change: opacity;
+}
+
+/* Critical path optimization */
+.longread-hero h1,
+.longread-subtitle {
+  contain: layout style;
+}

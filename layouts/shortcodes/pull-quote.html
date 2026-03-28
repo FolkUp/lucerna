@@ -10,7 +10,7 @@
 {{ $attribution := .Get "attribution" }}
 {{ $align := .Get "align" | default "center" }}
 
-<figure class="pull-quote pull-quote--{{ $align }}" role="figure">
+<figure class="pull-quote pull-quote--{{ $align }} enhanced-pullquote" role="figure">
   <blockquote class="pull-quote__text">
     {{ .Inner | markdownify }}
   </blockquote>

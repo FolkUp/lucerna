@@ -44,7 +44,7 @@
   {{ $confClass = "confidence--low" }}
 {{ end }}
 
-<div class="evidence-card {{ $statusClass }}" role="article" aria-label="{{ $source }}">
+<div class="evidence-card evidence-card-enhanced {{ $statusClass }}" role="article" aria-label="{{ $source }}">
   <div class="evidence-card__header">
     <span class="evidence-card__source">
       {{ with $link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}
