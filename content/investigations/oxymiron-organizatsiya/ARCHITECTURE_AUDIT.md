@@ -53,7 +53,7 @@ status: draft
   {{< timelineItem
     icon="hammer"
     header="СЛОЙ 1 — Литературное основание"
-    badge="2014-2015"
+    badge="2020-2021"
     subheader="Дольник Блока как стальной каркас"
   >}}
   [content]
@@ -103,9 +103,9 @@ timeline:
 
 | Layer | ID | Icon | Period | Elements |
 |-------|-----|------|--------|----------|
-| 1 | `literature-foundation` | hammer | 2014-2015 | mechanism, evidence (3), quote, insight |
-| 2 | `visual-encoding` | video | Spring 2015 | mechanism, evidence (3), visual_elements, insight |
-| 3 | `title-surgery` | edit | Pre-Release 2015 | mechanism, evidence (3), tactical_elements, insight |
+| 1 | `literature-foundation` | hammer | 2020-2021 | mechanism, evidence (3), quote, insight |
+| 2 | `visual-encoding` | video | 2021 | mechanism, evidence (3), visual_elements, insight |
+| 3 | `title-surgery` | edit | November 2021 | mechanism, evidence (3), tactical_elements, insight |
 
 #### Event Definition (6 total)
 
@@ -115,7 +115,7 @@ Each event maps to timeline display:
 event_1:
   id: "foundation-construction"
   icon: "hammer"
-  badge: "2014-2015"
+  badge: "2020-2021"
   header: "СЛОЙ 1 — Литературное основание"
   subheader: "Дольник Блока как стальной каркас"
   layer_ref: "literature-foundation"
@@ -125,10 +125,10 @@ event_1:
 
 **Complete Event Count:**
 
-- Event 1: Layer 1 construction (2014-2015)
-- Event 2: Layer 2 architecture (Spring 2015)
-- Event 3: Layer 3 modification (Pre-Release 2015)
-- Event 4: Armor testing (2015-2022)
+- Event 1: Layer 1 construction (2020-2021)
+- Event 2: Layer 2 architecture (2021)
+- Event 3: Layer 3 modification (November 2021)
+- Event 4: Seismographic validation (2021-2022)
 - Event 5: Combat validation (October 2022)
 - Event 6: Armor replication (2022-2026)
 
@@ -179,7 +179,7 @@ Status: All items use correct parameter syntax
 1. ✅ All 3 armor layers **fully described** with mechanism + evidence
 2. ✅ All 6 timeline events **present with complete text**
 3. ✅ Icon assignments **correct** (hammer, video, edit, shield, warning, chart-line)
-4. ✅ Badge periods **specified** (2014-2015, Spring 2015, etc.)
+4. ✅ Badge periods **specified** (2020-2021, 2021, November 2021, etc.)
 5. ✅ Subheaders **thematic and evocative**
 6. ✅ Evidence lists **numbered and sourced**
 7. ✅ Cross-references **working** (#layer-3-title-surgery, #одиннадцать-лет-детонации)

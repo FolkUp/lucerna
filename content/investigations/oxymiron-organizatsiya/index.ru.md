@@ -14,9 +14,9 @@ sources: [
   "YouTube metadata analysis - Oxymiron official channel",
   "Genius.com lyric database - verified transcriptions",
   "Music platform comparison - Spotify/Apple Music/Yandex.Music",
-  "Hip-hop journalism archives - cultural commentary 2015-2026",
+  "Hip-hop journalism archives - cultural commentary 2021-2026",
   "Tim ROHO filmography - visual concept analysis",
-  "Platform content policy evolution - YouTube/VK 2015-2022",
+  "Platform content policy evolution - YouTube/VK 2021-2022",
   "Russian hip-hop academic papers - literary analysis",
   "Cultural criticism archives - intellectual hip-hop discourse"
 ]
@@ -110,7 +110,7 @@ draft: false
 
 {{< timeline >}}
 
-{{< timelineItemEnhanced icon="hammer" header="СЛОЙ 1 — Литературное основание" badge="2014-2015" subheader="Дольник Блока как стальной каркас" layer="literature-foundation" evidence="foundation" >}}
+{{< timelineItemEnhanced icon="hammer" header="СЛОЙ 1 — Литературное основание" badge="2020-2021" subheader="Дольник Блока как сейсмографический датчик" layer="literature-foundation" evidence="foundation" >}}
 В студии рождается не просто рэп-строчка — рождается **поэтическая криптография**. *«Я делаю рэп, как запрещённая организация»* — это дольник, трёхиктный размер «Двенадцати» (1918). Ритмическая неустойчивость, которая передаёт социальное напряжение.
 
 Поэтический анализ разнослойной брони раскрывает **метрическую генетику**:
@@ -130,13 +130,13 @@ draft: false
 **ЗАЩИТНЫЙ МЕХАНИЗМ:** Литературная родословная Блок → Бродский → Оксимирон. Нельзя запретить то, что принадлежит канону.
 {{< /timelineItemEnhanced >}}
 
-{{< timelineItemEnhanced icon="video" header="СЛОЙ 2 — Визуальная кодировка" badge="Весна 2015" subheader="Tim ROHO: стеклянная стена как манифест" layer="visual-encoding" evidence="visual" >}}
+{{< timelineItemEnhanced icon="video" header="СЛОЙ 2 — Визуальная кодировка" badge="2021" subheader="Tim ROHO: стеклянная стена как сейсмографическое чтение" layer="visual-encoding" evidence="visual" >}}
 Режиссёр Tim ROHO создаёт **визуальную метафору-пророчество**: стеклянные стены, свет через преграды, барьеры, через которые всё видно и слышно. Это не интерьерное решение — это **архитектура выживания**, спрятанная на виду.
 
 **ЗАЩИТНЫЙ МЕХАНИЗМ:** Цензура видна, но не названа. Послание проходит — форма поглощает критику.
 {{< /timelineItemEnhanced >}}
 
-{{< timelineItemEnhanced icon="edit" header="СЛОЙ 3 — Хирургия названия" badge="Pre-Release 2015" subheader="Сжатие смысла как тактическое решение" layer="title-surgery" evidence="surgery" >}}
+{{< timelineItemEnhanced icon="edit" header="СЛОЙ 3 — Хирургия названия" badge="November 2021" subheader="Сжатие смысла как сейсмографическая адаптация" layer="title-surgery" evidence="surgery" >}}
 **КЛЮЧЕВОЙ МОМЕНТ СОЗДАНИЯ БРОНИ.** «Запрещённая» исчезает из заголовка — остаётся в тексте. Но это не компромисс. Это **сжатие смысла**: убрать слово = усилить удар. «Организация» без прилагательного становится *любой* организацией — универсальность вместо конкретики.
 
 **ЗАЩИТНЫЙ МЕХАНИЗМ:** Платформенная безопасность + читательская кодировка. Аудитория дописывает недостающее.
