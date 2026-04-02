@@ -1,0 +1,455 @@
+/* Lucerna Hero Investigation — Underground Resistance Visual Aesthetics
+   Brand Guide v2.5 Palette D | WCAG 2.1 AA | Performance <2.5s LCP */
+
+/* ============================================
+   Hero Container & Layout
+   ============================================ */
+
+.hero-investigation {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(var(--color-neutral-900));
+  /* Fallback gradient for no-media scenarios */
+  background: linear-gradient(135deg,
+    rgb(var(--color-primary-800)) 0%,
+    rgb(var(--color-neutral-800)) 50%,
+    rgb(var(--color-neutral-900)) 100%);
+}
+
+/* ============================================
+   Media Layer (Video/Image Background)
+   ============================================ */
+
+.hero-media-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+.hero-static-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.6) contrast(1.1);
+}
+
+.hero-fallback-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   Underground Resistance Visual Effects
+   ============================================ */
+
+.resistance-overlay,
+.resistance-overlay-static {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cryptographic-patterns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    /* Morse code-like patterns */
+    repeating-linear-gradient(0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(251, 191, 36, 0.05) 3px,
+      rgba(251, 191, 36, 0.05) 5px,
+      transparent 6px,
+      transparent 20px),
+    repeating-linear-gradient(90deg,
+      transparent 0px,
+      transparent 10px,
+      rgba(2, 132, 199, 0.03) 11px,
+      rgba(2, 132, 199, 0.03) 13px,
+      transparent 14px,
+      transparent 40px);
+  opacity: 0.6;
+}
+
+.seismograph-traces {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  background: linear-gradient(45deg,
+    transparent 0%,
+    rgba(2, 132, 199, 0.08) 20%,
+    rgba(251, 191, 36, 0.06) 50%,
+    rgba(2, 132, 199, 0.08) 80%,
+    transparent 100%);
+  border-radius: 12px;
+  filter: blur(2px);
+  animation: seismographicPulse 6s ease-in-out infinite;
+}
+
+@keyframes seismographicPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  33% { opacity: 0.4; transform: scale(1.02); }
+  66% { opacity: 0.3; transform: scale(0.98); }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .seismograph-traces {
+    animation: none;
+    opacity: 0.3;
+  }
+}
+
+/* ============================================
+   Content Layer & Typography
+   ============================================ */
+
+.hero-content-layer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--color-neutral-900), 0.3);
+}
+
+.hero-container {
+  max-width: 1200px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+/* Investigation Badge */
+.investigation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(var(--color-primary-600), 0.9);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.badge-icon {
+  font-size: 1.1em;
+}
+
+/* Hero Title */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.title-main {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.title-subtitle {
+  display: block;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.9;
+  color: rgb(var(--color-secondary-300)); /* amber accent */
+}
+
+/* ============================================
+   Cultural Seismography Visualization
+   ============================================ */
+
+.cultural-seismograph {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(var(--color-neutral-800), 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(var(--color-primary-400), 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.seismograph-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.seismic-line {
+  height: 2px;
+  border-radius: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.seismic-line--primary {
+  width: 80%;
+  background: rgb(var(--color-primary-400));
+  animation: seismicPulse 2s ease-in-out infinite;
+}
+
+.seismic-line--secondary {
+  width: 60%;
+  background: rgb(var(--color-secondary-400));
+  animation: seismicPulse 2s ease-in-out infinite 0.3s;
+}
+
+.seismic-line--tertiary {
+  width: 40%;
+  background: rgba(255, 255, 255, 0.6);
+  animation: seismicPulse 2s ease-in-out infinite 0.6s;
+}
+
+@keyframes seismicPulse {
+  0%, 100% { transform: scaleX(1); opacity: 0.7; }
+  50% { transform: scaleX(1.2); opacity: 1; }
+}
+
+.seismograph-concept {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   Detective Narrative Block
+   ============================================ */
+
+.detective-narrative {
+  margin: 3rem 0;
+}
+
+.narrative-quote {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem;
+  background: rgba(var(--color-neutral-800), 0.6);
+  border-left: 4px solid rgb(var(--color-secondary-400));
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.narrative-quote::before {
+  content: """;
+  font-size: 3rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  color: rgb(var(--color-secondary-400));
+  font-family: 'Playfair Display', serif;
+}
+
+/* ============================================
+   Scroll Indicator
+   ============================================ */
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  opacity: 0.8;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+  width: 2px;
+  height: 30px;
+  background: rgb(var(--color-secondary-400));
+  position: relative;
+}
+
+.scroll-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid rgb(var(--color-secondary-400));
+}
+
+.scroll-text {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 1.5rem;
+  }
+
+  .investigation-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cultural-seismograph {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .seismograph-concept {
+    font-size: 1rem;
+  }
+
+  .narrative-quote {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+
+  .narrative-quote::before {
+    font-size: 2rem;
+    top: -0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-investigation {
+    min-height: 90vh;
+  }
+
+  .hero-container {
+    padding: 1rem;
+  }
+
+  .seismograph-lines {
+    height: 40px;
+    gap: 0.25rem;
+  }
+
+  .scroll-indicator {
+    margin-top: 2rem;
+  }
+}
+
+/* ============================================
+   WCAG 2.1 AA Compliance
+   ============================================ */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hero-video,
+  .hero-static-image {
+    filter: brightness(0.4) contrast(1.5);
+  }
+
+  .investigation-badge,
+  .cultural-seismograph,
+  .narrative-quote {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: rgb(var(--color-secondary-400));
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.scroll-indicator:focus {
+  outline: 2px solid rgb(var(--color-secondary-400));
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Screen reader only content */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+
+/* GPU acceleration for animations */
+.seismograph-traces,
+.seismic-line,
+.scroll-indicator {
+  will-change: transform;
+}
+
+/* Reduce motion for performance */
+@media (prefers-reduced-motion: reduce) {
+  .seismic-line,
+  .scroll-indicator,
+  .seismograph-traces {
+    animation: none;
+  }
+
+  .hero-video {
+    animation: none;
+  }
+}
+
+/* Critical CSS containment */
+.hero-investigation {
+  contain: layout style paint;
+}

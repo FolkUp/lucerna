@@ -1,0 +1,163 @@
+{{/*
+  Hero Video Section for Investigations
+
+  Parameters:
+  - video_url: URL to hero video (optional)
+  - poster_url: Poster image URL
+  - glass_effect: Enable glass wall metaphor (boolean)
+  - title: Investigation title
+  - subtitle: Subtitle/tagline
+  - overlay_text: Detective narrative text
+  - performance_mode: "video" | "static" | "auto" (default: auto)
+
+  Brand Guide v2.5 compliant | WCAG 2.1 AA | Performance budget <2.5s LCP
+*/}}
+
+{{/* Extract parameters */}}
+{{ $video_url := .Get "video_url" | default "" }}
+{{ $poster_url := .Get "poster_url" | default "" }}
+{{ $glass_effect := .Get "glass_effect" | default true }}
+{{ $title := .Get "title" | default .Site.Title }}
+{{ $subtitle := .Get "subtitle" | default "" }}
+{{ $overlay_text := .Get "overlay_text" | default "" }}
+{{ $performance_mode := .Get "performance_mode" | default "auto" }}
+
+{{/* Performance mode logic */}}
+{{ $use_video := false }}
+{{ if eq $performance_mode "video" }}
+  {{ $use_video = true }}
+{{ else if eq $performance_mode "auto" }}
+  {{ $use_video = and $video_url (not (.Site.Params.performance.static_only | default false)) }}
+{{ end }}
+
+<section class="hero-investigation"
+         role="banner"
+         aria-labelledby="hero-title"
+         {{ if $glass_effect }}data-glass-effect="true"{{ end }}>
+
+  {{/* Video Background Layer */}}
+  {{ if and $use_video $video_url }}
+  <div class="hero-media-layer">
+    <video class="hero-video"
+           poster="{{ $poster_url }}"
+           muted
+           playsinline
+           preload="metadata"
+           aria-hidden="true"
+           {{ if .Site.Params.performance.autoplay_hero | default false }}autoplay{{ end }}>
+      <source src="{{ $video_url }}" type="video/mp4">
+      {{/* Fallback for unsupported video */}}
+      {{ if $poster_url }}
+      <img src="{{ $poster_url }}"
+           alt="Стеклянная стена — визуальная метафора расследования"
+           class="hero-fallback-image">
+      {{ end }}
+    </video>
+
+    {{/* Glass Wall Overlay Effect */}}
+    {{ if $glass_effect }}
+    <div class="glass-overlay" aria-hidden="true">
+      <div class="glass-fractures"></div>
+      <div class="glass-reflections"></div>
+    </div>
+    {{ end }}
+  </div>
+  {{ else if $poster_url }}
+  {{/* Static Image Mode */}}
+  <div class="hero-media-layer">
+    <div class="hero-static-image"
+         style="background-image: url('{{ $poster_url }}');"
+         role="img"
+         aria-label="Стеклянная стена — визуальная метафора расследования">
+      {{ if $glass_effect }}
+      <div class="glass-overlay-static" aria-hidden="true">
+        <div class="glass-fractures"></div>
+        <div class="glass-reflections"></div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Detective Narrative Overlay */}}
+  <div class="hero-content-layer">
+    <div class="hero-container">
+
+      {{/* Investigation Badge */}}
+      <div class="investigation-badge" aria-label="Тип контента">
+        <span class="badge-icon" aria-hidden="true">🔍</span>
+        <span class="badge-text">OSINT Расследование</span>
+      </div>
+
+      {{/* Main Title */}}
+      <h1 id="hero-title" class="hero-title">
+        <span class="title-main">{{ $title }}</span>
+        {{ if $subtitle }}
+        <span class="title-subtitle">{{ $subtitle }}</span>
+        {{ end }}
+      </h1>
+
+      {{/* Cultural Seismography Concept */}}
+      <div class="cultural-seismograph" aria-labelledby="seismograph-label">
+        <h2 id="seismograph-label" class="visually-hidden">Культурная сейсмография</h2>
+        <div class="seismograph-lines" aria-hidden="true">
+          <div class="seismic-line seismic-line--primary"></div>
+          <div class="seismic-line seismic-line--secondary"></div>
+          <div class="seismic-line seismic-line--tertiary"></div>
+        </div>
+        <p class="seismograph-concept">
+          Культурная сейсмография — детективное расследование подземных толчков в пространстве смыслов
+        </p>
+      </div>
+
+      {{/* Detective Narrative Text */}}
+      {{ if $overlay_text }}
+      <div class="detective-narrative">
+        <blockquote class="narrative-quote">
+          <p>{{ $overlay_text | markdownify }}</p>
+        </blockquote>
+      </div>
+      {{ end }}
+
+      {{/* Scroll Indicator */}}
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-arrow"></div>
+        <span class="scroll-text">Начать расследование</span>
+      </div>
+
+    </div>
+  </div>
+
+  {{/* Performance & Accessibility Enhancements */}}
+  {{ if $use_video }}
+  <script>
+    // Reduced motion support
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const heroVideo = document.querySelector('.hero-video');
+      if (heroVideo) {
+        heroVideo.pause();
+        heroVideo.style.opacity = '0.7';
+      }
+    }
+
+    // Intersection Observer for performance
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo && 'IntersectionObserver' in window) {
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            heroVideo.play().catch(() => {
+              // Silent fail for autoplay restrictions
+            });
+          } else {
+            heroVideo.pause();
+          }
+        });
+      }, { threshold: 0.5 });
+
+      videoObserver.observe(heroVideo);
+    }
+  </script>
+  {{ end }}
+
+</section>

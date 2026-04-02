@@ -1,0 +1,25 @@
+{{/*
+  Hero Investigation Shortcode
+
+  Usage:
+  {{< hero-investigation
+      video_url="/videos/oxymiron-glass-wall.mp4"
+      poster_url="/images/investigations/oxymiron/glass-wall-poster.webp"
+      glass_effect=true
+      title="«Организация» Оксимирона"
+      subtitle="OSINT-расследование культурного феномена"
+      overlay_text="Каждое слово — улика. Каждый ритм — след. Каждая рифма — ключ к разгадке."
+      performance_mode="auto"
+  >}}
+
+  Parameters:
+  - video_url: URL to background video (optional)
+  - poster_url: Poster/fallback image URL
+  - glass_effect: Enable Tim ROHO glass wall effect (default: true)
+  - title: Main investigation title
+  - subtitle: Investigation subtitle/tagline
+  - overlay_text: Detective narrative text overlay
+  - performance_mode: "video" | "static" | "auto" (default: auto)
+*/}}
+
+{{ partial "hero-video-investigation.html" . }}
