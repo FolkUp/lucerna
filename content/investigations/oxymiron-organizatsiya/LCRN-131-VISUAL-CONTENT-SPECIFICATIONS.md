@@ -29,19 +29,20 @@ Color space: sRGB
 DPI: 72 (web optimized)
 ```
 
-#### Visual Composition
-- **Central Element:** Underground labyrinth/tunnel aesthetic with cryptographic patterns
-- **Metaphor:** Поэтическая криптография + cultural seismographic detection
-- **Lighting:** Underground ambience — hidden knowledge emerging from shadows
-- **Framing:** Cultural detective navigating coded messages, viewer as co-investigator
-- **Text Overlay Space:** Clear areas for Russian headline text with resistance styling
+#### Visual Composition — Underground Resistance Aesthetic
+- **Central Element:** Cryptographic cipher wheels + underground network patterns + stenographic shadows
+- **Metaphor:** Поэтическая криптография + cultural seismography + underground resistance communication
+- **Lighting:** Deep charcoal ambience with muted gold highlights — encrypted knowledge emerging through resistance channels
+- **Framing:** Cultural investigator decoding underground messages, viewer as co-conspirator in resistance archaeology
+- **Text Overlay Space:** Clear areas for Russian headline text with resistance-coded styling + samizdat typography
 
-#### Brand Integration (Brand Guide v2.5)
+#### Brand Integration — Underground Resistance Palette (Brand Guide v2.5)
 ```css
-/* Color Palette D Integration */
-Primary Teal: rgb(2, 132, 199)     /* Glass reflections */
-Secondary Amber: rgb(251, 191, 36) /* FolkUp accent highlights */
-Neutral Stone: rgb(41, 37, 33)     /* Background gradients */
+/* Underground Resistance Color Palette */
+Deep Charcoal: rgb(23, 20, 18)     /* Primary resistance background */
+Muted Gold: rgb(184, 134, 11)      /* Encrypted highlights + cipher accents */
+Encrypted Blue: rgb(37, 99, 144)   /* Cryptographic elements + underground networks */
+Samizdat Gray: rgb(82, 76, 67)     /* Secondary text + resistance shadows */
 ```
 
 #### Performance Optimization
@@ -51,7 +52,7 @@ Neutral Stone: rgb(41, 37, 33)     /* Background gradients */
 - **Preload hint:** `<link rel="preload" as="image">`
 
 #### Accessibility Compliance (WCAG 2.1 AA)
-- **Alt text:** "Стеклянная стена — визуальная метафора цензуры и художественной защиты в расследовании 'Организация' Оксимирона"
+- **Alt text:** "Подпольная криптография — визуальная метафора сопротивления и поэтического шифрования в расследовании 'Организация' Оксимирона"
 - **Contrast ratio:** Minimum 4.5:1 for text overlays
 - **Screen reader:** Semantic description of visual metaphor
 
@@ -229,21 +230,22 @@ h3.timeline-header: clamp(1.2rem, 3vw, 1.5rem)
 p.body-text: clamp(1rem, 2vw, 1.125rem) /* System stack */
 ```
 
-### Color Palette D Application
+### Underground Resistance Palette Application
 ```css
 /* Underground Resistance Effects */
---resistance-primary: rgba(2, 132, 199, 0.08);    /* Teal cryptographic base */
---resistance-secondary: rgba(251, 191, 36, 0.06); /* Amber seismograph traces */
---cryptographic-patterns: rgba(255, 255, 255, 0.05); /* Subtle code overlays */
+--resistance-primary: rgba(23, 20, 18, 0.95);     /* Deep charcoal cryptographic base */
+--resistance-secondary: rgba(184, 134, 11, 0.08); /* Muted gold cipher traces */
+--cryptographic-patterns: rgba(37, 99, 144, 0.06); /* Encrypted blue code overlays */
 
-/* Timeline Accent Colors */
---timeline-point: rgb(251, 191, 36);     /* FolkUp amber */
---timeline-line: rgba(2, 132, 199, 0.6); /* Investigation teal */
---timeline-hover: rgba(251, 191, 36, 0.8); /* Interaction state */
+/* Timeline Accent Colors — Underground Resistance */
+--timeline-point: rgb(184, 134, 11);     /* Muted gold resistance markers */
+--timeline-line: rgba(37, 99, 144, 0.7); /* Encrypted blue investigation thread */
+--timeline-hover: rgba(184, 134, 11, 0.9); /* Gold resistance interaction state */
 
-/* Evidence Gallery */
---modal-overlay: rgba(23, 20, 18, 0.95); /* Stone base + transparency */
---modal-border: rgb(251, 191, 36);       /* FolkUp accent frame */
+/* Evidence Gallery — Resistance Aesthetic */
+--modal-overlay: rgba(23, 20, 18, 0.98); /* Deep charcoal underground ambience */
+--modal-border: rgb(184, 134, 11);       /* Muted gold cipher frame */
+--modal-text: rgb(82, 76, 67);           /* Samizdat gray resistance text */
 ```
 
 ### Logo Integration Points
@@ -256,11 +258,11 @@ p.body-text: clamp(1rem, 2vw, 1.125rem) /* System stack */
 
 ## 🔧 IMPLEMENTATION ROADMAP
 
-### Phase 1A: Hero Asset Creation (4-6h)
-1. **Create frames:** Underground resistance visual elements at highest quality
-2. **Compose hero image:** Glass wall metaphor + brand integration
+### Phase 1A: Hero Asset Creation (4-6h) — Underground Resistance
+1. **Create frames:** Cryptographic cipher wheels + underground network patterns + stenographic elements
+2. **Compose hero image:** Underground resistance aesthetic + поэтическая криптография + brand integration
 3. **Optimize assets:** WebP conversion + performance testing
-4. **Integration testing:** LCP measurement with real assets
+4. **Integration testing:** LCP measurement with underground resistance visual assets
 
 ### Phase 1B: Timeline Implementation (3-4h)
 1. **Animation development:** Intersection Observer + CSS animations

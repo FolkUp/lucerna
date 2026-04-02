@@ -16,7 +16,8 @@
 {{/* Extract parameters */}}
 {{ $video_url := .Get "video_url" | default "" }}
 {{ $poster_url := .Get "poster_url" | default "" }}
-{{ $glass_effect := .Get "glass_effect" | default true }}
+{{ $glass_effect := .Get "glass_effect" | default false }}
+{{ $resistance_effect := .Get "resistance_effect" | default true }}
 {{ $title := .Get "title" | default .Site.Title }}
 {{ $subtitle := .Get "subtitle" | default "" }}
 {{ $overlay_text := .Get "overlay_text" | default "" }}
@@ -30,10 +31,11 @@
   {{ $use_video = and $video_url (not (.Site.Params.performance.static_only | default false)) }}
 {{ end }}
 
-<section class="hero-investigation"
+<section class="hero-investigation{{ if $resistance_effect }} resistance-overlay{{ end }}"
          role="banner"
          aria-labelledby="hero-title"
-         {{ if $glass_effect }}data-glass-effect="true"{{ end }}>
+         {{ if $glass_effect }}data-glass-effect="true"{{ end }}
+         {{ if $resistance_effect }}data-resistance-effect="true"{{ end }}>
 
   {{/* Video Background Layer */}}
   {{ if and $use_video $video_url }}
@@ -61,6 +63,11 @@
       <div class="glass-reflections"></div>
     </div>
     {{ end }}
+
+    {{/* Underground Resistance Effect */}}
+    {{ if $resistance_effect }}
+    <div class="cryptographic-patterns" aria-hidden="true"></div>
+    {{ end }}
   </div>
   {{ else if $poster_url }}
   {{/* Static Image Mode */}}
@@ -74,6 +81,10 @@
         <div class="glass-fractures"></div>
         <div class="glass-reflections"></div>
       </div>
+      {{ end }}
+
+      {{ if $resistance_effect }}
+      <div class="cryptographic-patterns" aria-hidden="true"></div>
       {{ end }}
     </div>
   </div>
@@ -98,7 +109,7 @@
       </h1>
 
       {{/* Cultural Seismography Concept */}}
-      <div class="cultural-seismograph" aria-labelledby="seismograph-label">
+      <div class="cultural-seismograph{{ if $resistance_effect }} seismograph-traces{{ end }}" aria-labelledby="seismograph-label">
         <h2 id="seismograph-label" class="visually-hidden">Культурная сейсмография</h2>
         <div class="seismograph-lines" aria-hidden="true">
           <div class="seismic-line seismic-line--primary"></div>
