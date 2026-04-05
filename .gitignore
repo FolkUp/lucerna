@@ -62,6 +62,17 @@ scripts/build-fp3d-data.cjs
 deploy/reviews/
 scripts/reviews-passwords.json
 
+# Personal financial documents protection (KOCHEGAR security cleanup)
+*.irs.pdf
+*payslip*.pdf
+*separation*.pdf
+*IRS*.pdf
+*Payslip*.pdf
+*Separation*.pdf
+*ANDREI*.pdf
+*DecRendim*.pdf
+*Declaration*.pdf
+
 # Temp
 *.tmp
 *.bak
