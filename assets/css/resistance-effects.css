@@ -1,0 +1,171 @@
+/* Underground Resistance Visual Effects */
+/* LCRN-131 Phase 2B - Underground Resistance Aesthetic Implementation */
+/* Brand Guide v2.5 Palette D: Teal rgb(2,132,199) + Amber rgb(251,191,36) + Stone rgb(41,37,33) */
+
+.resistance-overlay {
+  position: relative;
+  background: linear-gradient(135deg,
+    rgba(2, 132, 199, 0.08) 0%,
+    rgba(251, 191, 36, 0.06) 100%);
+  backdrop-filter: blur(1px);
+}
+
+/* Cryptographic Pattern Animation */
+@keyframes cryptographic-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(2px);
+  }
+}
+
+.cryptographic-patterns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.05) 42%, transparent 44%),
+    linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.03) 42%, transparent 44%);
+  background-size: 20px 20px, 30px 30px;
+  animation: cryptographic-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Cultural Seismography Animation */
+.seismograph-traces {
+  position: relative;
+  overflow: hidden;
+}
+
+.seismograph-traces::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgb(251, 191, 36) 30%,
+    rgba(2, 132, 199, 0.8) 70%,
+    transparent 100%);
+  animation: seismic-activity 4s linear infinite;
+}
+
+@keyframes seismic-activity {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* WCAG 2.1 AA Compliance */
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .resistance-overlay {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid currentColor;
+  }
+  .cryptographic-patterns {
+    background: none;
+    border: 1px dashed currentColor;
+    opacity: 0.3;
+  }
+}
+
+/* Focus Indicators */
+.resistance-overlay:focus-within {
+  outline: 2px solid rgb(251, 191, 36);
+  outline-offset: 2px;
+}
+
+/* Performance Optimization */
+/* GPU Acceleration */
+.resistance-overlay,
+.cryptographic-patterns,
+.seismograph-traces::before {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .cryptographic-patterns,
+  .seismograph-traces::before {
+    animation: none;
+  }
+
+  .cryptographic-patterns {
+    opacity: 0.5;
+  }
+
+  .seismograph-traces::before {
+    opacity: 0.6;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile-First Responsive Optimization */
+@media (max-width: 768px) {
+  .cryptographic-patterns {
+    background-size: 15px 15px, 20px 20px;
+    animation-duration: 4s; /* Slower on mobile for performance */
+  }
+
+  .seismograph-traces::before {
+    animation-duration: 5s; /* Gentler on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .resistance-overlay {
+    backdrop-filter: none; /* Remove blur for performance */
+    background: linear-gradient(135deg,
+      rgba(2, 132, 199, 0.06) 0%,
+      rgba(251, 191, 36, 0.04) 100%);
+  }
+
+  .cryptographic-patterns {
+    background-size: 12px 12px, 16px 16px;
+    opacity: 0.4; /* Reduce intensity on smallest screens */
+  }
+}
+
+/* Dark Mode Compatibility */
+@media (prefers-color-scheme: dark) {
+  .resistance-overlay {
+    background: linear-gradient(135deg,
+      rgba(2, 132, 199, 0.12) 0%,
+      rgba(251, 191, 36, 0.08) 100%);
+  }
+
+  .cryptographic-patterns {
+    background-image:
+      linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.08) 42%, transparent 44%),
+      linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.05) 42%, transparent 44%);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .resistance-overlay,
+  .cryptographic-patterns,
+  .seismograph-traces::before {
+    display: none !important;
+  }
+}

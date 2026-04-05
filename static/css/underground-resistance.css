@@ -1,0 +1,592 @@
+/**
+ * Underground Resistance CSS Architecture — LCRN-131
+ * Поэтическая криптография + Cultural seismography + Underground communication
+ * Phase 2B Implementation — Banking-level quality standards
+ */
+
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES — Underground Resistance System
+   ========================================================================== */
+
+:root {
+  /* Core Underground Resistance Colors */
+  --deep-charcoal: rgb(23, 20, 18);
+  --muted-gold: rgb(184, 134, 11);
+  --encrypted-blue: rgb(37, 99, 144);
+  --samizdat-gray: rgb(82, 76, 67);
+
+  /* Accent & State Colors */
+  --cipher-amber: rgba(184, 134, 11, 0.8);
+  --resistance-teal: rgba(37, 99, 144, 0.6);
+  --underground-shadow: rgba(23, 20, 18, 0.9);
+  --coded-whisper: rgba(82, 76, 67, 0.4);
+
+  /* Typography System */
+  --font-cipher: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  --font-literature: 'Playfair Display', 'Times New Roman', serif;
+  --font-investigation: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+  /* Spacing & Layout */
+  --resistance-radius: 8px;
+  --cipher-spacing: 1.5rem;
+  --underground-shadow-depth: 0 8px 32px var(--underground-shadow);
+
+  /* Animation System */
+  --motion-reduce: 0; /* Override with media query */
+  --underground-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-reduce: 1;
+  }
+}
+
+/* ==========================================================================
+   HERO SECTION — Underground Resistance Implementation
+   ========================================================================== */
+
+.hero-investigation {
+  position: relative;
+  min-height: 80vh;
+  background: var(--deep-charcoal);
+  color: rgb(200, 200, 200);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Underground Background Pattern */
+.hero-investigation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, var(--coded-whisper) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, var(--coded-whisper) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, var(--coded-whisper) 1px, transparent 1px);
+  background-size: 60px 60px, 80px 80px, 100px 100px;
+  background-position: 0 0, 30px 30px, 60px 60px;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Hero Content Container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: var(--cipher-spacing);
+}
+
+/* Hero Title — Literature Typography */
+.hero-title {
+  font-family: var(--font-literature);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  color: var(--muted-gold);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+/* Cipher Subhead — Cryptographic Typography */
+.cipher-subhead {
+  font-family: var(--font-cipher);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  color: var(--encrypted-blue);
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Investigation Metadata */
+.investigation-meta {
+  font-family: var(--font-investigation);
+  font-size: 0.875rem;
+  color: var(--samizdat-gray);
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meta-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--muted-gold);
+}
+
+/* Resistance CTA Button */
+.resistance-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--muted-gold), var(--cipher-amber));
+  color: var(--deep-charcoal);
+  text-decoration: none;
+  border-radius: var(--resistance-radius);
+  font-family: var(--font-investigation);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--underground-shadow-depth);
+  transition: all 0.3s var(--underground-timing);
+  position: relative;
+  overflow: hidden;
+}
+
+.resistance-cta:hover,
+.resistance-cta:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 48px var(--underground-shadow);
+}
+
+.resistance-cta:active {
+  transform: translateY(0);
+}
+
+/* Remove animations if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .resistance-cta {
+    transition: none;
+  }
+
+  .resistance-cta:hover,
+  .resistance-cta:focus {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   CIPHER WHEEL ICONOGRAPHY
+   ========================================================================== */
+
+.cipher-wheel-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.8s var(--underground-timing);
+}
+
+.cipher-wheel-icon:hover {
+  transform: rotate(15deg);
+}
+
+/* Disable rotation animation if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .cipher-wheel-icon {
+    transition: none;
+  }
+
+  .cipher-wheel-icon:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   UNDERGROUND NETWORK PATTERNS
+   ========================================================================== */
+
+.network-pattern {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 100px;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.network-connection {
+  stroke: var(--resistance-teal);
+  stroke-width: 1;
+  fill: none;
+  stroke-dasharray: 2, 3;
+  animation: underground-pulse 3s ease-in-out infinite;
+}
+
+.network-connection:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.network-connection:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes underground-pulse {
+  0%, 100% {
+    stroke-opacity: 0.3;
+    stroke-width: 1;
+  }
+  50% {
+    stroke-opacity: 0.8;
+    stroke-width: 1.5;
+  }
+}
+
+/* Disable animation if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .network-connection {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   CULTURAL SEISMOGRAPH TRACE
+   ========================================================================== */
+
+.seismograph-trace {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--resistance-teal) 20%,
+    var(--muted-gold) 50%,
+    var(--resistance-teal) 80%,
+    transparent 100%
+  );
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.seismograph-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--encrypted-blue);
+  animation: seismograph-reading 4s linear infinite;
+}
+
+@keyframes seismograph-reading {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Disable seismograph animation if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .seismograph-line {
+    animation: none;
+    opacity: 0.5;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   TYPOGRAPHY COMPONENTS — Underground Resistance Hierarchy
+   ========================================================================== */
+
+.resistance-body {
+  font-family: var(--font-investigation);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  color: rgb(200, 200, 200);
+}
+
+.cipher-header {
+  font-family: var(--font-cipher);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--encrypted-blue);
+  margin-bottom: 1rem;
+}
+
+.investigation-subhead {
+  font-family: var(--font-investigation);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: var(--samizdat-gray);
+  margin-bottom: 1.5rem;
+}
+
+.coded-caption {
+  font-family: var(--font-cipher);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--samizdat-gray);
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   TIMELINE COMPONENTS — Resistance Aesthetics
+   ========================================================================== */
+
+.resistance-timeline {
+  position: relative;
+  padding: 3rem 0;
+  background: linear-gradient(180deg,
+    var(--deep-charcoal) 0%,
+    rgba(23, 20, 18, 0.95) 100%
+  );
+}
+
+.timeline-marker {
+  position: relative;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: rgba(37, 99, 144, 0.08);
+  border: 1px solid var(--resistance-teal);
+  border-radius: var(--resistance-radius);
+  transition: all 0.3s var(--underground-timing);
+}
+
+.timeline-marker:hover {
+  background: rgba(37, 99, 144, 0.12);
+  border-color: var(--muted-gold);
+  transform: translateX(8px);
+}
+
+.timeline-marker::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--muted-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--cipher-amber);
+}
+
+/* Disable timeline animations if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-marker {
+    transition: none;
+  }
+
+  .timeline-marker:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   EVIDENCE GALLERY — Underground Resistance Modal System
+   ========================================================================== */
+
+.evidence-trigger {
+  background: rgba(184, 134, 11, 0.1);
+  border: 1px solid var(--muted-gold);
+  color: var(--muted-gold);
+  padding: 0.5rem 1rem;
+  border-radius: var(--resistance-radius);
+  font-family: var(--font-cipher);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s var(--underground-timing);
+}
+
+.evidence-trigger:hover,
+.evidence-trigger:focus {
+  background: var(--muted-gold);
+  color: var(--deep-charcoal);
+}
+
+.evidence-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: var(--underground-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s var(--underground-timing);
+}
+
+.evidence-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.evidence-content {
+  background: var(--deep-charcoal);
+  border: 2px solid var(--muted-gold);
+  border-radius: var(--resistance-radius);
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 2rem;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s var(--underground-timing);
+}
+
+.evidence-modal.is-open .evidence-content {
+  transform: scale(1);
+}
+
+/* Disable modal animations if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .evidence-modal,
+  .evidence-content {
+    transition: none;
+  }
+
+  .evidence-modal.is-open .evidence-content {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN — Underground Resistance Mobile
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .hero-investigation {
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .investigation-meta {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .network-pattern {
+    display: none; /* Hide complex patterns on mobile for performance */
+  }
+
+  .timeline-marker:hover {
+    transform: none; /* Disable hover transforms on touch devices */
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY ENHANCEMENTS — WCAG 2.1 AA Compliance
+   ========================================================================== */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --muted-gold: rgb(255, 255, 0);
+    --encrypted-blue: rgb(0, 200, 255);
+    --samizdat-gray: rgb(200, 200, 200);
+  }
+
+  .evidence-modal {
+    background: rgb(0, 0, 0);
+  }
+
+  .evidence-content {
+    border: 3px solid rgb(255, 255, 255);
+  }
+}
+
+/* Focus indicators for keyboard navigation */
+.resistance-cta:focus,
+.evidence-trigger:focus,
+.timeline-marker:focus {
+  outline: 2px solid var(--muted-gold);
+  outline-offset: 2px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ========================================================================== */
+
+/* GPU acceleration for smooth animations */
+.cipher-wheel-icon,
+.network-connection,
+.timeline-marker,
+.evidence-content {
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Optimize repaints */
+.hero-investigation,
+.resistance-timeline {
+  contain: layout style paint;
+}
+
+/* Font display optimization */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-display: swap;
+  /* Additional font declarations would be here */
+}
+
+/* ==========================================================================
+   PRINT STYLES — Underground Resistance Documentation
+   ========================================================================== */
+
+@media print {
+  .hero-investigation {
+    background: white;
+    color: black;
+    min-height: auto;
+  }
+
+  .network-pattern,
+  .seismograph-trace {
+    display: none;
+  }
+
+  .evidence-modal {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: white;
+  }
+
+  .evidence-content {
+    border: 1px solid black;
+    box-shadow: none;
+    max-width: none;
+    max-height: none;
+  }
+}

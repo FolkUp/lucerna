@@ -1,0 +1,30 @@
+{{/*
+  LCRN-131 Hero Preload Hints — LCP Optimization
+  Inject hero image preload for improved Largest Contentful Paint
+
+  Usage: Include in head after shortcode processing
+  Automatically detects hero_preload scratch data from responsive shortcode
+*/}}
+
+{{ if .Page.Scratch.Get "hero_preload" }}
+  {{ $preload_data := .Page.Scratch.Get "hero_preload" }}
+  {{ if $preload_data.url }}
+
+    {{/* Critical hero image preload for LCP */}}
+    <link rel="preload"
+          href="{{ $preload_data.url }}"
+          as="{{ $preload_data.as | default "image" }}"
+          {{ if $preload_data.type }}type="{{ $preload_data.type }}"{{ end }}
+          fetchpriority="high">
+
+    {{/* DNS prefetch for external image CDNs (if applicable) */}}
+    {{ $url_parts := urls.Parse $preload_data.url }}
+    {{ if and $url_parts.Host (ne $url_parts.Host .Site.BaseURL) }}
+    <link rel="dns-prefetch" href="//{{ $url_parts.Host }}">
+    {{ end }}
+
+    {{/* Web Vitals optimization hint */}}
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  {{ end }}
+{{ end }}

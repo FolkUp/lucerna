@@ -1,0 +1,137 @@
+/* LCRN-131 Hero Responsive Image Enhancement
+   Extends hero-investigation.css for responsive images
+   Brand Guide v2.5 | WCAG 2.1 AA | Performance <2.5s LCP */
+
+/* ============================================
+   Responsive Image Container
+   ============================================ */
+
+.hero-static-responsive {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) contrast(1.1);
+  transition: filter 0.3s ease;
+
+  /* Performance optimizations for LCP */
+  will-change: transform;
+  transform: translateZ(0); /* Force GPU acceleration */
+}
+
+/* ============================================
+   Progressive Enhancement
+   ============================================ */
+
+/* Enhance contrast when image loads */
+.hero-responsive-image:not([loading="lazy"]) {
+  filter: brightness(0.6) contrast(1.15);
+}
+
+/* Critical CSS for above-the-fold */
+.hero-static-responsive {
+  contain: layout style paint;
+}
+
+/* ============================================
+   Responsive Breakpoints (Brand Guide v2.5)
+   ============================================ */
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  .hero-responsive-image {
+    filter: brightness(0.65) contrast(1.1);
+    /* Slightly brighter for mobile readability */
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-responsive-image {
+    object-position: center top;
+    /* Better framing for tablet aspect ratios */
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1200px) {
+  .hero-responsive-image {
+    filter: brightness(0.55) contrast(1.2);
+    /* Higher contrast for large screens */
+  }
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+
+/* Reduce paint complexity during transitions */
+.hero-responsive-image {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Critical path optimization */
+.hero-media-layer {
+  content-visibility: auto;
+  contain-intrinsic-size: 100vw 100vh;
+}
+
+/* ============================================
+   Glass Effect Integration
+   ============================================ */
+
+/* Ensure glass overlay works with responsive images */
+.hero-static-responsive .glass-overlay-static {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ============================================
+   Loading States & Progressive Enhancement
+   ============================================ */
+
+/* Skeleton loading state */
+.hero-responsive-image:not([complete="true"]) {
+  background: linear-gradient(135deg,
+    rgb(var(--color-primary-800)) 0%,
+    rgb(var(--color-neutral-800)) 50%,
+    rgb(var(--color-neutral-900)) 100%);
+}
+
+/* Smooth reveal when image loads */
+.hero-responsive-image[complete="true"] {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* ============================================
+   Accessibility Enhancements
+   ============================================ */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hero-responsive-image {
+    filter: brightness(0.7) contrast(1.5);
+  }
+}
+
+/* Reduced motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  .hero-responsive-image,
+  .glass-overlay-static {
+    transition: none;
+    animation: none;
+  }
+}

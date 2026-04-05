@@ -1,0 +1,203 @@
+{{/*
+  Hero Investigation Shortcode — LCRN-131 Responsive Enhancement
+
+  NEW PARAMETERS for responsive images:
+  - poster_srcset: Responsive image srcset (WebP variants)
+  - poster_sizes: Responsive sizes attribute
+  - preload_hero: Enable hero image preloading for LCP optimization (default: true)
+*/}}
+
+{{/* Enhanced parameter extraction */}}
+{{ $video_url := .Get "video_url" | default "" }}
+{{ $poster_url := .Get "poster_url" | default "" }}
+{{ $poster_srcset := .Get "poster_srcset" | default "" }}
+{{ $poster_sizes := .Get "poster_sizes" | default "(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1200px) 1200px, 1920px" }}
+{{ $preload_hero := .Get "preload_hero" | default true }}
+{{ $glass_effect := .Get "glass_effect" | default true }}
+{{ $title := .Get "title" | default .Site.Title }}
+{{ $subtitle := .Get "subtitle" | default "" }}
+{{ $overlay_text := .Get "overlay_text" | default "" }}
+{{ $performance_mode := .Get "performance_mode" | default "auto" }}
+
+{{/* Performance mode logic */}}
+{{ $use_video := false }}
+{{ if eq $performance_mode "video" }}
+  {{ $use_video = true }}
+{{ else if eq $performance_mode "auto" }}
+  {{ $use_video = and $video_url (not (.Site.Params.performance.static_only | default false)) }}
+{{ end }}
+
+{{/* Generate preload hints for LCP optimization */}}
+{{ if and $preload_hero $poster_url (not $use_video) }}
+  {{ $preload_url := $poster_url }}
+  {{ if $poster_srcset }}
+    {{/* Extract highest resolution image for preload */}}
+    {{ $srcset_parts := split $poster_srcset "," }}
+    {{ range $srcset_parts }}
+      {{ $part := trim . " " }}
+      {{ if strings.Contains $part "1920w" }}
+        {{ $preload_url = index (split $part " ") 0 }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Inject preload hint into head */}}
+  {{ .Page.Scratch.SetInMap "hero_preload" "url" $preload_url }}
+  {{ .Page.Scratch.SetInMap "hero_preload" "as" "image" }}
+  {{ .Page.Scratch.SetInMap "hero_preload" "type" "image/webp" }}
+{{ end }}
+
+<section class="hero-investigation"
+         role="banner"
+         aria-labelledby="hero-title"
+         {{ if $glass_effect }}data-glass-effect="true"{{ end }}>
+
+  {{/* Video Background Layer */}}
+  {{ if and $use_video $video_url }}
+  <div class="hero-media-layer">
+    <video class="hero-video"
+           poster="{{ $poster_url }}"
+           muted
+           playsinline
+           preload="metadata"
+           aria-hidden="true"
+           {{ if .Site.Params.performance.autoplay_hero | default false }}autoplay{{ end }}>
+      <source src="{{ $video_url }}" type="video/mp4">
+      {{/* Responsive fallback image */}}
+      {{ if $poster_url }}
+      {{ if $poster_srcset }}
+      <img srcset="{{ $poster_srcset }}"
+           sizes="{{ $poster_sizes }}"
+           src="{{ $poster_url }}"
+           alt="Стеклянная стена — визуальная метафора расследования"
+           class="hero-fallback-image">
+      {{ else }}
+      <img src="{{ $poster_url }}"
+           alt="Стеклянная стена — визуальная метафора расследования"
+           class="hero-fallback-image">
+      {{ end }}
+      {{ end }}
+    </video>
+
+    {{/* Glass Wall Overlay Effect */}}
+    {{ if $glass_effect }}
+    <div class="glass-overlay" aria-hidden="true">
+      <div class="glass-fractures"></div>
+      <div class="glass-reflections"></div>
+    </div>
+    {{ end }}
+  </div>
+  {{ else if $poster_url }}
+  {{/* Enhanced Static Image Mode with Responsive Images */}}
+  <div class="hero-media-layer">
+    <div class="hero-static-responsive">
+      {{ if $poster_srcset }}
+      <img srcset="{{ $poster_srcset }}"
+           sizes="{{ $poster_sizes }}"
+           src="{{ $poster_url }}"
+           alt="Стеклянная стена — визуальная метафора расследования"
+           class="hero-responsive-image"
+           loading="eager"
+           decoding="sync"
+           fetchpriority="high">
+      {{ else }}
+      <img src="{{ $poster_url }}"
+           alt="Стеклянная стена — визуальная метафора расследования"
+           class="hero-responsive-image"
+           loading="eager"
+           decoding="sync"
+           fetchpriority="high">
+      {{ end }}
+
+      {{ if $glass_effect }}
+      <div class="glass-overlay-static" aria-hidden="true">
+        <div class="glass-fractures"></div>
+        <div class="glass-reflections"></div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Detective Narrative Overlay — unchanged */}}
+  <div class="hero-content-layer">
+    <div class="hero-container">
+
+      {{/* Investigation Badge */}}
+      <div class="investigation-badge" aria-label="Тип контента">
+        <span class="badge-icon" aria-hidden="true">🔍</span>
+        <span class="badge-text">OSINT Расследование</span>
+      </div>
+
+      {{/* Main Title */}}
+      <h1 id="hero-title" class="hero-title">
+        <span class="title-main">{{ $title }}</span>
+        {{ if $subtitle }}
+        <span class="title-subtitle">{{ $subtitle }}</span>
+        {{ end }}
+      </h1>
+
+      {{/* Cultural Seismography Concept */}}
+      <div class="cultural-seismograph" aria-labelledby="seismograph-label">
+        <h2 id="seismograph-label" class="visually-hidden">Культурная сейсмография</h2>
+        <div class="seismograph-lines" aria-hidden="true">
+          <div class="seismic-line seismic-line--primary"></div>
+          <div class="seismic-line seismic-line--secondary"></div>
+          <div class="seismic-line seismic-line--tertiary"></div>
+        </div>
+        <p class="seismograph-concept">
+          Культурная сейсмография — детективное расследование подземных толчков в пространстве смыслов
+        </p>
+      </div>
+
+      {{/* Detective Narrative Text */}}
+      {{ if $overlay_text }}
+      <div class="detective-narrative">
+        <blockquote class="narrative-quote">
+          <p>{{ $overlay_text | markdownify }}</p>
+        </blockquote>
+      </div>
+      {{ end }}
+
+      {{/* Scroll Indicator */}}
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-arrow"></div>
+        <span class="scroll-text">Начать расследование</span>
+      </div>
+
+    </div>
+  </div>
+
+  {{/* Performance & Accessibility Enhancements */}}
+  {{ if $use_video }}
+  <script>
+    // Reduced motion support
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const heroVideo = document.querySelector('.hero-video');
+      if (heroVideo) {
+        heroVideo.pause();
+        heroVideo.style.opacity = '0.7';
+      }
+    }
+
+    // Intersection Observer for performance
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo && 'IntersectionObserver' in window) {
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            heroVideo.play().catch(() => {
+              // Silent fail for autoplay restrictions
+            });
+          } else {
+            heroVideo.pause();
+          }
+        });
+      }, { threshold: 0.5 });
+
+      videoObserver.observe(heroVideo);
+    }
+  </script>
+  {{ end }}
+
+</section>
