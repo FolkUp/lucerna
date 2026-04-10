@@ -1,5 +1,9 @@
 /* Lucerna — OSINT Research Lab custom styles */
 
+/* === BRAND GUIDE V2.5 INTEGRATION === */
+@import "brand-fonts.css";
+@import "palette-d.css";
+
 /* Underground Resistance Visual Effects - LCRN-131 Phase 2B Integration */
 /* Brand Guide v2.5 Palette D: Teal rgb(2,132,199) + Amber rgb(251,191,36) + Stone rgb(41,37,33) */
 
@@ -325,10 +329,19 @@
 }
 
 /* ============================================
-   FolkUp Typography overrides
+   FolkUp Typography overrides — Brand Guide v2.5
    ============================================ */
 :root {
+  /* Brand Guide v2.5 Font System */
   --font-sans: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-heading, 'Playfair Display', Georgia, serif);
+  --font-body: var(--font-body, 'Source Sans 3', system-ui, sans-serif);
+  --font-accent: var(--font-accent, 'Pacifico', cursive);
+
+  /* Blowfish Theme Overrides — Force Brand Guide colors */
+  --primary-color: var(--folkup-bordeaux, #7D4450) !important;
+  --text-color: var(--folkup-text, inherit) !important;
+  --accent-color: var(--folkup-amber, #E8AD4A) !important;
 }
 
 h1, h2, h3, h4,

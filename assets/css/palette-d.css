@@ -1,0 +1,219 @@
+/* FolkUp Brand Guide v2.5 — Palette D Design Tokens */
+/* Complete light and dark mode color system */
+/* Usage: Import in custom.css alongside brand-fonts.css */
+
+:root {
+  /* ===== CORE BRAND COLORS ===== */
+
+  /* Primary brand palette */
+  --folkup-bordeaux: #7D4450;
+  --folkup-bordeaux-rgb: 125, 68, 80;
+  --folkup-sage: #839E75;
+  --folkup-sage-rgb: 131, 158, 117;
+  --folkup-amber: #E8AD4A;
+  --folkup-amber-rgb: 232, 173, 74;
+  --folkup-ivory: #FEFCF6;
+  --folkup-ivory-rgb: 254, 252, 246;
+  --folkup-charcoal: #2A2825;
+  --folkup-charcoal-rgb: 42, 40, 37;
+
+  /* Extended surface colors */
+  --folkup-surface: #F0EDE8;
+  --folkup-surface-rgb: 240, 237, 232;
+  --folkup-text: #2A2725;
+  --folkup-text-rgb: 42, 39, 37;
+  --folkup-text-muted: #6B6560;
+  --folkup-text-muted-rgb: 107, 101, 96;
+
+  /* ===== DERIVED COLORS ===== */
+
+  /* Color variants */
+  --folkup-bordeaux-light: #9E6470;
+  --folkup-bordeaux-dark: #5C3038;
+  --folkup-sage-light: #A3B898;
+  --folkup-sage-dark: #627852;
+  --folkup-amber-light: #F0C574;
+  --folkup-amber-dark: #C08A28;
+
+  /* Border colors */
+  --folkup-border: #DCD7D0;
+  --folkup-border-light: #E8E4DE;
+
+  /* ===== SHADOWS ===== */
+
+  --shadow-xs: 0 1px 2px rgba(var(--folkup-text-rgb), 0.04);
+  --shadow-sm: 0 1px 3px rgba(var(--folkup-text-rgb), 0.06), 0 1px 2px rgba(var(--folkup-text-rgb), 0.04);
+  --shadow-md: 0 4px 6px rgba(var(--folkup-text-rgb), 0.05), 0 2px 4px rgba(var(--folkup-text-rgb), 0.04);
+  --shadow-lg: 0 10px 15px rgba(var(--folkup-text-rgb), 0.06), 0 4px 6px rgba(var(--folkup-text-rgb), 0.04);
+  --shadow-xl: 0 20px 25px rgba(var(--folkup-text-rgb), 0.08), 0 8px 10px rgba(var(--folkup-text-rgb), 0.04);
+
+  /* ===== SEMANTIC ALIASES (LIGHT MODE) ===== */
+
+  /* Background colors */
+  --bg-primary: var(--folkup-ivory);
+  --bg-surface: var(--folkup-surface);
+
+  /* Text colors */
+  --text-primary: var(--folkup-text);
+  --text-titles: var(--folkup-text);
+  --text-link: var(--folkup-bordeaux);
+  --text-link-hover: var(--folkup-bordeaux-dark);
+
+  /* Border colors */
+  --border-color: var(--folkup-border);
+  --border-light: var(--folkup-border-light);
+
+  /* ===== COMPONENT-SPECIFIC COLORS ===== */
+
+  /* Blockquotes */
+  --blockquote-border: rgba(var(--folkup-amber-rgb), 0.5);
+  --blockquote-bg: rgba(var(--folkup-amber-rgb), 0.08);
+
+  /* Status markers */
+  --marker-folklore-color: #6b4c1e;
+  --marker-folklore-bg: rgba(var(--folkup-amber-rgb), 0.15);
+  --marker-folklore-border: rgba(var(--folkup-amber-rgb), 0.35);
+  --marker-disputed-color: var(--folkup-bordeaux);
+  --marker-disputed-bg: rgba(var(--folkup-bordeaux-rgb), 0.1);
+  --marker-disputed-border: rgba(var(--folkup-bordeaux-rgb), 0.25);
+  --marker-unverified-color: var(--folkup-text-muted);
+  --marker-unverified-bg: rgba(var(--folkup-text-muted-rgb), 0.1);
+  --marker-unverified-border: rgba(var(--folkup-text-muted-rgb), 0.25);
+
+  /* Ko-fi integration */
+  --kofi-bg: var(--folkup-bordeaux);
+  --kofi-hover: var(--folkup-bordeaux-dark);
+
+  /* Verification banner */
+  --verification-border: var(--folkup-amber);
+  --verification-icon: var(--folkup-amber);
+  --verification-btn: var(--folkup-bordeaux);
+  --verification-btn-hover: var(--folkup-bordeaux-dark);
+
+  /* Selection highlight */
+  --selection-bg: rgba(var(--folkup-bordeaux-rgb), 0.15);
+
+  /* ===== TRANSITIONS ===== */
+
+  --transition-fast: 0.15s ease-out;
+  --transition-medium: 0.2s ease-out;
+  --transition-slow: 0.3s ease-out;
+}
+
+/* ===== DARK MODE OVERRIDES ===== */
+
+.dark {
+  /* Core brand colors (adjusted for dark mode) */
+  --folkup-bordeaux: #B8818F;
+  --folkup-bordeaux-rgb: 184, 129, 143;
+  --folkup-sage: #A8C499;
+  --folkup-sage-rgb: 168, 196, 153;
+  --folkup-amber: #F4C870;
+  --folkup-amber-rgb: 244, 200, 112;
+  --folkup-ivory: #1A1814;
+  --folkup-ivory-rgb: 26, 24, 20;
+  --folkup-charcoal: #E5E3DF;
+  --folkup-charcoal-rgb: 229, 227, 223;
+
+  /* Surface and text (inverted) */
+  --folkup-surface: #242018;
+  --folkup-surface-rgb: 36, 32, 24;
+  --folkup-text: #E5E3DF;
+  --folkup-text-rgb: 229, 227, 223;
+  --folkup-text-muted: #A8A19C;
+  --folkup-text-muted-rgb: 168, 161, 156;
+
+  /* Color variants (adjusted) */
+  --folkup-bordeaux-light: #C69AAB;
+  --folkup-bordeaux-dark: #8F6270;
+  --folkup-sage-light: #C2D6B3;
+  --folkup-sage-dark: #7EA475;
+  --folkup-amber-light: #F7D993;
+  --folkup-amber-dark: #E0B050;
+
+  /* Border colors (dark mode) */
+  --folkup-border: #3A342C;
+  --folkup-border-light: #2E2820;
+
+  /* Semantic aliases (dark mode) */
+  --bg-primary: var(--folkup-ivory);
+  --bg-surface: var(--folkup-surface);
+  --text-primary: var(--folkup-text);
+  --text-titles: var(--folkup-text);
+  --text-link: var(--folkup-bordeaux);
+  --text-link-hover: var(--folkup-bordeaux-light);
+  --border-color: var(--folkup-border);
+  --border-light: var(--folkup-border-light);
+
+  /* Component colors (dark mode adjusted) */
+  --blockquote-border: rgba(var(--folkup-amber-rgb), 0.6);
+  --blockquote-bg: rgba(var(--folkup-amber-rgb), 0.12);
+
+  /* Status markers (dark mode) */
+  --marker-folklore-color: #D4B871;
+  --marker-folklore-bg: rgba(var(--folkup-amber-rgb), 0.18);
+  --marker-folklore-border: rgba(var(--folkup-amber-rgb), 0.4);
+  --marker-disputed-color: var(--folkup-bordeaux);
+  --marker-disputed-bg: rgba(var(--folkup-bordeaux-rgb), 0.15);
+  --marker-disputed-border: rgba(var(--folkup-bordeaux-rgb), 0.3);
+  --marker-unverified-color: var(--folkup-text-muted);
+  --marker-unverified-bg: rgba(var(--folkup-text-muted-rgb), 0.12);
+  --marker-unverified-border: rgba(var(--folkup-text-muted-rgb), 0.25);
+
+  /* Ko-fi (dark mode) */
+  --kofi-bg: var(--folkup-bordeaux);
+  --kofi-hover: var(--folkup-bordeaux-light);
+
+  /* Verification (dark mode) */
+  --verification-border: var(--folkup-amber);
+  --verification-icon: var(--folkup-amber);
+  --verification-btn: var(--folkup-bordeaux);
+  --verification-btn-hover: var(--folkup-bordeaux-light);
+
+  /* Selection (dark mode) */
+  --selection-bg: rgba(var(--folkup-bordeaux-rgb), 0.2);
+
+  /* Shadows (darker for contrast) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.18), 0 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.25), 0 8px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Background utilities */
+.bg-folkup-bordeaux { background-color: var(--folkup-bordeaux); }
+.bg-folkup-sage { background-color: var(--folkup-sage); }
+.bg-folkup-amber { background-color: var(--folkup-amber); }
+.bg-folkup-ivory { background-color: var(--folkup-ivory); }
+.bg-folkup-surface { background-color: var(--folkup-surface); }
+
+/* Text color utilities */
+.text-folkup-bordeaux { color: var(--folkup-bordeaux); }
+.text-folkup-sage { color: var(--folkup-sage); }
+.text-folkup-amber { color: var(--folkup-amber); }
+.text-folkup-text { color: var(--folkup-text); }
+.text-folkup-muted { color: var(--folkup-text-muted); }
+
+/* Border utilities */
+.border-folkup-bordeaux { border-color: var(--folkup-bordeaux); }
+.border-folkup-sage { border-color: var(--folkup-sage); }
+.border-folkup-amber { border-color: var(--folkup-amber); }
+
+/* ===== INTEGRATION NOTES ===== */
+/*
+HEXTRA THEME INTEGRATION:
+1. Import after brand-fonts.css: @import "palette-d.css";
+2. Override Hextra's dark mode class if needed
+3. Test: dark mode toggle preserves FolkUp colors
+
+RELEARN THEME INTEGRATION:
+1. May need to override Relearn's CSS custom properties
+2. Test: theme color picker doesn't conflict with Palette D
+
+BLOWFISH THEME INTEGRATION:
+1. params.toml colors vs CSS custom properties priority
+2. Ensure --folkup-* tokens survive Blowfish theme loading
+*/
