@@ -1,0 +1,489 @@
+{{ define "head" }}
+  {{ partial "head.html" . }}
+  <style>
+    /* FlightPath3D Search Interface Styles */
+    .fp3d-search-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .search-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--color-primary-200);
+    }
+
+    .search-header h1 {
+      color: var(--color-primary-900);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .search-header p {
+      color: var(--color-neutral-600);
+      font-size: 1.1rem;
+    }
+
+    .search-box {
+      margin-bottom: 2rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      border: 2px solid var(--color-neutral-300);
+      border-radius: 8px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      background: var(--color-neutral-50);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--color-primary-500);
+      box-shadow: 0 0 0 3px var(--color-primary-200);
+    }
+
+    .search-filters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .filter-group label {
+      font-weight: 600;
+      color: var(--color-neutral-700);
+      font-size: 0.875rem;
+    }
+
+    .filter-group select {
+      padding: 0.75rem;
+      border: 1px solid var(--color-neutral-300);
+      border-radius: 6px;
+      background: var(--color-neutral-50);
+      font-size: 0.875rem;
+    }
+
+    .search-stats {
+      background: var(--color-primary-100);
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      color: var(--color-neutral-700);
+      border-left: 4px solid var(--color-primary-500);
+    }
+
+    .results-container {
+      margin-top: 2rem;
+    }
+
+    .result-item {
+      border: 1px solid var(--color-neutral-300);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: var(--color-neutral-0);
+    }
+
+    .result-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-color: var(--color-primary-300);
+    }
+
+    .result-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-primary-900);
+      margin-bottom: 0.75rem;
+    }
+
+    .result-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--color-neutral-600);
+    }
+
+    .result-meta span {
+      background: var(--color-neutral-100);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--color-neutral-300);
+    }
+
+    .result-excerpt {
+      color: var(--color-neutral-700);
+      line-height: 1.6;
+    }
+
+    .pii-warning {
+      background: var(--color-warning-100);
+      border: 1px solid var(--color-warning-300);
+      padding: 0.75rem;
+      border-radius: 6px;
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--color-warning-800);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .no-results, .loading {
+      text-align: center;
+      padding: 3rem;
+      color: var(--color-neutral-600);
+      font-style: italic;
+    }
+
+    .security-notice {
+      background: var(--color-warning-50);
+      border: 1px solid var(--color-warning-300);
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      font-size: 0.875rem;
+      color: var(--color-warning-800);
+    }
+
+    .security-notice strong {
+      color: var(--color-warning-900);
+    }
+
+    @media (max-width: 768px) {
+      .search-filters {
+        grid-template-columns: 1fr;
+      }
+
+      .result-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .search-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+{{ end }}
+
+{{ define "main" }}
+<article class="max-w-full">
+
+  <!-- Security Notice -->
+  <div class="security-notice">
+    <strong>🔒 Authenticated Access:</strong> This search interface contains sensitive case documents with banking-level PII redaction.
+    All searches are logged for audit compliance. Access restricted to authorized personnel only.
+  </div>
+
+  <!-- Content from Markdown -->
+  <div class="prose dark:prose-invert max-w-full">
+    {{ .Content }}
+  </div>
+
+  <!-- Search Interface -->
+  <div class="fp3d-search-container">
+
+    <div class="search-box">
+      <input type="text" id="searchInput" class="search-input"
+             placeholder="Search FlightPath3D documents..."
+             aria-label="Search documents" />
+    </div>
+
+    <div class="search-filters">
+      <div class="filter-group">
+        <label for="languageFilter">Language</label>
+        <select id="languageFilter" aria-label="Filter by language">
+          <option value="">All Languages</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="typeFilter">Document Type</label>
+        <select id="typeFilter" aria-label="Filter by document type">
+          <option value="">All Types</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="piiFilter">PII Status</label>
+        <select id="piiFilter" aria-label="Filter by PII status">
+          <option value="">All Documents</option>
+          <option value="true">PII Redacted</option>
+          <option value="false">No PII</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="searchStats" class="search-stats" style="display: none;">
+      <span id="statsText"></span>
+    </div>
+
+    <div id="results" class="results-container">
+      <div class="loading">Loading search data...</div>
+    </div>
+  </div>
+
+</article>
+
+<!-- Lunr.js and Search Logic -->
+<script src="https://unpkg.com/lunr/lunr.min.js"></script>
+<script>
+  let searchData = null;
+  let currentResults = [];
+
+  // Load search data
+  fetch('/search-data.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      searchData = data;
+      initializeInterface();
+      performSearch('');
+    })
+    .catch(error => {
+      console.error('Search data loading error:', error);
+      document.getElementById('results').innerHTML =
+        `<div class="no-results">
+          <strong>Error loading search data:</strong><br>
+          ${error.message}<br><br>
+          <em>Please contact administrator if this problem persists.</em>
+        </div>`;
+    });
+
+  function initializeInterface() {
+    // Populate language filter
+    const languageFilter = document.getElementById('languageFilter');
+    searchData.metadata.languages.forEach(lang => {
+      const option = document.createElement('option');
+      option.value = lang;
+      option.textContent = lang.toUpperCase();
+      languageFilter.appendChild(option);
+    });
+
+    // Populate document type filter
+    const typeFilter = document.getElementById('typeFilter');
+    const types = [...new Set(searchData.documents.map(doc => doc.type))];
+    types.sort().forEach(type => {
+      const option = document.createElement('option');
+      option.value = type;
+      option.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+      typeFilter.appendChild(option);
+    });
+
+    // Add event listeners
+    document.getElementById('searchInput').addEventListener('input', debounce(handleSearch, 300));
+    document.getElementById('languageFilter').addEventListener('change', handleSearch);
+    document.getElementById('typeFilter').addEventListener('change', handleSearch);
+    document.getElementById('piiFilter').addEventListener('change', handleSearch);
+
+    // Add keyboard navigation
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleSearch();
+      }
+    });
+  }
+
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  function handleSearch() {
+    const query = document.getElementById('searchInput').value;
+    performSearch(query);
+  }
+
+  function performSearch(query) {
+    if (!searchData) return;
+
+    const languageFilter = document.getElementById('languageFilter').value;
+    const typeFilter = document.getElementById('typeFilter').value;
+    const piiFilter = document.getElementById('piiFilter').value;
+
+    let results = [];
+
+    if (query.trim()) {
+      // Determine which language index to use
+      const searchLang = languageFilter || detectQueryLanguage(query) || 'en';
+
+      if (searchData.indexes[searchLang]) {
+        try {
+          const index = lunr.Index.load(searchData.indexes[searchLang]);
+
+          // Try multiple search strategies for better results
+          let searchResults = [];
+
+          // Exact phrase search
+          try {
+            searchResults = index.search(`"${query}"`);
+          } catch (e) {
+            // Fallback to fuzzy search
+            try {
+              searchResults = index.search(query + '~1');
+            } catch (e2) {
+              // Fallback to basic search
+              searchResults = index.search(query);
+            }
+          }
+
+          results = searchResults.map(result => {
+            const doc = searchData.documents.find(d => d.id.toString() === result.ref);
+            return doc ? { ...doc, score: result.score } : null;
+          }).filter(Boolean);
+
+        } catch (error) {
+          console.error('Search error:', error);
+          results = [];
+        }
+      }
+    } else {
+      // No query - show all documents
+      results = searchData.documents.map(doc => ({ ...doc, score: 1 }));
+    }
+
+    // Apply filters
+    if (languageFilter) {
+      results = results.filter(doc => doc.language === languageFilter);
+    }
+
+    if (typeFilter) {
+      results = results.filter(doc => doc.type === typeFilter);
+    }
+
+    if (piiFilter !== '') {
+      const piiValue = piiFilter === 'true';
+      results = results.filter(doc => doc.piiRedacted === piiValue);
+    }
+
+    // Sort by relevance score, then by date
+    results.sort((a, b) => {
+      if (a.score !== b.score) {
+        return b.score - a.score;
+      }
+      return new Date(b.lastModified) - new Date(a.lastModified);
+    });
+
+    currentResults = results;
+    displayResults(results, query);
+  }
+
+  function detectQueryLanguage(query) {
+    // Simple language detection for search queries
+    const ptWords = /\b(com|uma|para|que|não|por|mais|como|seu|sua|esta|este|sobre)\b/gi;
+    const ruWords = /\b(это|что|как|для|так|все|они|был|была|были|будет|есть)\b/gi;
+
+    const ptMatches = (query.match(ptWords) || []).length;
+    const ruMatches = (query.match(ruWords) || []).length;
+
+    if (ptMatches > 0 && ptMatches >= ruMatches) return 'pt';
+    if (ruMatches > 0) return 'ru';
+    return 'en';
+  }
+
+  function displayResults(results, query) {
+    const resultsContainer = document.getElementById('results');
+    const searchStats = document.getElementById('searchStats');
+    const statsText = document.getElementById('statsText');
+
+    if (results.length === 0) {
+      resultsContainer.innerHTML =
+        `<div class="no-results">
+          No documents found matching your search criteria.
+          ${query ? `<br><br>Try different keywords or remove filters.` : ''}
+        </div>`;
+      searchStats.style.display = 'none';
+      return;
+    }
+
+    // Update search stats
+    const piiCount = results.filter(doc => doc.piiRedacted).length;
+    const avgScore = results.length > 0 ? (results.reduce((sum, doc) => sum + doc.score, 0) / results.length) : 0;
+
+    statsText.innerHTML = `
+      Found <strong>${results.length}</strong> document${results.length === 1 ? '' : 's'}
+      ${query ? ` matching <strong>"${escapeHtml(query)}"</strong>` : ''}
+      • ${piiCount} with PII redacted
+      ${query && avgScore < 1 ? ` • Average relevance: ${(avgScore * 100).toFixed(1)}%` : ''}
+    `;
+    searchStats.style.display = 'block';
+
+    // Render results
+    resultsContainer.innerHTML = results.slice(0, 50).map(doc => `
+      <div class="result-item">
+        <div class="result-title">${escapeHtml(doc.title)}</div>
+        <div class="result-meta">
+          <span>📄 ${doc.type.charAt(0).toUpperCase() + doc.type.slice(1)}</span>
+          <span>🌐 ${doc.language.toUpperCase()}</span>
+          <span>📏 ${formatFileSize(doc.size)}</span>
+          <span>📅 ${formatDate(doc.lastModified)}</span>
+          ${doc.score < 1 ? `<span>🎯 ${(doc.score * 100).toFixed(1)}%</span>` : ''}
+        </div>
+        <div class="result-excerpt">${escapeHtml(doc.excerpt)}</div>
+        ${doc.piiRedacted ? `
+          <div class="pii-warning">
+            🔒 This document contains redacted PII for security compliance
+          </div>
+        ` : ''}
+      </div>
+    `).join('');
+
+    if (results.length > 50) {
+      resultsContainer.innerHTML += `
+        <div class="no-results">
+          Showing first 50 results of ${results.length} total.
+          Use more specific search terms to narrow results.
+        </div>
+      `;
+    }
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function formatFileSize(bytes) {
+    if (bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+  }
+
+  function formatDate(dateString) {
+    return new Date(dateString).toLocaleDateString('en-GB', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  }
+</script>
+{{ end }}

@@ -8,6 +8,9 @@ main:
   - name: Methodology
     pageRef: methodology
     weight: 30
+  - name: FP3D Search
+    pageRef: search/flightpath3d
+    weight: 35
   - name: About
     pageRef: about
     weight: 40

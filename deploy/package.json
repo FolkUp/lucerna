@@ -1,0 +1,12 @@
+{
+  "name": "flightpath3d-deployment",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "FlightPath3D deployment automation components",
+  "main": "flightpath3d-deployment-orchestrator.sh",
+  "scripts": {
+    "validate": "node automation/content-validator.js",
+    "scan-pii": "node automation/pii-scanner.js",
+    "optimize-search": "node automation/search-optimizer.js"
+  }
+}

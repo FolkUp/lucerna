@@ -1,0 +1,30 @@
+{
+  "totalDocuments": 834,
+  "skippedDocuments": 2,
+  "languageDistribution": {
+    "pt": 268,
+    "en": 566
+  },
+  "typeDistribution": {
+    "markdown": 18,
+    "other": 52,
+    "text": 11,
+    "email": 753
+  },
+  "sizeDistribution": {
+    "small": 61,
+    "medium": 613,
+    "large": 160
+  },
+  "piiRedactionStats": {
+    "documentsWithPii": 830,
+    "totalRedactions": 1412,
+    "redactionTypes": {
+      "email": 5008,
+      "phone": 323812,
+      "ssn": 1698,
+      "iban": 42,
+      "card": 70
+    }
+  }
+}

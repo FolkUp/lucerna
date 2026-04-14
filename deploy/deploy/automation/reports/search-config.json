@@ -1,0 +1,67 @@
+{
+  "lunr": {
+    "fields": {
+      "title": {
+        "boost": 10,
+        "ref": "title"
+      },
+      "summary": {
+        "boost": 5,
+        "ref": "summary"
+      },
+      "content": {
+        "boost": 1,
+        "ref": "content"
+      },
+      "tags": {
+        "boost": 8,
+        "ref": "tags"
+      },
+      "evidence_type": {
+        "boost": 6,
+        "ref": "evidence_type"
+      },
+      "companies": {
+        "boost": 7,
+        "ref": "companies"
+      }
+    },
+    "stopWords": [],
+    "stemming": true,
+    "tokenSeparator": {},
+    "scoring": {
+      "exactMatchBoost": 2,
+      "lengthNormalization": 0.75,
+      "freshnessBoost": 1.2
+    }
+  },
+  "ui": {
+    "resultsPerPage": 25,
+    "enableHighlighting": true,
+    "enableFaceting": true,
+    "facets": [
+      "evidence_type",
+      "companies",
+      "date_range"
+    ],
+    "enableAutoComplete": true,
+    "minQueryLength": 2,
+    "searchDelay": 300
+  },
+  "performance": {
+    "enableIndexCaching": true,
+    "cacheExpiry": 3600000,
+    "enableResultsCaching": true,
+    "maxCachedQueries": 1000,
+    "enableLazyLoading": true
+  },
+  "security": {
+    "enablePIIFiltering": true,
+    "maxQueryLength": 500,
+    "rateLimiting": {
+      "enabled": true,
+      "maxRequests": 100,
+      "windowMs": 60000
+    }
+  }
+}

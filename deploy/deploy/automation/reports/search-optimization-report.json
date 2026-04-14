@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-04-13T07:46:06.889Z",
+  "analysis": {
+    "currentIndex": {
+      "size": null,
+      "documentCount": 0,
+      "averageDocSize": 0
+    },
+    "contentAnalysis": {
+      "fileCount": 0,
+      "totalWords": 0,
+      "documentTypes": {},
+      "topTerms": [],
+      "suggestedStopWords": []
+    },
+    "optimization": {
+      "stopWords": {},
+      "stemming": true,
+      "fieldBoosts": {}
+    }
+  },
+  "optimizations": {
+    "indexOptimized": false,
+    "configGenerated": true,
+    "monitoringSetup": true
+  },
+  "artifacts": {
+    "searchConfig": "..\\deploy\\deploy\\automation\\reports\\search-config.json",
+    "monitorScript": "..\\deploy\\deploy\\automation\\reports\\search-performance-monitor.js",
+    "analyticsBoard": "..\\deploy\\deploy\\automation\\reports\\search-analytics.html"
+  },
+  "recommendations": [
+    "Integrate performance monitoring script into search interface",
+    "Review and apply suggested stop words configuration",
+    "Monitor search analytics for query optimization opportunities",
+    "Consider implementing search result caching for frequently accessed documents",
+    "Set up automated index rebuilding on content changes"
+  ]
+}

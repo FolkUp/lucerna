@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-13T07:45:16.691Z",
+  "hugositeDir": "--help",
+  "validationResults": {
+    "piiCompliance": {
+      "scanTimestamp": "2026-04-13T07:45:16.669Z",
+      "basePath": "--help",
+      "statistics": {
+        "filesScanned": 0,
+        "piiInstancesFound": 0,
+        "criticalFindings": 0,
+        "complianceScore": 100
+      },
+      "findings": [],
+      "complianceStatus": "COMPLIANT",
+      "recommendations": [
+        "Update whitelist for approved legal context patterns"
+      ]
+    },
+    "brokenLinks": [],
+    "missingAssets": [],
+    "frontmatterErrors": [],
+    "contentIntegrity": {
+      "totalFiles": 0,
+      "checksumVerified": 0,
+      "missingFiles": [],
+      "modifiedFiles": [],
+      "timestamp": "2026-04-13T07:45:16.676Z"
+    },
+    "buildTest": {
+      "exitCode": -4058,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "overallStatus": "FAILED",
+  "exitCode": 1
+}

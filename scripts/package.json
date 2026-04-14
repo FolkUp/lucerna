@@ -2,6 +2,7 @@
   "name": "fp3d-build-tools",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Build tools for FP3D dossier web interface",
   "scripts": {
     "build": "node build-fp3d-data.cjs",

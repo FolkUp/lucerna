@@ -1,0 +1,15 @@
+{
+  "scanTimestamp": "2026-04-13T07:45:24.143Z",
+  "basePath": "--site-dir",
+  "statistics": {
+    "filesScanned": 0,
+    "piiInstancesFound": 0,
+    "criticalFindings": 0,
+    "complianceScore": 100
+  },
+  "findings": [],
+  "complianceStatus": "COMPLIANT",
+  "recommendations": [
+    "Update whitelist for approved legal context patterns"
+  ]
+}

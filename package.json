@@ -2,6 +2,7 @@
   "name": "lucerna-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Lucerna OSINT Research Lab — site build tools",
   "scripts": {
     "encrypt-reviews": "node scripts/encrypt-reviews.mjs",
@@ -11,9 +12,15 @@
     "lcp-check": "node scripts/lcp-measurement.mjs"
   },
   "devDependencies": {
-    "sharp": "^0.33.0",
-    "staticrypt": "^4.0.1",
+    "lighthouse": "^11.0.0",
     "puppeteer": "^22.0.0",
-    "lighthouse": "^11.0.0"
+    "sharp": "^0.33.0",
+    "staticrypt": "^3.5.4"
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.1",
+    "lunr": "^2.3.9"
   }
 }
