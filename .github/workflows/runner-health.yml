@@ -1,0 +1,58 @@
+name: Runner Health Ping
+
+# Weekly noop ping — prevents GitHub from auto-deregistering the self-hosted
+# runner after prolonged inactivity (~14-21 day threshold per GitHub policy).
+#
+# Origin pattern: FolkUp/ecosystem-dashboard/.github/workflows/runner-health.yml
+# (shipped 2026-04-20 after folkup-runner-dashboard auto-deregistered at ~27d idle).
+# Replicated here per INFR-262 (2026-04-22) after folkup-runner-mushrooms was
+# auto-deregistered at ~3 weeks idle, blocking GNRL-280 deploy for 24h.
+#
+# Cron staggered off-minute (03:42 UTC Wed) to spread scheduler load across
+# the FolkUp ecosystem. GitHub cron is best-effort, may drift ±30min.
+#
+# TELEGRAM_THREAD_ID is OPTIONAL. If set, failure alerts route to that thread;
+# if unset, alerts fall back to chat root with a [no-thread] prefix so the
+# misconfiguration is visible.
+#
+# NOTE: GitHub disables scheduled workflows in repos commit-idle >60 days.
+# At ship time lucerna last commit was 8 days prior. Low risk.
+
+on:
+  schedule:
+    - cron: '42 3 * * 3'  # Wednesday 03:42 UTC
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: [self-hosted, folkup-lucerna]
+    timeout-minutes: 2
+    steps:
+      - name: Keep-alive ping
+        run: |
+          echo "Runner alive on $(hostname). Connection preserved at $(date -u '+%Y-%m-%dT%H:%M:%SZ')."
+          uptime
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "TG creds missing — alert suppressed"
+            exit 0
+          fi
+          PREFIX=""
+          ARGS=(
+            -d "chat_id=${TELEGRAM_CHAT_ID}"
+          )
+          if [ -n "${TELEGRAM_THREAD_ID}" ]; then
+            ARGS+=(-d "message_thread_id=${TELEGRAM_THREAD_ID}")
+          else
+            PREFIX="[no-thread] "
+          fi
+          ARGS+=(--data-urlencode "text=${PREFIX}Runner health ping FAILED on folkup-runner-lucerna. Check runner status on VPS.")
+          curl -sf "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" "${ARGS[@]}" \
+            || echo "Telegram notification failed"
